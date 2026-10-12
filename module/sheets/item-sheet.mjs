@@ -22,7 +22,7 @@ export class ZCorpsItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
   };
 
   static PARTS = {
-    sheet: { template: `systems/${SYSTEM_ID}/templates/item/item.hbs` }
+    sheet: { template: `systems/${SYSTEM_ID}/templates/item/item.hbs`, scrollable: [""] }
   };
 
   async _prepareContext(options) {

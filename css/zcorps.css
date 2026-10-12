@@ -16,16 +16,26 @@
 .zcorps .window-content {
   background: var(--zc-paper);
   color: var(--zc-ink);
-  padding: 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
+/* La fiche défile dans la fenêtre ; c'est aussi l'élément dont Foundry
+   mémorise la position de défilement entre deux rendus (scrollable: [""]). */
 .zc-sheet {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-size: 13px;
   color: var(--zc-ink);
 }
+.zc-sheet > * { flex-shrink: 0; }
 
 .zc-sheet input[type="text"],
 .zc-sheet input[type="number"],
