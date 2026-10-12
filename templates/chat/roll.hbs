@@ -1,0 +1,29 @@
+<div class="zc-roll">
+  <header class="zc-roll-title">{{label}} <span class="zc-roll-code">{{code}}</span></header>
+  <div class="zc-dice">
+    {{#each normal}}<span class="zc-die">{{this}}</span>{{/each}}
+    {{#each wild}}<span class="zc-die wild" data-tooltip="Dé libre">{{this}}</span>{{/each}}
+    {{#each cp}}<span class="zc-die cp" data-tooltip="Point de personnage">{{this}}</span>{{/each}}
+    {{#if flatLabel}}<span class="zc-flat">{{flatLabel}}</span>{{/if}}
+  </div>
+  <div class="zc-total">{{total}}</div>
+  {{#if difficulty}}
+  <div class="zc-outcome {{#if success}}success{{else}}failure{{/if}}">
+    {{#if success}}Réussite{{else}}Échec{{/if}} contre {{difficulty}} (marge {{marginLabel}})
+  </div>
+  {{/if}}
+  {{#if complication}}
+  <div class="zc-complication">
+    <strong>Complication !</strong> Le dé libre a fait 1.
+    Si le MJ retire le 1 et le dé le plus haut : <strong>{{altTotal}}</strong>
+    {{#if difficulty}}({{#if altSuccess}}réussite{{else}}échec{{/if}}){{/if}}.
+  </div>
+  {{/if}}
+  {{#if highlight}}<div class="zc-highlight">{{highlight}}</div>{{/if}}
+  {{#each notes}}<div class="zc-note">{{this}}</div>{{/each}}
+  {{#if isDamage}}
+  <button type="button" class="zc-apply-damage" data-zc-apply-damage="{{total}}">
+    <i class="fa-solid fa-heart-crack"></i> Appliquer aux jetons ciblés
+  </button>
+  {{/if}}
+</div>

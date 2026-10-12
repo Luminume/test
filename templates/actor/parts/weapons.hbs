@@ -1,0 +1,38 @@
+<section class="zc-box zc-weapons">
+  <header class="zc-band">
+    <span>Armes</span>
+    {{#if editable}}<a data-action="itemCreate" data-type="arme" data-tooltip="Ajouter une arme"><i class="fa-solid fa-plus"></i></a>{{/if}}
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th></th><th>Type</th><th>Compétence</th><th>Dégâts</th><th>Munitions</th>
+        <th>Courte</th><th>Moyenne</th><th>Longue</th><th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each weapons as |w|}}
+      <tr data-item-id="{{w.id}}">
+        <td><img src="{{w.img}}" alt="" class="zc-item-img"></td>
+        <td><a data-action="itemEdit">{{w.name}}</a></td>
+        <td>{{w.skill}}</td>
+        <td>{{w.damage}}</td>
+        <td class="zc-ammo">
+          {{#if w.hasAmmo}}
+          <input type="number" min="0" data-item-field="system.ammo.value" value="{{w.ammo.value}}"> / {{w.ammo.max}}
+          <a data-action="weaponReload" data-tooltip="Recharger"><i class="fa-solid fa-rotate"></i></a>
+          {{else}}—{{/if}}
+        </td>
+        <td>{{w.range.short}}</td>
+        <td>{{w.range.medium}}</td>
+        <td>{{w.range.long}}</td>
+        <td class="zc-controls">
+          <a data-action="weaponAttack" data-tooltip="Attaque (Maj+clic : sans options)"><i class="fa-solid fa-crosshairs"></i></a>
+          <a data-action="weaponDamage" data-tooltip="Dégâts"><i class="fa-solid fa-burst"></i></a>
+          <a data-action="itemDelete" data-tooltip="Supprimer"><i class="fa-solid fa-trash"></i></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</section>

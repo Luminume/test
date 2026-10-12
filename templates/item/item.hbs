@@ -1,0 +1,55 @@
+<div class="zc-sheet zc-item-sheet">
+  <header class="zc-top">
+    <img class="zc-item-portrait" src="{{item.img}}" alt="" data-action="editPortrait" data-tooltip="Changer l'image">
+    <label class="zc-field grow">Nom <input type="text" name="name" value="{{item.name}}"></label>
+  </header>
+
+  {{#if isArme}}
+  <div class="zc-form">
+    <label class="zc-field">Compétence
+      <select name="system.skill">{{selectOptions skillChoices selected=system.skill}}</select>
+    </label>
+    <label class="zc-field">Dégâts <input type="text" name="system.damage" value="{{system.damage}}"></label>
+    <label class="zc-field zc-inline">
+      <input type="checkbox" name="system.addDamageBonus" {{checked system.addDamageBonus}}>
+      Ajouter le bonus aux dégâts du personnage (armes de mêlée, lancer…)
+    </label>
+    <div class="zc-row">
+      <label class="zc-field">Munitions <input type="number" min="0" name="system.ammo.value" value="{{system.ammo.value}}"></label>
+      <label class="zc-field">Chargeur (0 = sans munitions) <input type="number" min="0" name="system.ammo.max" value="{{system.ammo.max}}"></label>
+    </div>
+    <div class="zc-row">
+      <label class="zc-field">Portée courte <input type="text" name="system.range.short" value="{{system.range.short}}"></label>
+      <label class="zc-field">Moyenne <input type="text" name="system.range.medium" value="{{system.range.medium}}"></label>
+      <label class="zc-field">Longue <input type="text" name="system.range.long" value="{{system.range.long}}"></label>
+    </div>
+  </div>
+  {{/if}}
+
+  {{#if isEquipement}}
+  <div class="zc-form">
+    <div class="zc-row">
+      <label class="zc-field">Quantité <input type="number" min="0" name="system.quantity" value="{{system.quantity}}"></label>
+      <label class="zc-field">Protection (ex. +1D) <input type="text" name="system.protection" value="{{system.protection}}"></label>
+    </div>
+    <label class="zc-field zc-inline">
+      <input type="checkbox" name="system.equipped" {{checked system.equipped}}> Porté (la protection compte pour encaisser)
+    </label>
+  </div>
+  {{/if}}
+
+  {{#if isCompetence}}
+  <div class="zc-form">
+    <div class="zc-row">
+      <label class="zc-field">Attribut
+        <select name="system.attribute">{{selectOptions attributeChoices selected=system.attribute}}</select>
+      </label>
+      <label class="zc-field">Bonus (ex. +1D+2) <input type="text" name="system.bonus" value="{{system.bonus}}"></label>
+    </div>
+  </div>
+  {{/if}}
+
+  <label class="zc-field zc-block">Notes
+    <textarea name="system.notes" rows="5">{{system.notes}}</textarea>
+  </label>
+</div>

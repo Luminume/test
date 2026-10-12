@@ -1,0 +1,37 @@
+<div class="zc-roll-options">
+  <p class="zc-roll-code">Code : <strong>{{code}}</strong></p>
+  {{#if isTest}}
+  <div class="form-group">
+    <label>Difficulté</label>
+    <select name="difficulty">{{selectOptions difficulties}}</select>
+  </div>
+  <div class="form-group">
+    <label>ou valeur libre</label>
+    <input type="number" name="customDifficulty" min="0" placeholder="—">
+  </div>
+  {{/if}}
+  <div class="form-group">
+    <label>Modificateur en dés</label>
+    <input type="number" name="diceMod" value="0" step="1">
+  </div>
+  <div class="form-group">
+    <label>Modificateur fixe</label>
+    <input type="number" name="flatMod" value="0" step="1">
+  </div>
+  {{#if woundPenalty}}
+  <div class="form-group">
+    <label>Malus de blessure ({{woundLabel}} : -{{woundPenalty}}D)</label>
+    <input type="checkbox" name="applyWound" {{#if isTest}}checked{{/if}}>
+  </div>
+  {{/if}}
+  {{#if hasResources}}
+  <div class="form-group">
+    <label>Points de personnage (+1D chacun, {{cpAvailable}} dispo.)</label>
+    <input type="number" name="cp" value="0" min="0" max="{{cpAvailable}}">
+  </div>
+  <div class="form-group">
+    <label>Point de Cojones : double les dés ({{cojonesAvailable}} dispo.)</label>
+    <input type="checkbox" name="cojones" {{#unless cojonesAvailable}}disabled{{/unless}}>
+  </div>
+  {{/if}}
+</div>

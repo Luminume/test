@@ -1,0 +1,356 @@
+/* ==========================================================
+   Z-Corps — feuille de style
+   ========================================================== */
+
+.zcorps {
+  --zc-paper: #f2ebe3;
+  --zc-paper-dark: #e4d8cc;
+  --zc-ink: #231a17;
+  --zc-muted: #7a6a62;
+  --zc-blood: #7d1414;
+  --zc-blood-dark: #4a1010;
+  --zc-line: #b9a89c;
+  --zc-ok: #2f6b2f;
+}
+
+.zcorps .window-content {
+  background: var(--zc-paper);
+  color: var(--zc-ink);
+  padding: 8px;
+}
+
+.zc-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--zc-ink);
+}
+
+.zc-sheet input[type="text"],
+.zc-sheet input[type="number"],
+.zc-sheet textarea,
+.zc-sheet select {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--zc-ink);
+  border: none;
+  border-bottom: 1px solid var(--zc-line);
+  border-radius: 0;
+  font-size: 13px;
+}
+
+.zc-sheet textarea {
+  border: 1px solid var(--zc-line);
+  width: 100%;
+  resize: vertical;
+}
+
+.zc-sheet a { color: inherit; cursor: pointer; }
+.zc-sheet a:hover { color: var(--zc-blood); text-shadow: none; }
+
+.zc-sheet button {
+  background: var(--zc-blood);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin-top: 6px;
+  width: 100%;
+}
+.zc-sheet button:hover { background: var(--zc-blood-dark); }
+
+/* --- En-tête --------------------------------------------- */
+
+.zc-top {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.zc-logo {
+  flex: 0 0 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #3b3b3b;
+  border: 4px solid #8a8a8a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  line-height: 1;
+}
+.zc-logo-z { font-size: 52px; font-weight: 900; }
+.zc-logo-corps { font-size: 14px; letter-spacing: 2px; font-weight: 700; }
+
+.zc-identity { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+
+.zc-row { display: flex; gap: 8px; }
+
+.zc-field {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-weight: 600;
+  flex: 1;
+}
+.zc-field input, .zc-field select { flex: 1; min-width: 0; font-weight: 400; }
+.zc-field.small { flex: 0 0 110px; }
+.zc-field.grow { flex: 2; }
+.zc-field.zc-block { flex-direction: column; align-items: stretch; }
+.zc-field.zc-inline { font-weight: 400; align-items: center; }
+.zc-field.zc-inline input { flex: 0 0 auto; }
+
+/* --- Colonnes -------------------------------------------- */
+
+.zc-columns {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 10px;
+}
+
+.zc-attributes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-content: start;
+}
+
+.zc-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  background: var(--zc-blood-dark);
+  color: #fff;
+  padding: 2px 6px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+.zc-band a:hover { color: #f3c1c1; }
+
+.zc-attr { border: 2px solid var(--zc-blood-dark); background: rgba(255, 255, 255, 0.35); }
+
+.zc-sheet .zc-band input.zc-code {
+  flex: 0 0 64px;
+  background: #fff;
+  text-align: center;
+  font-weight: 700;
+  border: none;
+}
+
+.zc-skills { list-style: none; margin: 0; padding: 4px 6px; }
+
+.zc-skill, .zc-skill-head {
+  display: grid;
+  grid-template-columns: 1fr 52px 52px 34px;
+  gap: 4px;
+  align-items: center;
+  padding: 1px 0;
+}
+.zc-skill-head { font-size: 10px; color: var(--zc-muted); text-transform: uppercase; }
+.zc-skill-head span { text-align: center; }
+
+.zc-skill .zc-code { text-align: center; height: 20px; padding: 0 2px; }
+.zc-skill .zc-total { text-align: center; color: var(--zc-muted); }
+.zc-skill.trained .zc-total { color: var(--zc-ink); font-weight: 700; }
+.zc-skill.trained > a { font-weight: 700; }
+
+.zc-sheet input.invalid { background: #f5c9c9; }
+
+.zc-controls { display: flex; gap: 6px; justify-content: flex-end; font-size: 11px; }
+
+.zc-add { font-size: 11px; color: var(--zc-muted); padding-top: 2px; }
+
+/* --- Colonne de droite ----------------------------------- */
+
+.zc-side { display: flex; flex-direction: column; gap: 8px; }
+
+.zc-portrait {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 2px solid var(--zc-blood-dark);
+  transform: rotate(-1.5deg);
+  background: #fff;
+  cursor: pointer;
+}
+.zc-portrait.small { width: 96px; flex: 0 0 96px; transform: none; }
+
+.zc-box {
+  border: 2px solid var(--zc-blood-dark);
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.35);
+}
+.zc-box > .zc-band { margin: -4px -6px 6px; }
+.zc-box h3 {
+  margin: 0 0 4px;
+  border: none;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--zc-ink);
+}
+
+/* Cases à cocher dessinées */
+.zc-check {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--zc-ink);
+  background: #fff;
+  flex: 0 0 auto;
+}
+.checked > .zc-check, .reached > .zc-check { background: var(--zc-blood); border-color: var(--zc-blood-dark); }
+.current > .zc-check { box-shadow: 0 0 0 2px #e8a0a0; }
+
+.zc-wounds ul { list-style: none; margin: 0; padding: 0; }
+.zc-wounds li {
+  display: grid;
+  grid-template-columns: 18px 52px 1fr 30px;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 0;
+}
+.zc-wounds li.current .zc-label { font-weight: 700; color: var(--zc-blood); }
+.zc-penalty { font-size: 11px; color: var(--zc-muted); text-align: right; }
+
+.zc-stress-scale { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; text-align: center; }
+.zc-stress-step { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.zc-stress-label { font-size: 10px; font-weight: 700; }
+.zc-stress-die { font-size: 10px; color: var(--zc-muted); }
+.zc-stress-effect { font-size: 9px; color: var(--zc-muted); min-height: 11px; }
+.zc-stress-step.current .zc-stress-label { color: var(--zc-blood); }
+
+.zc-points { display: flex; flex-direction: column; gap: 4px; }
+.zc-point {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+}
+.zc-sheet .zc-point input {
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--zc-ink);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  background: #fff;
+}
+
+/* --- Accoutumance ---------------------------------------- */
+
+.zc-accou-controls { display: flex; gap: 8px; align-items: center; font-size: 13px; }
+
+.zc-gauge {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  gap: 2px;
+  padding: 2px 0 16px;
+}
+
+.zc-cell {
+  position: relative;
+  height: 20px;
+  border: 1px solid var(--zc-ink);
+  background: #fff;
+}
+.zc-cell.filled { background: linear-gradient(#9c1c1c, #5a0e0e); border-color: var(--zc-blood-dark); }
+.zc-cell.threshold { border-width: 1px 3px 1px 1px; border-right-color: var(--zc-blood-dark); }
+.zc-cell:hover { outline: 2px solid #e8a0a0; }
+
+.zc-tick {
+  position: absolute;
+  right: -4px;
+  bottom: -16px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--zc-blood-dark);
+}
+
+.zc-occult {
+  border: 1px solid var(--zc-line);
+  background: #fff;
+  padding: 2px 6px;
+}
+.zc-occult-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 8px;
+  padding: 2px 0;
+  border-bottom: 1px dotted var(--zc-line);
+}
+.zc-occult-row:last-child { border-bottom: none; }
+.zc-sheet .zc-occult input { background: transparent; border: none; }
+.zc-sheet .zc-occult .zc-occult-name { font-weight: 700; border-right: 1px dotted var(--zc-line); }
+
+/* --- Tableaux -------------------------------------------- */
+
+.zc-sheet table { width: 100%; border-collapse: collapse; margin: 0; background: transparent; border: none; }
+.zc-sheet th {
+  font-size: 11px;
+  text-align: left;
+  color: var(--zc-muted);
+  font-weight: 600;
+  background: transparent;
+}
+.zc-sheet td { border-bottom: 1px solid var(--zc-line); padding: 2px 4px; background: transparent; }
+.zc-sheet tbody tr:nth-child(odd) { background: transparent; }
+.zc-item-img { width: 24px; height: 24px; border: none; vertical-align: middle; }
+.zc-sheet td input[type="number"] { width: 44px; text-align: center; }
+.zc-ammo { white-space: nowrap; }
+
+.zc-equipment textarea { margin-top: 6px; }
+
+/* --- Fiche d'objet --------------------------------------- */
+
+.zc-item-portrait { width: 56px; height: 56px; border: 2px solid var(--zc-blood-dark); cursor: pointer; }
+.zc-item-sheet .zc-top { align-items: center; }
+.zc-form { display: flex; flex-direction: column; gap: 6px; }
+
+/* --- Chat ------------------------------------------------ */
+
+.zc-roll { font-size: 13px; }
+.zc-roll-title {
+  background: var(--zc-blood-dark);
+  color: #fff;
+  font-weight: 800;
+  padding: 2px 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.zc-roll-code { font-weight: 400; opacity: 0.85; }
+.zc-dice { display: flex; flex-wrap: wrap; gap: 3px; padding: 6px 0 2px; align-items: center; }
+.zc-die {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+}
+.zc-die.wild { background: var(--zc-blood, #7d1414); color: #fff; border-color: #4a1010; }
+.zc-die.cp { background: #2b4a6b; color: #fff; }
+.zc-flat { font-weight: 700; }
+.zc-roll .zc-total { font-size: 24px; font-weight: 900; text-align: center; }
+.zc-outcome { text-align: center; font-weight: 700; padding: 2px; border-radius: 3px; }
+.zc-outcome.success { background: #d9ecd9; color: #1e4d1e; }
+.zc-outcome.failure { background: #f2d4d4; color: #6a1010; }
+.zc-complication { background: #fff1c9; color: #5c4400; padding: 4px; margin-top: 4px; border-radius: 3px; }
+.zc-highlight { text-align: center; font-weight: 800; font-size: 16px; color: #7d1414; margin-top: 4px; }
+.zc-note { font-size: 11px; color: #666; }
+.zc-roll .zc-apply-damage { margin-top: 6px; }
+
+/* --- Fenêtres de dialogue -------------------------------- */
+
+.zc-dialog .zc-roll-options .form-group { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.zc-dialog .zc-roll-options .form-group label { flex: 2; }
+.zc-dialog .zc-roll-options .form-group input,
+.zc-dialog .zc-roll-options .form-group select { flex: 1; }

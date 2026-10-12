@@ -1,0 +1,189 @@
+<div class="zc-sheet zc-personnage">
+
+  {{!-- Identité --}}
+  <header class="zc-top">
+    <div class="zc-logo"><span class="zc-logo-z">Z</span><span class="zc-logo-corps">CORPS</span></div>
+    <div class="zc-identity">
+      <div class="zc-row">
+        <label class="zc-field grow">Nom <input type="text" name="name" value="{{actor.name}}"></label>
+        <label class="zc-field">Pseudo <input type="text" name="system.pseudo" value="{{system.pseudo}}"></label>
+        <label class="zc-field small">Genre <input type="text" name="system.genre" value="{{system.genre}}"></label>
+      </div>
+      <div class="zc-row">
+        <label class="zc-field small">Âge <input type="text" name="system.age" value="{{system.age}}"></label>
+        <label class="zc-field small">Taille <input type="text" name="system.taille" value="{{system.taille}}"></label>
+        <label class="zc-field small">Poids <input type="text" name="system.poids" value="{{system.poids}}"></label>
+        <label class="zc-field grow">Carrière <input type="text" name="system.carriere" value="{{system.carriere}}"></label>
+      </div>
+      <label class="zc-field zc-block">Historique
+        <textarea name="system.historique" rows="3">{{system.historique}}</textarea>
+      </label>
+    </div>
+  </header>
+
+  <div class="zc-columns">
+
+    {{!-- Attributs et compétences --}}
+    <div class="zc-attributes">
+      {{#each attributeBlocks as |block|}}
+      <section class="zc-attr">
+        <header class="zc-band">
+          <a class="zc-roll-link" data-action="rollAttribute" data-attribute="{{block.key}}"
+             data-tooltip="Lancer {{block.label}} (Maj+clic : sans options)">{{block.label}}</a>
+          <input class="zc-code{{#unless block.attr.valid}} invalid{{/unless}}" type="text"
+                 name="system.attributes.{{block.key}}.code" value="{{block.attr.code}}" data-tooltip="Code de l'attribut (ex. 3D+1)">
+        </header>
+        <ol class="zc-skills">
+          <li class="zc-skill-head"><span></span><span>Bonus</span><span>Total</span><span></span></li>
+          {{#each block.skills as |skill|}}
+          <li class="zc-skill{{#if skill.trained}} trained{{/if}}">
+            <a class="zc-roll-link" data-action="rollSkill" data-skill="{{skill.key}}">{{skill.label}}</a>
+            <input class="zc-code{{#unless skill.valid}} invalid{{/unless}}" type="text"
+                   name="system.skills.{{skill.key}}.bonus" value="{{skill.bonus}}">
+            <span class="zc-total">{{skill.total}}</span>
+            <span></span>
+          </li>
+          {{/each}}
+          {{#each block.custom as |skill|}}
+          <li class="zc-skill trained custom" data-item-id="{{skill.id}}">
+            <a class="zc-roll-link" data-action="rollCustomSkill">{{skill.name}}</a>
+            <input class="zc-code{{#unless skill.valid}} invalid{{/unless}}" type="text"
+                   data-item-field="system.bonus" value="{{skill.bonus}}">
+            <span class="zc-total">{{skill.total}}</span>
+            <span class="zc-controls">
+              <a data-action="itemEdit" data-tooltip="Modifier"><i class="fa-solid fa-pen"></i></a>
+              <a data-action="itemDelete" data-tooltip="Supprimer"><i class="fa-solid fa-trash"></i></a>
+            </span>
+          </li>
+          {{/each}}
+          {{#if @root.editable}}
+          <li class="zc-add">
+            <a data-action="itemCreate" data-type="competence" data-attribute="{{block.key}}">
+              <i class="fa-solid fa-plus"></i> Ajouter une compétence
+            </a>
+          </li>
+          {{/if}}
+        </ol>
+      </section>
+      {{/each}}
+    </div>
+
+    {{!-- Colonne de droite --}}
+    <aside class="zc-side">
+      <img class="zc-portrait" src="{{actor.img}}" alt="" data-action="editPortrait" data-tooltip="Changer l'image">
+
+      <section class="zc-box zc-wounds">
+        <h3>Niveaux de blessures</h3>
+        <ul>
+          {{#each wounds as |w|}}
+          <li class="{{#if w.checked}}checked{{/if}}{{#if w.current}} current{{/if}}">
+            <a class="zc-check" data-action="setWound" data-level="{{w.level}}"></a>
+            <span class="zc-range">{{w.range}}</span>
+            <span class="zc-label">{{w.label}}</span>
+            <span class="zc-penalty">{{w.penaltyLabel}}</span>
+          </li>
+          {{/each}}
+        </ul>
+        <button type="button" data-action="takeDamage"><i class="fa-solid fa-heart-crack"></i> Encaisser des dégâts</button>
+      </section>
+
+      <section class="zc-box zc-stress">
+        <h3>Échelle de stress</h3>
+        <div class="zc-stress-scale">
+          {{#each stress as |s|}}
+          <div class="zc-stress-step{{#if s.reached}} reached{{/if}}{{#if s.current}} current{{/if}}">
+            <span class="zc-stress-label">{{s.label}}</span>
+            <span class="zc-stress-die">{{s.die}}</span>
+            <a class="zc-check" data-action="setStress" data-level="{{s.level}}"></a>
+            <span class="zc-stress-effect">{{s.effect}}</span>
+          </div>
+          {{/each}}
+        </div>
+        <button type="button" data-action="rollStress"><i class="fa-solid fa-dice"></i> Test de stress ({{stressCurrent.die}})</button>
+        <label class="zc-field zc-block">Traumas
+          <textarea name="system.stress.trauma" rows="2">{{system.stress.trauma}}</textarea>
+        </label>
+      </section>
+
+      <section class="zc-box zc-points">
+        <label class="zc-point">Points de Cojones
+          <input type="number" min="0" name="system.cojones.value" value="{{system.cojones.value}}">
+        </label>
+        <label class="zc-point">Points de Personnage
+          <input type="number" min="0" name="system.cp.value" value="{{system.cp.value}}">
+        </label>
+        <label class="zc-field">Bonus aux dégâts
+          <input type="text" name="system.damageBonus" value="{{system.damageBonus}}">
+        </label>
+        <label class="zc-field">Mouvement
+          <input type="text" name="system.movement" value="{{system.movement}}">
+        </label>
+        <label class="zc-field">Niveau de vie
+          <input type="text" name="system.lifeLevel" value="{{system.lifeLevel}}">
+        </label>
+      </section>
+    </aside>
+  </div>
+
+  {{!-- Accoutumance + pouvoirs occultes --}}
+  <section class="zc-box zc-accoutumance">
+    <header class="zc-band">
+      <span>Accoutumance</span>
+      <span class="zc-accou-controls">
+        <a data-action="stepAccoutumance" data-step="-1" data-tooltip="-1"><i class="fa-solid fa-minus"></i></a>
+        <span class="zc-accou-value">{{accoutumance.value}} / {{accoutumance.max}}</span>
+        <a data-action="stepAccoutumance" data-step="1" data-tooltip="+1"><i class="fa-solid fa-plus"></i></a>
+      </span>
+    </header>
+    <div class="zc-gauge">
+      {{#each accoutumance.cells as |cell|}}
+      <a class="zc-cell{{#if cell.filled}} filled{{/if}}{{#if cell.threshold}} threshold{{/if}}"
+         data-action="setAccoutumance" data-value="{{cell.value}}" data-tooltip="{{cell.value}}">
+        {{#if cell.threshold}}<span class="zc-tick">{{cell.value}}</span>{{/if}}
+      </a>
+      {{/each}}
+    </div>
+    <div class="zc-occult">
+      {{#each occult as |p|}}
+      <div class="zc-occult-row">
+        <input type="text" class="zc-occult-name" name="system.occult.{{p.key}}.name" value="{{p.name}}">
+        <input type="text" class="zc-occult-effect" name="system.occult.{{p.key}}.effect" value="{{p.effect}}">
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+  {{> "systems/zcorps-vtt/templates/actor/parts/weapons.hbs"}}
+
+  {{!-- Équipement --}}
+  <section class="zc-box zc-equipment">
+    <header class="zc-band">
+      <span>Équipement</span>
+      {{#if editable}}<a data-action="itemCreate" data-type="equipement" data-tooltip="Ajouter"><i class="fa-solid fa-plus"></i></a>{{/if}}
+    </header>
+    <table>
+      <thead><tr><th></th><th>Objet</th><th>Qté</th><th>Protection</th><th>Porté</th><th></th></tr></thead>
+      <tbody>
+        {{#each equipment as |e|}}
+        <tr data-item-id="{{e.id}}">
+          <td><img src="{{e.img}}" alt="" class="zc-item-img"></td>
+          <td><a data-action="itemEdit">{{e.name}}</a></td>
+          <td><input type="number" min="0" data-item-field="system.quantity" value="{{e.quantity}}"></td>
+          <td>{{e.protection}}</td>
+          <td><input type="checkbox" data-item-field="system.equipped" {{checked e.equipped}}></td>
+          <td class="zc-controls">
+            <a data-action="itemEdit" data-tooltip="Modifier"><i class="fa-solid fa-pen"></i></a>
+            <a data-action="itemDelete" data-tooltip="Supprimer"><i class="fa-solid fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <textarea name="system.equipmentNotes" rows="4">{{system.equipmentNotes}}</textarea>
+  </section>
+
+  <section class="zc-box">
+    <header class="zc-band"><span>Notes</span></header>
+    <textarea name="system.notes" rows="4">{{system.notes}}</textarea>
+  </section>
+</div>
