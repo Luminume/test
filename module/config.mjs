@@ -130,3 +130,13 @@ export const STARTING = {
   cojones: 1,
   cp: 5
 };
+
+/**
+ * Progression permanente avec les points de personnage (p. 23 et 26).
+ * Le barème détaillé est dans « Récompenser les joueurs » : valeurs OpenD6 par défaut, à ajuster ici.
+ * Chaque achat ajoute 1 tiers (+1). Coût = chiffre devant le D de la valeur actuelle × multiplicateur.
+ */
+export const ADVANCEMENT = {
+  skillMultiplier: 1,
+  attributeMultiplier: 10
+};

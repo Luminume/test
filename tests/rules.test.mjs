@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  woundFromMargin, nextWoundLevel, damageBonusPips, movement, outcome,
+  woundFromMargin, nextWoundLevel, damageBonusPips, movement, outcome, advancementCost, nextSkillBonus,
   thresholdsCrossed, thresholdsReached
 } from "../module/rules.mjs";
 
@@ -49,4 +49,14 @@ test("paliers d'accoutumance", () => {
   assert.deepEqual(thresholdsCrossed(9, 30, t), [10, 20, 30]);
   assert.deepEqual(thresholdsCrossed(12, 8, t), []);
   assert.equal(thresholdsReached(20, t), 2);
+});
+
+test("progression avec les points de personnage", () => {
+  assert.equal(advancementCost(13), 4);        // compétence 4D+1 -> 4 PP
+  assert.equal(advancementCost(2), 1);         // minimum 1
+  assert.equal(advancementCost(9, 10), 30);    // attribut 3D -> 30 PP
+  assert.equal(nextSkillBonus(0, false), -2);  // non sélectionnée : -1D devient -1D+1
+  assert.equal(nextSkillBonus(-2, true), -1);
+  assert.equal(nextSkillBonus(-1, true), 0);   // retour au niveau de la Caractéristique
+  assert.equal(nextSkillBonus(5, true), 6);    // +1D+2 -> +2D
 });

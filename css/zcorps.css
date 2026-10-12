@@ -369,3 +369,10 @@
 .zc-dialog .zc-roll-options .form-group label { flex: 2; }
 .zc-dialog .zc-roll-options .form-group input,
 .zc-dialog .zc-roll-options .form-group select { flex: 1; }
+
+/* --- Progression ----------------------------------------- */
+
+.zc-sheet a.zc-improve { color: var(--zc-blood); font-size: 13px; }
+.zc-sheet .zc-band a.zc-improve { color: #fff; }
+.zc-sheet .zc-band a.zc-improve:hover { color: #f3c1c1; }
+.zc-sheet button.zc-progression-toggle.active { background: #2b4a6b; }

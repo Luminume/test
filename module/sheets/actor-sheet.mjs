@@ -1,5 +1,6 @@
-import { SYSTEM_ID, ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS } from "../config.mjs";
+import { SYSTEM_ID, ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, ADVANCEMENT } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
+import { advancementCost } from "../rules.mjs";
 
 const { HandlebarsApplicationMixin, DialogV2 } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -53,6 +54,18 @@ function onSetStress(event, target) {
   const level = Number(target.dataset.level);
   const current = this.document.system.stress.value;
   return this.document.update({ "system.stress.value": current === level ? Math.max(0, level - 1) : level });
+}
+
+/** Affiche ou masque les boutons de progression. */
+function onToggleProgression() {
+  this.progression = !this.progression;
+  return this.render();
+}
+
+function onImprove(event, target) {
+  const { type, key } = target.dataset;
+  const id = type === "custom" ? target.closest("[data-item-id]").dataset.itemId : key;
+  return this.document.improve(type, id);
 }
 
 function onRollStress() {
@@ -148,7 +161,9 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemCreate: onItemCreate,
       itemEdit: onItemEdit,
       itemDelete: onItemDelete,
-      editPortrait: onEditPortrait
+      editPortrait: onEditPortrait,
+      toggleProgression: onToggleProgression,
+      improve: onImprove
     }
   };
 
@@ -158,20 +173,34 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const system = actor.system;
     const items = actor.items.contents.sort((a, b) => (a.sort - b.sort) || a.name.localeCompare(b.name));
 
+    const skillCost = pips => advancementCost(pips, ADVANCEMENT.skillMultiplier);
+
     Object.assign(context, {
       actor,
       system,
       editable: this.isEditable,
+      progression: this.isEditable && actor.type === "personnage" && !!this.progression,
       attributeBlocks: Object.entries(ATTRIBUTES).map(([key, label]) => ({
         key,
         label,
         attr: system.attributes[key],
+        cost: advancementCost(system.attributes[key].pips, ADVANCEMENT.attributeMultiplier),
+        next: pipsToCode(system.attributes[key].pips + 1),
         skills: system.skills
-          ? Object.entries(SKILLS).filter(([, s]) => s.attribute === key).map(([k]) => ({ key: k, ...system.skills[k] }))
+          ? Object.entries(SKILLS).filter(([, s]) => s.attribute === key).map(([k]) => ({
+            key: k,
+            ...system.skills[k],
+            cost: skillCost(system.skills[k].pips),
+            next: pipsToCode(system.skills[k].pips + 1)
+          }))
           : [],
         custom: items.filter(i => i.type === "competence" && i.system.attribute === key).map(i => {
           const bonus = codeToPips(i.system.bonus);
-          return { id: i.id, name: i.name, bonus: i.system.bonus, valid: bonus.valid, total: pipsToCode(actor.customSkillPips(i)) };
+          const pips = actor.customSkillPips(i);
+          return {
+            id: i.id, name: i.name, bonus: i.system.bonus, valid: bonus.valid,
+            total: pipsToCode(pips), cost: skillCost(pips), next: pipsToCode(pips + 1)
+          };
         })
       })),
       wounds: WOUNDS.slice(1).map(w => ({

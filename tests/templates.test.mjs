@@ -49,6 +49,17 @@ test("fiche personnage", () => {
   assert.ok(html.includes('data-zc') === false);
 });
 
+test("mode progression", () => {
+  const ctx = actorContext();
+  assert.ok(!render("templates/actor/personnage.hbs", ctx).includes('data-action="improve"'));
+  ctx.progression = true;
+  const html = render("templates/actor/personnage.hbs", ctx);
+  // 6 Caractéristiques + 48 compétences de base + 6 compétences ajoutées
+  assert.equal((html.match(/data-action="improve"/g) || []).length, 6 + 48 + 6);
+  assert.ok(html.includes("Terminer la progression"));
+  assert.ok(!html.includes('data-action="itemEdit" data-tooltip="Modifier"><i class="fa-solid fa-pen"></i></a>\n              <a data-action="itemDelete"'));
+});
+
 test("fiche PNJ, objet, dialogue, chat", () => {
   assert.ok(render("templates/actor/pnj.hbs", actorContext()).includes("Kung-fu"));
   const item = render("templates/item/item.hbs", {

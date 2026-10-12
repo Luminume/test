@@ -43,6 +43,12 @@ et contenir `system.json`), puis relancer Foundry.
   Malus -1D / -1D / -2D / -3D sur les jets de Compétence et de Caractéristique uniquement.
 - **Bonus aux dégâts** et **Déplacement** calculés automatiquement (p. 22-23), avec saisie possible pour les remplacer.
   Une arme dont les dégâts commencent par « + » s'ajoute au bonus aux dégâts (p. 57).
+- **Progression** (p. 23 et 26) : bouton « Progression » sous les points de personnage, puis
+  <i>▲</i> à côté d'une Caractéristique ou d'une compétence pour gagner +1 tiers. Coût actuel
+  (barème OpenD6, le chapitre « Récompenser les joueurs » n'étant pas dans les extraits) :
+  chiffre devant le D de la valeur actuelle pour une compétence, ×10 pour une Caractéristique.
+  Une compétence non sélectionnée passe de Caractéristique -1D à -1D+1 et devient sélectionnée.
+  Réglable dans `ADVANCEMENT` (`module/config.mjs`). Chaque achat est noté dans le chat.
 - **Initiative** : Test d'Agilité avec Joker ; une action par tranche de 10 points (p. 28).
 - **Départ** : 3D par Caractéristique (18D à répartir), 5 points de personnage, 1 point de Cojones.
 

@@ -46,6 +46,22 @@ export function outcome(total, difficulty) {
   return "failure";
 }
 
+/**
+ * Coût en points de personnage pour gagner 1 tiers :
+ * chiffre devant le D de la valeur actuelle (minimum 1) × multiplicateur.
+ */
+export function advancementCost(currentPips, multiplier = 1) {
+  return Math.max(1, Math.floor(currentPips / 3)) * multiplier;
+}
+
+/**
+ * Nouveau bonus d'une compétence de base après +1 tiers.
+ * Non sélectionnée (Caractéristique -1D) : elle devient sélectionnée à Caractéristique -1D+1 (bonus -2).
+ */
+export function nextSkillBonus(bonusPips, trained) {
+  return trained ? bonusPips + 1 : -2;
+}
+
 /** Paliers franchis à la hausse entre deux valeurs. */
 export function thresholdsCrossed(before, after, thresholds) {
   return thresholds.filter(t => before < t && after >= t);

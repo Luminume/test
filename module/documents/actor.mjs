@@ -1,6 +1,6 @@
-import { SKILLS, STRESS, WOUNDS, ACCOUTUMANCE } from "../config.mjs";
+import { SKILLS, STRESS, WOUNDS, ACCOUTUMANCE, ADVANCEMENT } from "../config.mjs";
 import { codeToPips, pipsToCode, rollFormula } from "../dice-code.mjs";
-import { nextWoundLevel, thresholdsCrossed } from "../rules.mjs";
+import { nextWoundLevel, thresholdsCrossed, advancementCost, nextSkillBonus } from "../rules.mjs";
 import { rollD6, rollSimple, postChat } from "../dice/roll.mjs";
 
 const escape = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
@@ -167,5 +167,73 @@ export class ZCorpsActor extends Actor {
         };
       }
     });
+  }
+
+  /* -------------------------------------------- */
+  /*  Progression (points de personnage)          */
+  /* -------------------------------------------- */
+
+  /**
+   * Ce que coûte et rapporte +1 tiers sur une Caractéristique, une compétence de base
+   * ou une compétence ajoutée.
+   * @param {"attribute"|"skill"|"custom"} type
+   * @param {string} id  clé de Caractéristique / de compétence, ou id de l'objet
+   */
+  advancementPlan(type, id) {
+    const bonusCode = p => (p ? pipsToCode(p, { signed: true }) : "");
+    if (type === "attribute") {
+      const attr = this.system.attributes[id];
+      return {
+        label: attr.label,
+        from: attr.pips,
+        cost: advancementCost(attr.pips, ADVANCEMENT.attributeMultiplier),
+        apply: () => this.update({ [`system.attributes.${id}.code`]: pipsToCode(attr.pips + 1) })
+      };
+    }
+    if (type === "skill") {
+      const skill = this.system.skills[id];
+      const bonus = nextSkillBonus(codeToPips(skill.bonus).pips, skill.trained);
+      return {
+        label: skill.label,
+        from: skill.pips,
+        cost: advancementCost(skill.pips, ADVANCEMENT.skillMultiplier),
+        note: skill.trained ? "" : "La compétence devient sélectionnée.",
+        apply: () => this.update({ [`system.skills.${id}.selected`]: true, [`system.skills.${id}.bonus`]: bonusCode(bonus) })
+      };
+    }
+    const item = this.items.get(id);
+    const from = this.customSkillPips(item);
+    return {
+      label: item.name,
+      from,
+      cost: advancementCost(from, ADVANCEMENT.skillMultiplier),
+      apply: () => item.update({ "system.bonus": bonusCode(codeToPips(item.system.bonus).pips + 1) })
+    };
+  }
+
+  /** Dépense des points de personnage pour gagner 1 tiers, après confirmation. */
+  async improve(type, id) {
+    const plan = this.advancementPlan(type, id);
+    const available = this.system.cp.value;
+    const from = pipsToCode(plan.from);
+    const to = pipsToCode(plan.from + 1);
+    if (available < plan.cost) {
+      ui.notifications.warn(`${plan.label} : il faut ${plan.cost} points de personnage (${available} disponibles).`);
+      return false;
+    }
+    const ok = await foundry.applications.api.DialogV2.confirm({
+      window: { title: "Progression" },
+      content: `<p>Améliorer <strong>${escape(plan.label)}</strong> de ${from} à <strong>${to}</strong>
+        pour <strong>${plan.cost}</strong> point(s) de personnage (${available} disponibles) ?</p>
+        ${plan.note ? `<p>${plan.note}</p>` : ""}`,
+      rejectClose: false
+    });
+    if (!ok) return false;
+    await plan.apply();
+    await this.update({ "system.cp.value": available - plan.cost });
+    await postChat(this, `<div class="zc-roll"><header class="zc-roll-title">Progression</header>
+      <p><strong>${escape(plan.label)}</strong> : ${from} → <strong>${to}</strong></p>
+      <div class="zc-note">${plan.cost} point(s) de personnage dépensé(s), reste ${available - plan.cost}.</div></div>`);
+    return true;
   }
 }

@@ -32,6 +32,10 @@
              data-tooltip="Lancer {{block.label}} (Maj+clic : sans options)">{{block.label}}</a>
           <input class="zc-code{{#unless block.attr.valid}} invalid{{/unless}}" type="text"
                  name="system.attributes.{{block.key}}.code" value="{{block.attr.code}}" data-tooltip="Code de l'attribut (ex. 3D+1)">
+          {{#if @root.progression}}
+          <a class="zc-improve" data-action="improve" data-type="attribute" data-key="{{block.key}}"
+             data-tooltip="Passer à {{block.next}} : {{block.cost}} PP"><i class="fa-solid fa-circle-up"></i></a>
+          {{/if}}
         </header>
         <ol class="zc-skills">
           <li class="zc-skill-head"><span></span><span></span><span>Bonus</span><span>Total</span><span></span></li>
@@ -43,7 +47,12 @@
             <input class="zc-code{{#unless skill.valid}} invalid{{/unless}}" type="text"
                    name="system.skills.{{skill.key}}.bonus" value="{{skill.bonus}}">
             <span class="zc-total">{{skill.total}}</span>
-            <span></span>
+            <span class="zc-controls">
+              {{#if @root.progression}}
+              <a class="zc-improve" data-action="improve" data-type="skill" data-key="{{skill.key}}"
+                 data-tooltip="Passer à {{skill.next}} : {{skill.cost}} PP"><i class="fa-solid fa-circle-up"></i></a>
+              {{/if}}
+            </span>
           </li>
           {{/each}}
           {{#each block.custom as |skill|}}
@@ -54,8 +63,13 @@
                    data-item-field="system.bonus" value="{{skill.bonus}}">
             <span class="zc-total">{{skill.total}}</span>
             <span class="zc-controls">
+              {{#if @root.progression}}
+              <a class="zc-improve" data-action="improve" data-type="custom"
+                 data-tooltip="Passer à {{skill.next}} : {{skill.cost}} PP"><i class="fa-solid fa-circle-up"></i></a>
+              {{else}}
               <a data-action="itemEdit" data-tooltip="Modifier"><i class="fa-solid fa-pen"></i></a>
               <a data-action="itemDelete" data-tooltip="Supprimer"><i class="fa-solid fa-trash"></i></a>
+              {{/if}}
             </span>
           </li>
           {{/each}}
@@ -115,6 +129,15 @@
         <label class="zc-point">Points de Personnage
           <input type="number" min="0" name="system.cp.value" value="{{system.cp.value}}">
         </label>
+        {{#if editable}}
+        <button type="button" class="zc-progression-toggle{{#if progression}} active{{/if}}" data-action="toggleProgression">
+          <i class="fa-solid fa-circle-up"></i> {{#if progression}}Terminer la progression{{else}}Progression{{/if}}
+        </button>
+        {{#if progression}}
+        <p class="zc-hint">Clique sur <i class="fa-solid fa-circle-up"></i> à côté d'une Caractéristique ou d'une compétence
+          pour gagner +1 tiers ; le coût s'affiche au survol.</p>
+        {{/if}}
+        {{/if}}
         <label class="zc-field" data-tooltip="Calculé depuis la Puissance ; saisir une valeur pour le remplacer">Bonus aux dégâts
           <input type="text" name="system.damageBonus" value="{{system.damageBonus}}" placeholder="{{system.damageBonusAuto}}">
         </label>
