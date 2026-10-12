@@ -145,7 +145,7 @@
 
 .zc-skill, .zc-skill-head {
   display: grid;
-  grid-template-columns: 1fr 52px 52px 34px;
+  grid-template-columns: 16px 1fr 52px 52px 34px;
   gap: 4px;
   align-items: center;
   padding: 1px 0;
@@ -153,6 +153,7 @@
 .zc-skill-head { font-size: 10px; color: var(--zc-muted); text-transform: uppercase; }
 .zc-skill-head span { text-align: center; }
 
+.zc-sheet .zc-skill input[type="checkbox"] { margin: 0; width: 13px; height: 13px; }
 .zc-skill .zc-code { text-align: center; height: 20px; padding: 0 2px; }
 .zc-skill .zc-total { text-align: center; color: var(--zc-muted); }
 .zc-skill.trained .zc-total { color: var(--zc-ink); font-weight: 700; }
@@ -346,6 +347,10 @@
 .zc-complication { background: #fff1c9; color: #5c4400; padding: 4px; margin-top: 4px; border-radius: 3px; }
 .zc-highlight { text-align: center; font-weight: 800; font-size: 16px; color: #7d1414; margin-top: 4px; }
 .zc-note { font-size: 11px; color: #666; }
+.zc-outcome.tie { background: #e6e1d6; color: #4a3f2a; }
+.zc-critical-success { text-align: center; font-weight: 700; color: #1e4d1e; font-size: 12px; }
+.zc-complication ul { margin: 2px 0 0; padding-left: 18px; }
+.zc-hint { font-size: 11px; color: #7a6a62; margin: 0; }
 .zc-roll .zc-apply-damage { margin-top: 6px; }
 
 /* --- Fenêtres de dialogue -------------------------------- */

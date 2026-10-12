@@ -4,7 +4,7 @@ import { ArmeData, EquipementData, CompetenceData } from "./data/item.mjs";
 import { ZCorpsActor } from "./documents/actor.mjs";
 import { PersonnageSheet, PnjSheet } from "./sheets/actor-sheet.mjs";
 import { ZCorpsItemSheet } from "./sheets/item-sheet.mjs";
-import { rollD6 } from "./dice/roll.mjs";
+import { rollD6, rerollWithCojones } from "./dice/roll.mjs";
 import { codeToPips, pipsToCode } from "./dice-code.mjs";
 
 const { SYSTEM_ID } = config;
@@ -37,15 +37,10 @@ Hooks.once("init", () => {
     makeDefault: true, label: "Objet Z-Corps"
   });
 
-  game.settings.register(SYSTEM_ID, "complicationOnOne", {
-    name: "Complication sur un 1 du dé libre",
-    hint: "Signale la complication et calcule le total sans le 1 et sans le dé le plus haut.",
-    scope: "world", config: true, type: Boolean, default: true
-  });
-  game.settings.register(SYSTEM_ID, "wildDieOnDamage", {
-    name: "Dé libre sur les jets de dégâts et de résistance",
-    hint: "Si coché, ces jets utilisent aussi un dé libre explosif.",
-    scope: "world", config: true, type: Boolean, default: false
+  game.settings.register(SYSTEM_ID, "maxCpPerRoll", {
+    name: "Maximum de points de personnage par jet",
+    hint: "Fixé par le MJ selon le ton de l'aventure (p. 26) : 2 pour une aventure facile, 3 pour une aventure cinématique, 0 = pas de limite.",
+    scope: "world", config: true, type: Number, default: 0
   });
 
   foundry.applications.handlebars.loadTemplates([
@@ -55,8 +50,14 @@ Hooks.once("init", () => {
   ]);
 });
 
-/** Bouton « Appliquer les dégâts » des cartes de chat. */
+/** Boutons des cartes de chat : appliquer les dégâts, relancer avec un point de Cojones. */
 Hooks.on("renderChatMessageHTML", (message, html) => {
+  for (const button of html.querySelectorAll("[data-zc-reroll]")) {
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      rerollWithCojones(message);
+    });
+  }
   for (const button of html.querySelectorAll("[data-zc-apply-damage]")) {
     button.addEventListener("click", async event => {
       event.preventDefault();

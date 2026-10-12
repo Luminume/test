@@ -43,10 +43,10 @@ export class ZCorpsActor extends Actor {
     }
   }
 
-  /** Initiative : jet de Perception (dé libre compris). */
+  /** Initiative : Test d'Agilité avec dé Joker (p. 28). Une action par tranche de 10 points. */
   getRollData() {
     const data = Object.assign({}, super.getRollData());
-    data.initiative = rollFormula(this.system.attributes.perception.pips);
+    data.initiative = rollFormula(this.system.attributes.agilite.pips);
     return data;
   }
 
@@ -62,10 +62,10 @@ export class ZCorpsActor extends Actor {
   rollSkill(key, { fast = false } = {}) {
     const skill = this.system.skills?.[key];
     if (skill) return rollD6(this, { label: skill.label, pips: skill.pips, fast });
-    // Compétence de base sans entrée sur la fiche (PNJ) : on lance l'attribut.
+    // Compétence de base sans entrée sur la fiche (PNJ) : Caractéristique -1D (p. 22).
     const def = SKILLS[key];
     const attr = this.system.attributes[def.attribute];
-    return rollD6(this, { label: def.label, pips: attr.pips, fast, notes: [`Non entraînée : ${attr.label} seul`] });
+    return rollD6(this, { label: def.label, pips: attr.pips - 3, fast, notes: [`Non sélectionnée : ${attr.label} -1D`] });
   }
 
   /** Total d'une compétence ajoutée en objet. */
@@ -83,7 +83,7 @@ export class ZCorpsActor extends Actor {
     if (custom) return this.customSkillPips(custom);
     const skill = this.system.skills?.[item.system.skill];
     if (skill) return skill.pips;
-    return this.system.attributes[SKILLS[item.system.skill].attribute].pips;
+    return this.system.attributes[SKILLS[item.system.skill].attribute].pips - 3;
   }
 
   async rollWeaponAttack(item, { fast = false } = {}) {
@@ -104,14 +104,19 @@ export class ZCorpsActor extends Actor {
     return result;
   }
 
+  /** Un code de dégâts précédé de « + » s'ajoute au bonus aux dégâts (p. 57). */
+  static addsDamageBonus(item) {
+    return item.system.damage.trim().startsWith("+");
+  }
+
   weaponDamagePips(item) {
     let pips = codeToPips(item.system.damage).pips;
-    if (item.system.addDamageBonus) pips += this.system.damageBonusPips;
+    if (ZCorpsActor.addsDamageBonus(item)) pips += this.system.damageBonusPips;
     return pips;
   }
 
   rollWeaponDamage(item, { fast = false } = {}) {
-    const notes = item.system.addDamageBonus && this.system.damageBonusPips
+    const notes = ZCorpsActor.addsDamageBonus(item)
       ? [`Bonus aux dégâts inclus (${pipsToCode(this.system.damageBonusPips, { signed: true })})`] : [];
     return rollD6(this, { label: `Dégâts — ${item.name}`, pips: this.weaponDamagePips(item), kind: "damage", fast, notes });
   }
@@ -152,11 +157,13 @@ export class ZCorpsActor extends Actor {
         const before = this.system.wounds.value;
         const after = nextWoundLevel(before, margin);
         if (after !== before) await this.update({ "system.wounds.value": after });
+        const notes = [`Dégâts ${damage} − résistance ${result.total} = ${margin}`];
+        if (after !== before && WOUNDS[after].effect) notes.push(WOUNDS[after].effect);
         return {
           highlight: after === before
-            ? (margin < 0 ? "Aucun effet" : `Reste ${WOUNDS[after].label}`)
+            ? (margin <= 0 ? "Aucune blessure" : `Reste ${WOUNDS[after].label}`)
             : WOUNDS[after].label,
-          notes: [`Dégâts ${damage} − résistance ${result.total} = marge ${margin}`]
+          notes
         };
       }
     });

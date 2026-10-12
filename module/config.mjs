@@ -74,20 +74,26 @@ export const SKILLS = {
 };
 
 /**
- * Niveaux de blessure (index = valeur stockée dans system.wounds.value).
- * `penalty` = dés retirés aux jets. À VÉRIFIER dans les règles.
+ * Niveaux de blessure (index = valeur stockée dans system.wounds.value), p. 63.
+ * `penalty` = dés retirés aux jets de Compétence et de Caractéristique (non cumulables).
  */
 export const WOUNDS = [
   { level: 0, label: "Indemne", range: "", penalty: 0 },
-  { level: 1, label: "Sonné", range: "0 à 3", penalty: 1 },
-  { level: 2, label: "Blessé", range: "4 à 8", penalty: 1 },
-  { level: 3, label: "Gravement blessé", range: "4 à 8", penalty: 2 },
-  { level: 4, label: "Handicapé", range: "9 à 12", penalty: 3 },
-  { level: 5, label: "Mortellement blessé", range: "13 à 15", penalty: 0, incapacitated: true },
-  { level: 6, label: "Mort", range: "16+", penalty: 0, incapacitated: true }
+  { level: 1, label: "Sonné", range: "1 à 3", penalty: 1,
+    effect: "-1D aux actions restantes du round et au round suivant (ou seulement se défendre / battre en retraite)." },
+  { level: 2, label: "Blessé", range: "4 à 8", penalty: 1, effect: "-1D à toutes les actions jusqu'à la guérison." },
+  { level: 3, label: "Gravement blessé", range: "4 à 8", penalty: 2, effect: "-2D à toutes les actions jusqu'à la guérison." },
+  { level: 4, label: "Handicapé", range: "9 à 12", penalty: 3,
+    effect: "Test de Volonté ou d'Endurance Moyen (15) pour rester debout avec -3D, sinon K.O. pendant 10D minutes." },
+  { level: 5, label: "Mortellement blessé", range: "13 à 15", penalty: 0, incapacitated: true,
+    effect: "Inconscient. Test de Puissance chaque round : mort si le résultat est inférieur au nombre de minutes écoulées." },
+  { level: 6, label: "Mort", range: "16+", penalty: 0, incapacitated: true, effect: "Désolé. Game over." }
 ];
 
-/** Échelle de stress, reprise de la fiche (dé du test et effet indiqué sous la case). */
+/**
+ * Échelle de stress, reprise de la fiche (dé du test et effet indiqué sous la case).
+ * Le chapitre « Stress et Folies » n'a pas encore été intégré.
+ */
 export const STRESS = [
   { label: "Calme", die: "d8", effect: "" },
   { label: "Énervé", die: "d10", effect: "-1D×1" },
@@ -106,7 +112,7 @@ export const ACCOUTUMANCE = {
 /** Nombre d'emplacements de pouvoirs occultes sous la jauge. */
 export const OCCULT_SLOTS = 6;
 
-/** Seuils de difficulté D6 classiques. À VÉRIFIER. */
+/** Difficultés standard (p. 37). Le jet doit être strictement supérieur. */
 export const DIFFICULTIES = {
   0: "Aucune",
   5: "Très facile (5)",
@@ -114,5 +120,13 @@ export const DIFFICULTIES = {
   15: "Moyenne (15)",
   20: "Difficile (20)",
   25: "Très difficile (25)",
-  30: "Héroïque (30)"
+  30: "Héroïque (30)",
+  35: "Légendaire (35)"
+};
+
+/** Valeurs de départ d'un personnage (p. 22-23). */
+export const STARTING = {
+  attribute: "3D",
+  cojones: 1,
+  cp: 5
 };

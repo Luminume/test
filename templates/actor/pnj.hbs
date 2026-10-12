@@ -4,8 +4,8 @@
     <div class="zc-identity">
       <label class="zc-field grow">Nom <input type="text" name="name" value="{{actor.name}}"></label>
       <div class="zc-row">
-        <label class="zc-field">Bonus aux dégâts <input type="text" name="system.damageBonus" value="{{system.damageBonus}}"></label>
-        <label class="zc-field">Mouvement <input type="text" name="system.movement" value="{{system.movement}}"></label>
+        <label class="zc-field">Bonus aux dégâts <input type="text" name="system.damageBonus" value="{{system.damageBonus}}" placeholder="{{system.damageBonusAuto}}"></label>
+        <label class="zc-field">Déplacement <input type="text" name="system.movement" value="{{system.movement}}" placeholder="{{system.movementAuto}}"></label>
       </div>
     </div>
   </header>
@@ -22,6 +22,7 @@
         <ol class="zc-skills">
           {{#each block.custom as |skill|}}
           <li class="zc-skill trained custom" data-item-id="{{skill.id}}">
+            <span></span>
             <a class="zc-roll-link" data-action="rollCustomSkill">{{skill.name}}</a>
             <input class="zc-code{{#unless skill.valid}} invalid{{/unless}}" type="text"
                    data-item-field="system.bonus" value="{{skill.bonus}}">
@@ -46,7 +47,7 @@
         <h3>Niveaux de blessures</h3>
         <ul>
           {{#each wounds as |w|}}
-          <li class="{{#if w.checked}}checked{{/if}}{{#if w.current}} current{{/if}}">
+          <li class="{{#if w.checked}}checked{{/if}}{{#if w.current}} current{{/if}}" data-tooltip="{{w.effect}}">
             <a class="zc-check" data-action="setWound" data-level="{{w.level}}"></a>
             <span class="zc-range">{{w.range}}</span>
             <span class="zc-label">{{w.label}}</span>

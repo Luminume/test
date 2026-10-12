@@ -1,18 +1,21 @@
 import { SYSTEM_ID, DIFFICULTIES, WOUNDS } from "../config.mjs";
 import { pipsToCode, dicePlan } from "../dice-code.mjs";
+import { outcome } from "../rules.mjs";
 
 const TEMPLATES = {
   dialog: `systems/${SYSTEM_ID}/templates/dialog/roll-options.hbs`,
   chat: `systems/${SYSTEM_ID}/templates/chat/roll.hbs`
 };
 
+const OUTCOME_LABELS = { success: "Réussite", tie: "Égalité", failure: "Échec" };
+
 export function renderTemplate(path, data) {
   return foundry.applications.handlebars.renderTemplate(path, data);
 }
 
-export async function postChat(actor, content, rolls = []) {
+export async function postChat(actor, content, rolls = [], flags = {}) {
   const cls = ChatMessage.implementation;
-  const data = { speaker: cls.getSpeaker({ actor }), content, rolls };
+  const data = { speaker: cls.getSpeaker({ actor }), content, rolls, flags };
   if (rolls.length) {
     data.sound = CONFIG.sounds.dice;
     cls.applyRollMode(data, game.settings.get("core", "rollMode"));
@@ -20,19 +23,26 @@ export async function postChat(actor, content, rolls = []) {
   return cls.create(data);
 }
 
+/** Les Cojones ne s'utilisent que sur un Test propre au personnage (p. 26), pas sur les dégâts. */
+const cojonesAllowed = kind => kind !== "damage";
+
 /** Fenêtre d'options avant un jet. Renvoie null si le joueur annule. */
 async function promptRollOptions(actor, { label, pips, kind }) {
   const isTest = kind === "test";
   const hasResources = actor?.type === "personnage";
   const wound = WOUNDS[actor?.system.wounds?.value ?? 0];
+  const maxCp = game.settings.get(SYSTEM_ID, "maxCpPerRoll");
+  const cpAvailable = actor?.system.cp?.value ?? 0;
   const content = await renderTemplate(TEMPLATES.dialog, {
     code: pipsToCode(pips),
     isTest,
     difficulties: DIFFICULTIES,
-    woundPenalty: wound.penalty,
+    woundPenalty: isTest ? wound.penalty : 0,
     woundLabel: wound.label,
     hasResources,
-    cpAvailable: actor?.system.cp?.value ?? 0,
+    cpAvailable,
+    cpMax: maxCp > 0 ? Math.min(maxCp, cpAvailable) : cpAvailable,
+    allowCojones: cojonesAllowed(kind),
     cojonesAvailable: actor?.system.cojones?.value ?? 0
   });
 
@@ -68,23 +78,28 @@ async function promptRollOptions(actor, { label, pips, kind }) {
 }
 
 const resultsOf = roll => roll ? roll.dice.flatMap(d => d.results.filter(r => r.active).map(r => r.result)) : [];
+const sum = arr => arr.reduce((a, b) => a + b, 0);
 
 /**
- * Jet D6 complet : options, dé libre, points dépensés, carte de chat.
+ * Jet D6 complet : options, dé Joker, points dépensés, carte de chat.
  * @param {Actor} actor
  * @param {object} params
  * @param {string} params.label       Titre du jet
  * @param {number} params.pips        Code total, en crans
  * @param {"test"|"damage"|"resistance"} [params.kind]
  * @param {boolean} [params.fast]     Pas de fenêtre d'options (Maj+clic)
+ * @param {object} [params.preset]    Options imposées (relance Cojones)
  * @param {string[]} [params.notes]   Lignes ajoutées à la carte
  * @param {Function} [params.afterRoll] async (result) => ({notes, highlight}) avant l'envoi au chat
  * @returns {Promise<object|null>}
  */
-export async function rollD6(actor, { label, pips, kind = "test", fast = false, notes = [], afterRoll } = {}) {
+export async function rollD6(actor, { label, pips, kind = "test", fast = false, preset, notes = [], afterRoll } = {}) {
   const isTest = kind === "test";
-  let opts = { difficulty: 0, diceMod: 0, flatMod: 0, applyWound: isTest, cp: 0, cojones: false };
-  if (!fast && kind !== "resistance") {
+  const isPersonnage = actor?.type === "personnage";
+  let opts = { difficulty: 0, diceMod: 0, flatMod: 0, applyWound: isTest, cp: 0, cojones: false, ...preset };
+  // Les PNJ n'ont pas de points : inutile de demander pour leurs jets de résistance.
+  const ask = !fast && !preset && (kind !== "resistance" || isPersonnage);
+  if (ask) {
     const chosen = await promptRollOptions(actor, { label, pips, kind });
     if (!chosen) return null;
     opts = { ...opts, ...chosen };
@@ -96,48 +111,53 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
     lines.push(`Modificateur : ${pipsToCode(opts.diceMod * 3 + opts.flatMod, { signed: true })}`);
   }
 
+  // Malus de blessure : jets de Compétence et de Caractéristique uniquement (p. 63).
   const wound = WOUNDS[actor?.system.wounds?.value ?? 0];
-  if (opts.applyWound && wound.penalty) {
+  if (isTest && opts.applyWound && wound.penalty) {
     total -= wound.penalty * 3;
     lines.push(`Malus de blessure (${wound.label}) : -${wound.penalty}D`);
   }
   if (isTest && wound.incapacitated) lines.push(`Attention : ${wound.label}, le personnage ne devrait pas pouvoir agir.`);
 
-  // Dépense des points (personnages uniquement)
+  // Points de personnage OU Cojones, jamais les deux (p. 26).
   const update = {};
   let cp = 0;
-  if (actor?.type === "personnage") {
-    cp = Math.max(0, Math.min(opts.cp, actor.system.cp.value));
+  if (isPersonnage) {
+    if (opts.cp > 0 && opts.cojones) {
+      ui.notifications.warn("Points de personnage et Cojones ne se cumulent pas : seul le point de Cojones est utilisé.");
+      opts.cp = 0;
+    }
+    const maxCp = game.settings.get(SYSTEM_ID, "maxCpPerRoll");
+    cp = Math.max(0, Math.min(opts.cp, actor.system.cp.value, maxCp > 0 ? maxCp : Infinity));
     if (cp) {
       update["system.cp.value"] = actor.system.cp.value - cp;
       lines.push(`${cp} point(s) de personnage dépensé(s) : +${cp}D`);
     }
-    if (opts.cojones) {
+    if (opts.cojones && cojonesAllowed(kind)) {
       if (actor.system.cojones.value > 0) {
         update["system.cojones.value"] = actor.system.cojones.value - 1;
         total *= 2;
-        lines.push("Point de Cojones dépensé : dés doublés");
+        lines.push("Point de Cojones dépensé : dés et tiers doublés");
       } else {
         ui.notifications.warn("Plus de points de Cojones.");
       }
     }
   }
 
-  const useWild = isTest || game.settings.get(SYSTEM_ID, "wildDieOnDamage");
+  // Un seul dé Joker par jet, plus un Joker « doux » parmi les dés de points de personnage.
   const { dice, flat } = dicePlan(total);
-  const normalCount = useWild ? dice - 1 : dice;
-
-  const normalRoll = normalCount > 0 ? await new Roll(`${normalCount}d6`).evaluate() : null;
-  const wildRoll = useWild ? await new Roll("1d6x6").evaluate() : null;
-  const cpRoll = cp ? await new Roll(`${cp}d6x6`).evaluate() : null;
-  const rolls = [normalRoll, wildRoll, cpRoll].filter(Boolean);
+  const normalRoll = dice > 1 ? await new Roll(`${dice - 1}d6`).evaluate() : null;
+  const jokerRoll = await new Roll("1d6x6").evaluate();
+  const cpNormalRoll = cp > 1 ? await new Roll(`${cp - 1}d6`).evaluate() : null;
+  const cpJokerRoll = cp ? await new Roll("1d6x6").evaluate() : null;
+  const rolls = [normalRoll, jokerRoll, cpNormalRoll, cpJokerRoll].filter(Boolean);
 
   const normal = resultsOf(normalRoll);
-  const wild = resultsOf(wildRoll);
-  const cpDice = resultsOf(cpRoll);
-  const sum = arr => arr.reduce((a, b) => a + b, 0);
+  const wild = resultsOf(jokerRoll);
+  const cpDice = [...resultsOf(cpNormalRoll), ...resultsOf(cpJokerRoll)];
   const result = {
     label,
+    kind,
     code: pipsToCode(total),
     normal, wild, cp: cpDice, flat,
     total: sum(normal) + sum(wild) + sum(cpDice) + flat,
@@ -145,14 +165,18 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
     isDamage: kind === "damage"
   };
 
-  if (useWild && isTest && wild[0] === 1 && game.settings.get(SYSTEM_ID, "complicationOnOne")) {
-    result.complication = true;
-    result.altTotal = result.total - 1 - (normal.length ? Math.max(...normal) : 0);
+  // Échec critique : 1 au premier jet du Joker (p. 25). Option 1 du MJ : on retire le dé le plus haut.
+  if (wild[0] === 1) {
+    result.critical = true;
+    result.altTotal = result.total - Math.max(...normal, ...cpDice, 1);
   }
+  if (wild[0] === 6) result.criticalSuccess = true;
+
   if (result.difficulty > 0) {
+    result.outcome = outcome(result.total, result.difficulty);
+    result.outcomeLabel = OUTCOME_LABELS[result.outcome];
     result.margin = result.total - result.difficulty;
-    result.success = result.margin >= 0;
-    if (result.complication) result.altSuccess = result.altTotal >= result.difficulty;
+    if (result.critical) result.altOutcomeLabel = OUTCOME_LABELS[outcome(result.altTotal, result.difficulty)].toLowerCase();
   }
 
   if (Object.keys(update).length) await actor.update(update);
@@ -160,15 +184,45 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
   const extra = afterRoll ? await afterRoll(result) : null;
   if (extra?.notes) lines.push(...extra.notes);
 
+  // Relance d'un Test échoué avec un point de Cojones (2e option, p. 26).
+  const canReroll = isTest && isPersonnage && !opts.cojones && !preset?.reroll && result.outcome !== "success";
+
   const content = await renderTemplate(TEMPLATES.chat, {
     ...result,
     flatLabel: flat ? `+${flat}` : "",
-    marginLabel: result.margin >= 0 ? `+${result.margin}` : `${result.margin}`,
+    marginLabel: result.margin > 0 ? `+${result.margin}` : `${result.margin}`,
     highlight: extra?.highlight,
-    notes: lines
+    notes: lines,
+    canReroll
   });
-  await postChat(actor, content, rolls);
+  const flags = canReroll ? {
+    [SYSTEM_ID]: {
+      reroll: {
+        actorUuid: actor.uuid,
+        label,
+        pips,
+        options: { difficulty: opts.difficulty, diceMod: opts.diceMod, flatMod: opts.flatMod, applyWound: opts.applyWound }
+      }
+    }
+  } : {};
+  await postChat(actor, content, rolls, flags);
   return result;
+}
+
+/** Relance un Test en dépensant un point de Cojones, à partir des données de la carte de chat. */
+export async function rerollWithCojones(message) {
+  const data = message.getFlag(SYSTEM_ID, "reroll");
+  if (!data) return;
+  const actor = await fromUuid(data.actorUuid);
+  if (!actor?.isOwner) return ui.notifications.warn("Seul le propriétaire du personnage peut relancer.");
+  if (actor.system.cojones.value <= 0) return ui.notifications.warn("Plus de points de Cojones.");
+  await actor.update({ "system.cojones.value": actor.system.cojones.value - 1 });
+  return rollD6(actor, {
+    label: `${data.label} (relance)`,
+    pips: data.pips,
+    preset: { ...data.options, reroll: true },
+    notes: ["Relance grâce à un point de Cojones"]
+  });
 }
 
 /** Jet simple d'un seul dé (test de stress). */

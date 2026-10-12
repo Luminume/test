@@ -26,12 +26,15 @@
   {{/if}}
   {{#if hasResources}}
   <div class="form-group">
-    <label>Points de personnage (+1D chacun, {{cpAvailable}} dispo.)</label>
-    <input type="number" name="cp" value="0" min="0" max="{{cpAvailable}}">
+    <label>Points de personnage (+1D chacun, max {{cpMax}}, {{cpAvailable}} dispo.)</label>
+    <input type="number" name="cp" value="0" min="0" max="{{cpMax}}">
   </div>
+  {{#if allowCojones}}
   <div class="form-group">
-    <label>Point de Cojones : double les dés ({{cojonesAvailable}} dispo.)</label>
+    <label>Point de Cojones : double dés et tiers ({{cojonesAvailable}} dispo.)</label>
     <input type="checkbox" name="cojones" {{#unless cojonesAvailable}}disabled{{/unless}}>
   </div>
+  <p class="zc-hint">Points de personnage et Cojones ne se cumulent pas sur un même jet.</p>
+  {{/if}}
   {{/if}}
 </div>

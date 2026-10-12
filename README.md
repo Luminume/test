@@ -25,34 +25,36 @@ et contenir `system.json`), puis relancer Foundry.
 - **Objets** : arme (compétence, dégâts, munitions, portées), équipement (protection),
   compétence.
 
-## Jets
+## Règles appliquées (livre de base, édition révisée)
 
-- Clic sur un attribut, une compétence ou une arme : fenêtre d'options (difficulté,
-  modificateurs, malus de blessure, points de personnage, Cojones).
-  **Maj+clic** : jet direct sans fenêtre.
-- **Dé libre** (en rouge dans le chat) : explose sur 6 ; sur un 1, la carte signale la
-  complication et donne le total sans le 1 et sans le dé le plus haut.
-- **Dégâts** : le bouton du chat applique les dégâts aux jetons ciblés (ou sélectionnés) :
-  jet de Puissance + protection portée, puis niveau de blessure selon la marge.
-  « Encaisser des dégâts » sur la fiche fait la même chose à la main.
-- **Initiative** : jet de Perception.
-- Codes acceptés : `3D+1`, `+1D`, `2D-1`, `+2`.
+- **Dé Joker** sur tous les jets (p. 25) : sur un 6 il explose. Sur un 1 au premier jet,
+  c'est un échec critique : la carte donne les deux options du MJ (retirer le dé le plus haut,
+  ou garder le total avec une complication).
+- **Réussite** si le total *dépasse* la difficulté ; l'égalité est signalée à part (p. 37).
+- **Compétences** (p. 22) : la case à cocher indique les compétences sélectionnées à la création.
+  Non sélectionnée = Caractéristique -1D ; sélectionnée = Caractéristique + bonus.
+- **Points de personnage** (p. 26) : +1D par point, dont un Joker qui explose mais sans
+  échec critique ; maximum par jet réglable par le MJ. Utilisables aussi sur les dégâts et la résistance.
+- **Cojones** (p. 26) : 1 par test, double dés et tiers ; ou bouton « Relancer » sur un test raté.
+  Jamais cumulés avec les points de personnage.
+- **Blessures** (p. 63) : résistance = Puissance + protection portée. Résistance ≥ dégâts : rien.
+  Marge 1-3 Sonné, 4-8 Blessé (Gravement blessé si déjà Blessé), 9-12 Handicapé,
+  13-15 Mortellement blessé, 16+ Mort. Un coup inférieur au niveau actuel fait monter d'un niveau.
+  Malus -1D / -1D / -2D / -3D sur les jets de Compétence et de Caractéristique uniquement.
+- **Bonus aux dégâts** et **Déplacement** calculés automatiquement (p. 22-23), avec saisie possible pour les remplacer.
+  Une arme dont les dégâts commencent par « + » s'ajoute au bonus aux dégâts (p. 57).
+- **Initiative** : Test d'Agilité avec Joker ; une action par tranche de 10 points (p. 28).
+- **Départ** : 3D par Caractéristique (18D à répartir), 5 points de personnage, 1 point de Cojones.
 
-## Hypothèses à vérifier avec le livre
+Maj+clic sur un jet le lance sans fenêtre d'options.
 
-Tout est regroupé dans `module/config.mjs` et `module/rules.mjs`.
+## Pas encore couvert
 
-| Point | Choix actuel |
-|---|---|
-| Malus de blessure | Sonné −1D, Blessé −1D, Gravement blessé −2D, Handicapé −3D |
-| Aggravation | Une blessure ≤ à l'état actuel l'aggrave d'un cran (Blessé + Blessé = Gravement blessé) |
-| Résistance aux dégâts | Puissance + protection des équipements portés |
-| Point de Cojones | Double les dés du jet |
-| Point de personnage | +1D explosif par point |
-| Test de stress | Lance le dé du niveau actuel (d8 → d15), sans interprétation automatique |
-| Effets du stress (−1D×1…) | Affichés pour mémoire, non appliqués |
-| Dé libre sur dégâts/résistance | Désactivé par défaut (réglage du monde) |
-| Difficultés | 5 / 10 / 15 / 20 / 25 / 30 |
+- **Échelle de stress** : le chapitre « Stress et Folies » (p. 196) n'était pas dans les extraits fournis.
+  La fiche affiche les niveaux et lance le dé du niveau actuel, sans interprétation.
+- Options de combat (visée, rafales, couverture, localisation), coup mortel, armes assommantes,
+  guérison : à appliquer par le MJ via les modificateurs de la fenêtre de jet.
+- L'accoutumance et les pouvoirs occultes sont un ajout maison : aucun effet automatique.
 
 ## Développement
 

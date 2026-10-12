@@ -2,21 +2,22 @@
   <header class="zc-roll-title">{{label}} <span class="zc-roll-code">{{code}}</span></header>
   <div class="zc-dice">
     {{#each normal}}<span class="zc-die">{{this}}</span>{{/each}}
-    {{#each wild}}<span class="zc-die wild" data-tooltip="Dé libre">{{this}}</span>{{/each}}
+    {{#each wild}}<span class="zc-die wild" data-tooltip="Dé Joker">{{this}}</span>{{/each}}
     {{#each cp}}<span class="zc-die cp" data-tooltip="Point de personnage">{{this}}</span>{{/each}}
     {{#if flatLabel}}<span class="zc-flat">{{flatLabel}}</span>{{/if}}
   </div>
   <div class="zc-total">{{total}}</div>
-  {{#if difficulty}}
-  <div class="zc-outcome {{#if success}}success{{else}}failure{{/if}}">
-    {{#if success}}Réussite{{else}}Échec{{/if}} contre {{difficulty}} (marge {{marginLabel}})
-  </div>
+  {{#if outcomeLabel}}
+  <div class="zc-outcome {{outcome}}">{{outcomeLabel}} contre {{difficulty}} (marge {{marginLabel}})</div>
   {{/if}}
-  {{#if complication}}
+  {{#if criticalSuccess}}<div class="zc-critical-success">Succès critique : le Joker a explosé !</div>{{/if}}
+  {{#if critical}}
   <div class="zc-complication">
-    <strong>Complication !</strong> Le dé libre a fait 1.
-    Si le MJ retire le 1 et le dé le plus haut : <strong>{{altTotal}}</strong>
-    {{#if difficulty}}({{#if altSuccess}}réussite{{else}}échec{{/if}}){{/if}}.
+    <strong>Échec critique !</strong> Le Joker a fait 1. Au choix du MJ :
+    <ul>
+      <li>on retire le dé le plus haut : <strong>{{altTotal}}</strong>{{#if altOutcomeLabel}} ({{altOutcomeLabel}}){{/if}} ;</li>
+      <li>ou on garde {{total}} mais une complication survient.</li>
+    </ul>
   </div>
   {{/if}}
   {{#if highlight}}<div class="zc-highlight">{{highlight}}</div>{{/if}}
@@ -24,6 +25,11 @@
   {{#if isDamage}}
   <button type="button" class="zc-apply-damage" data-zc-apply-damage="{{total}}">
     <i class="fa-solid fa-heart-crack"></i> Appliquer aux jetons ciblés
+  </button>
+  {{/if}}
+  {{#if canReroll}}
+  <button type="button" class="zc-reroll" data-zc-reroll>
+    <i class="fa-solid fa-rotate-right"></i> Relancer (1 point de Cojones)
   </button>
   {{/if}}
 </div>

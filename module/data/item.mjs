@@ -13,8 +13,8 @@ export class ArmeData extends foundry.abstract.TypeDataModel {
       skill: new fields.StringField({
         required: true, blank: false, initial: "armesAFeu", choices: Object.keys(SKILLS)
       }),
+      // « +1D » = s'ajoute au bonus aux dégâts du porteur (armes de mêlée, p. 57).
       damage: text("3D"),
-      addDamageBonus: new fields.BooleanField({ initial: false }),
       ammo: new fields.SchemaField({ value: int(0), max: int(0) }),
       range: new fields.SchemaField({ short: text(""), medium: text(""), long: text("") }),
       notes: text("")

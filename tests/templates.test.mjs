@@ -24,7 +24,7 @@ function actorContext() {
     attributeBlocks: Object.entries(ATTRIBUTES).map(([key, label]) => ({
       key, label, attr: { code: "3D", valid: true },
       skills: Object.entries(SKILLS).filter(([, s]) => s.attribute === key)
-        .map(([k, s]) => ({ key: k, label: s.label, bonus: "", total: "3D", valid: true })),
+        .map(([k, s]) => ({ key: k, label: s.label, selected: true, bonus: "", total: "3D", valid: true })),
       custom: [{ id: "abc", name: "Kung-fu", bonus: "+1D", total: "4D", valid: true }]
     })),
     wounds: WOUNDS.slice(1).map(w => ({ ...w, checked: w.level <= 2, current: w.level === 2, penaltyLabel: "-1D" })),
@@ -44,6 +44,7 @@ test("fiche personnage", () => {
   assert.equal((html.match(/zc-tick/g) || []).length, 3);
   assert.equal((html.match(/class="zc-occult-row"/g) || []).length, 6);
   assert.ok(html.includes('name="system.skills.armesAFeu.bonus"'));
+  assert.ok(html.includes('name="system.skills.armesAFeu.selected" checked'));
   assert.ok(html.includes("Ajouter une compétence"));
   assert.ok(html.includes('data-zc') === false);
 });
@@ -57,8 +58,10 @@ test("fiche PNJ, objet, dialogue, chat", () => {
   assert.ok(item.includes('value="armesAFeu" selected'));
   assert.ok(render("templates/dialog/roll-options.hbs", { code: "3D", isTest: true, difficulties: DIFFICULTIES, hasResources: true }).includes("Héroïque"));
   const chat = render("templates/chat/roll.hbs", {
-    label: "Tir", normal: [3, 4], wild: [1], cp: [], total: 8, difficulty: 10, success: false,
-    marginLabel: "-2", complication: true, altTotal: 3, notes: ["note"], isDamage: true
+    label: "Tir", normal: [3, 4], wild: [1], cp: [], total: 8, difficulty: 10, outcome: "failure",
+    outcomeLabel: "Échec", marginLabel: "-2", critical: true, altTotal: 4, altOutcomeLabel: "échec",
+    notes: ["note"], isDamage: true, canReroll: true
   });
-  assert.ok(chat.includes("Complication") && chat.includes('data-zc-apply-damage="8"'));
+  assert.ok(chat.includes("Échec critique") && chat.includes('data-zc-apply-damage="8"'));
+  assert.ok(chat.includes("data-zc-reroll"));
 });

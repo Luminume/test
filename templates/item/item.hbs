@@ -10,10 +10,7 @@
       <select name="system.skill">{{selectOptions skillChoices selected=system.skill}}</select>
     </label>
     <label class="zc-field">Dégâts <input type="text" name="system.damage" value="{{system.damage}}"></label>
-    <label class="zc-field zc-inline">
-      <input type="checkbox" name="system.addDamageBonus" {{checked system.addDamageBonus}}>
-      Ajouter le bonus aux dégâts du personnage (armes de mêlée, lancer…)
-    </label>
+    <p class="zc-hint">Un code précédé de « + » (ex. +1D) s'ajoute au bonus aux dégâts du porteur (armes de mêlée, de jet).</p>
     <div class="zc-row">
       <label class="zc-field">Munitions <input type="number" min="0" name="system.ammo.value" value="{{system.ammo.value}}"></label>
       <label class="zc-field">Chargeur (0 = sans munitions) <input type="number" min="0" name="system.ammo.max" value="{{system.ammo.max}}"></label>

@@ -3,11 +3,11 @@
  */
 
 /**
- * Niveau de blessure infligé selon la marge (dégâts - résistance),
- * d'après le tableau de la fiche. 0 = aucun effet.
+ * Niveau de blessure infligé selon la marge (dégâts - résistance), p. 63.
+ * Une résistance supérieure ou égale aux dégâts n'inflige rien.
  */
 export function woundFromMargin(margin) {
-  if (margin < 0) return 0;
+  if (margin <= 0) return 0;
   if (margin <= 3) return 1;   // Sonné
   if (margin <= 8) return 2;   // Blessé
   if (margin <= 12) return 4;  // Handicapé
@@ -16,18 +16,34 @@ export function woundFromMargin(margin) {
 }
 
 /**
- * Nouveau niveau de blessure après un coup.
- * Un coup égal ou inférieur à l'état actuel aggrave d'un cran
- * (Blessé + Blessé = Gravement blessé, comme les deux cases « 4 à 8 » de la fiche).
- * Sonné n'aggrave jamais une vraie blessure.
+ * Nouveau niveau de blessure après un coup (p. 63) :
+ * - un coup inférieur au niveau actuel fait monter d'un niveau ;
+ * - Blessé sur un personnage déjà Blessé donne Gravement blessé ;
+ * - sinon on garde le plus grave des deux.
  */
 export function nextWoundLevel(current, margin) {
   const hit = woundFromMargin(margin);
   if (hit === 0) return current;
-  if (hit === 1) return Math.max(current, 1);
-  if (hit === 6) return 6;
-  if (current >= hit) return Math.min(current + 1, 6);
-  return hit;
+  if (hit < current) return Math.min(current + 1, 6);
+  if (hit === 2 && current === 2) return 3;
+  return Math.max(current, hit);
+}
+
+/** Bonus aux dégâts (p. 23) : dés de Puissance sans les tiers, divisés par 2, arrondi au supérieur. En crans. */
+export function damageBonusPips(puissancePips) {
+  return Math.ceil(Math.floor(Math.max(0, puissancePips) / 3) / 2) * 3;
+}
+
+/** Déplacement (p. 22) : dés de Puissance + dés d'Agilité, en mètres. */
+export function movement(puissancePips, agilitePips) {
+  return Math.floor(Math.max(0, puissancePips) / 3) + Math.floor(Math.max(0, agilitePips) / 3);
+}
+
+/** Issue d'un test (p. 37) : il faut dépasser la difficulté, l'égalité est un cas à part. */
+export function outcome(total, difficulty) {
+  if (total > difficulty) return "success";
+  if (total === difficulty) return "tie";
+  return "failure";
 }
 
 /** Paliers franchis à la hausse entre deux valeurs. */

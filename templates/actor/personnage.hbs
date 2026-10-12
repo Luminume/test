@@ -34,9 +34,11 @@
                  name="system.attributes.{{block.key}}.code" value="{{block.attr.code}}" data-tooltip="Code de l'attribut (ex. 3D+1)">
         </header>
         <ol class="zc-skills">
-          <li class="zc-skill-head"><span></span><span>Bonus</span><span>Total</span><span></span></li>
+          <li class="zc-skill-head"><span></span><span></span><span>Bonus</span><span>Total</span><span></span></li>
           {{#each block.skills as |skill|}}
           <li class="zc-skill{{#if skill.trained}} trained{{/if}}">
+            <input type="checkbox" name="system.skills.{{skill.key}}.selected" {{checked skill.selected}}
+                   data-tooltip="Sélectionnée (sinon Caractéristique -1D)">
             <a class="zc-roll-link" data-action="rollSkill" data-skill="{{skill.key}}">{{skill.label}}</a>
             <input class="zc-code{{#unless skill.valid}} invalid{{/unless}}" type="text"
                    name="system.skills.{{skill.key}}.bonus" value="{{skill.bonus}}">
@@ -46,6 +48,7 @@
           {{/each}}
           {{#each block.custom as |skill|}}
           <li class="zc-skill trained custom" data-item-id="{{skill.id}}">
+            <span></span>
             <a class="zc-roll-link" data-action="rollCustomSkill">{{skill.name}}</a>
             <input class="zc-code{{#unless skill.valid}} invalid{{/unless}}" type="text"
                    data-item-field="system.bonus" value="{{skill.bonus}}">
@@ -76,7 +79,7 @@
         <h3>Niveaux de blessures</h3>
         <ul>
           {{#each wounds as |w|}}
-          <li class="{{#if w.checked}}checked{{/if}}{{#if w.current}} current{{/if}}">
+          <li class="{{#if w.checked}}checked{{/if}}{{#if w.current}} current{{/if}}" data-tooltip="{{w.effect}}">
             <a class="zc-check" data-action="setWound" data-level="{{w.level}}"></a>
             <span class="zc-range">{{w.range}}</span>
             <span class="zc-label">{{w.label}}</span>
@@ -112,11 +115,11 @@
         <label class="zc-point">Points de Personnage
           <input type="number" min="0" name="system.cp.value" value="{{system.cp.value}}">
         </label>
-        <label class="zc-field">Bonus aux dégâts
-          <input type="text" name="system.damageBonus" value="{{system.damageBonus}}">
+        <label class="zc-field" data-tooltip="Calculé depuis la Puissance ; saisir une valeur pour le remplacer">Bonus aux dégâts
+          <input type="text" name="system.damageBonus" value="{{system.damageBonus}}" placeholder="{{system.damageBonusAuto}}">
         </label>
-        <label class="zc-field">Mouvement
-          <input type="text" name="system.movement" value="{{system.movement}}">
+        <label class="zc-field" data-tooltip="Puissance + Agilité (en dés), en mètres ; saisir une valeur pour le remplacer">Déplacement
+          <input type="text" name="system.movement" value="{{system.movement}}" placeholder="{{system.movementAuto}}">
         </label>
         <label class="zc-field">Niveau de vie
           <input type="text" name="system.lifeLevel" value="{{system.lifeLevel}}">

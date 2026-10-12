@@ -1,6 +1,6 @@
-import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS } from "../config.mjs";
+import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, STARTING } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
-import { thresholdsReached } from "../rules.mjs";
+import { thresholdsReached, damageBonusPips, movement } from "../rules.mjs";
 
 const fields = foundry.data.fields;
 
@@ -11,7 +11,7 @@ const int = (initial, min, max) => new fields.NumberField({
 
 function attributesSchema() {
   const schema = {};
-  for (const key of Object.keys(ATTRIBUTES)) schema[key] = new fields.SchemaField({ code: text("2D") });
+  for (const key of Object.keys(ATTRIBUTES)) schema[key] = new fields.SchemaField({ code: text(STARTING.attribute) });
   return new fields.SchemaField(schema);
 }
 
@@ -39,8 +39,9 @@ class BaseActorData extends foundry.abstract.TypeDataModel {
         value: int(0, 0, WOUNDS.length - 1),
         max: int(WOUNDS.length - 1, 0, WOUNDS.length - 1)
       }),
+      // Vides = calcul automatique ; une valeur saisie remplace le calcul.
       damageBonus: text(""),
-      movement: text("10"),
+      movement: text(""),
       notes: text("")
     };
   }
@@ -48,14 +49,24 @@ class BaseActorData extends foundry.abstract.TypeDataModel {
   prepareDerivedData() {
     prepareAttributes(this);
     prepareWounds(this);
-    this.damageBonusPips = codeToPips(this.damageBonus).pips;
+    const puissance = this.attributes.puissance.pips;
+    const autoBonus = damageBonusPips(puissance);
+    this.damageBonusAuto = pipsToCode(autoBonus);
+    this.damageBonusPips = this.damageBonus.trim() ? codeToPips(this.damageBonus).pips : autoBonus;
+    this.movementAuto = String(movement(puissance, this.attributes.agilite.pips));
+    this.movementValue = this.movement.trim() || this.movementAuto;
   }
 }
 
 export class PersonnageData extends BaseActorData {
   static defineSchema() {
     const skills = {};
-    for (const key of Object.keys(SKILLS)) skills[key] = new fields.SchemaField({ bonus: text("") });
+    for (const key of Object.keys(SKILLS)) {
+      skills[key] = new fields.SchemaField({
+        selected: new fields.BooleanField({ initial: false }),
+        bonus: text("")
+      });
+    }
 
     const occult = {};
     for (let i = 1; i <= OCCULT_SLOTS; i++) {
@@ -76,8 +87,8 @@ export class PersonnageData extends BaseActorData {
         value: int(0, 0, STRESS.length - 1),
         trauma: text("")
       }),
-      cojones: new fields.SchemaField({ value: int(0, 0) }),
-      cp: new fields.SchemaField({ value: int(0, 0) }),
+      cojones: new fields.SchemaField({ value: int(STARTING.cojones, 0) }),
+      cp: new fields.SchemaField({ value: int(STARTING.cp, 0) }),
       lifeLevel: text(""),
       accoutumance: new fields.SchemaField({
         value: int(0, 0, ACCOUTUMANCE.max),
@@ -90,15 +101,18 @@ export class PersonnageData extends BaseActorData {
 
   prepareDerivedData() {
     super.prepareDerivedData();
+    // p. 22 : compétence non sélectionnée = Caractéristique -1D ;
+    // sélectionnée = Caractéristique + dés ajoutés.
     for (const [key, def] of Object.entries(SKILLS)) {
       const skill = this.skills[key];
       const bonus = codeToPips(skill.bonus);
-      const pips = this.attributes[def.attribute].pips + bonus.pips;
+      const trained = skill.selected || bonus.pips > 0;
+      const pips = this.attributes[def.attribute].pips + (trained ? bonus.pips : -3);
       Object.assign(skill, {
         label: def.label,
         attribute: def.attribute,
         valid: bonus.valid,
-        trained: bonus.pips !== 0,
+        trained,
         pips,
         total: pipsToCode(pips)
       });
