@@ -2,7 +2,7 @@
   "id": "zcorps-vtt",
   "title": "Z-Corps (non officiel)",
   "description": "Système Foundry VTT pour Z-Corps : fiche de personnage, jets D6 avec dé libre, blessures, échelle de stress, accoutumance et pouvoirs occultes.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "authors": [
     {
       "name": "Landry Freson"

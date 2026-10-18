@@ -31,8 +31,9 @@ function actorContext() {
     wounds: WOUNDS.slice(1).map(w => ({ ...w, checked: w.level <= 2, current: w.level === 2, penaltyLabel: "-1D" })),
     stress: STRESS.map((s, i) => ({ ...s, level: i, current: i === 2, reached: i <= 2 })),
     stressCurrent: STRESS[2],
-    accoutumance: { value: 12, max: 30, cells: Array.from({ length: 30 }, (_, i) => ({
-      value: i + 1, filled: i < 12, threshold: (i + 1) % 10 === 0 })) },
+    accoutumance: { value: 12, max: 30, tier: 2, cells: Array.from({ length: 30 }, (_, i) => ({
+      value: i + 1, filled: i < 12, tier: i < 10 ? 1 : i < 20 ? 2 : 3, threshold: (i + 1) % 10 === 0 })),
+    zones: [1, 2, 3].map(t => ({ tier: t, label: `Seuil ${t}`, range: "", current: t === 2 })) },
     occult: Array.from({ length: 6 }, (_, i) => ({ key: `p${i + 1}`, name: "", effect: "" })),
     weapons: [{ id: "w1", name: "Fusil", skill: "Armes à feu", damage: "4D", hasAmmo: true, ammo: { value: 2, max: 6 }, range: {} }],
     equipment: [{ id: "e1", name: "Gilet", quantity: 1, protection: "+1D", equipped: true }],
@@ -47,6 +48,8 @@ test("fiche personnage", () => {
   const html = render("templates/actor/personnage.hbs", actorContext());
   assert.equal((html.match(/class="zc-cell/g) || []).length, 30);
   assert.equal((html.match(/zc-tick/g) || []).length, 3);
+  assert.equal((html.match(/zc-cell zc-zone-2/g) || []).length, 10);
+  assert.ok(html.includes("seuil 2") && html.includes("zc-zone-label zc-zone-2 current"));
   assert.equal((html.match(/class="zc-occult-row"/g) || []).length, 6);
   assert.ok(html.includes('name="system.skills.armesAFeu.bonus"'));
   assert.ok(html.includes('name="system.skills.armesAFeu.selected" checked'));

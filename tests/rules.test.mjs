@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   woundFromMargin, nextWoundLevel, damageBonusPips, movement, outcome, advancementCost, nextSkillBonus,
-  thresholdsCrossed, thresholdsReached
+  accoutumanceTier, accoutumanceEvents
 } from "../module/rules.mjs";
 
 test("table des niveaux de blessure (p. 63)", () => {
@@ -43,12 +43,15 @@ test("issue d'un test : il faut dépasser la difficulté", () => {
   assert.equal(outcome(14, 15), "failure");
 });
 
-test("paliers d'accoutumance", () => {
-  const t = [10, 20, 30];
-  assert.deepEqual(thresholdsCrossed(8, 12, t), [10]);
-  assert.deepEqual(thresholdsCrossed(9, 30, t), [10, 20, 30]);
-  assert.deepEqual(thresholdsCrossed(12, 8, t), []);
-  assert.equal(thresholdsReached(20, t), 2);
+test("seuils d'accoutumance : 0-10, 11-20, 21-30", () => {
+  const zones = [{ tier: 1, from: 0, to: 10 }, { tier: 2, from: 11, to: 20 }, { tier: 3, from: 21, to: 30 }];
+  assert.deepEqual([0, 10, 11, 20, 21, 30].map(v => accoutumanceTier(v, zones)), [1, 1, 2, 2, 3, 3]);
+  assert.deepEqual(accoutumanceEvents(9, 10, zones, 30), []);
+  assert.deepEqual(accoutumanceEvents(10, 11, zones, 30), [{ type: "tier", tier: 2, value: 11 }]);
+  assert.deepEqual(accoutumanceEvents(5, 30, zones, 30), [
+    { type: "tier", tier: 2, value: 11 }, { type: "tier", tier: 3, value: 21 }, { type: "full", value: 30 }
+  ]);
+  assert.deepEqual(accoutumanceEvents(25, 12, zones, 30), []);
 });
 
 test("progression avec les points de personnage", () => {

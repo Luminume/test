@@ -162,16 +162,21 @@
       <span>Accoutumance</span>
       <span class="zc-accou-controls">
         <a data-action="stepAccoutumance" data-step="-1" data-tooltip="-1"><i class="fa-solid fa-minus"></i></a>
-        <span class="zc-accou-value">{{accoutumance.value}} / {{accoutumance.max}}</span>
+        <span class="zc-accou-value">{{accoutumance.value}} / {{accoutumance.max}} · seuil {{accoutumance.tier}}</span>
         <a data-action="stepAccoutumance" data-step="1" data-tooltip="+1"><i class="fa-solid fa-plus"></i></a>
       </span>
     </header>
     <div class="zc-gauge">
       {{#each accoutumance.cells as |cell|}}
-      <a class="zc-cell{{#if cell.filled}} filled{{/if}}{{#if cell.threshold}} threshold{{/if}}"
-         data-action="setAccoutumance" data-value="{{cell.value}}" data-tooltip="{{cell.value}}">
+      <a class="zc-cell zc-zone-{{cell.tier}}{{#if cell.filled}} filled{{/if}}{{#if cell.threshold}} threshold{{/if}}"
+         data-action="setAccoutumance" data-value="{{cell.value}}" data-tooltip="{{cell.value}} (seuil {{cell.tier}})">
         {{#if cell.threshold}}<span class="zc-tick">{{cell.value}}</span>{{/if}}
       </a>
+      {{/each}}
+    </div>
+    <div class="zc-gauge-zones">
+      {{#each accoutumance.zones as |z|}}
+      <span class="zc-zone-label zc-zone-{{z.tier}}{{#if z.current}} current{{/if}}">{{z.label}} <small>({{z.range}})</small></span>
       {{/each}}
     </div>
     <div class="zc-occult">

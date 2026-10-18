@@ -18,9 +18,9 @@ et contenir `system.json`), puis relancer Foundry.
 - **Personnage** : identité, 6 attributs et toutes les compétences de la fiche officielle,
   compétences supplémentaires par attribut, blessures, échelle de stress, Cojones,
   points de personnage, bonus aux dégâts, mouvement, niveau de vie, équipement.
-- **Accoutumance** : jauge de 0 à 30 (clic sur une case, ou −/+) avec paliers à 10, 20 et 30.
-  Franchir un palier envoie un message dans le chat. Sous la jauge, une case sans titre
-  avec 6 lignes « pouvoir / effet ».
+- **Accoutumance** : jauge de 0 à 30 (clic sur une case, ou −/+), visible des joueurs, en trois seuils :
+  0-10, 11-20, 21-30 (une couleur par seuil). Le chat annonce l'entrée dans le seuil 2 (11) et le
+  seuil 3 (21), puis la jauge pleine (30). Sous la jauge, la case des pouvoirs occultes.
 - **PNJ / Zombie** : fiche simplifiée (attributs, compétences libres, blessures, armes).
 - **Objets** : arme (compétence, dégâts, munitions, portées), équipement (protection),
   compétence.

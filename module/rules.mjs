@@ -62,12 +62,19 @@ export function nextSkillBonus(bonusPips, trained) {
   return trained ? bonusPips + 1 : -2;
 }
 
-/** Paliers franchis à la hausse entre deux valeurs. */
-export function thresholdsCrossed(before, after, thresholds) {
-  return thresholds.filter(t => before < t && after >= t);
+/** Seuil (1 à 3) correspondant à une valeur d'accoutumance. */
+export function accoutumanceTier(value, zones) {
+  return (zones.find(z => value >= z.from && value <= z.to) ?? zones.at(-1)).tier;
 }
 
-/** Nombre de paliers atteints. */
-export function thresholdsReached(value, thresholds) {
-  return thresholds.filter(t => value >= t).length;
+/**
+ * Événements à annoncer quand l'accoutumance monte :
+ * entrée dans un nouveau seuil (11, 21…) et jauge pleine.
+ */
+export function accoutumanceEvents(before, after, zones, max) {
+  const events = zones
+    .filter(z => z.from > 0 && before < z.from && after >= z.from)
+    .map(z => ({ type: "tier", tier: z.tier, value: z.from }));
+  if (before < max && after >= max) events.push({ type: "full", value: max });
+  return events;
 }

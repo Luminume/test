@@ -283,16 +283,21 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       accoutumance: {
         value: accou,
         max: ACCOUTUMANCE.max,
+        tier: system.accoutumance.tier,
         cells: Array.from({ length: ACCOUTUMANCE.max }, (_, i) => {
           const value = i + 1;
-          const threshold = ACCOUTUMANCE.thresholds.includes(value);
+          const zone = ACCOUTUMANCE.zones.find(z => value >= z.from && value <= z.to);
           return {
             value,
             filled: value <= accou,
-            threshold,
-            tier: threshold ? ACCOUTUMANCE.thresholds.indexOf(value) + 1 : 0
+            tier: zone.tier,
+            // Fin de seuil : trait épais et repère sous la case (10, 20, 30).
+            threshold: value === zone.to
           };
-        })
+        }),
+        zones: ACCOUTUMANCE.zones.map(z => ({
+          ...z, label: `Seuil ${z.tier}`, range: `${z.from}-${z.to}`, current: z.tier === system.accoutumance.tier
+        }))
       },
       // Lignes libres : celles déjà remplies, puis des vides jusqu'à 6 lignes au total avec les pouvoirs.
       occult: (() => {

@@ -106,7 +106,12 @@ export const STRESS = [
 /** Jauge d'accoutumance. */
 export const ACCOUTUMANCE = {
   max: 30,
-  thresholds: [10, 20, 30]
+  // Seuil 1 : 0-10, seuil 2 : 11-20, seuil 3 : 21-30.
+  zones: [
+    { tier: 1, from: 0, to: 10 },
+    { tier: 2, from: 11, to: 20 },
+    { tier: 3, from: 21, to: 30 }
+  ]
 };
 
 /** Nombre d'emplacements de pouvoirs occultes sous la jauge. */

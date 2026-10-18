@@ -1,6 +1,6 @@
 import { SKILLS, STRESS, WOUNDS, ACCOUTUMANCE, ADVANCEMENT } from "../config.mjs";
 import { codeToPips, pipsToCode, rollFormula } from "../dice-code.mjs";
-import { nextWoundLevel, thresholdsCrossed, advancementCost, nextSkillBonus } from "../rules.mjs";
+import { nextWoundLevel, accoutumanceEvents, advancementCost, nextSkillBonus } from "../rules.mjs";
 import { rollD6, rollSimple, postChat } from "../dice/roll.mjs";
 
 const escape = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
@@ -36,10 +36,12 @@ export class ZCorpsActor extends Actor {
     super._onUpdate(changed, options, userId);
     const change = options.zcAccoutumance;
     if (!change || userId !== game.user.id) return;
-    for (const t of thresholdsCrossed(change.before, change.after, ACCOUTUMANCE.thresholds)) {
-      const tier = ACCOUTUMANCE.thresholds.indexOf(t) + 1;
-      postChat(this, `<div class="zc-roll zc-accou-alert"><header class="zc-roll-title">Accoutumance</header>
-        <p><strong>${escape(this.name)}</strong> atteint le palier ${tier} (${t}/${ACCOUTUMANCE.max}).</p></div>`);
+    for (const event of accoutumanceEvents(change.before, change.after, ACCOUTUMANCE.zones, ACCOUTUMANCE.max)) {
+      const text = event.type === "full"
+        ? `a atteint le maximum d'accoutumance (${event.value}/${ACCOUTUMANCE.max}).`
+        : `entre dans le <strong>seuil ${event.tier}</strong> d'accoutumance (${event.value}/${ACCOUTUMANCE.max}).`;
+      postChat(this, `<div class="zc-roll zc-accou-alert zc-tier-${event.tier ?? 3}"><header class="zc-roll-title">Accoutumance</header>
+        <p><strong>${escape(this.name)}</strong> ${text}</p></div>`);
     }
   }
 

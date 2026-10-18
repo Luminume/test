@@ -269,7 +269,13 @@
   border: 1px solid var(--zc-ink);
   background: #fff;
 }
-.zc-cell.filled { background: linear-gradient(#9c1c1c, #5a0e0e); border-color: var(--zc-blood-dark); }
+/* Une teinte par seuil : ocre (1), rouge (2), noir-violet (3). */
+.zc-cell.zc-zone-1 { background: #f6efe0; }
+.zc-cell.zc-zone-2 { background: #f6e3e0; }
+.zc-cell.zc-zone-3 { background: #ece0ea; }
+.zc-cell.zc-zone-1.filled { background: linear-gradient(#c58a2a, #8a5a12); border-color: #6b440c; }
+.zc-cell.zc-zone-2.filled { background: linear-gradient(#9c1c1c, #5a0e0e); border-color: var(--zc-blood-dark); }
+.zc-cell.zc-zone-3.filled { background: linear-gradient(#4a1640, #1e0a1b); border-color: #12060f; }
 .zc-cell.threshold { border-width: 1px 3px 1px 1px; border-right-color: var(--zc-blood-dark); }
 .zc-cell:hover { outline: 2px solid #e8a0a0; }
 
@@ -445,3 +451,11 @@
 .zc-browser-extra { margin: 2px 0 0; font-size: 11px; font-style: italic; color: var(--zc-muted); }
 .zc-browser-add { width: 30px; flex: 0 0 30px; }
 .zc-browser-entry[hidden], .zc-browser-group[hidden] { display: none; }
+
+.zc-gauge-zones { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin: -2px 0 6px; font-size: 11px; text-align: center; }
+.zc-zone-label { color: var(--zc-muted); border-top: 3px solid transparent; padding-top: 1px; }
+.zc-zone-label.zc-zone-1 { border-color: #c58a2a; }
+.zc-zone-label.zc-zone-2 { border-color: #9c1c1c; }
+.zc-zone-label.zc-zone-3 { border-color: #4a1640; }
+.zc-zone-label.current { color: var(--zc-ink); font-weight: 700; }
+.zc-accou-alert.zc-tier-3 .zc-roll-title { background: #2a0c25; }

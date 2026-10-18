@@ -1,6 +1,6 @@
 import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, STARTING } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
-import { thresholdsReached, damageBonusPips, movement } from "../rules.mjs";
+import { accoutumanceTier, damageBonusPips, movement } from "../rules.mjs";
 
 const fields = foundry.data.fields;
 
@@ -117,7 +117,7 @@ export class PersonnageData extends BaseActorData {
         total: pipsToCode(pips)
       });
     }
-    this.accoutumance.tier = thresholdsReached(this.accoutumance.value, ACCOUTUMANCE.thresholds);
+    this.accoutumance.tier = accoutumanceTier(this.accoutumance.value, ACCOUTUMANCE.zones);
   }
 }
 
