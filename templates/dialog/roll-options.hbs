@@ -1,6 +1,8 @@
 <div class="zc-roll-options">
   <p class="zc-roll-code">Code : <strong>{{code}}</strong></p>
-  {{#if isTest}}
+  {{#if fixedDifficulty}}
+  <p class="zc-roll-code">Difficulté : <strong>{{fixedDifficulty}}</strong></p>
+  {{else if isTest}}
   <div class="form-group">
     <label>Difficulté</label>
     <select name="difficulty">{{selectOptions difficulties}}</select>

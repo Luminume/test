@@ -126,3 +126,11 @@ export function nextVehicleDamage(current, margin) {
   if (current >= 3 && hit >= 2) return Math.min(current + 1, 5);
   return Math.max(current, hit);
 }
+
+/**
+ * Difficulté du prochain test d'accoutumance : +step après une réussite,
+ * retour à la base après un échec (une égalité ne dépasse pas la difficulté : échec).
+ */
+export function nextAccoutumanceDifficulty(difficulty, success, { base, step }) {
+  return success ? difficulty + step : base;
+}

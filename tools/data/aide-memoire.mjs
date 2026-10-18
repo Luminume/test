@@ -97,6 +97,9 @@ Pas de points de personnage ni de Cojones sur la Résistance d'un véhicule.</p>
 <h2>Accoutumance (règle de la campagne)</h2>
 <p>Jauge de 0 à 30, visible des joueurs : seuil 1 de 0 à 10, seuil 2 de 11 à 20, seuil 3 de 21 à 30.
 Le chat annonce l'entrée dans les seuils 2 et 3 et la jauge pleine.</p>
+<h2>Test d'accoutumance</h2>
+<p>Test de Volonté contre 15. Chaque réussite augmente de 3 la difficulté du test suivant ; au premier échec
+(une égalité ne suffit pas), elle revient à 15. Une relance avec un point de Cojones suit la même règle.</p>
 <h2>Pouvoirs occultes</h2>
 <ul>
   <li>Seuil 1 : passifs, narrés par le MJ. Seuil 2 : actifs, +1 par utilisation. Seuil 3 : manifestes, +2 par utilisation.</li>

@@ -21,7 +21,8 @@ function actorContext() {
   return {
     actor: { name: "Joe", img: "icons/svg/mystery-man.svg" },
     editable: true,
-    system: { pseudo: "", cojones: { value: 1 }, cp: { value: 3 }, stress: { value: 2, trauma: "" }, notes: "", equipmentNotes: "" },
+    system: { pseudo: "", cojones: { value: 1 }, cp: { value: 3 }, stress: { value: 2, trauma: "" }, notes: "", equipmentNotes: "",
+      accoutumance: { testDifficulty: 18 }, skills: { volonte: { total: "3D+1" } } },
     attributeBlocks: Object.entries(ATTRIBUTES).map(([key, label]) => ({
       key, label, attr: { code: "3D", valid: true },
       skills: Object.entries(SKILLS).filter(([, s]) => s.attribute === key)
@@ -50,6 +51,8 @@ test("fiche personnage", () => {
   assert.equal((html.match(/zc-tick/g) || []).length, 3);
   assert.equal((html.match(/zc-cell zc-zone-2/g) || []).length, 10);
   assert.ok(html.includes("seuil 2") && html.includes("zc-zone-label zc-zone-2 current"));
+  assert.ok(html.includes('data-action="accoutumanceTest"') && html.includes('name="system.accoutumance.testDifficulty" value="18"'));
+  assert.ok(html.includes("Volonté 3D+1"));
   assert.equal((html.match(/class="zc-occult-row"/g) || []).length, 6);
   assert.ok(html.includes('name="system.skills.armesAFeu.bonus"'));
   assert.ok(html.includes('name="system.skills.armesAFeu.selected" checked'));
@@ -76,6 +79,8 @@ test("fiche PNJ, objet, dialogue, chat", () => {
   });
   assert.ok(item.includes('value="armesAFeu" selected'));
   assert.ok(render("templates/dialog/roll-options.hbs", { code: "3D", isTest: true, difficulties: DIFFICULTIES, hasResources: true }).includes("Héroïque"));
+  const fixed = render("templates/dialog/roll-options.hbs", { code: "3D", isTest: true, fixedDifficulty: 18, difficulties: DIFFICULTIES });
+  assert.ok(fixed.includes("<strong>18</strong>") && !fixed.includes('name="difficulty"'));
   const chat = render("templates/chat/roll.hbs", {
     label: "Tir", normal: [3, 4], wild: [1], cp: [], total: 8, difficulty: 10, outcome: "failure",
     outcomeLabel: "Échec", marginLabel: "-2", critical: true, altTotal: 4, altOutcomeLabel: "échec",

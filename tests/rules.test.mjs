@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   woundFromMargin, nextWoundLevel, damageBonusPips, movement, outcome, advancementCost, nextSkillBonus,
-  accoutumanceTier, accoutumanceEvents, powerCost, vehicleDamageFromMargin, nextVehicleDamage, creationReport
+  accoutumanceTier, accoutumanceEvents, powerCost, vehicleDamageFromMargin, nextVehicleDamage, creationReport, nextAccoutumanceDifficulty
 } from "../module/rules.mjs";
 
 test("table des niveaux de blessure (p. 63)", () => {
@@ -85,4 +85,15 @@ test("rapport de création", () => {
   assert.ok(ok.attributesOk && ok.attributesInRange && ok.selectedOk && ok.bonusOk && ok.bonusInRange);
   const ko = creationReport([18, 9, 9, 9, 6, 3], 10, [9], rules);
   assert.ok(!ko.attributesInRange && !ko.selectedOk && !ko.bonusInRange);
+});
+
+test("test d'accoutumance : 15, +3 par réussite, retour à 15 après un échec", () => {
+  const rule = { base: 15, step: 3 };
+  let d = 15;
+  d = nextAccoutumanceDifficulty(d, true, rule);   // réussite
+  assert.equal(d, 18);
+  d = nextAccoutumanceDifficulty(d, true, rule);
+  assert.equal(d, 21);
+  d = nextAccoutumanceDifficulty(d, false, rule);  // échec
+  assert.equal(d, 15);
 });

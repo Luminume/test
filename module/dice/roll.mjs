@@ -27,7 +27,7 @@ export async function postChat(actor, content, rolls = [], flags = {}) {
 const cojonesAllowed = kind => kind !== "damage";
 
 /** Fenêtre d'options avant un jet. Renvoie null si le joueur annule. */
-async function promptRollOptions(actor, { label, pips, kind }) {
+async function promptRollOptions(actor, { label, pips, kind, fixedDifficulty }) {
   const isTest = kind === "test";
   const hasResources = actor?.type === "personnage";
   const wound = WOUNDS[actor?.system.wounds?.value ?? 0];
@@ -36,6 +36,7 @@ async function promptRollOptions(actor, { label, pips, kind }) {
   const content = await renderTemplate(TEMPLATES.dialog, {
     code: pipsToCode(pips),
     isTest,
+    fixedDifficulty,
     difficulties: DIFFICULTIES,
     woundPenalty: isTest ? wound.penalty : 0,
     woundLabel: wound.label,
@@ -62,7 +63,7 @@ async function promptRollOptions(actor, { label, pips, kind }) {
           const num = name => Number(f.namedItem(name)?.value) || 0;
           const custom = num("customDifficulty");
           return {
-            difficulty: custom > 0 ? custom : num("difficulty"),
+            difficulty: fixedDifficulty ?? (custom > 0 ? custom : num("difficulty")),
             diceMod: num("diceMod"),
             flatMod: num("flatMod"),
             applyWound: f.namedItem("applyWound")?.checked ?? false,
@@ -105,16 +106,18 @@ const sum = arr => arr.reduce((a, b) => a + b, 0);
  * @param {object} [params.preset]    Options imposées (relance Cojones)
  * @param {string[]} [params.notes]   Lignes ajoutées à la carte
  * @param {Function} [params.afterRoll] async (result) => ({notes, highlight}) avant l'envoi au chat
+ * @param {number} [params.fixedDifficulty] difficulté imposée (non modifiable dans la fenêtre)
+ * @param {string} [params.rerollKind] type de jet à relancer avec les Cojones (« accoutumance »)
  * @returns {Promise<object|null>}
  */
-export async function rollD6(actor, { label, pips, kind = "test", fast = false, preset, notes = [], afterRoll } = {}) {
+export async function rollD6(actor, { label, pips, kind = "test", fast = false, preset, notes = [], afterRoll, fixedDifficulty, rerollKind } = {}) {
   const isTest = kind === "test";
   const isPersonnage = actor?.type === "personnage";
-  let opts = { difficulty: 0, diceMod: 0, flatMod: 0, applyWound: isTest, cp: 0, cojones: false, ...preset };
+  let opts = { difficulty: fixedDifficulty ?? 0, diceMod: 0, flatMod: 0, applyWound: isTest, cp: 0, cojones: false, ...preset };
   // Les PNJ n'ont pas de points : inutile de demander pour leurs jets de résistance.
   const ask = !fast && !preset && (kind !== "resistance" || isPersonnage);
   if (ask) {
-    const chosen = await promptRollOptions(actor, { label, pips, kind });
+    const chosen = await promptRollOptions(actor, { label, pips, kind, fixedDifficulty });
     if (!chosen) return null;
     opts = { ...opts, ...chosen };
   }
@@ -215,6 +218,7 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
     [SYSTEM_ID]: {
       reroll: {
         actorUuid: actor.uuid,
+        kind: rerollKind,
         label,
         pips,
         options: { difficulty: opts.difficulty, diceMod: opts.diceMod, flatMod: opts.flatMod, applyWound: opts.applyWound }
@@ -233,6 +237,9 @@ export async function rerollWithCojones(message) {
   if (!actor?.isOwner) return ui.notifications.warn("Seul le propriétaire du personnage peut relancer.");
   if (actor.system.cojones.value <= 0) return ui.notifications.warn("Plus de points de Cojones.");
   await actor.update({ "system.cojones.value": actor.system.cojones.value - 1 });
+  if (data.kind === "accoutumance") {
+    return actor.rollAccoutumanceTest({ difficulty: data.options.difficulty, preset: { ...data.options, reroll: true } });
+  }
   return rollD6(actor, {
     label: `${data.label} (relance)`,
     pips: data.pips,

@@ -487,3 +487,10 @@
 
 .zc-power-card .zc-roll-title { background: #2a0c25; }
 .zc-power-card p { margin: 4px 0; }
+
+/* --- Test d'accoutumance --------------------------------- */
+
+.zc-accou-test { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; }
+.zc-sheet .zc-accou-test button { width: auto; margin: 0; }
+.zc-accou-test .zc-field { flex: 0 0 auto; }
+.zc-sheet .zc-accou-test input[type="number"] { width: 48px; text-align: center; font-weight: 700; }

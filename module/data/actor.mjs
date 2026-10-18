@@ -93,7 +93,8 @@ export class PersonnageData extends BaseActorData {
       money: text(""),
       accoutumance: new fields.SchemaField({
         value: int(0, 0, ACCOUTUMANCE.max),
-        max: int(ACCOUTUMANCE.max, 0, ACCOUTUMANCE.max)
+        max: int(ACCOUTUMANCE.max, 0, ACCOUTUMANCE.max),
+        testDifficulty: int(ACCOUTUMANCE.test.base, 0)
       }),
       occult: new fields.SchemaField(occult),
       equipmentNotes: text("")

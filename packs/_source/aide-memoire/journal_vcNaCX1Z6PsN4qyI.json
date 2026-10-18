@@ -109,7 +109,7 @@
         "level": 1
       },
       "text": {
-        "content": "<h2>Accoutumance (règle de la campagne)</h2>\n<p>Jauge de 0 à 30, visible des joueurs : seuil 1 de 0 à 10, seuil 2 de 11 à 20, seuil 3 de 21 à 30.\nLe chat annonce l'entrée dans les seuils 2 et 3 et la jauge pleine.</p>\n<h2>Pouvoirs occultes</h2>\n<ul>\n  <li>Seuil 1 : passifs, narrés par le MJ. Seuil 2 : actifs, +1 par utilisation. Seuil 3 : manifestes, +2 par utilisation.</li>\n  <li>Le bouton <em>Utiliser</em> ajoute le coût à la jauge et l'annonce (au MJ seulement si le pouvoir n'est pas révélé).</li>\n  <li>Un pouvoir reste invisible pour le joueur tant que le MJ ne l'a pas révélé (icône œil).</li>\n</ul>",
+        "content": "<h2>Accoutumance (règle de la campagne)</h2>\n<p>Jauge de 0 à 30, visible des joueurs : seuil 1 de 0 à 10, seuil 2 de 11 à 20, seuil 3 de 21 à 30.\nLe chat annonce l'entrée dans les seuils 2 et 3 et la jauge pleine.</p>\n<h2>Test d'accoutumance</h2>\n<p>Test de Volonté contre 15. Chaque réussite augmente de 3 la difficulté du test suivant ; au premier échec\n(une égalité ne suffit pas), elle revient à 15. Une relance avec un point de Cojones suit la même règle.</p>\n<h2>Pouvoirs occultes</h2>\n<ul>\n  <li>Seuil 1 : passifs, narrés par le MJ. Seuil 2 : actifs, +1 par utilisation. Seuil 3 : manifestes, +2 par utilisation.</li>\n  <li>Le bouton <em>Utiliser</em> ajoute le coût à la jauge et l'annonce (au MJ seulement si le pouvoir n'est pas révélé).</li>\n  <li>Un pouvoir reste invisible pour le joueur tant que le MJ ne l'a pas révélé (icône œil).</li>\n</ul>",
         "format": 1
       },
       "flags": {},

@@ -198,6 +198,15 @@
         <a data-action="stepAccoutumance" data-step="1" data-tooltip="+1"><i class="fa-solid fa-plus"></i></a>
       </span>
     </header>
+    <div class="zc-accou-test">
+      <button type="button" data-action="accoutumanceTest" data-tooltip="Volonté contre la difficulté indiquée. Réussite : +3 au prochain test ; échec : retour à 15. Maj+clic : sans options.">
+        <i class="fa-solid fa-brain"></i> Test d'accoutumance
+      </button>
+      <label class="zc-field" data-tooltip="Difficulté du prochain test (modifiable)">Difficulté
+        <input type="number" min="0" name="system.accoutumance.testDifficulty" value="{{system.accoutumance.testDifficulty}}">
+      </label>
+      <span class="zc-hint">Volonté {{system.skills.volonte.total}}</span>
+    </div>
     <div class="zc-gauge">
       {{#each accoutumance.cells as |cell|}}
       <a class="zc-cell zc-zone-{{cell.tier}}{{#if cell.filled}} filled{{/if}}{{#if cell.threshold}} threshold{{/if}}"

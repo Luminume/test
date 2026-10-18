@@ -1,6 +1,6 @@
 import { SKILLS, STRESS, WOUNDS, ACCOUTUMANCE, ADVANCEMENT, VEHICLE_DAMAGE } from "../config.mjs";
 import { codeToPips, pipsToCode, rollFormula } from "../dice-code.mjs";
-import { nextWoundLevel, accoutumanceEvents, advancementCost, nextSkillBonus, powerCost, nextVehicleDamage } from "../rules.mjs";
+import { nextWoundLevel, accoutumanceEvents, advancementCost, nextSkillBonus, powerCost, nextVehicleDamage, nextAccoutumanceDifficulty } from "../rules.mjs";
 import { rollD6, rollSimple, postChat } from "../dice/roll.mjs";
 
 const escape = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
@@ -237,6 +237,42 @@ export class ZCorpsActor extends Actor {
       <p><strong>${escape(plan.label)}</strong> : ${from} → <strong>${to}</strong></p>
       <div class="zc-note">${plan.cost} point(s) de personnage dépensé(s), reste ${available - plan.cost}.</div></div>`);
     return true;
+  }
+
+  /* -------------------------------------------- */
+  /*  Test d'accoutumance                         */
+  /* -------------------------------------------- */
+
+  /**
+   * Test de Volonté contre la difficulté courante (15 au départ).
+   * Réussite : +3 pour le prochain test ; échec : retour à 15.
+   * @param {object} [options]
+   * @param {number} [options.difficulty]  difficulté imposée (relance avec un point de Cojones)
+   * @param {object} [options.preset]      options de jet reprises lors d'une relance
+   */
+  rollAccoutumanceTest({ difficulty, preset, fast = false } = {}) {
+    const { skill, base, step } = ACCOUTUMANCE.test;
+    const target = difficulty ?? this.system.accoutumance.testDifficulty;
+    const volonte = this.system.skills[skill];
+    return rollD6(this, {
+      label: `Test d'accoutumance (${volonte.label})`,
+      pips: volonte.pips,
+      fixedDifficulty: target,
+      rerollKind: "accoutumance",
+      preset,
+      fast,
+      notes: preset?.reroll ? ["Relance grâce à un point de Cojones"] : [],
+      afterRoll: async result => {
+        const success = result.outcome === "success";
+        const next = nextAccoutumanceDifficulty(target, success, { base, step });
+        await this.update({ "system.accoutumance.testDifficulty": next });
+        return {
+          notes: [success
+            ? `Prochain test d'accoutumance : difficulté ${next}.`
+            : `La difficulté du test d'accoutumance revient à ${next}.`]
+        };
+      }
+    });
   }
 
   /* -------------------------------------------- */

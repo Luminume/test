@@ -159,6 +159,10 @@ function onOpenBrowser(event, target) {
   return ZCorpsBrowser.open(this.document, target.dataset.mode);
 }
 
+function onAccoutumanceTest(event) {
+  return this.document.rollAccoutumanceTest({ fast: event.shiftKey });
+}
+
 function onUsePower(event, target) {
   const item = itemOf(this, target);
   if (item) return this.document.usePower(item);
@@ -234,6 +238,7 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       togglePowerRevealed: onTogglePowerRevealed,
       improve: onImprove,
       usePower: onUsePower,
+      accoutumanceTest: onAccoutumanceTest,
       toggleCreation: onToggleCreation,
       applyArchetype: onApplyArchetype
     },
