@@ -1,0 +1,27 @@
+{
+  "_id": "bEyzDNF0KFKC6SLm",
+  "_key": "!items!bEyzDNF0KFKC6SLm",
+  "name": "Perception des fissures",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Évalue approximativement le niveau de corruption occulte sur une personne à proximité.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 410,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

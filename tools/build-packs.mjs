@@ -10,7 +10,13 @@ import { WEAPONS, ARMOR, GEAR, VEHICLES } from "./data/equipement.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SYSTEM = "zcorps-vtt";
-const POWERS = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data/pouvoirs.json"), "utf8"));
+const readJson = file => JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data", file), "utf8"));
+// Pouvoirs de la campagne puis bibliothèque générique (sans étiquette « Campagne »).
+// `variant` distingue les identifiants quand un nom existe dans les deux listes.
+const POWERS = [
+  ...readJson("pouvoirs.json"),
+  ...readJson("pouvoirs-generiques.json").map(p => ({ ...p, variant: "generique" }))
+];
 
 /** Identifiant Foundry stable (16 caractères alphanumériques) dérivé d'une clé. */
 function id(key) {
@@ -26,8 +32,8 @@ function folder(pack, name, sort) {
   return { _id, _key: `!folders!${_id}`, name, type: "Item", folder: null, sorting: "a", sort, color: null, description: "", flags: {} };
 }
 
-function item(pack, folderDoc, { name, type, img, system }, sort) {
-  const _id = id(`${pack}:item:${type}:${name}`);
+function item(pack, folderDoc, { name, type, img, system, variant }, sort) {
+  const _id = id(`${pack}:item:${type}:${name}${variant ? `:${variant}` : ""}`);
   return {
     _id, _key: `!items!${_id}`, name, type, img, system, folder: folderDoc._id, sort,
     effects: [], flags: {}, ownership: { default: 0 }, _stats: stats
@@ -86,7 +92,7 @@ function powerDocs() {
   const folders = [1, 2, 3].map(t => folder(pack, `Seuil ${t}`, t * 100));
   const docs = [...folders];
   POWERS.forEach((p, i) => docs.push(item(pack, folders[p.tier - 1], {
-    name: p.name, type: "pouvoir", img: "icons/svg/eye.svg",
+    name: p.name, type: "pouvoir", img: "icons/svg/eye.svg", variant: p.variant,
     system: { tier: p.tier, tags: p.tags.join(", "), cost: p.cost, mechanic: p.mechanic, narrative: p.narrative, revealed: false }
   }, i * 10)));
   return { pack, docs };

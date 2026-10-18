@@ -1,0 +1,27 @@
+{
+  "_id": "vMkM1GXiQmMNRDpE",
+  "_key": "!items!vMkM1GXiQmMNRDpE",
+  "name": "Présence stabilisante renforcée",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Les alliés proches gagnent un bonus à leurs tests de Volonté contre la panique pour la durée d'une scène.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 660,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Sens du danger",
+    "tier": 1,
+    "mechanic": "Perception instinctive d'une menace imminente avant qu'elle se manifeste. Rationalisé comme hypervigilance.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Lecture des corps",
+    "tier": 1,
+    "mechanic": "Perçoit l'état physique réel des gens : blessures cachées, maladie, fatigue profonde.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Mémoire photographique situationnelle",
+    "tier": 1,
+    "mechanic": "Retient inconsciemment les détails d'un lieu visité, même brièvement.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Calme contre nature",
+    "tier": 1,
+    "mechanic": "Résistance passive aux effets de panique et de terreur situationnelle.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Transparence sociale",
+    "tier": 1,
+    "mechanic": "Les regards hostiles glissent sur lui dans les foules. Difficulté pour les PNJ à le cibler en premier.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Résonance animale",
+    "tier": 1,
+    "mechanic": "Les animaux ordinaires ne réagissent pas à sa présence avec peur ou agressivité.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Perception des intentions",
+    "tier": 1,
+    "mechanic": "Sait instinctivement si un interlocuteur est sincère ou dissimule quelque chose.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Sommeil léger productif",
+    "tier": 1,
+    "mechanic": "Se repose pleinement en deux à trois heures. Rationalisé comme insomnie productive.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Mémoire des lieux chargés",
+    "tier": 1,
+    "mechanic": "Ressent une impression diffuse dans les endroits où se sont passées des choses violentes ou intenses.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Résistance aux toxines mineures",
+    "tier": 1,
+    "mechanic": "Alcool, drogues légères et venins faibles ont un effet réduit.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Orientation naturelle",
+    "tier": 1,
+    "mechanic": "Ne se perd jamais dans un environnement traversé une seule fois, même dans l'obscurité.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Perception des fissures",
+    "tier": 1,
+    "mechanic": "Évalue approximativement le niveau de corruption occulte sur une personne à proximité.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Silence de mouvement",
+    "tier": 1,
+    "mechanic": "Ses déplacements sont naturellement discrets sans effort conscient.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Empathie de surface",
+    "tier": 1,
+    "mechanic": "Ressent l'état émotionnel dominant d'un groupe ou d'une foule à son entrée.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Résistance à la douleur légère",
+    "tier": 1,
+    "mechanic": "Ignore les pénalités des blessures mineures.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Vision crépusculaire",
+    "tier": 1,
+    "mechanic": "Voit clairement dans une obscurité partielle là où les autres peinent.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Mémoire auditive",
+    "tier": 1,
+    "mechanic": "Retient et peut reproduire exactement des sons ou des voix entendus une seule fois.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Attrait diffus",
+    "tier": 1,
+    "mechanic": "Dégage quelque chose d'indéfinissable qui pousse les inconnus à lui faire confiance légèrement plus vite.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Détection de présence",
+    "tier": 1,
+    "mechanic": "Sait instinctivement si une pièce est vide ou occupée avant d'y entrer.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Corps efficace",
+    "tier": 1,
+    "mechanic": "Se remet des blessures physiques légèrement plus vite que la normale. Rationalisé comme bonne condition physique.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Cartographie des liens",
+    "tier": 2,
+    "mechanic": "Analyse complète des dynamiques d'un groupe : qui obéit à qui par peur, qui est le maillon faible, qui ment.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Voix de conviction",
+    "tier": 2,
+    "mechanic": "Ses paroles portent un poids difficile à ignorer. Bonus significatif à un jet de Persuasion ou d'Intimidation ciblé.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Emprunt",
+    "tier": 2,
+    "mechanic": "S'immerge brièvement dans la logique interne d'une personne pour en comprendre les motivations profondes. La cible ressent un vide.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Calcul de sortie",
+    "tier": 2,
+    "mechanic": "Identifie instantanément le chemin de moindre résistance dans une situation dangereuse : fuite, mensonge optimal, allié utile.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Mémoire des morts",
+    "tier": 2,
+    "mechanic": "Dans un lieu chargé de mort violente, perçoit des fragments : qui est mort, comment, parfois pourquoi.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Interférence",
+    "tier": 2,
+    "mechanic": "Peut brouiller brièvement la perception d'une cible — elle perd le fil d'une pensée, hésite, se retourne sans raison. Effet narratif.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Appel de similitude",
+    "tier": 2,
+    "mechanic": "Les créatures ou entités partageant une origine avec l'énergie qui l'influence hésitent à l'attaquer en premier.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Absorption émotionnelle",
+    "tier": 2,
+    "mechanic": "Prend temporairement la charge émotionnelle d'un allié pour une scène. Il porte ses pénalités de stress à sa place.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Transmission d'urgence",
+    "tier": 2,
+    "mechanic": "Peut transmettre une impression forte à un allié à distance — pas des mots, mais une émotion ou une direction. Une fois par session.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Régénération accélérée",
+    "tier": 2,
+    "mechanic": "Remonte d'un niveau de blessure après un repos court au lieu de la durée normale.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Vérité de surface",
+    "tier": 2,
+    "mechanic": "En regardant quelqu'un dans les yeux quelques secondes, sait s'il ment sur ce qu'il dit en ce moment précis.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Camouflage de présence",
+    "tier": 2,
+    "mechanic": "Peut rester parfaitement immobile et non remarqué dans un environnement même partiellement éclairé.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Appel de refuge",
+    "tier": 2,
+    "mechanic": "Trouve instinctivement un abri ou une cache utilisable dans n'importe quel environnement urbain ou naturel.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Résistance à l'influence",
+    "tier": 2,
+    "mechanic": "Pour une scène, immunise un allié désigné contre les effets de manipulation ou de corruption psychologique.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Écho du passé",
+    "tier": 2,
+    "mechanic": "Dans un objet qui a appartenu à quelqu'un, perçoit une impression émotionnelle forte liée à son dernier propriétaire.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Fragilisation",
+    "tier": 2,
+    "mechanic": "Identifie le point de rupture psychologique d'une cible consciente. Ce qui la ferait craquer. Usage narratif.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Présence stabilisante renforcée",
+    "tier": 2,
+    "mechanic": "Les alliés proches gagnent un bonus à leurs tests de Volonté contre la panique pour la durée d'une scène.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Désorientation localisée",
+    "tier": 2,
+    "mechanic": "Inverse brièvement les repères spatiaux d'une cible pendant un round. Test de résistance applicable.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Infiltration sensorielle",
+    "tier": 2,
+    "mechanic": "Peut percevoir ce qu'une entité liée à la source de corruption perçoit — brièvement, depuis sa perspective.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Marque",
+    "tier": 2,
+    "mechanic": "Pose une impression imperceptible sur une cible. Sait pendant les prochaines 24 heures si cette cible est vivante, morte, ou en danger.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Commandement",
+    "tier": 3,
+    "mechanic": "Les entités ou créatures de bas niveau obéissent à une injonction courte et simple. Ça marche. Il n'y a pas d'explication valide.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Dissolution de l'identité",
+    "tier": 3,
+    "mechanic": "Peut projeter une identité entièrement fabriquée pour la durée d'une scène — il devient ce que l'interlocuteur a besoin de percevoir.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Négociation directe",
+    "tier": 3,
+    "mechanic": "Peut engager une véritable conversation avec la source de corruption — pas la subir, mais lui parler, poser des questions, proposer des termes.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Vision totale",
+    "tier": 3,
+    "mechanic": "Perçoit en un instant l'état réel d'un lieu, d'une situation ou d'une personne — ce qui est caché, ce qui va arriver, ce qui a déjà eu lieu.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Sceau",
+    "tier": 3,
+    "mechanic": "Peut interdire l'accès d'une zone à des entités corrompues pendant une durée limitée. Nécessite un ancrage physique.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Transfert de corruption",
+    "tier": 3,
+    "mechanic": "Peut extraire partiellement l'influence occulte d'une cible et l'absorber lui-même. Augmentation propre, réduction chez la cible.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Corps-frontière",
+    "tier": 3,
+    "mechanic": "Sa chair devient partiellement imperméable aux attaques des entités cosmiques. Bonus de résistance contre ces sources uniquement.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Langage des profondeurs",
+    "tier": 3,
+    "mechanic": "Peut communiquer en intentions et émotions primaires avec n'importe quelle créature mutée ou corrompue, quelle que soit sa forme.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Gel de perception",
+    "tier": 3,
+    "mechanic": "Suspend la perception d'une cible pendant un round — elle ne peut agir, pas parce qu'elle est immobilisée, mais parce qu'elle ne reçoit plus le monde.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Appel des fragments",
+    "tier": 3,
+    "mechanic": "Convoque les impressions de tous les morts violents d'un lieu en même temps. Information massive, potentiellement déstabilisante pour le personnage lui-même.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Effacement",
+    "tier": 3,
+    "mechanic": "Sur une cible inconsciente, peut effacer les souvenirs d'une période déterminée. Irréversible.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Lien vivant",
+    "tier": 3,
+    "mechanic": "Se lie à un allié consentant. Partage sa résistance physique avec lui — les dégâts sont répartis entre les deux pour la durée d'une scène.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Miroir de Vérité",
+    "tier": 3,
+    "mechanic": "Force une cible consciente à percevoir sa propre nature réelle pendant un round. Effets selon ce qu'elle y voit — désorientation, révélation, ou rupture.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Canal",
+    "tier": 3,
+    "mechanic": "Devient temporairement un vecteur direct de la source de corruption. Sa présence rayonne son influence. Tous les êtres à proximité ressentent la source à travers lui.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Sacrifice partiel",
+    "tier": 3,
+    "mechanic": "Absorbe tous les dégâts destinés à un allié dans un rayon proche pendant un round. Il subit la totalité. Une seule fois par rencontre.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Invocation partielle",
+    "tier": 3,
+    "mechanic": "Attire une manifestation mineure de la source dans une zone. Perturbation sensorielle massive, augmentation des difficultés de Volonté pour tous pendant plusieurs rounds.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Régénération totale",
+    "tier": 3,
+    "mechanic": "Remonte d'un niveau de blessure immédiatement, sans repos requis. Utilisable une seule fois par session.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Perception hors du temps",
+    "tier": 3,
+    "mechanic": "Pour un round, perçoit tous les futurs immédiats possibles dans une situation — sait ce qui va se passer si rien ne change. Aucune garantie que quelque chose changera.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Dissolution progressive",
+    "tier": 3,
+    "mechanic": "À influence maximale, peut choisir de ne plus résister activement à la corruption. Accès temporaire à des capacités hors-norme au prix d'un basculement narratif irréversible.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "Témoignage",
+    "tier": 3,
+    "mechanic": "Peut transmettre à un autre personnage une vision complète de ce qu'il a vécu sous influence — ses traumas, ses pouvoirs, sa progression. Connexion intense, irréversible, coûteuse pour les deux.",
+    "narrative": "",
+    "tags": [
+      "Générique"
+    ],
+    "cost": "+2 influence"
+  }
+]

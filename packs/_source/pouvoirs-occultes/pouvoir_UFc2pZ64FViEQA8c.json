@@ -1,0 +1,27 @@
+{
+  "_id": "UFc2pZ64FViEQA8c",
+  "_key": "!items!UFc2pZ64FViEQA8c",
+  "name": "Appel de similitude",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Les créatures ou entités partageant une origine avec l'énergie qui l'influence hésitent à l'attaquer en premier.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 560,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

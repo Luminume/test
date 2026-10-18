@@ -1,0 +1,27 @@
+{
+  "_id": "zj4xCR0N0AXAHALF",
+  "_key": "!items!zj4xCR0N0AXAHALF",
+  "name": "Résonance animale",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Les animaux ordinaires ne réagissent pas à sa présence avec peur ou agressivité.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 350,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

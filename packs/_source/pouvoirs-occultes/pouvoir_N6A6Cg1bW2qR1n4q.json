@@ -1,0 +1,27 @@
+{
+  "_id": "N6A6Cg1bW2qR1n4q",
+  "_key": "!items!N6A6Cg1bW2qR1n4q",
+  "name": "Désorientation localisée",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Inverse brièvement les repères spatiaux d'une cible pendant un round. Test de résistance applicable.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 670,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

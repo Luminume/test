@@ -8,6 +8,7 @@ import { WEAPONS, ARMOR, GEAR, VEHICLES } from "../tools/data/equipement.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const powers = JSON.parse(fs.readFileSync(path.join(root, "tools/data/pouvoirs.json"), "utf8"));
+const generic = JSON.parse(fs.readFileSync(path.join(root, "tools/data/pouvoirs-generiques.json"), "utf8"));
 
 test("banque d'objets : compétences et codes valides", () => {
   let count = 0;
@@ -32,6 +33,16 @@ test("pouvoirs occultes : 30 pouvoirs, seuils 1 à 3, étiquette Campagne", () =
   assert.deepEqual([1, 2, 3].map(t => powers.filter(p => p.tier === t).length), [11, 11, 8]);
   // Bill n'a pas de seuil 3 (conception narrative)
   assert.ok(!powers.some(p => p.tags.includes("Bill") && p.tier === 3));
+});
+
+test("bibliothèque générique : 60 pouvoirs, 20 par seuil, sans étiquette Campagne", () => {
+  assert.equal(generic.length, 60);
+  assert.deepEqual([1, 2, 3].map(t => generic.filter(p => p.tier === t).length), [20, 20, 20]);
+  for (const p of generic) {
+    assert.ok(!p.tags.includes("Campagne"), p.name);
+    assert.ok(p.name.length > 2 && p.mechanic.length > 20, p.name);
+  }
+  assert.deepEqual(generic.filter(p => p.tier > 1).map(p => p.cost).filter((c, i, a) => a.indexOf(c) === i), ["+1 influence", "+2 influence"]);
 });
 
 test("compendiums compilés présents", () => {

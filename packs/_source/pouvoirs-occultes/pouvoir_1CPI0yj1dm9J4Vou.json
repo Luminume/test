@@ -1,0 +1,27 @@
+{
+  "_id": "1CPI0yj1dm9J4Vou",
+  "_key": "!items!1CPI0yj1dm9J4Vou",
+  "name": "Effacement",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Sur une cible inconsciente, peut effacer les souvenirs d'une période déterminée. Irréversible.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 800,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

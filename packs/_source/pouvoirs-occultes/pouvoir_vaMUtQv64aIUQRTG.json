@@ -1,0 +1,27 @@
+{
+  "_id": "vaMUtQv64aIUQRTG",
+  "_key": "!items!vaMUtQv64aIUQRTG",
+  "name": "Régénération totale",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Remonte d'un niveau de blessure immédiatement, sans repos requis. Utilisable une seule fois par session.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 860,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

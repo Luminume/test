@@ -1,0 +1,27 @@
+{
+  "_id": "41q0OFdSKjfYWS78",
+  "_key": "!items!41q0OFdSKjfYWS78",
+  "name": "Négociation directe",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Peut engager une véritable conversation avec la source de corruption — pas la subir, mais lui parler, poser des questions, proposer des termes.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 720,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

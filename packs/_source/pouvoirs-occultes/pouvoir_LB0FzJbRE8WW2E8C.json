@@ -1,0 +1,27 @@
+{
+  "_id": "LB0FzJbRE8WW2E8C",
+  "_key": "!items!LB0FzJbRE8WW2E8C",
+  "name": "Sommeil léger productif",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Se repose pleinement en deux à trois heures. Rationalisé comme insomnie productive.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 370,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

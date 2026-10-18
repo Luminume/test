@@ -1,0 +1,27 @@
+{
+  "_id": "4SA7HkOsHbd916mD",
+  "_key": "!items!4SA7HkOsHbd916mD",
+  "name": "Calme contre nature",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Résistance passive aux effets de panique et de terreur situationnelle.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 330,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

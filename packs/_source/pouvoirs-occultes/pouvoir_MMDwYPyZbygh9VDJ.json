@@ -1,0 +1,27 @@
+{
+  "_id": "MMDwYPyZbygh9VDJ",
+  "_key": "!items!MMDwYPyZbygh9VDJ",
+  "name": "Dissolution progressive",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "À influence maximale, peut choisir de ne plus résister activement à la corruption. Accès temporaire à des capacités hors-norme au prix d'un basculement narratif irréversible.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 880,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

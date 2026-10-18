@@ -34,7 +34,8 @@ et contenir `system.json`), puis relancer Foundry.
   au personnage. Les objets créés par le MJ dans l'onglet Objets du monde y apparaissent aussi
   (bouton « Créer »). Également disponible dans la compendie « Équipement Z-Corps ».
 - **Pouvoirs occultes** (MJ uniquement, bouton dans la case des pouvoirs) : les 30 pouvoirs de la
-  campagne, rangés par seuil, étiquetés « Campagne » + personnage + PJ/PNJ, avec recherche.
+  campagne (étiquetés « Campagne » + personnage + PJ/PNJ) et les 60 pouvoirs de la bibliothèque
+  générique (étiquette « Générique »), rangés par seuil, avec recherche.
   Cocher = ajouter au personnage, décocher = retirer. Sur la fiche, un pouvoir reste caché au joueur
   tant que le MJ ne l'a pas révélé (icône œil). Compendie « Pouvoirs occultes (MJ) », invisible aux joueurs.
 - Données sources : `tools/data/` ; après modification, `npm run build:packs` régénère les compendiums.

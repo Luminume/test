@@ -1,0 +1,27 @@
+{
+  "_id": "uyO384zRuGCDhsKV",
+  "_key": "!items!uyO384zRuGCDhsKV",
+  "name": "Infiltration sensorielle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Peut percevoir ce qu'une entité liée à la source de corruption perçoit — brièvement, depuis sa perspective.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 680,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "vbxfw4hhQlZBbMaK",
+  "_key": "!items!vbxfw4hhQlZBbMaK",
+  "name": "Perception hors du temps",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Pour un round, perçoit tous les futurs immédiats possibles dans une situation — sait ce qui va se passer si rien ne change. Aucune garantie que quelque chose changera.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 870,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

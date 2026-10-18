@@ -1,0 +1,27 @@
+{
+  "_id": "Vy0D00k3CxHSyJOq",
+  "_key": "!items!Vy0D00k3CxHSyJOq",
+  "name": "Mémoire des lieux chargés",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Ressent une impression diffuse dans les endroits où se sont passées des choses violentes ou intenses.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 380,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

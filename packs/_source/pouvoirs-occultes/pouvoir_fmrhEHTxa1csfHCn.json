@@ -1,0 +1,27 @@
+{
+  "_id": "fmrhEHTxa1csfHCn",
+  "_key": "!items!fmrhEHTxa1csfHCn",
+  "name": "Silence de mouvement",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Ses déplacements sont naturellement discrets sans effort conscient.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 420,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "aUpthc5VnVVsybAs",
+  "_key": "!items!aUpthc5VnVVsybAs",
+  "name": "Vision totale",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Perçoit en un instant l'état réel d'un lieu, d'une situation ou d'une personne — ce qui est caché, ce qui va arriver, ce qui a déjà eu lieu.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 730,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

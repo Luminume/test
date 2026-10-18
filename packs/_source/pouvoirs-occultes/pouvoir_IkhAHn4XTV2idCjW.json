@@ -1,0 +1,27 @@
+{
+  "_id": "IkhAHn4XTV2idCjW",
+  "_key": "!items!IkhAHn4XTV2idCjW",
+  "name": "Absorption émotionnelle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Prend temporairement la charge émotionnelle d'un allié pour une scène. Il porte ses pénalités de stress à sa place.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 570,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

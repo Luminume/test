@@ -1,0 +1,27 @@
+{
+  "_id": "fuhqG1vGd39cJXtq",
+  "_key": "!items!fuhqG1vGd39cJXtq",
+  "name": "Résistance à l'influence",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Pour une scène, immunise un allié désigné contre les effets de manipulation ou de corruption psychologique.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 630,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

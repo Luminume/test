@@ -1,0 +1,27 @@
+{
+  "_id": "YHMKAmvTzOZoNMs4",
+  "_key": "!items!YHMKAmvTzOZoNMs4",
+  "name": "Fragilisation",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Identifie le point de rupture psychologique d'une cible consciente. Ce qui la ferait craquer. Usage narratif.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 650,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

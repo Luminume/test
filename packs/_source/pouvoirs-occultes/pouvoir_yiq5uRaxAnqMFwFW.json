@@ -1,0 +1,27 @@
+{
+  "_id": "yiq5uRaxAnqMFwFW",
+  "_key": "!items!yiq5uRaxAnqMFwFW",
+  "name": "Empathie de surface",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Ressent l'état émotionnel dominant d'un groupe ou d'une foule à son entrée.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 430,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

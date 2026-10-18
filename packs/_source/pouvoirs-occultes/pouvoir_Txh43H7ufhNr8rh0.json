@@ -1,0 +1,27 @@
+{
+  "_id": "Txh43H7ufhNr8rh0",
+  "_key": "!items!Txh43H7ufhNr8rh0",
+  "name": "Témoignage",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Peut transmettre à un autre personnage une vision complète de ce qu'il a vécu sous influence — ses traumas, ses pouvoirs, sa progression. Connexion intense, irréversible, coûteuse pour les deux.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 890,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

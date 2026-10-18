@@ -1,0 +1,27 @@
+{
+  "_id": "m4Wifw0FlChPqMCj",
+  "_key": "!items!m4Wifw0FlChPqMCj",
+  "name": "Calcul de sortie",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Identifie instantanément le chemin de moindre résistance dans une situation dangereuse : fuite, mensonge optimal, allié utile.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 530,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

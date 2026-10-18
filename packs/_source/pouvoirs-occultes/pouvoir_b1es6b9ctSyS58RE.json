@@ -1,0 +1,27 @@
+{
+  "_id": "b1es6b9ctSyS58RE",
+  "_key": "!items!b1es6b9ctSyS58RE",
+  "name": "Dissolution de l'identité",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Peut projeter une identité entièrement fabriquée pour la durée d'une scène — il devient ce que l'interlocuteur a besoin de percevoir.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 710,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

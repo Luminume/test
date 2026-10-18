@@ -1,0 +1,27 @@
+{
+  "_id": "WA0Uss0yaS3FQR85",
+  "_key": "!items!WA0Uss0yaS3FQR85",
+  "name": "Mémoire auditive",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Retient et peut reproduire exactement des sons ou des voix entendus une seule fois.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 460,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

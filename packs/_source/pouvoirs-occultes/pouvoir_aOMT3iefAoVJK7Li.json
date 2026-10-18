@@ -1,0 +1,27 @@
+{
+  "_id": "aOMT3iefAoVJK7Li",
+  "_key": "!items!aOMT3iefAoVJK7Li",
+  "name": "Résistance aux toxines mineures",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Alcool, drogues légères et venins faibles ont un effet réduit.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 390,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

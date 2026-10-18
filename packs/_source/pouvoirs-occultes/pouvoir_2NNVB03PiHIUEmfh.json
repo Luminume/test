@@ -1,0 +1,27 @@
+{
+  "_id": "2NNVB03PiHIUEmfh",
+  "_key": "!items!2NNVB03PiHIUEmfh",
+  "name": "Appel des fragments",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Convoque les impressions de tous les morts violents d'un lieu en même temps. Information massive, potentiellement déstabilisante pour le personnage lui-même.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 790,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

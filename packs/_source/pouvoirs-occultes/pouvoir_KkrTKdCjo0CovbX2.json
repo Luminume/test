@@ -1,0 +1,27 @@
+{
+  "_id": "KkrTKdCjo0CovbX2",
+  "_key": "!items!KkrTKdCjo0CovbX2",
+  "name": "Vision crépusculaire",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Voit clairement dans une obscurité partielle là où les autres peinent.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 450,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

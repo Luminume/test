@@ -1,0 +1,27 @@
+{
+  "_id": "lChjG3W4eaQi7966",
+  "_key": "!items!lChjG3W4eaQi7966",
+  "name": "Mémoire photographique situationnelle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Retient inconsciemment les détails d'un lieu visité, même brièvement.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 320,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

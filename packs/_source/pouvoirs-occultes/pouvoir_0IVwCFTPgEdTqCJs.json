@@ -1,0 +1,27 @@
+{
+  "_id": "0IVwCFTPgEdTqCJs",
+  "_key": "!items!0IVwCFTPgEdTqCJs",
+  "name": "Sens du danger",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Perception instinctive d'une menace imminente avant qu'elle se manifeste. Rationalisé comme hypervigilance.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 300,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

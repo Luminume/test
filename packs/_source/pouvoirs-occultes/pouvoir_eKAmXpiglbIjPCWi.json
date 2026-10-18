@@ -1,0 +1,27 @@
+{
+  "_id": "eKAmXpiglbIjPCWi",
+  "_key": "!items!eKAmXpiglbIjPCWi",
+  "name": "Mémoire des morts",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Dans un lieu chargé de mort violente, perçoit des fragments : qui est mort, comment, parfois pourquoi.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 540,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

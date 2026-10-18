@@ -1,0 +1,27 @@
+{
+  "_id": "cQXN0z9Xm1G8BIy1",
+  "_key": "!items!cQXN0z9Xm1G8BIy1",
+  "name": "Emprunt",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "S'immerge brièvement dans la logique interne d'une personne pour en comprendre les motivations profondes. La cible ressent un vide.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 520,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

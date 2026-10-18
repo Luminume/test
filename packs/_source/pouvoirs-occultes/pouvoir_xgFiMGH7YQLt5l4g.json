@@ -1,0 +1,27 @@
+{
+  "_id": "xgFiMGH7YQLt5l4g",
+  "_key": "!items!xgFiMGH7YQLt5l4g",
+  "name": "Lien vivant",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Se lie à un allié consentant. Partage sa résistance physique avec lui — les dégâts sont répartis entre les deux pour la durée d'une scène.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 810,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

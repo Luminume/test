@@ -1,0 +1,27 @@
+{
+  "_id": "jiz20vagG8eFlpv9",
+  "_key": "!items!jiz20vagG8eFlpv9",
+  "name": "Orientation naturelle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Générique",
+    "cost": "",
+    "mechanic": "Ne se perd jamais dans un environnement traversé une seule fois, même dans l'obscurité.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 400,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

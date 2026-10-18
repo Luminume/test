@@ -1,0 +1,27 @@
+{
+  "_id": "kMBSVrSAMztnjC8l",
+  "_key": "!items!kMBSVrSAMztnjC8l",
+  "name": "Camouflage de présence",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Générique",
+    "cost": "+1 influence",
+    "mechanic": "Peut rester parfaitement immobile et non remarqué dans un environnement même partiellement éclairé.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 610,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

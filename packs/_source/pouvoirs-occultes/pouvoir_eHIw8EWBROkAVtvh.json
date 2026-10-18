@@ -1,0 +1,27 @@
+{
+  "_id": "eHIw8EWBROkAVtvh",
+  "_key": "!items!eHIw8EWBROkAVtvh",
+  "name": "Commandement",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Générique",
+    "cost": "+2 influence",
+    "mechanic": "Les entités ou créatures de bas niveau obéissent à une injonction courte et simple. Ça marche. Il n'y a pas d'explication valide.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 700,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}
