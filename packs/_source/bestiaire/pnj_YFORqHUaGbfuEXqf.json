@@ -1,0 +1,111 @@
+{
+  "_id": "YFORqHUaGbfuEXqf",
+  "_key": "!actors!YFORqHUaGbfuEXqf",
+  "name": "Horde de zombies (Phase 1)",
+  "type": "pnj",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+2"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "1D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "4",
+    "damageBonus": "2D",
+    "painless": true,
+    "notes": "Jet de horde 3D+2, Puissance de référence 3D. RÈGLE DE HORDE : un seul jet d'attaque pour le groupe (bonus de nombre ajouté automatiquement). Chaque niveau de blessure infligé à la horde élimine environ 20 % des créatures (appliqué automatiquement). Une créature isolée se joue avec sa fiche individuelle. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de l'hypophyse ou la décapitation l'arrête. Sang et salive contaminants. Une horde réduite à quelques unités peut être achevée sans nouveau jet si la description s'y prête.",
+    "horde": {
+      "enabled": true,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "XSHlSVyCjFdvENQJ",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "0pq5DktBZnVC6L9O",
+      "_key": "!actors.items!YFORqHUaGbfuEXqf.0pq5DktBZnVC6L9O",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (horde)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "KrX3NMVhPJQH98ME",
+      "_key": "!actors.items!YFORqHUaGbfuEXqf.KrX3NMVhPJQH98ME",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Morsures de la horde",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+0",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Contamination possible : voir les règles du virus."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Horde de zombies (Phase 1)",
+    "texture": {
+      "src": "icons/svg/skull.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

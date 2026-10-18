@@ -7,10 +7,10 @@
   "system": {
     "attributes": {
       "agilite": {
-        "code": "3D"
+        "code": "3D+1"
       },
       "adresse": {
-        "code": "1D+1"
+        "code": "1D"
       },
       "puissance": {
         "code": "3D"
@@ -19,18 +19,24 @@
         "code": "1D"
       },
       "perception": {
-        "code": "2D+1"
+        "code": "1D"
       },
       "presence": {
         "code": "1D"
       }
     },
     "movement": "8",
+    "damageBonus": "",
     "painless": true,
-    "notes": "Profil maison. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de la tête (hypophyse) l'arrête définitivement. Sang et salive contaminants. Contaminé récent, encore rapide et coordonné."
+    "notes": "Profil maison : contaminé récent, encore rapide. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de l'hypophyse ou la décapitation l'arrête. Sang et salive contaminants.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
   },
-  "folder": "XUiiWhg32JIgGthV",
-  "sort": 10,
+  "folder": "q7kEG9D9LAnH6awS",
+  "sort": 0,
   "items": [
     {
       "_id": "doKsSBJOKxjmIXBq",
@@ -46,7 +52,7 @@
       "img": "icons/svg/item-bag.svg",
       "system": {
         "attribute": "agilite",
-        "bonus": "+1D",
+        "bonus": "+2",
         "notes": ""
       }
     },
@@ -69,20 +75,20 @@
       }
     },
     {
-      "_id": "ZNiAKMC80HKR8y9e",
-      "_key": "!actors.items!8jt6v1jgJEiEuPGC.ZNiAKMC80HKR8y9e",
+      "_id": "GNILGKzsglDEWm8V",
+      "_key": "!actors.items!8jt6v1jgJEiEuPGC.GNILGKzsglDEWm8V",
       "effects": [],
       "flags": {},
       "ownership": {
         "default": 0
       },
       "sort": 20,
-      "name": "Chercher (ouïe, odorat)",
+      "name": "Chercher",
       "type": "competence",
       "img": "icons/svg/item-bag.svg",
       "system": {
         "attribute": "perception",
-        "bonus": "+1D",
+        "bonus": "+2D",
         "notes": ""
       }
     },
@@ -100,7 +106,7 @@
       "img": "icons/svg/blood.svg",
       "system": {
         "skill": "bagarre",
-        "category": "Armes naturelles",
+        "category": "Attaques naturelles",
         "damage": "+1D",
         "price": "",
         "ammo": {
@@ -112,36 +118,7 @@
           "medium": "",
           "long": ""
         },
-        "notes": "Arme naturelle. Contamination possible : voir les règles du virus."
-      }
-    },
-    {
-      "_id": "ep4Vy8SXUGEyxBtj",
-      "_key": "!actors.items!8jt6v1jgJEiEuPGC.ep4Vy8SXUGEyxBtj",
-      "effects": [],
-      "flags": {},
-      "ownership": {
-        "default": 0
-      },
-      "sort": 40,
-      "name": "Étreinte / griffes",
-      "type": "arme",
-      "img": "icons/svg/blood.svg",
-      "system": {
-        "skill": "bagarre",
-        "category": "Armes naturelles",
-        "damage": "+1",
-        "price": "",
-        "ammo": {
-          "value": 0,
-          "max": 0
-        },
-        "range": {
-          "short": "",
-          "medium": "",
-          "long": ""
-        },
-        "notes": "Arme naturelle. Réussite : la cible est agrippée, la morsure suit."
+        "notes": "Contamination possible : voir les règles du virus."
       }
     }
   ],

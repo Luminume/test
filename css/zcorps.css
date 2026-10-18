@@ -494,3 +494,6 @@
 .zc-sheet .zc-accou-test button { width: auto; margin: 0; }
 .zc-accou-test .zc-field { flex: 0 0 auto; }
 .zc-sheet .zc-accou-test input[type="number"] { width: 48px; text-align: center; font-weight: 700; }
+
+.zc-horde-bonus { font-weight: 800; color: var(--zc-blood); align-self: center; }
+.zc-pnj .zc-field.small input { width: 48px; }

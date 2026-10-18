@@ -26,11 +26,17 @@
       }
     },
     "movement": "",
+    "damageBonus": "",
     "painless": false,
-    "notes": "Profil maison. Garde un cordon de quarantaine ; ordre de tirer sur tout infecté. Arme d'épaule : profil du fusil d'assaut du livre."
+    "notes": "Profil maison. Garde un cordon de quarantaine ; ordre de tirer sur tout infecté.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
   },
-  "folder": "0j2ZZJbckjEFYMzR",
-  "sort": 20,
+  "folder": "q7kEG9D9LAnH6awS",
+  "sort": 30,
   "items": [
     {
       "_id": "jutobEvILs0B2eHx",

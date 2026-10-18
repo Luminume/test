@@ -26,11 +26,17 @@
       }
     },
     "movement": "",
+    "damageBonus": "",
     "painless": false,
-    "notes": "Profil maison. Protège les installations et le personnel de OneWorld ; peu enclin à partager ses informations."
+    "notes": "Profil maison. Protège les installations et le personnel de OneWorld.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
   },
-  "folder": "0j2ZZJbckjEFYMzR",
-  "sort": 30,
+  "folder": "q7kEG9D9LAnH6awS",
+  "sort": 40,
   "items": [
     {
       "_id": "XndnFSF2q57UGj7E",

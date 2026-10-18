@@ -77,6 +77,20 @@ export const PAGES = [
 <p>Bonus aux dégâts : dés de Puissance ÷ 2, arrondi au supérieur. Une arme notée « +xD » s'y ajoute.</p>`
   },
   {
+    name: "Hordes",
+    content: `
+<h2>Règle de horde (Bestiaire II)</h2>
+<ul>
+  <li>Un seul jet d'attaque pour toute la horde (compétence « Bagarre (horde) »).</li>
+  <li>Bonus de nombre : +5 au total toutes les 10 créatures au-delà de la première (15 pour un essaim dense de rats,
+    5 pour les Mini Spiders). 25 rats : +10. Ajouté automatiquement quand la case « Horde » est cochée.</li>
+  <li>Chaque niveau de blessure infligé à la horde (Puissance de référence) élimine environ 20 % des créatures :
+    le nombre est réduit automatiquement, et le bonus suit.</li>
+  <li>Une créature qui se détache de la horde se joue avec sa fiche individuelle.</li>
+  <li>Scène centrée sur une horde : individualiser ponctuellement 1 ou 2 créatures pour la texture.</li>
+</ul>`
+  },
+  {
     name: "Véhicules",
     content: `
 <h2>Dégâts aux véhicules (p. 52)</h2>
@@ -98,8 +112,9 @@ Pas de points de personnage ni de Cojones sur la Résistance d'un véhicule.</p>
 <p>Jauge de 0 à 30, visible des joueurs : seuil 1 de 0 à 10, seuil 2 de 11 à 20, seuil 3 de 21 à 30.
 Le chat annonce l'entrée dans les seuils 2 et 3 et la jauge pleine.</p>
 <h2>Test d'accoutumance</h2>
-<p>Test de Volonté contre 15. Chaque réussite augmente de 3 la difficulté du test suivant ; au premier échec
-(une égalité ne suffit pas), elle revient à 15. Une relance avec un point de Cojones suit la même règle.</p>
+<p>Test de Volonté contre 15. Chaque réussite augmente de 3 la difficulté du test suivant. Un échec
+(une égalité ne suffit pas) donne <strong>+1 d'accoutumance</strong> et remet la difficulté à 15.
+Une relance réussie avec un point de Cojones annule l'échec (et son +1).</p>
 <h2>Pouvoirs occultes</h2>
 <ul>
   <li>Seuil 1 : passifs, narrés par le MJ. Seuil 2 : actifs, +1 par utilisation. Seuil 3 : manifestes, +2 par utilisation.</li>

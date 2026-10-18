@@ -1,0 +1,63 @@
+{
+  "_id": "Mf7fYrawCj8ULjKg",
+  "_key": "!actors!Mf7fYrawCj8ULjKg",
+  "name": "Bébé zombie",
+  "type": "pnj",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "1D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "1D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "1D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "1 (rampe)",
+    "damageBonus": "0D",
+    "painless": true,
+    "notes": "Phase 1, maternités. NOTE MJ : volontairement pas conçu pour le combat, aucun test de dégâts substantiel. À jouer comme un moment narratif, pour le poids émotionnel de la scène.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "76NETNg5tb92NjZg",
+  "sort": 20,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Bébé zombie",
+    "texture": {
+      "src": "icons/svg/skull.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

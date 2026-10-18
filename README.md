@@ -22,7 +22,8 @@ et contenir `system.json`), puis relancer Foundry.
   0-10, 11-20, 21-30 (une couleur par seuil). Le chat annonce l'entrée dans le seuil 2 (11) et le
   seuil 3 (21), puis la jauge pleine (30). Sous la jauge, la case des pouvoirs occultes.
 - **Test d'accoutumance** (au-dessus de la jauge) : Volonté contre 15 ; chaque réussite ajoute +3 à la
-  difficulté du test suivant, un échec la remet à 15. La difficulté courante est affichée et modifiable.
+  difficulté du test suivant ; un échec donne +1 d'accoutumance et remet la difficulté à 15.
+  La difficulté courante est affichée et modifiable.
 - **PNJ / Zombie** : fiche simplifiée (attributs, compétences libres, blessures, armes).
 - **Objets** : arme (compétence, dégâts, munitions, portées), équipement (protection),
   compétence.
@@ -55,8 +56,10 @@ et contenir `system.json`), puis relancer Foundry.
 - **Argent** sur la fiche, **Insensible à la douleur** sur les PNJ (aucun malus de blessure).
 - **Aide à la création** : compteurs 18D / 12 compétences / 7D / 5 PP / 1 Cojones, alertes, et
   « Partir de cet archétype » pour copier un pré-tiré.
-- Compendiums : **Archétypes** (les 10 pré-tirés du livre), **Bestiaire (MJ)** (zombies et humains en
-  profils maison, véhicules), **Aide-mémoire** (journal des règles appliquées).
+- Compendiums : **Archétypes** (les 10 pré-tirés du livre), **Bestiaire (MJ)** (zombie de Phase 1 du livre,
+  les 22 créatures du Bestiaire II de la campagne, profils maison, véhicules), **Aide-mémoire**.
+- **Hordes** : case « Horde » sur les PNJ (nombre, +5 toutes les N créatures) ; le bonus est ajouté aux jets
+  et chaque niveau de blessure réduit la horde d'environ 20 %.
 
 ## Règles appliquées (livre de base, édition révisée)
 

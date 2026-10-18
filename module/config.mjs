@@ -112,8 +112,9 @@ export const ACCOUTUMANCE = {
     { tier: 2, from: 11, to: 20 },
     { tier: 3, from: 21, to: 30 }
   ],
-  // Test d'accoutumance : Volonté contre 15, +3 après chaque réussite, retour à 15 après un échec.
-  test: { skill: "volonte", base: 15, step: 3 }
+  // Test d'accoutumance : Volonté contre 15, +3 après chaque réussite ;
+  // un échec donne +1 d'accoutumance et remet la difficulté à 15.
+  test: { skill: "volonte", base: 15, step: 3, failureGain: 1 }
 };
 
 /** Nombre d'emplacements de pouvoirs occultes sous la jauge. */

@@ -1,0 +1,176 @@
+{
+  "_id": "ivJSBLhljNuAwNWF",
+  "_key": "!actors!ivJSBLhljNuAwNWF",
+  "name": "Test biologique n°1",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "7D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "5D+2"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "movement": "6 (9 en espace dégagé)",
+    "damageBonus": "4D",
+    "painless": false,
+    "notes": "Création abandonnée d'Eliah, au fond des égouts : dragon aveugle sans écailles. Mini-boss de zone (entre les péchés mutants et les Anciens).\nPOUVOIRS OCCULTES\n▸ Écholocalisation vibratoire : aucune pénalité de Perception liée à l'obscurité ou à l'absence de vue.\n▸ Peau sans écailles : les armes tranchantes font la moitié des dégâts (contondantes et perforantes normales).\n▸ Vestige de conception (MJ) : Sciences occultes ou Médecine avancée peuvent reconnaître la signature d'Eliah.\nFAIBLESSE\n▸ Silence et immobilité : Discrétion (diff. 18) maintenue chaque round rend une cible indétectable.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "2T734AkpN71OAxBw",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "OSablpDgf1bSRDo3",
+      "_key": "!actors.items!ivJSBLhljNuAwNWF.OSablpDgf1bSRDo3",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "2m4CszCA8oQ6fE81",
+      "_key": "!actors.items!ivJSBLhljNuAwNWF.2m4CszCA8oQ6fE81",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Soulever",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "eqCWwmD5nAHG1hHY",
+      "_key": "!actors.items!ivJSBLhljNuAwNWF.eqCWwmD5nAHG1hHY",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+3D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "H9CRAOGXpU9i6ag5",
+      "_key": "!actors.items!ivJSBLhljNuAwNWF.H9CRAOGXpU9i6ag5",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Morsure massive",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+2D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Mâchoire démesurée, capable d'engloutir un membre entier."
+      }
+    },
+    {
+      "_id": "tYNIM6FUOq1z9TZD",
+      "_key": "!actors.items!ivJSBLhljNuAwNWF.tYNIM6FUOq1z9TZD",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Coup de queue",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "4 m",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Peut toucher deux cibles alignées."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Test biologique n°1",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

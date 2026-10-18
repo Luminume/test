@@ -1,0 +1,176 @@
+{
+  "_id": "8Fqx6FiOTRk3Yp5R",
+  "_key": "!actors!8Fqx6FiOTRk3Yp5R",
+  "name": "Le Boucher",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+1"
+      },
+      "adresse": {
+        "code": "2D+2"
+      },
+      "puissance": {
+        "code": "3D+2"
+      },
+      "connaissances": {
+        "code": "2D"
+      },
+      "perception": {
+        "code": "2D+1"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "movement": "5",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Lieutenant de Gourmandise : prépare la « viande » des rites. Massif, calme, méthodique. Dextérité : précision du dépeçage ; Intimidation : calme terrifiant.\n▸ Précision clinique : +1D aux dégâts s'il a observé sa cible un round complet.\n▸ Sang-froid absolu : immunisé à la peur et à l'intimidation.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "SUfBYb4OZlIsMWjY",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "QHEWBrMKnagPdWZW",
+      "_key": "!actors.items!8Fqx6FiOTRk3Yp5R.QHEWBrMKnagPdWZW",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Dextérité",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "9nuBd1zYZQlKqIvW",
+      "_key": "!actors.items!8Fqx6FiOTRk3Yp5R.9nuBd1zYZQlKqIvW",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "dbfcbrW7QkhjMcV8",
+      "_key": "!actors.items!8Fqx6FiOTRk3Yp5R.dbfcbrW7QkhjMcV8",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "td9IwemGmw4tz3n4",
+      "_key": "!actors.items!8Fqx6FiOTRk3Yp5R.td9IwemGmw4tz3n4",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Hachoir de boucher",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "+1D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme d'origine, parfaitement entretenue."
+      }
+    },
+    {
+      "_id": "tinip9wnSuaG1Py3",
+      "_key": "!actors.items!8Fqx6FiOTRk3Yp5R.tinip9wnSuaG1Py3",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Crochets de boucherie (x2)",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Peut immobiliser un membre : Agilité diff. 14 pour se libérer."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Le Boucher",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

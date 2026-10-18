@@ -26,11 +26,17 @@
       }
     },
     "movement": "",
+    "damageBonus": "",
     "painless": false,
-    "notes": "Profil maison. Fuit au premier coup de feu ; peut suivre un PJ qui le rassure (Persuasion, Commander)."
+    "notes": "Profil maison. Fuit au premier coup de feu ; peut suivre un PJ qui le rassure (Persuasion, Commander).",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
   },
-  "folder": "0j2ZZJbckjEFYMzR",
-  "sort": 0,
+  "folder": "q7kEG9D9LAnH6awS",
+  "sort": 10,
   "items": [
     {
       "_id": "RbsC9fmz14gewCVK",

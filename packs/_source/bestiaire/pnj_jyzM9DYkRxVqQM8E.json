@@ -1,0 +1,165 @@
+{
+  "_id": "jyzM9DYkRxVqQM8E",
+  "_key": "!actors!jyzM9DYkRxVqQM8E",
+  "name": "Horreur marine",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+2"
+      },
+      "adresse": {
+        "code": "2D+1"
+      },
+      "puissance": {
+        "code": "4D"
+      },
+      "connaissances": {
+        "code": "2D+2"
+      },
+      "perception": {
+        "code": "3D+1"
+      },
+      "presence": {
+        "code": "2D+2"
+      }
+    },
+    "movement": "3 (8 en eau)",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Sous-fifre aquatique de Paresse, d'inspiration lovecraftienne. Connaissance fragmentaire de Paresse.\n▸ Communication silencieuse : les Horreurs proches agissent en synchronisation parfaite.\n▸ Écho de Paresse : Volonté (diff. 11) pour qui la regarde trop longtemps, sinon −1D aux actions ce round.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "qvECKuDq0d5MpHsa",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "gOhQgY859J8RBYRy",
+      "_key": "!actors.items!jyzM9DYkRxVqQM8E.gOhQgY859J8RBYRy",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Nager",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "fFRUcsCP6H8dOOeZ",
+      "_key": "!actors.items!jyzM9DYkRxVqQM8E.fFRUcsCP6H8dOOeZ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Ut8GIAQndVXuNeIf",
+      "_key": "!actors.items!jyzM9DYkRxVqQM8E.Ut8GIAQndVXuNeIf",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "KbySDA7RcCvZWIXo",
+      "_key": "!actors.items!jyzM9DYkRxVqQM8E.KbySDA7RcCvZWIXo",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "kmye6jmv1tAB9nEA",
+      "_key": "!actors.items!jyzM9DYkRxVqQM8E.kmye6jmv1tAB9nEA",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Griffes palmées",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D+1",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Dégâts perforants et lacérants combinés."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Horreur marine",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

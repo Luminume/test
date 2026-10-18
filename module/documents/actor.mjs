@@ -1,6 +1,6 @@
 import { SKILLS, STRESS, WOUNDS, ACCOUTUMANCE, ADVANCEMENT, VEHICLE_DAMAGE } from "../config.mjs";
 import { codeToPips, pipsToCode, rollFormula } from "../dice-code.mjs";
-import { nextWoundLevel, accoutumanceEvents, advancementCost, nextSkillBonus, powerCost, nextVehicleDamage, nextAccoutumanceDifficulty } from "../rules.mjs";
+import { nextWoundLevel, accoutumanceEvents, advancementCost, nextSkillBonus, powerCost, nextVehicleDamage, nextAccoutumanceDifficulty, hordeAfterWounds } from "../rules.mjs";
 import { rollD6, rollSimple, postChat } from "../dice/roll.mjs";
 
 const escape = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
@@ -79,9 +79,15 @@ export class ZCorpsActor extends Actor {
     return rollD6(this, { label: item.name, pips: this.customSkillPips(item), fast });
   }
 
-  /** Compétence d'une arme : compétence ajoutée du même nom en priorité, sinon compétence de base. */
+  /**
+   * Compétence d'une arme : compétence ajoutée du même nom en priorité (spécialité comprise,
+   * ex. « Bagarre (horde) »), sinon compétence de base.
+   */
   weaponSkillPips(item) {
-    const custom = this.items.find(i => i.type === "competence" && i.name === SKILLS[item.system.skill]?.label);
+    const label = SKILLS[item.system.skill]?.label;
+    const base = name => name.replace(/\s*\(.*\)\s*$/, "").trim();
+    const custom = this.items.find(i => i.type === "competence" && i.name === label)
+      ?? this.items.find(i => i.type === "competence" && base(i.name) === label);
     if (custom) return this.customSkillPips(custom);
     const skill = this.system.skills?.[item.system.skill];
     if (skill) return skill.pips;
@@ -158,8 +164,17 @@ export class ZCorpsActor extends Actor {
         const margin = damage - result.total;
         const before = this.system.wounds.value;
         const after = nextWoundLevel(before, margin);
-        if (after !== before) await this.update({ "system.wounds.value": after });
+        const update = {};
+        if (after !== before) update["system.wounds.value"] = after;
         const notes = [`Dégâts ${damage} − résistance ${result.total} = ${margin}`];
+        // Horde : chaque niveau de blessure élimine environ 20 % des créatures.
+        const horde = this.system.horde;
+        if (horde?.enabled && after > before) {
+          const count = after >= 6 ? 0 : hordeAfterWounds(horde.count, after - before);
+          update["system.horde.count"] = count;
+          notes.push(count ? `Horde réduite : ${horde.count} → ${count} créatures.` : "La horde est anéantie ou dispersée.");
+        }
+        if (Object.keys(update).length) await this.update(update);
         if (after !== before && WOUNDS[after].effect) notes.push(WOUNDS[after].effect);
         return {
           highlight: after === before
@@ -265,12 +280,30 @@ export class ZCorpsActor extends Actor {
       afterRoll: async result => {
         const success = result.outcome === "success";
         const next = nextAccoutumanceDifficulty(target, success, { base, step });
-        await this.update({ "system.accoutumance.testDifficulty": next });
-        return {
-          notes: [success
-            ? `Prochain test d'accoutumance : difficulté ${next}.`
-            : `La difficulté du test d'accoutumance revient à ${next}.`]
-        };
+        const update = { "system.accoutumance.testDifficulty": next };
+        const notes = [];
+        const gain = ACCOUTUMANCE.test.failureGain;
+        const before = this.system.accoutumance.value;
+        if (preset?.reroll) {
+          // Relance (Cojones) d'un échec déjà compté : une réussite annule le +1, un nouvel échec ne recompte rien.
+          if (success) {
+            update["system.accoutumance.value"] = Math.max(0, before - gain);
+            notes.push(`Relance réussie : l'échec est annulé (accoutumance ${before} → ${Math.max(0, before - gain)}).`);
+            notes.push(`Prochain test d'accoutumance : difficulté ${next}.`);
+          } else {
+            notes.push(`La difficulté du test d'accoutumance reste à ${next}.`);
+          }
+        } else if (success) {
+          notes.push(`Prochain test d'accoutumance : difficulté ${next}.`);
+        } else {
+          // Échec : +1 d'accoutumance, et la difficulté revient à 15.
+          const after = Math.min(ACCOUTUMANCE.max, before + gain);
+          update["system.accoutumance.value"] = after;
+          notes.push(`Échec : accoutumance ${before} → ${after}/${ACCOUTUMANCE.max}.`);
+          notes.push(`La difficulté du test d'accoutumance revient à ${next}.`);
+        }
+        await this.update(update);
+        return { highlight: !success && !preset?.reroll ? `+${gain} accoutumance` : "", notes };
       }
     });
   }

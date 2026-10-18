@@ -1,0 +1,194 @@
+{
+  "_id": "cnoGCXysD35Nk5Vh",
+  "_key": "!actors!cnoGCXysD35Nk5Vh",
+  "name": "Cultiste de Colère / Orgueil",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+2"
+      },
+      "adresse": {
+        "code": "2D+1"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "1D+1"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "2D+1"
+      }
+    },
+    "movement": "5",
+    "damageBonus": "1D",
+    "painless": false,
+    "notes": "Membre de l'empire de violence de Colère (incluant l'ancien territoire d'Orgueil annexé), discipliné par la peur.\n▸ Discipline par la peur : +1D à l'Initiative de groupe si un supérieur de Colère est visible.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "SUfBYb4OZlIsMWjY",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "PoNcxDE1ApHAX7rU",
+      "_key": "!actors.items!cnoGCXysD35Nk5Vh.PoNcxDE1ApHAX7rU",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "frrk7qmZaP1tMzre",
+      "_key": "!actors.items!cnoGCXysD35Nk5Vh.frrk7qmZaP1tMzre",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "oa3EZ1eBIcPhDAVp",
+      "_key": "!actors.items!cnoGCXysD35Nk5Vh.oa3EZ1eBIcPhDAVp",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Td0lmlW8N6aj6MBf",
+      "_key": "!actors.items!cnoGCXysD35Nk5Vh.Td0lmlW8N6aj6MBf",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "9GxTcuCfx5IwlEqS",
+      "_key": "!actors.items!cnoGCXysD35Nk5Vh.9GxTcuCfx5IwlEqS",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Arme de poing improvisée",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes",
+        "damage": "3D",
+        "price": "",
+        "ammo": {
+          "value": 6,
+          "max": 6
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Munitions limitées : ressources rares sur le territoire de Colère."
+      }
+    },
+    {
+      "_id": "eHWqEjNtDn7ZxRXu",
+      "_key": "!actors.items!cnoGCXysD35Nk5Vh.eHWqEjNtDn7ZxRXu",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Couteau ou batte cloutée",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme de réserve."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Cultiste de Colère / Orgueil",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

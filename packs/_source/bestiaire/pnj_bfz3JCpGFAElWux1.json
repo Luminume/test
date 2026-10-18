@@ -1,0 +1,194 @@
+{
+  "_id": "bfz3JCpGFAElWux1",
+  "_key": "!actors!bfz3JCpGFAElWux1",
+  "name": "Giga Spider",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "4D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "5D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "3D+2"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "movement": "7 (murs et plafonds)",
+    "damageBonus": "3D",
+    "painless": false,
+    "notes": "Gardienne des zones critiques de Luxure. Détection vibratoire étendue (15 m).\n▸ Gardienne : la vaincre ouvre généralement l'accès à ce que Luxure protégeait.\nMini-boss de zone.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "1je0kDFQzfW9JUNI",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "xMpQkfZVrgvb3YmI",
+      "_key": "!actors.items!bfz3JCpGFAElWux1.xMpQkfZVrgvb3YmI",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Grimper",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "6wUCVd7coqWU1ptx",
+      "_key": "!actors.items!bfz3JCpGFAElWux1.6wUCVd7coqWU1ptx",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "9FT0trcN9mKcQ1m6",
+      "_key": "!actors.items!bfz3JCpGFAElWux1.9FT0trcN9mKcQ1m6",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Soulever",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "9Q5ukF96rmnyShqv",
+      "_key": "!actors.items!bfz3JCpGFAElWux1.9Q5ukF96rmnyShqv",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "nrVcRotczENMRDhA",
+      "_key": "!actors.items!bfz3JCpGFAElWux1.nrVcRotczENMRDhA",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Mandibules",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Dégâts perforants."
+      }
+    },
+    {
+      "_id": "BgOYmDyTyJ4hZegp",
+      "_key": "!actors.items!bfz3JCpGFAElWux1.BgOYmDyTyJ4hZegp",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Toile lourde",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "lancer",
+        "category": "Attaques naturelles",
+        "damage": "0",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Immobilise une cible : Agilité diff. 16 pour se libérer. 2 fois par combat."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Giga Spider",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

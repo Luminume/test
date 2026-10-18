@@ -1,0 +1,111 @@
+{
+  "_id": "E0Ay6jFZCQB2OCoI",
+  "_key": "!actors!E0Ay6jFZCQB2OCoI",
+  "name": "Horde de rats",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+1"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "2D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "4",
+    "damageBonus": "1D",
+    "painless": false,
+    "notes": "Vermine mutée : nombre écrasant, faible dégât individuel. Jet de horde 2D+1 (+5 par 15 rats, essaim dense), Puissance de référence 2D. RÈGLE DE HORDE : un seul jet d'attaque pour le groupe (bonus de nombre ajouté automatiquement). Chaque niveau de blessure infligé à la horde élimine environ 20 % des créatures (appliqué automatiquement). Une créature isolée se joue avec sa fiche individuelle.\n▸ Infiltration : traverse grilles, conduits, brèches minuscules.\n▸ Panique de masse : un témoin non préparé doit réussir Volonté (diff. 8) ou perdre son action suivante à reculer.",
+    "horde": {
+      "enabled": true,
+      "count": 25,
+      "per": 15
+    }
+  },
+  "folder": "SwhioWs7wWuuxt8M",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "JrSJizHk07F6zynj",
+      "_key": "!actors.items!E0Ay6jFZCQB2OCoI.JrSJizHk07F6zynj",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (horde)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "N61nR6UVvPEezYsW",
+      "_key": "!actors.items!E0Ay6jFZCQB2OCoI.N61nR6UVvPEezYsW",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Morsures de l'essaim",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+0",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Horde de rats",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

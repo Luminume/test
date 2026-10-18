@@ -1,0 +1,183 @@
+{
+  "_id": "tWcyNSGzppD1Qtqf",
+  "_key": "!actors!tWcyNSGzppD1Qtqf",
+  "name": "Infirmière zombie",
+  "type": "pnj",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "1D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "4",
+    "damageBonus": "2D",
+    "painless": true,
+    "notes": "Phase 1, milieu hospitalier : zombie standard en uniforme d'infirmière. Mécaniquement identique au zombie du livre. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de l'hypophyse ou la décapitation l'arrête. Sang et salive contaminants.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "76NETNg5tb92NjZg",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "ZuO9iDoHbYKrWTGn",
+      "_key": "!actors.items!tWcyNSGzppD1Qtqf.ZuO9iDoHbYKrWTGn",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "ojJWkBGzSyBfbO2K",
+      "_key": "!actors.items!tWcyNSGzppD1Qtqf.ojJWkBGzSyBfbO2K",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Soulever",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "hP55MGQzM3HxOGbe",
+      "_key": "!actors.items!tWcyNSGzppD1Qtqf.hP55MGQzM3HxOGbe",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Chercher",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "QAl97o64HQy5JuTR",
+      "_key": "!actors.items!tWcyNSGzppD1Qtqf.QAl97o64HQy5JuTR",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Pister",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "tTr68TwwXO8IY4PI",
+      "_key": "!actors.items!tWcyNSGzppD1Qtqf.tTr68TwwXO8IY4PI",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "vFMDJv4SHJgktpPU",
+      "_key": "!actors.items!tWcyNSGzppD1Qtqf.vFMDJv4SHJgktpPU",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Morsure",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Contamination possible : voir les règles du virus."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Infirmière zombie",
+    "texture": {
+      "src": "icons/svg/skull.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

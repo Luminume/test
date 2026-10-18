@@ -1,0 +1,111 @@
+{
+  "_id": "MVEu7BlQypb7xCtc",
+  "_key": "!actors!MVEu7BlQypb7xCtc",
+  "name": "Noyés revenus à la vie",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "3D+1"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "3 (5 en eau)",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Victimes de noyade ramenées par la corruption du lac (pas le virus). Jet de horde 3D+1, Puissance de référence 3D+1. RÈGLE DE HORDE : un seul jet d'attaque pour le groupe (bonus de nombre ajouté automatiquement). Chaque niveau de blessure infligé à la horde élimine environ 20 % des créatures (appliqué automatiquement). Une créature isolée se joue avec sa fiche individuelle.\n▸ Attente immobile : indétectables sous l'eau sans Perception (diff. 15), puis embuscade.",
+    "horde": {
+      "enabled": true,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "qvECKuDq0d5MpHsa",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "OplVxTxaM20aQxru",
+      "_key": "!actors.items!MVEu7BlQypb7xCtc.OplVxTxaM20aQxru",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (horde)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "MUcURrmm2KT9TzYP",
+      "_key": "!actors.items!MVEu7BlQypb7xCtc.MUcURrmm2KT9TzYP",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Étreinte noyeuse",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+0",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "En eau profonde, la cible saisie risque d'être entraînée vers le fond : Agilité diff. 14 pour se libérer."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Noyés revenus à la vie",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

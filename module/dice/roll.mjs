@@ -164,6 +164,10 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
   }
 
   // Un seul dé Joker par jet, plus un Joker « doux » parmi les dés de points de personnage.
+  // Horde : bonus de nombre ajouté au total (pas aux dés).
+  const hordeFlat = isTest ? (actor?.system.hordeBonus ?? 0) : 0;
+  if (hordeFlat) lines.push(`Horde de ${actor.system.horde.count} : +${hordeFlat} au total`);
+
   const { dice, flat } = dicePlan(total);
   const normalRoll = dice > 1 ? await new Roll(`${dice - 1}d6`).evaluate() : null;
   const jokerRoll = await jokerDie().evaluate();
@@ -179,7 +183,7 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
     kind,
     code: pipsToCode(total),
     normal, wild, cp: cpDice, flat,
-    total: sum(normal) + sum(wild) + sum(cpDice) + flat,
+    total: sum(normal) + sum(wild) + sum(cpDice) + flat + hordeFlat,
     difficulty: opts.difficulty,
     isDamage: kind === "damage"
   };
@@ -208,7 +212,7 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
 
   const content = await renderTemplate(TEMPLATES.chat, {
     ...result,
-    flatLabel: flat ? `+${flat}` : "",
+    flatLabel: (flat + hordeFlat) ? `+${flat + hordeFlat}` : "",
     marginLabel: result.margin > 0 ? `+${result.margin}` : `${result.margin}`,
     highlight: extra?.highlight,
     notes: lines,

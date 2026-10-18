@@ -1,0 +1,111 @@
+{
+  "_id": "aLco8Bg5X3zVJkQA",
+  "_key": "!actors!aLco8Bg5X3zVJkQA",
+  "name": "Banc d'anguilles",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "6 (en eau uniquement)",
+    "damageBonus": "1D+2",
+    "painless": false,
+    "notes": "Faune lacustre corrompue par Paresse. Jet de horde 3D, Puissance de référence 2D+2. RÈGLE DE HORDE : un seul jet d'attaque pour le groupe (bonus de nombre ajouté automatiquement). Chaque niveau de blessure infligé à la horde élimine environ 20 % des créatures (appliqué automatiquement). Une créature isolée se joue avec sa fiche individuelle.\n▸ Sens électrique : aucune pénalité de Perception dans l'obscurité ou l'eau trouble.",
+    "horde": {
+      "enabled": true,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "qvECKuDq0d5MpHsa",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "TxtjabDt6nuvP4BF",
+      "_key": "!actors.items!aLco8Bg5X3zVJkQA.TxtjabDt6nuvP4BF",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (horde)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "sP8AHZU7fQip422L",
+      "_key": "!actors.items!aLco8Bg5X3zVJkQA.sP8AHZU7fQip422L",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Morsures du banc",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+0",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Banc d'anguilles",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

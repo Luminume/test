@@ -134,3 +134,18 @@ export function nextVehicleDamage(current, margin) {
 export function nextAccoutumanceDifficulty(difficulty, success, { base, step }) {
   return success ? difficulty + step : base;
 }
+
+/**
+ * Bonus de nombre d'une horde (Bestiaire II) : +5 au total toutes les `per` créatures
+ * au-delà de la première. 25 créatures, per 10 → +10.
+ */
+export function hordeBonus(count, per) {
+  if (!per || count <= 1) return 0;
+  return Math.floor((count - 1) / per) * 5;
+}
+
+/** Réduction de horde : chaque niveau de blessure infligé élimine environ 20 % des créatures. */
+export function hordeAfterWounds(count, levels) {
+  if (levels <= 0) return count;
+  return Math.max(0, Math.round(count * 0.8 ** levels));
+}

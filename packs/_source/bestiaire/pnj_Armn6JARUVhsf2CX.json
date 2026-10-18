@@ -1,9 +1,9 @@
 {
-  "_id": "eyaAFQGnieUUFq36",
-  "_key": "!actors!eyaAFQGnieUUFq36",
-  "name": "Horde de zombies",
+  "_id": "Armn6JARUVhsf2CX",
+  "_key": "!actors!Armn6JARUVhsf2CX",
+  "name": "Egg Bearer",
   "type": "pnj",
-  "img": "icons/svg/skull.svg",
+  "img": "icons/svg/terror.svg",
   "system": {
     "attributes": {
       "agilite": {
@@ -13,58 +13,64 @@
         "code": "1D"
       },
       "puissance": {
-        "code": "4D"
+        "code": "2D+1"
       },
       "connaissances": {
         "code": "1D"
       },
       "perception": {
-        "code": "2D"
+        "code": "2D+2"
       },
       "presence": {
-        "code": "1D"
+        "code": "1D+1"
       }
     },
     "movement": "4",
-    "painless": true,
-    "notes": "Profil maison. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de la tête (hypophyse) l'arrête définitivement. Sang et salive contaminants. Un seul jeton pour 5 à 10 zombies. Chaque niveau de blessure = une partie de la horde abattue ; à Mort, elle est dispersée."
+    "damageBonus": "1D",
+    "painless": false,
+    "notes": "Hôte parasité, vecteur de ponte. Ralenti par la couvée, protège la couvée avant tout, lucidité fragmentaire, sens accru de la chaleur corporelle.\n▸ Ponte : étreinte réussie 2 rounds consécutifs = transfert de couvée. Conséquence grave : en discuter avec le joueur.\n▸ Fragment d'humanité (MJ) : approché avec prudence, peut manifester une dernière lueur de reconnaissance.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
   },
-  "folder": "XUiiWhg32JIgGthV",
-  "sort": 30,
+  "folder": "1je0kDFQzfW9JUNI",
+  "sort": 0,
   "items": [
     {
-      "_id": "Ebyacr3R3LhgDNua",
-      "_key": "!actors.items!eyaAFQGnieUUFq36.Ebyacr3R3LhgDNua",
+      "_id": "ugmmMJrnG7fA9EMZ",
+      "_key": "!actors.items!Armn6JARUVhsf2CX.ugmmMJrnG7fA9EMZ",
       "effects": [],
       "flags": {},
       "ownership": {
         "default": 0
       },
       "sort": 0,
-      "name": "Bagarre",
+      "name": "Endurance",
       "type": "competence",
       "img": "icons/svg/item-bag.svg",
       "system": {
-        "attribute": "agilite",
-        "bonus": "+3D",
+        "attribute": "puissance",
+        "bonus": "+2",
         "notes": ""
       }
     },
     {
-      "_id": "NehYEOjHqxqALBkr",
-      "_key": "!actors.items!eyaAFQGnieUUFq36.NehYEOjHqxqALBkr",
+      "_id": "8KwnRj59mVlt8iYj",
+      "_key": "!actors.items!Armn6JARUVhsf2CX.8KwnRj59mVlt8iYj",
       "effects": [],
       "flags": {},
       "ownership": {
         "default": 0
       },
       "sort": 10,
-      "name": "Morsure",
+      "name": "Étreinte parasitaire",
       "type": "arme",
       "img": "icons/svg/blood.svg",
       "system": {
         "skill": "bagarre",
-        "category": "Armes naturelles",
+        "category": "Attaques naturelles",
         "damage": "+1D",
         "price": "",
         "ammo": {
@@ -76,7 +82,7 @@
           "medium": "",
           "long": ""
         },
-        "notes": "Arme naturelle. Contamination possible : voir les règles du virus."
+        "notes": "Immobilise une cible (Agilité diff. 13 pour se libérer), puis tente de transférer une partie de la couvée."
       }
     }
   ],
@@ -91,9 +97,9 @@
     "systemVersion": "0.2.0"
   },
   "prototypeToken": {
-    "name": "Horde de zombies",
+    "name": "Egg Bearer",
     "texture": {
-      "src": "icons/svg/skull.svg"
+      "src": "icons/svg/terror.svg"
     },
     "displayBars": 20,
     "actorLink": false,

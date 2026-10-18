@@ -1,6 +1,6 @@
 import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, STARTING, VEHICLE_DAMAGE } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
-import { accoutumanceTier, damageBonusPips, movement } from "../rules.mjs";
+import { accoutumanceTier, damageBonusPips, movement, hordeBonus } from "../rules.mjs";
 
 const fields = foundry.data.fields;
 
@@ -129,8 +129,19 @@ export class PnjData extends BaseActorData {
     return {
       ...super.defineSchema(),
       // Morts-vivants : aucun malus de blessure.
-      painless: new fields.BooleanField({ initial: false })
+      painless: new fields.BooleanField({ initial: false }),
+      // Règle de horde : un seul jet pour le groupe, +5 toutes les `per` créatures.
+      horde: new fields.SchemaField({
+        enabled: new fields.BooleanField({ initial: false }),
+        count: int(10, 0),
+        per: int(10, 1)
+      })
     };
+  }
+
+  prepareDerivedData() {
+    super.prepareDerivedData();
+    this.hordeBonus = this.horde.enabled ? hordeBonus(this.horde.count, this.horde.per) : 0;
   }
 }
 

@@ -1,0 +1,129 @@
+{
+  "_id": "iPTON4ugwq7Xb5mv",
+  "_key": "!actors!iPTON4ugwq7Xb5mv",
+  "name": "Kraken",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "5D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "9D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "5D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "4 (10 en eau)",
+    "damageBonus": "6D",
+    "painless": false,
+    "notes": "Manifestation majeure du lac, échelle d'Ancien mineur. STATISTIQUES DE RÉFÉRENCE UNIQUEMENT (Adresse, Connaissances et Présence non précisées). AVERTISSEMENT MJ : pas un ennemi affrontable de front ; une confrontation prolongée doit se solder par la mort ou la fuite des PJ. À utiliser comme menace environnementale ou obstacle de traversée.\n▸ Présence avant le combat : l'eau qui bouillonne, l'ombre massive sous la surface suffisent à pousser à la fuite.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "qvECKuDq0d5MpHsa",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "fSu1I6RYPmvnz7vH",
+      "_key": "!actors.items!iPTON4ugwq7Xb5mv.fSu1I6RYPmvnz7vH",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Nager",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "-1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "e0XaXwf3NOphGCEL",
+      "_key": "!actors.items!iPTON4ugwq7Xb5mv.e0XaXwf3NOphGCEL",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "dnfSNVDXNbQLaWru",
+      "_key": "!actors.items!iPTON4ugwq7Xb5mv.dnfSNVDXNbQLaWru",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Tentacule massif",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+3D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "12 m",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Peut saisir une embarcation entière ou un groupe : Puissance diff. 22 pour résister à l'étreinte."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Kraken",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

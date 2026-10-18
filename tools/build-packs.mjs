@@ -170,16 +170,25 @@ function bestiaryDocs() {
       }
       for (const w of a.weapons) {
         items.push(typeof w === "string" ? bankWeapon(w) : {
-          name: w.name, type: "arme", img: "icons/svg/blood.svg",
-          system: { skill: w.skill, category: "Armes naturelles", damage: w.damage, price: "", ammo: { value: 0, max: 0 }, range: { short: "", medium: "", long: "" }, notes: w.notes }
+          name: w.name, type: "arme", img: w.skill === "armesAFeu" ? "icons/svg/target.svg" : "icons/svg/blood.svg",
+          system: {
+            skill: w.skill, category: w.skill === "armesAFeu" ? "Armes" : "Attaques naturelles", damage: w.damage, price: "",
+            ammo: { value: w.ammo ?? 0, max: w.ammo ?? 0 }, range: { short: "", medium: "", long: "", ...w.range }, notes: w.notes ?? ""
+          }
         });
       }
-      for (const e of a.equipment ?? []) items.push(bankArmor(e));
+      for (const e of a.equipment ?? []) {
+        items.push(typeof e === "string" ? bankArmor(e) : {
+          name: e.name, type: "equipement", img: "icons/svg/shield.svg",
+          system: { category: "Protections", quantity: 1, protection: e.protection, availability: "", price: "", equipped: true, notes: e.notes ?? "" }
+        });
+      }
       docs.push(actorDoc(pack, f, {
-        name: a.name, type: "pnj", img: group.img,
+        name: a.name, type: "pnj", img: a.img ?? group.img,
         system: {
           attributes: Object.fromEntries(Object.entries(a.attributes).map(([k, code]) => [k, { code }])),
-          movement: a.movement ?? "", painless: group.painless, notes: a.notes
+          movement: a.movement ?? "", damageBonus: a.damageBonus ?? "", painless: a.painless ?? group.painless, notes: a.notes,
+          horde: a.horde ? { enabled: a.horde.count > 1, count: a.horde.count, per: a.horde.per } : { enabled: false, count: 10, per: 10 }
         },
         items,
         token: { actorLink: false, disposition: -1, bar1: { attribute: "wounds" } }

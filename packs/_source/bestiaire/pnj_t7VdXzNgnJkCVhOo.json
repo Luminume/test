@@ -1,9 +1,9 @@
 {
-  "_id": "CY94Gcxfew9E0dg7",
-  "_key": "!actors!CY94Gcxfew9E0dg7",
-  "name": "Chien zombie",
+  "_id": "t7VdXzNgnJkCVhOo",
+  "_key": "!actors!t7VdXzNgnJkCVhOo",
+  "name": "Lézard-lanterne",
   "type": "pnj",
-  "img": "icons/svg/skull.svg",
+  "img": "icons/svg/terror.svg",
   "system": {
     "attributes": {
       "agilite": {
@@ -13,94 +13,100 @@
         "code": "1D"
       },
       "puissance": {
-        "code": "2D+2"
+        "code": "2D+1"
       },
       "connaissances": {
         "code": "1D"
       },
       "perception": {
-        "code": "3D"
+        "code": "3D+1"
       },
       "presence": {
         "code": "1D"
       }
     },
-    "movement": "12",
-    "painless": true,
-    "notes": "Profil maison. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de la tête (hypophyse) l'arrête définitivement. Sang et salive contaminants. Animal contaminé (les animaux peuvent l'être dans ce profil maison : à valider avec le livre)."
+    "movement": "5 (9 dans les branches)",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Prédateur de forêt, embuscade par leurre lumineux. Grimpe aux arbres et laisse pendre une queue lumineuse pour attirer ses proies. Chercher : repère les proies sous l'arbre. Nombreux sur le territoire de Jah'ste.\n▸ Lanterne hypnotique : une cible qui fixe la lumière plus de quelques secondes doit réussir Volonté (diff. 10) ou s'approcher inconsciemment de l'arbre.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
   },
-  "folder": "XUiiWhg32JIgGthV",
-  "sort": 40,
+  "folder": "SwhioWs7wWuuxt8M",
+  "sort": 0,
   "items": [
     {
-      "_id": "2DLbRjYBj0O7ic9b",
-      "_key": "!actors.items!CY94Gcxfew9E0dg7.2DLbRjYBj0O7ic9b",
+      "_id": "tPNmYoHQhrvYcjJV",
+      "_key": "!actors.items!t7VdXzNgnJkCVhOo.tPNmYoHQhrvYcjJV",
       "effects": [],
       "flags": {},
       "ownership": {
         "default": 0
       },
       "sort": 0,
-      "name": "Bagarre",
+      "name": "Grimper",
       "type": "competence",
       "img": "icons/svg/item-bag.svg",
       "system": {
         "attribute": "agilite",
-        "bonus": "+1",
+        "bonus": "+2D",
         "notes": ""
       }
     },
     {
-      "_id": "AXaEXuH6EgAEn5XT",
-      "_key": "!actors.items!CY94Gcxfew9E0dg7.AXaEXuH6EgAEn5XT",
+      "_id": "NWKiy4H5Hz9UJFOR",
+      "_key": "!actors.items!t7VdXzNgnJkCVhOo.NWKiy4H5Hz9UJFOR",
       "effects": [],
       "flags": {},
       "ownership": {
         "default": 0
       },
       "sort": 10,
-      "name": "Courir",
+      "name": "Discrétion",
       "type": "competence",
       "img": "icons/svg/item-bag.svg",
       "system": {
-        "attribute": "puissance",
-        "bonus": "+2D+1",
+        "attribute": "agilite",
+        "bonus": "+1D",
         "notes": ""
       }
     },
     {
-      "_id": "nOJZIkyeJqzolpbe",
-      "_key": "!actors.items!CY94Gcxfew9E0dg7.nOJZIkyeJqzolpbe",
+      "_id": "YbBliBc9CTFamXJy",
+      "_key": "!actors.items!t7VdXzNgnJkCVhOo.YbBliBc9CTFamXJy",
       "effects": [],
       "flags": {},
       "ownership": {
         "default": 0
       },
       "sort": 20,
-      "name": "Pister",
+      "name": "Chercher",
       "type": "competence",
       "img": "icons/svg/item-bag.svg",
       "system": {
         "attribute": "perception",
-        "bonus": "+1D",
+        "bonus": "+2",
         "notes": ""
       }
     },
     {
-      "_id": "QztOYihIn8MiW5ox",
-      "_key": "!actors.items!CY94Gcxfew9E0dg7.QztOYihIn8MiW5ox",
+      "_id": "tluT8SujN6DEAfIl",
+      "_key": "!actors.items!t7VdXzNgnJkCVhOo.tluT8SujN6DEAfIl",
       "effects": [],
       "flags": {},
       "ownership": {
         "default": 0
       },
       "sort": 30,
-      "name": "Morsure",
+      "name": "Morsure (chute en embuscade)",
       "type": "arme",
       "img": "icons/svg/blood.svg",
       "system": {
         "skill": "bagarre",
-        "category": "Armes naturelles",
+        "category": "Attaques naturelles",
         "damage": "+1D+1",
         "price": "",
         "ammo": {
@@ -112,7 +118,7 @@
           "medium": "",
           "long": ""
         },
-        "notes": "Arme naturelle. Contamination possible : voir les règles du virus."
+        "notes": "Si la cible n'a pas détecté le lézard avant l'attaque : surprise, pas de défense possible au premier coup."
       }
     }
   ],
@@ -127,9 +133,9 @@
     "systemVersion": "0.2.0"
   },
   "prototypeToken": {
-    "name": "Chien zombie",
+    "name": "Lézard-lanterne",
     "texture": {
-      "src": "icons/svg/skull.svg"
+      "src": "icons/svg/terror.svg"
     },
     "displayBars": 20,
     "actorLink": false,

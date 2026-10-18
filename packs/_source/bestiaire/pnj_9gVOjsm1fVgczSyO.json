@@ -1,0 +1,165 @@
+{
+  "_id": "9gVOjsm1fVgczSyO",
+  "_key": "!actors!9gVOjsm1fVgczSyO",
+  "name": "Lust Minion",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "4D+1"
+      },
+      "adresse": {
+        "code": "2D+1"
+      },
+      "puissance": {
+        "code": "3D+1"
+      },
+      "connaissances": {
+        "code": "2D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "4D"
+      }
+    },
+    "movement": "7 (murs compris)",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Humain-arachnide, élu de la beauté de Luxure. Peut grimper aux murs à déplacement complet.\n▸ Charme résiduel : Perception (diff. 14) pour réaliser qu'il n'est pas humain.\n▸ Loyauté absolue : immunisé à la peur tant que Luxure est à portée perceptible.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "1je0kDFQzfW9JUNI",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "oUTFbKCb2NwcGdRs",
+      "_key": "!actors.items!9gVOjsm1fVgczSyO.oUTFbKCb2NwcGdRs",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Esquive",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "mhnBSQmlrlSn06tF",
+      "_key": "!actors.items!9gVOjsm1fVgczSyO.mhnBSQmlrlSn06tF",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Acrobaties",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "wfGYenTOu7bHahoq",
+      "_key": "!actors.items!9gVOjsm1fVgczSyO.wfGYenTOu7bHahoq",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "kCoOozNwvoV0RLFf",
+      "_key": "!actors.items!9gVOjsm1fVgczSyO.kCoOozNwvoV0RLFf",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Charmer",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "4vyiMb6R5QvvLhio",
+      "_key": "!actors.items!9gVOjsm1fVgczSyO.4vyiMb6R5QvvLhio",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Membres arachnéens supplémentaires",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D+1",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Attaque secondaire à −1D dans le même round."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Lust Minion",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

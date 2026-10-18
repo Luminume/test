@@ -85,8 +85,16 @@ test("bestiaire : PNJ valides, zombies insensibles à la douleur, véhicules", (
   assert.ok(pnj.length >= 9);
   assert.equal(vehicles.length, 17);
   for (const a of pnj) {
-    assert.ok(a.items.some(i => i.type === "arme") || a.name === "Civil paniqué", a.name);
+    assert.ok(a.items.some(i => i.type === "arme") || ["Civil paniqué", "Bébé zombie"].includes(a.name), a.name);
     for (const i of a.items) assert.ok(i._key.startsWith(`!actors.items!${a._id}.`), i.name);
   }
   assert.ok(pnj.filter(a => a.system.painless).every(a => a.img.includes("skull")));
+  // Zombie officiel du livre et créatures de la campagne
+  const zombie = pnj.find(a => a.name === "Zombie (Phase 1)");
+  assert.equal(zombie.system.attributes.agilite.code, "3D");
+  assert.equal(zombie.items.find(i => i.name === "Bagarre").system.bonus, "+2");
+  assert.equal(pnj.filter(a => a.folder && docs.find(f => f._id === a.folder).name.startsWith("Campagne Atica")).length, 21);
+  const hordes = pnj.filter(a => a.system.horde.enabled).map(a => a.name).sort();
+  assert.deepEqual(hordes, ["Banc d'anguilles", "Horde de chiens", "Horde de rats", "Horde de zombies (Phase 1)", "Noyés revenus à la vie"]);
+  assert.equal(pnj.find(a => a.name === "Horde de rats").system.horde.per, 15);
 });

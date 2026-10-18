@@ -1,0 +1,219 @@
+{
+  "_id": "qGgrdmCcv7l8mSCA",
+  "_key": "!actors!qGgrdmCcv7l8mSCA",
+  "name": "Agile",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "5D+1"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "3D+2"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "4D+1"
+      },
+      "presence": {
+        "code": "1D+2"
+      }
+    },
+    "movement": "9",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Humain corrompu jusqu'à la moelle, type Wendigo : maigre, étiré, d'une rapidité dérangeante. Ne sert aucun Péché, chasse tout être humain. Déplacement très rapide et erratique. Pister : odorat développé ; Intimidation : terreur instinctive.\n▸ Traque obsessionnelle : ne fuit jamais, n'abandonne jamais une piste fraîche.\n▸ Discrétion contre-nature : +2D à Discrétion (inclus dans la compétence).",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "SUfBYb4OZlIsMWjY",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "ynCBAP4KzoYZSu4e",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.ynCBAP4KzoYZSu4e",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "P25pI3czNmtwaC95",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.P25pI3czNmtwaC95",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "RLvM9IjpK5M9BSIF",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.RLvM9IjpK5M9BSIF",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Acrobaties",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "D58h0sYVCVqe5nB2",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.D58h0sYVCVqe5nB2",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Llx2sEpnuqgJ8EYe",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.Llx2sEpnuqgJ8EYe",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Pister",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1D+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "qsJ6rqTkqTCy2EA5",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.qsJ6rqTkqTCy2EA5",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+2D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "m6LVsSJmpeHwAsem",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.m6LVsSJmpeHwAsem",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Discrétion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "FLQMjfYe6rdkLMTO",
+      "_key": "!actors.items!qGgrdmCcv7l8mSCA.FLQMjfYe6rdkLMTO",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Griffes et morsure",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Peut attaquer deux fois par round au prix de −1D sur chaque jet."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Agile",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

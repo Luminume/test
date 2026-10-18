@@ -1,0 +1,111 @@
+{
+  "_id": "As85KCYQrvLKruN7",
+  "_key": "!actors!As85KCYQrvLKruN7",
+  "name": "Horde de chiens",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "4D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "4D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "7",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Phase 3, necrobeast canin : chiens errants parasités par des restes de zombies. Jet de horde 4D, Puissance de référence 4D. RÈGLE DE HORDE : un seul jet d'attaque pour le groupe (bonus de nombre ajouté automatiquement). Chaque niveau de blessure infligé à la horde élimine environ 20 % des créatures (appliqué automatiquement). Une créature isolée se joue avec sa fiche individuelle.\n▸ Pas de contagion.\n▸ Coordination de meute : si la horde encercle une cible isolée (3+ directions), +1D au jet de groupe.",
+    "horde": {
+      "enabled": true,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "SwhioWs7wWuuxt8M",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "VT0CJftbpdL7qf6H",
+      "_key": "!actors.items!As85KCYQrvLKruN7.VT0CJftbpdL7qf6H",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (horde)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "PBJlNIpzzlXhVSos",
+      "_key": "!actors.items!As85KCYQrvLKruN7.PBJlNIpzzlXhVSos",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Morsures multiples",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+0",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Ne transmet jamais le virus : uniquement des dégâts physiques."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Horde de chiens",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

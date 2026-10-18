@@ -12,9 +12,19 @@
         <label class="zc-field">Bonus aux dégâts <input type="text" name="system.damageBonus" value="{{system.damageBonus}}" placeholder="{{system.damageBonusAuto}}"></label>
         <label class="zc-field">Déplacement <input type="text" name="system.movement" value="{{system.movement}}" placeholder="{{system.movementAuto}}"></label>
       </div>
-      <label class="zc-field zc-inline" data-tooltip="Morts-vivants : aucun malus de blessure sur les jets">
-        <input type="checkbox" name="system.painless" {{checked system.painless}}> Insensible à la douleur
-      </label>
+      <div class="zc-row">
+        <label class="zc-field zc-inline" data-tooltip="Morts-vivants : aucun malus de blessure sur les jets">
+          <input type="checkbox" name="system.painless" {{checked system.painless}}> Insensible à la douleur
+        </label>
+        <label class="zc-field zc-inline" data-tooltip="Un seul jet pour le groupe, +5 toutes les N créatures au-delà de la première ; chaque niveau de blessure en élimine environ 20 %">
+          <input type="checkbox" name="system.horde.enabled" {{checked system.horde.enabled}}> Horde
+        </label>
+        {{#if system.horde.enabled}}
+        <label class="zc-field small">Nombre <input type="number" min="0" name="system.horde.count" value="{{system.horde.count}}"></label>
+        <label class="zc-field small" data-tooltip="+5 toutes les N créatures">+5 / <input type="number" min="1" name="system.horde.per" value="{{system.horde.per}}"></label>
+        <span class="zc-horde-bonus">+{{system.hordeBonus}}</span>
+        {{/if}}
+      </div>
     </div>
   </header>
 

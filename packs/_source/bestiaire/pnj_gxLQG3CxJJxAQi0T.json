@@ -1,0 +1,176 @@
+{
+  "_id": "gxLQG3CxJJxAQi0T",
+  "_key": "!actors!gxLQG3CxJJxAQi0T",
+  "name": "Colosse",
+  "type": "pnj",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "6D+2"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "1D+2"
+      },
+      "presence": {
+        "code": "2D"
+      }
+    },
+    "movement": "5",
+    "damageBonus": "4D",
+    "painless": true,
+    "notes": "Zombie muté de 2 m 30, force surhumaine (virus + corruption de Paresse). Lent mais presque impossible à arrêter. Jamais en horde. Agilité : lent. Intimidation : sa seule présence terrifie.\n▸ Résistant aux dégâts mineurs : moins de 5 points après comparaison avec sa Puissance ne le ralentissent pas (pas d'accumulation de Sonné).\n▸ Cible prioritaire si une horde l'accompagne.\nMini-boss de zone : ne pas en multiplier dans une même rencontre.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "SwhioWs7wWuuxt8M",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "bYJ8WnMTg170sZ1Q",
+      "_key": "!actors.items!gxLQG3CxJJxAQi0T.bYJ8WnMTg170sZ1Q",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Soulever",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "VUrNAVceF7JXnYds",
+      "_key": "!actors.items!gxLQG3CxJJxAQi0T.VUrNAVceF7JXnYds",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "g8RwA7MgqyKY5ZRg",
+      "_key": "!actors.items!gxLQG3CxJJxAQi0T.g8RwA7MgqyKY5ZRg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+3D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "vKQzkbI3WDyCw0Wu",
+      "_key": "!actors.items!gxLQG3CxJJxAQi0T.vKQzkbI3WDyCw0Wu",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Poing massif",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+2D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Peut projeter une cible humaine de 2-3 mètres en arrière."
+      }
+    },
+    {
+      "_id": "WCUt786lHbtyCtsj",
+      "_key": "!actors.items!gxLQG3CxJJxAQi0T.WCUt786lHbtyCtsj",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Charge",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+3D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "S'il a couru 3+ mètres en ligne droite avant l'impact. Une fois par round au maximum."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Colosse",
+    "texture": {
+      "src": "icons/svg/skull.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

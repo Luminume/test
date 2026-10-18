@@ -1,0 +1,129 @@
+{
+  "_id": "9kdDHCnt2hvrp9Up",
+  "_key": "!actors!9kdDHCnt2hvrp9Up",
+  "name": "Mini Spider",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "2D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "2D+2"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "6 (murs et plafonds)",
+    "damageBonus": "1D",
+    "painless": false,
+    "notes": "Araignée mutée de la taille d'un enfant de 6 ans, chasse en petits groupes. Détection vibratoire (toile).\n▸ Embuscade de groupe : 3+ Mini Spiders sur la même cible → règle de horde simplifiée (+5 par tranche de 5). Cocher « Horde » et indiquer le nombre pour l'appliquer.",
+    "horde": {
+      "enabled": false,
+      "count": 1,
+      "per": 5
+    }
+  },
+  "folder": "1je0kDFQzfW9JUNI",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "2DaMcyUPsoREZSr0",
+      "_key": "!actors.items!9kdDHCnt2hvrp9Up.2DaMcyUPsoREZSr0",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Grimper",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "3zqHoVNMRFEOibD9",
+      "_key": "!actors.items!9kdDHCnt2hvrp9Up.3zqHoVNMRFEOibD9",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Discrétion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "YkdV3SBbUYlmRElm",
+      "_key": "!actors.items!9kdDHCnt2hvrp9Up.YkdV3SBbUYlmRElm",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Morsure venimeuse",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Venin léger : −1D aux actions pendant 1D3 rounds si la cible échoue Puissance (diff. 10)."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Mini Spider",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

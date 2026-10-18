@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   woundFromMargin, nextWoundLevel, damageBonusPips, movement, outcome, advancementCost, nextSkillBonus,
-  accoutumanceTier, accoutumanceEvents, powerCost, vehicleDamageFromMargin, nextVehicleDamage, creationReport, nextAccoutumanceDifficulty
+  accoutumanceTier, accoutumanceEvents, powerCost, vehicleDamageFromMargin, nextVehicleDamage, creationReport, nextAccoutumanceDifficulty, hordeBonus, hordeAfterWounds
 } from "../module/rules.mjs";
 
 test("table des niveaux de blessure (p. 63)", () => {
@@ -96,4 +96,15 @@ test("test d'accoutumance : 15, +3 par réussite, retour à 15 après un échec"
   assert.equal(d, 21);
   d = nextAccoutumanceDifficulty(d, false, rule);  // échec
   assert.equal(d, 15);
+});
+
+test("règle de horde (Bestiaire II)", () => {
+  assert.equal(hordeBonus(25, 10), 10);   // exemple du document : 25 rats → +10
+  assert.equal(hordeBonus(10, 10), 0);
+  assert.equal(hordeBonus(11, 10), 5);
+  assert.equal(hordeBonus(25, 15), 5);    // essaim dense : +5 par 15
+  assert.equal(hordeBonus(1, 10), 0);
+  assert.equal(hordeAfterWounds(25, 1), 20);  // −20 % par niveau
+  assert.equal(hordeAfterWounds(25, 2), 16);
+  assert.equal(hordeAfterWounds(25, 0), 25);
 });
