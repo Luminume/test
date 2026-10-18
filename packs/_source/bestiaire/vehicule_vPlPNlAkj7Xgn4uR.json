@@ -1,0 +1,40 @@
+{
+  "_id": "vPlPNlAkj7Xgn4uR",
+  "_key": "!actors!vPlPNlAkj7Xgn4uR",
+  "name": "Camionnette de livraison",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "60/160 km/h",
+    "passengers": "2 (cabine)",
+    "resistance": "6D",
+    "manoeuvre": "-1D",
+    "price": "$20 000/30 000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 80,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Camionnette de livraison",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

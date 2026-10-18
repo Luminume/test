@@ -1,0 +1,132 @@
+{
+  "_id": "TY8dCFikxFsEZf4i",
+  "_key": "!actors!TY8dCFikxFsEZf4i",
+  "name": "Chanteuse de country",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "puissance": {
+        "code": "2D+1"
+      },
+      "connaissances": {
+        "code": "2D+1"
+      },
+      "perception": {
+        "code": "4D"
+      },
+      "presence": {
+        "code": "3D+2"
+      }
+    },
+    "skills": {
+      "bagarre": {
+        "selected": true,
+        "bonus": ""
+      },
+      "erudition": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "artiste": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "connaissanceRue": {
+        "selected": true,
+        "bonus": ""
+      },
+      "jeux": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "survie": {
+        "selected": true,
+        "bonus": ""
+      },
+      "charmer": {
+        "selected": true,
+        "bonus": "+2"
+      },
+      "deguisement": {
+        "selected": true,
+        "bonus": "+2"
+      },
+      "empathie": {
+        "selected": true,
+        "bonus": "+2"
+      },
+      "escroquerie": {
+        "selected": true,
+        "bonus": ""
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": ""
+      }
+    },
+    "carriere": "Chanteuse de country",
+    "historique": "Originaire de Nashville, vous avez toujours été attirée par la countrymusic. Par ce subtil mélange d’influences musicales diverses, en provenance des Appalaches. Les vestes à franges et les jupes en jean ont trôné pendant longtemps dans votre garde-robe, avant de laisser la place à des costumes de scène bien plus modernes. Vous avez traîné votre voix suave et votre guitare sur de nombreuses petites scènes du Mississipi, de l’Alabama et de la Georgie, avant d’atterrir dans l’Oklahoma. Vos quelques albums ont connu leur petit succès, mélangeant rock, pop et country, sur des textes retraçant votre vie. Mais le chemin n’a pas toujours été facile. Entre les bars malfamés et les camionneurs avinés cherchant la bagarre, vous avez appris à esquiver les coups et à battre les plus bouseux en absorption de bières et de bourbon. Coincée par l’épidémie, vous allez certainement devoir apprendre à utiliser de nouveaux instruments…\n\nPsychologie : Vous êtes une artiste, ravissante, fragile et charmeuse. Vous n’appréciez pas vraiment de vous retrouver au milieu du sang, de la crasse et des cadavres. Plutôt portée à laisser les autres prendre soin de vous, à vous protéger, il se peut que la terreur vous conduise à changer de comportement. Lorsqu’il ne sert plus à rien de hurler, autant foncer dans le tas ! Attention tout de même : vous pourriez finir par aimer ça…\n\nPhrase type : «Eh Duke ! Passe-moi le banjo !»",
+    "movement": "",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "9qLNrE3RpcC1ZhX9",
+  "sort": 40,
+  "items": [
+    {
+      "_id": "FARyDlmmxCn6P6ZS",
+      "_key": "!actors.items!TY8dCFikxFsEZf4i.FARyDlmmxCn6P6ZS",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Pilotage (Voiture)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Chanteuse de country",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

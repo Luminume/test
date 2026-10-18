@@ -1,0 +1,228 @@
+{
+  "_id": "EJq4qujLbFD0oTuK",
+  "_key": "!actors!EJq4qujLbFD0oTuK",
+  "name": "Soldat de l'US Army",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "3D+2"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "2D+1"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "2D+2"
+      }
+    },
+    "movement": "",
+    "painless": false,
+    "notes": "Profil maison. Garde un cordon de quarantaine ; ordre de tirer sur tout infecté. Arme d'épaule : profil du fusil d'assaut du livre."
+  },
+  "folder": "0j2ZZJbckjEFYMzR",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "jutobEvILs0B2eHx",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.jutobEvILs0B2eHx",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "hAyVvyr3OjXNeLZZ",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.hAyVvyr3OjXNeLZZ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "GAorXW2yi9wIsw86",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.GAorXW2yi9wIsw86",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "iyqMawQbVPSPqw4v",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.iyqMawQbVPSPqw4v",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Démolition",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "6qq5SnqJH70mSMun",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.6qq5SnqJH70mSMun",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Volonté",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "HraRoEwdziwZNYkx",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.HraRoEwdziwZNYkx",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Kalashnikov AK-47 (7.62x39mm)",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Fusils d'assaut",
+        "damage": "6D",
+        "price": "D (D)",
+        "ammo": {
+          "value": 30,
+          "max": 30
+        },
+        "range": {
+          "short": "45",
+          "medium": "85",
+          "long": "170"
+        },
+        "notes": "Rafales de 3-4 cartouches (1 coup), coup par coup ou automatique ; jusqu'à 3 cibles par action. Ne s'enraye jamais.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+      }
+    },
+    {
+      "_id": "ogi3qJjJOabR2ANQ",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.ogi3qJjJOabR2ANQ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Couteau (survie, grand), dague",
+      "type": "arme",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Armes de mêlée",
+        "damage": "+1D",
+        "price": "$50",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Les dégâts s'ajoutent au bonus aux dégâts du porteur."
+      }
+    },
+    {
+      "_id": "dHhRHWaFEAY3m5Xy",
+      "_key": "!actors.items!EJq4qujLbFD0oTuK.dHhRHWaFEAY3m5Xy",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Gilet pare-balles",
+      "type": "equipement",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "category": "Protections",
+        "quantity": 1,
+        "protection": "+3D",
+        "availability": "",
+        "price": "",
+        "equipped": true,
+        "notes": "Kevlar, céramique… Ne se porte pas sous une autre armure. Chaque couche supplémentaire : +4 ou plus aux difficultés basées sur l'Agilité."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Soldat de l'US Army",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

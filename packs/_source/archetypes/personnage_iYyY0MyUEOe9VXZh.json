@@ -1,0 +1,132 @@
+{
+  "_id": "iYyY0MyUEOe9VXZh",
+  "_key": "!actors!iYyY0MyUEOe9VXZh",
+  "name": "Responsable Transcom'",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "4D"
+      },
+      "perception": {
+        "code": "2D+1"
+      },
+      "presence": {
+        "code": "2D+1"
+      }
+    },
+    "skills": {
+      "discretion": {
+        "selected": true,
+        "bonus": ""
+      },
+      "esquive": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "armesAFeu": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "dexterite": {
+        "selected": true,
+        "bonus": ""
+      },
+      "reparer": {
+        "selected": true,
+        "bonus": ""
+      },
+      "electronique": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "informatique": {
+        "selected": true,
+        "bonus": "+2D"
+      },
+      "securite": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "investigation": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "jeux": {
+        "selected": true,
+        "bonus": ""
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": "+1D+1"
+      }
+    },
+    "carriere": "Responsable Transcom'",
+    "historique": "Après avoir longtemps travaillé dans la fibre optique et pour une compagnie de téléphone canadienne, vous êtes entré chez Intech System. Parmi les nombreux projets de cette filiale de OneWorld, vous avez tout particulièrement travaillé sur les senseurs et commandes des robots Sentry. Ces robots, pilotés à distance, sont utilisés pour le déminage et les missions de reconnaissance en «terrain hostile». Comme tous les habitants du monde, vous êtes resté bouchebée face aux annonces des médias, annonçant un virus destructeur en provenance du Kansas. Mais ce que vous avez d’abord pris pour un canular, un hoax, s’est avéré être la triste vérité lorsque votre chef d’équipe vous a montré les terribles images de Topeka et de Wichita. Mobilisé comme tous les membres de OneWorld suite au vote du Congrès, vous avez été affecté à une unité Z-Corps dans le but de maintenir les transmissions avec le central. Et franchement, plus le temps passe, plus vous regrettez vos anciens boulots.\n\nPsychologie : Vous ne cessez de répéter que vous n’êtes ni soldat, ni médecin et que votre rôle est uniquement de transmettre des rapports. L’époque où vous preniez tranquillement votre café devant la machine du service, en parlant des matchs de NBA ou du Superbowl, vous paraît bien loin. On ne peut pas dire que vous soyez très courageux, ayant surtout tendance à geindre et à jouer les pessimistes. Mais, qui sait, dans l’adversité, on peut apprendre à retirer le cran de sécurité.\n\nPhrase type : «Comme c’est trop dégueulasse !»",
+    "movement": "",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "yY05rQIPYWS89iJ0",
+  "sort": 80,
+  "items": [
+    {
+      "_id": "aLZDNCY14xNOSMJv",
+      "_key": "!actors.items!iYyY0MyUEOe9VXZh.aLZDNCY14xNOSMJv",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Langues (Espagnol)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Responsable Transcom'",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

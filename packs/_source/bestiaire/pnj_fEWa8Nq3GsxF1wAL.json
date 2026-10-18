@@ -1,0 +1,94 @@
+{
+  "_id": "fEWa8Nq3GsxF1wAL",
+  "_key": "!actors!fEWa8Nq3GsxF1wAL",
+  "name": "Civil paniqué",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+1"
+      },
+      "adresse": {
+        "code": "2D"
+      },
+      "puissance": {
+        "code": "2D"
+      },
+      "connaissances": {
+        "code": "2D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "2D"
+      }
+    },
+    "movement": "",
+    "painless": false,
+    "notes": "Profil maison. Fuit au premier coup de feu ; peut suivre un PJ qui le rassure (Persuasion, Commander)."
+  },
+  "folder": "0j2ZZJbckjEFYMzR",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "RbsC9fmz14gewCVK",
+      "_key": "!actors.items!fEWa8Nq3GsxF1wAL.RbsC9fmz14gewCVK",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Courir",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "AbASzzc6TpZPl5de",
+      "_key": "!actors.items!fEWa8Nq3GsxF1wAL.AbASzzc6TpZPl5de",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Discrétion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Civil paniqué",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

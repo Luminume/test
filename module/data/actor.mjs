@@ -1,4 +1,4 @@
-import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, STARTING } from "../config.mjs";
+import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, STARTING, VEHICLE_DAMAGE } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
 import { accoutumanceTier, damageBonusPips, movement } from "../rules.mjs";
 
@@ -90,6 +90,7 @@ export class PersonnageData extends BaseActorData {
       cojones: new fields.SchemaField({ value: int(STARTING.cojones, 0) }),
       cp: new fields.SchemaField({ value: int(STARTING.cp, 0) }),
       lifeLevel: text(""),
+      money: text(""),
       accoutumance: new fields.SchemaField({
         value: int(0, 0, ACCOUTUMANCE.max),
         max: int(ACCOUTUMANCE.max, 0, ACCOUTUMANCE.max)
@@ -122,4 +123,51 @@ export class PersonnageData extends BaseActorData {
 }
 
 /** PNJ et zombies : attributs, blessures, compétences en objets. */
-export class PnjData extends BaseActorData {}
+export class PnjData extends BaseActorData {
+  static defineSchema() {
+    return {
+      ...super.defineSchema(),
+      // Morts-vivants : aucun malus de blessure.
+      painless: new fields.BooleanField({ initial: false })
+    };
+  }
+}
+
+/** Véhicule (p. 51-52, 74). */
+export class VehiculeData extends foundry.abstract.TypeDataModel {
+  static defineSchema() {
+    return {
+      category: text(""),
+      speed: text(""),
+      passengers: text(""),
+      resistance: text("4D"),
+      manoeuvre: text("0"),
+      protection: text(""),
+      price: text(""),
+      damage: new fields.SchemaField({
+        value: int(0, 0, VEHICLE_DAMAGE.length - 1),
+        max: int(VEHICLE_DAMAGE.length - 1, 0, VEHICLE_DAMAGE.length - 1)
+      }),
+      crew: text(""),
+      notes: text("")
+    };
+  }
+
+  prepareDerivedData() {
+    const state = VEHICLE_DAMAGE[this.damage.value] ?? VEHICLE_DAMAGE[0];
+    this.damageLabel = state.label;
+    this.resistancePips = codeToPips(this.resistance).pips + codeToPips(this.protection).pips;
+    this.manoeuvrePips = codeToPips(this.manoeuvre).pips - state.manoeuvre * 3;
+  }
+}
+
+/** Groupe de personnages : un coup d'œil sur l'état de chacun. */
+export class GroupeData extends foundry.abstract.TypeDataModel {
+  static defineSchema() {
+    return {
+      members: new fields.ArrayField(new fields.StringField({ required: true, blank: false })),
+      inventory: text(""),
+      notes: text("")
+    };
+  }
+}

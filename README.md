@@ -40,6 +40,22 @@ et contenir `system.json`), puis relancer Foundry.
   tant que le MJ ne l'a pas révélé (icône œil). Compendie « Pouvoirs occultes (MJ) », invisible aux joueurs.
 - Données sources : `tools/data/` ; après modification, `npm run build:packs` régénère les compendiums.
 
+## Confort de jeu (0.3)
+
+- **Utiliser un pouvoir** : bouton <i>main</i> sur chaque pouvoir de la fiche ; ajoute son coût à
+  l'accoutumance et l'annonce dans le chat (au MJ seulement si le pouvoir n'est pas révélé).
+- **Macros** : glisser une Caractéristique, une compétence ou une arme dans la barre de macros.
+- **Dice So Nice** : dé Joker rouge sang, Joker des points de personnage bleu (jeux de couleurs « Z-Corps »).
+- **Fiche limitée** : un joueur en permission « limitée » ne voit que le portrait, le nom et la carrière.
+- **Véhicules** : type d'acteur avec Résistance, Manœuvrabilité, dégâts du livre (p. 52) et part des
+  passagers ; les 17 véhicules du livre sont prêts dans le Bestiaire.
+- **Groupe** : type d'acteur où l'on glisse les membres pour voir blessures, stress, accoutumance et points.
+- **Argent** sur la fiche, **Insensible à la douleur** sur les PNJ (aucun malus de blessure).
+- **Aide à la création** : compteurs 18D / 12 compétences / 7D / 5 PP / 1 Cojones, alertes, et
+  « Partir de cet archétype » pour copier un pré-tiré.
+- Compendiums : **Archétypes** (les 10 pré-tirés du livre), **Bestiaire (MJ)** (zombies et humains en
+  profils maison, véhicules), **Aide-mémoire** (journal des règles appliquées).
+
 ## Règles appliquées (livre de base, édition révisée)
 
 - **Dé Joker** sur tous les jets (p. 25) : sur un 6 il explose. Sur un 1 au premier jet,

@@ -1,0 +1,152 @@
+{
+  "_id": "54hPbLwPBiBJG5wT",
+  "_key": "!actors!54hPbLwPBiBJG5wT",
+  "name": "Zombie rôdeur",
+  "type": "pnj",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "4",
+    "painless": true,
+    "notes": "Profil maison. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de la tête (hypophyse) l'arrête définitivement. Sang et salive contaminants. Le plus courant : lent, obstiné, se déplace en groupe vers le bruit."
+  },
+  "folder": "XUiiWhg32JIgGthV",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "kjUfbI1CHXNFmaPI",
+      "_key": "!actors.items!54hPbLwPBiBJG5wT.kjUfbI1CHXNFmaPI",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "cMa5FA6X2Hsc6stH",
+      "_key": "!actors.items!54hPbLwPBiBJG5wT.cMa5FA6X2Hsc6stH",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Chercher (ouïe, odorat)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Uyz8UVD4XyF5pVvA",
+      "_key": "!actors.items!54hPbLwPBiBJG5wT.Uyz8UVD4XyF5pVvA",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Morsure",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Armes naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme naturelle. Contamination possible : voir les règles du virus."
+      }
+    },
+    {
+      "_id": "P3sWiqZdCuGhZ24M",
+      "_key": "!actors.items!54hPbLwPBiBJG5wT.P3sWiqZdCuGhZ24M",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Étreinte / griffes",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Armes naturelles",
+        "damage": "+1",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme naturelle. Réussite : la cible est agrippée, la morsure suit."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Zombie rôdeur",
+    "texture": {
+      "src": "icons/svg/skull.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

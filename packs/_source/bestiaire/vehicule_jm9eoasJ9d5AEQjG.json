@@ -1,0 +1,40 @@
+{
+  "_id": "jm9eoasJ9d5AEQjG",
+  "_key": "!actors!jm9eoasJ9d5AEQjG",
+  "name": "Canoë",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "Test de Puissance",
+    "passengers": "4",
+    "resistance": "2D",
+    "manoeuvre": "+1D",
+    "price": "$900/2000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 110,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Canoë",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

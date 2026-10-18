@@ -1,0 +1,141 @@
+{
+  "_id": "CY94Gcxfew9E0dg7",
+  "_key": "!actors!CY94Gcxfew9E0dg7",
+  "name": "Chien zombie",
+  "type": "pnj",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "4D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "12",
+    "painless": true,
+    "notes": "Profil maison. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de la tête (hypophyse) l'arrête définitivement. Sang et salive contaminants. Animal contaminé (les animaux peuvent l'être dans ce profil maison : à valider avec le livre)."
+  },
+  "folder": "XUiiWhg32JIgGthV",
+  "sort": 40,
+  "items": [
+    {
+      "_id": "2DLbRjYBj0O7ic9b",
+      "_key": "!actors.items!CY94Gcxfew9E0dg7.2DLbRjYBj0O7ic9b",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "AXaEXuH6EgAEn5XT",
+      "_key": "!actors.items!CY94Gcxfew9E0dg7.AXaEXuH6EgAEn5XT",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Courir",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "nOJZIkyeJqzolpbe",
+      "_key": "!actors.items!CY94Gcxfew9E0dg7.nOJZIkyeJqzolpbe",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Pister",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "QztOYihIn8MiW5ox",
+      "_key": "!actors.items!CY94Gcxfew9E0dg7.QztOYihIn8MiW5ox",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Morsure",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Armes naturelles",
+        "damage": "+1D+1",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme naturelle. Contamination possible : voir les règles du virus."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Chien zombie",
+    "texture": {
+      "src": "icons/svg/skull.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

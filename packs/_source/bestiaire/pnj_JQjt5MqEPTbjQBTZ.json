@@ -1,0 +1,210 @@
+{
+  "_id": "JQjt5MqEPTbjQBTZ",
+  "_key": "!actors!JQjt5MqEPTbjQBTZ",
+  "name": "Agent de sécurité OneWorld",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "3D+1"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "2D+2"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "movement": "",
+    "painless": false,
+    "notes": "Profil maison. Protège les installations et le personnel de OneWorld ; peu enclin à partager ses informations."
+  },
+  "folder": "0j2ZZJbckjEFYMzR",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "XndnFSF2q57UGj7E",
+      "_key": "!actors.items!JQjt5MqEPTbjQBTZ.XndnFSF2q57UGj7E",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "lQ4TuxMC7Hj1zYNN",
+      "_key": "!actors.items!JQjt5MqEPTbjQBTZ.lQ4TuxMC7Hj1zYNN",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "qaEnSCLEPA2jKagR",
+      "_key": "!actors.items!JQjt5MqEPTbjQBTZ.qaEnSCLEPA2jKagR",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Sécurité",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "lkKRSyNfiPFpkFRP",
+      "_key": "!actors.items!JQjt5MqEPTbjQBTZ.lkKRSyNfiPFpkFRP",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Commander",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "mcB0yaSh76eZUnKi",
+      "_key": "!actors.items!JQjt5MqEPTbjQBTZ.mcB0yaSh76eZUnKi",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Glock 17 9mm",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes de poing",
+        "damage": "3D+2",
+        "price": "D (F)",
+        "ammo": {
+          "value": 17,
+          "max": 17
+        },
+        "range": {
+          "short": "8",
+          "medium": "16",
+          "long": "24"
+        },
+        "notes": "Semi-automatique léger et compact, fiable, faible recul.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+      }
+    },
+    {
+      "_id": "7eyevnX0yo7aAViQ",
+      "_key": "!actors.items!JQjt5MqEPTbjQBTZ.7eyevnX0yo7aAViQ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Bâton, matraque, tisonnier",
+      "type": "arme",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Armes de mêlée",
+        "damage": "+1D+1",
+        "price": "$50",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Les dégâts s'ajoutent au bonus aux dégâts du porteur."
+      }
+    },
+    {
+      "_id": "knAw2V0N5PFdK3uR",
+      "_key": "!actors.items!JQjt5MqEPTbjQBTZ.knAw2V0N5PFdK3uR",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Gilet pare-balles",
+      "type": "equipement",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "category": "Protections",
+        "quantity": 1,
+        "protection": "+3D",
+        "availability": "",
+        "price": "",
+        "equipped": true,
+        "notes": "Kevlar, céramique… Ne se porte pas sous une autre armure. Chaque couche supplémentaire : +4 ou plus aux difficultés basées sur l'Agilité."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Agent de sécurité OneWorld",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

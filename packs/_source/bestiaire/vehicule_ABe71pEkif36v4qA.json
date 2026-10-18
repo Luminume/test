@@ -1,0 +1,40 @@
+{
+  "_id": "ABe71pEkif36v4qA",
+  "_key": "!actors!ABe71pEkif36v4qA",
+  "name": "Voiture, 4x4",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "60/180 km/h",
+    "passengers": "6-7",
+    "resistance": "5D+2",
+    "manoeuvre": "0",
+    "price": "$25 000/35 000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 50,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Voiture, 4x4",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

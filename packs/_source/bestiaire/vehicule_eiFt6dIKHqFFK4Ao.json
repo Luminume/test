@@ -1,0 +1,40 @@
+{
+  "_id": "eiFt6dIKHqFFK4Ao",
+  "_key": "!actors!eiFt6dIKHqFFK4Ao",
+  "name": "Mini-van (avec sièges)",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "60/180 km/h",
+    "passengers": "7",
+    "resistance": "5D+2",
+    "manoeuvre": "0",
+    "price": "$25 000/45 000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 60,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Mini-van (avec sièges)",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

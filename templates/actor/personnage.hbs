@@ -21,6 +21,32 @@
     </div>
   </header>
 
+  {{#if creation}}
+  <section class="zc-box zc-creation">
+    <header class="zc-band"><span>Aide à la création (p. 22)</span></header>
+    <div class="zc-creation-grid">
+      {{#each creation.rows as |r|}}
+      <div class="zc-creation-row {{#if r.ok}}ok{{else}}ko{{/if}}">
+        <i class="fa-solid {{#if r.ok}}fa-circle-check{{else}}fa-circle-exclamation{{/if}}"></i>
+        <span>{{r.label}}</span>
+        <strong>{{r.value}}</strong><span class="zc-hint">/ {{r.target}}</span>
+      </div>
+      {{/each}}
+    </div>
+    {{#each creation.warnings}}<p class="zc-creation-warning"><i class="fa-solid fa-triangle-exclamation"></i> {{this}}</p>{{/each}}
+    <p class="zc-hint">Répartir 18D entre les Caractéristiques (2D à 5D chacune), cocher 12 compétences, puis répartir 7D
+      entre elles (2D maximum par compétence). Déplacement et bonus aux dégâts se calculent seuls.</p>
+    {{#if creation.archetypes.length}}
+    <div class="zc-archetype">
+      <select class="zc-archetype-choice">
+        {{#each creation.archetypes}}<option value="{{uuid}}">{{name}}</option>{{/each}}
+      </select>
+      <button type="button" data-action="applyArchetype"><i class="fa-solid fa-user-plus"></i> Partir de cet archétype</button>
+    </div>
+    {{/if}}
+  </section>
+  {{/if}}
+
   <div class="zc-columns">
 
     {{!-- Attributs et compétences --}}
@@ -135,6 +161,9 @@
           <input type="number" min="0" name="system.cp.value" value="{{system.cp.value}}">
         </label>
         {{#if editable}}
+        <button type="button" class="zc-progression-toggle{{#if creation}} active{{/if}}" data-action="toggleCreation">
+          <i class="fa-solid fa-user-pen"></i> {{#if creation}}Terminer la création{{else}}Aide à la création{{/if}}
+        </button>
         <button type="button" class="zc-progression-toggle{{#if progression}} active{{/if}}" data-action="toggleProgression">
           <i class="fa-solid fa-circle-up"></i> {{#if progression}}Terminer la progression{{else}}Progression{{/if}}
         </button>
@@ -151,6 +180,9 @@
         </label>
         <label class="zc-field">Niveau de vie
           <input type="text" name="system.lifeLevel" value="{{system.lifeLevel}}">
+        </label>
+        <label class="zc-field">Argent
+          <input type="text" name="system.money" value="{{system.money}}">
         </label>
       </section>
     </aside>

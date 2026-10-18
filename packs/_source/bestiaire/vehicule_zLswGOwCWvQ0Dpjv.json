@@ -1,0 +1,40 @@
+{
+  "_id": "zLswGOwCWvQ0Dpjv",
+  "_key": "!actors!zLswGOwCWvQ0Dpjv",
+  "name": "Moto 1200cc",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "100/200 km/h",
+    "passengers": "1-2",
+    "resistance": "4D",
+    "manoeuvre": "+2D",
+    "price": "$7000/15 000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 20,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Moto 1200cc",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

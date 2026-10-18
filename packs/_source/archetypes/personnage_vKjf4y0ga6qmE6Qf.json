@@ -1,0 +1,132 @@
+{
+  "_id": "vKjf4y0ga6qmE6Qf",
+  "_key": "!actors!vKjf4y0ga6qmE6Qf",
+  "name": "Chasseur de primes",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "2D+1"
+      },
+      "perception": {
+        "code": "4D"
+      },
+      "presence": {
+        "code": "2D+2"
+      }
+    },
+    "skills": {
+      "bagarre": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "armesAFeu": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "crochetage": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "courir": {
+        "selected": true,
+        "bonus": ""
+      },
+      "informatique": {
+        "selected": true,
+        "bonus": ""
+      },
+      "securite": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "connaissanceRue": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "pister": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "survie": {
+        "selected": true,
+        "bonus": ""
+      },
+      "empathie": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "persuasion": {
+        "selected": true,
+        "bonus": "+1"
+      }
+    },
+    "carriere": "Chasseur de primes",
+    "historique": "Vous bossez depuis de nombreuses années en bonne intelligence avec les flics locaux, le plus souvent pour ramener à l’ombre des détenus ayant échappé à leur vigilance. À bord de votre antique Pontiac rafistolée, vous jouez les détectives de second plan, épiant les couples infidèles, passant des nuits entières en planque devant une boîte de nuit miteuse. Le whisky, les donuts et les chansons de Johnny Cash sont devenus vos meilleurs amis, à force d’arpenter les routes du Tennessee ou de l’Arkansas pour épingler toutes les petites frappes qui refusent de se rendre devant le juge. Mais vous n’êtes pas le genre de mec à qui l’on échappe. Il suffit de voir vos cicatrices et le long couteau planqué dans vos Santiags, qui a déjà désossé pas mal de crotales. Le problème est désormais de savoir, si vous, vous êtes capable d’échapper à ce qui vous pourchasse…\n\nPsychologie : Dans votre famille, on a toujours eu beaucoup d’estime pour les médecins et les avocats. C’est sans doute pour cela que vous avez fait tout le contraire. Ce que vous préférez, c’est l’action, la sueur, les coups de poings dans les dents. Et ce ne sont certainement pas les bureaucrates les mieux placés pour se débarrasser des morts-vivants qui ont décidé de vous pourrir votre journée. Tant que vous serez debout, personne ne viendra vous pisser sur les bottes.\n\nPhrase type : « J’avais bien dit qu’il fallait le buter !»",
+    "movement": "",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "9qLNrE3RpcC1ZhX9",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "Nv1FFd7ruWFWaTwr",
+      "_key": "!actors.items!vKjf4y0ga6qmE6Qf.Nv1FFd7ruWFWaTwr",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Pilotage (voiture)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Chasseur de primes",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

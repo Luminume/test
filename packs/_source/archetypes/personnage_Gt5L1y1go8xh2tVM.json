@@ -1,0 +1,117 @@
+{
+  "_id": "Gt5L1y1go8xh2tVM",
+  "_key": "!actors!Gt5L1y1go8xh2tVM",
+  "name": "Miss Epi de Maïs",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "puissance": {
+        "code": "2D+1"
+      },
+      "connaissances": {
+        "code": "2D+1"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "4D"
+      }
+    },
+    "skills": {
+      "acrobaties": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "esquive": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "dexterite": {
+        "selected": true,
+        "bonus": ""
+      },
+      "courir": {
+        "selected": true,
+        "bonus": ""
+      },
+      "erudition": {
+        "selected": true,
+        "bonus": ""
+      },
+      "artiste": {
+        "selected": true,
+        "bonus": ""
+      },
+      "chercher": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "charmer": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "deguisement": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "empathie": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "persuasion": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": ""
+      }
+    },
+    "carriere": "Miss Epi de Maïs",
+    "historique": "Depuis votre plus tendre enfance, vous avez toujours rêvé de devenir mannequin. Belle et sportive, vous êtes devenue sans surprise Reine de Promo, avant de vous lancer dans de nombreux castings et concours de beauté. Issue d’une famille modeste, des fermiers du Kentucky, vous tentez désespérément de vous arracher à votre bled paumé, pour atterrir enfin sous les feux d’Hollywood. Votre élection en tant que Miss Epi de Maïs 2012, lors du concours des coopératives de Greenville, n’est qu’un nouveau pas en avant vers la reconnaissance publique. Et si vous parvenez à sortir vivante de cette apocalypse, vous savez qu’un destin hors du commun vous attend. Et rien ni personne ne vous arrêtera, même pas une centaine de zombies que vous n’hésiterez pas à passer dans la moissonneuse-batteuse familiale s’il le faut !\n\nPsychologie : Votre beauté n’a d’égal que votre naturel et votre simplicité. Vous avez fait taire les jalouses depuis longtemps et avez plus d’une fois démontré que vous n’êtes pas une simple potiche. Que vous le vouliez ou non, vous restez une vraie fille de la ferme, habituée à manier la hache, la fourche et la pelle. Derrière votre visage angélique se cache un sacré caractère, capable de faire le vide au fusil de chasse.\n\nPhrase type : «Arrête de mater mes fesses, Boss Hog. »",
+    "movement": "",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "9qLNrE3RpcC1ZhX9",
+  "sort": 10,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Miss Epi de Maïs",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

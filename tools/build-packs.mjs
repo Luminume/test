@@ -7,6 +7,10 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { WEAPONS, ARMOR, GEAR, VEHICLES } from "./data/equipement.mjs";
+import { BESTIARY } from "./data/bestiaire.mjs";
+import { PAGES } from "./data/aide-memoire.mjs";
+import { ATTRIBUTES, SKILLS } from "../module/config.mjs";
+import { codeToPips, pipsToCode } from "../module/dice-code.mjs";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SYSTEM = "zcorps-vtt";
@@ -27,9 +31,9 @@ function id(key) {
 
 const stats = { coreVersion: "13.345", systemId: SYSTEM, systemVersion: "0.2.0" };
 
-function folder(pack, name, sort) {
+function folder(pack, name, sort, type = "Item") {
   const _id = id(`${pack}:folder:${name}`);
-  return { _id, _key: `!folders!${_id}`, name, type: "Item", folder: null, sorting: "a", sort, color: null, description: "", flags: {} };
+  return { _id, _key: `!folders!${_id}`, name, type, folder: null, sorting: "a", sort, color: null, description: "", flags: {} };
 }
 
 function item(pack, folderDoc, { name, type, img, system, variant }, sort) {
@@ -37,6 +41,175 @@ function item(pack, folderDoc, { name, type, img, system, variant }, sort) {
   return {
     _id, _key: `!items!${_id}`, name, type, img, system, folder: folderDoc._id, sort,
     effects: [], flags: {}, ownership: { default: 0 }, _stats: stats
+  };
+}
+
+/** Système d'une arme de la banque, à partir de son nom. */
+function bankWeapon(name) {
+  for (const group of WEAPONS) {
+    const row = group.items.find(r => r[0] === name);
+    if (!row) continue;
+    const [, damage, ammo, short, medium, long, price, notes] = row;
+    return {
+      name, type: "arme", img: group.skill === "melee" ? "icons/svg/sword.svg" : "icons/svg/target.svg",
+      system: {
+        skill: group.skill, category: group.category, damage, price,
+        ammo: { value: ammo, max: ammo }, range: { short, medium, long },
+        notes: [notes, group.note].filter(Boolean).join("\n")
+      }
+    };
+  }
+  throw new Error(`Arme inconnue dans la banque : ${name}`);
+}
+
+function bankArmor(name) {
+  const row = ARMOR.find(r => r[0] === name);
+  if (!row) throw new Error(`Protection inconnue : ${name}`);
+  return {
+    name, type: "equipement", img: "icons/svg/shield.svg",
+    system: { category: "Protections", quantity: 1, protection: row[1], availability: "", price: "", equipped: true, notes: row[2] }
+  };
+}
+
+/* ---------------- Compétences écrites comme dans le livre ---------------- */
+
+const norm = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+const SKILL_ALIASES = { art: "artiste", "connaissance de la rue": "connaissanceRue" };
+const SKILL_BY_NAME = Object.fromEntries(Object.entries(SKILLS).map(([k, s]) => [norm(s.label), k]));
+
+/** « Pilotage (Moto) 4D+1 », « Médecine* 6D », « Survie » → { base, label, code } */
+function parseSkill(text) {
+  const m = /^(.+?)\*?(?:\s+(\d+D(?:\+\d)?))?$/.exec(text.trim());
+  const label = m[1].replace(/\*$/, "").trim();
+  const baseName = norm(label.replace(/\s*\(.*\)\s*$/, ""));
+  const key = SKILL_ALIASES[baseName] ?? SKILL_BY_NAME[baseName];
+  if (!key) throw new Error(`Compétence inconnue : ${text}`);
+  return { key, label, special: label.includes("("), code: m[2] ?? null };
+}
+
+function embedded(actorId, data, i) {
+  const _id = id(`${actorId}:item:${data.type}:${data.name}`);
+  return { _id, _key: `!actors.items!${actorId}.${_id}`, effects: [], flags: {}, ownership: { default: 0 }, sort: i * 10, ...data };
+}
+
+function customSkill(name, attribute, attributePips, code) {
+  const diff = code ? codeToPips(code).pips - attributePips : 0;
+  return {
+    name, type: "competence", img: "icons/svg/item-bag.svg",
+    system: { attribute, bonus: diff ? pipsToCode(diff, { signed: true }) : "", notes: "" }
+  };
+}
+
+function actorDoc(pack, folderDoc, { name, type, img, system, items = [], token = {} }, sort) {
+  const _id = id(`${pack}:actor:${type}:${name}`);
+  return {
+    _id, _key: `!actors!${_id}`, name, type, img, system, folder: folderDoc._id, sort,
+    items: items.map((it, i) => embedded(_id, it, i)),
+    effects: [], flags: {}, ownership: { default: 0 }, _stats: stats,
+    prototypeToken: { name, texture: { src: img }, displayBars: 20, ...token }
+  };
+}
+
+const ATTR_BY_LABEL = Object.fromEntries(Object.entries(ATTRIBUTES).map(([k, l]) => [l, k]));
+
+/** Archétypes du livre (p. 78-122) en personnages prêts à jouer. */
+function archetypeDocs() {
+  const pack = "archetypes";
+  const archetypes = readJson("archetypes.json");
+  const groups = [...new Set(archetypes.map(a => a.group))];
+  const folders = Object.fromEntries(groups.map((g, i) => [g, folder(pack, g, (i + 1) * 100, "Actor")]));
+  const docs = Object.values(folders);
+  archetypes.forEach((a, i) => {
+    const attributes = {}, skills = {}, items = [];
+    for (const [label, { code, skills: list }] of Object.entries(a.attributes)) {
+      const attr = ATTR_BY_LABEL[label];
+      const attrPips = codeToPips(code).pips;
+      attributes[attr] = { code };
+      for (const text of list) {
+        const s = parseSkill(text);
+        if (s.special) items.push(customSkill(s.label, attr, attrPips, s.code));
+        else {
+          const diff = s.code ? codeToPips(s.code).pips - attrPips : 0;
+          skills[s.key] = { selected: true, bonus: diff ? pipsToCode(diff, { signed: true }) : "" };
+        }
+      }
+    }
+    const puiDice = Math.floor(codeToPips(attributes.puissance.code).pips / 3);
+    const agiDice = Math.floor(codeToPips(attributes.agilite.code).pips / 3);
+    const autoMove = String(puiDice + agiDice);
+    const autoBonus = `${Math.ceil(puiDice / 2)}D`;
+    docs.push(actorDoc(pack, folders[a.group], {
+      name: a.name, type: "personnage", img: "icons/svg/mystery-man.svg",
+      system: {
+        attributes, skills, carriere: a.name,
+        historique: `${a.description}\n\nPsychologie : ${a.psychologie}\n\nPhrase type : ${a.phrase}`,
+        movement: a.movement === autoMove ? "" : a.movement,
+        damageBonus: a.damageBonus === autoBonus ? "" : a.damageBonus,
+        cojones: { value: 1 }, cp: { value: 5 }
+      },
+      items,
+      token: { actorLink: true, disposition: 1, bar1: { attribute: "wounds" }, bar2: { attribute: "accoutumance" } }
+    }, i * 10));
+  });
+  return { pack, docs };
+}
+
+/** Bestiaire maison + véhicules du livre en acteurs prêts à poser sur la carte. */
+function bestiaryDocs() {
+  const pack = "bestiaire";
+  const docs = [];
+  BESTIARY.forEach((group, g) => {
+    const f = folder(pack, group.folder, (g + 1) * 100, "Actor");
+    docs.push(f);
+    group.actors.forEach((a, i) => {
+      const items = [];
+      for (const [text, code] of a.skills) {
+        const s = parseSkill(text);
+        const attr = SKILLS[s.key].attribute;
+        items.push(customSkill(s.label, attr, codeToPips(a.attributes[attr]).pips, code));
+      }
+      for (const w of a.weapons) {
+        items.push(typeof w === "string" ? bankWeapon(w) : {
+          name: w.name, type: "arme", img: "icons/svg/blood.svg",
+          system: { skill: w.skill, category: "Armes naturelles", damage: w.damage, price: "", ammo: { value: 0, max: 0 }, range: { short: "", medium: "", long: "" }, notes: w.notes }
+        });
+      }
+      for (const e of a.equipment ?? []) items.push(bankArmor(e));
+      docs.push(actorDoc(pack, f, {
+        name: a.name, type: "pnj", img: group.img,
+        system: {
+          attributes: Object.fromEntries(Object.entries(a.attributes).map(([k, code]) => [k, { code }])),
+          movement: a.movement ?? "", painless: group.painless, notes: a.notes
+        },
+        items,
+        token: { actorLink: false, disposition: -1, bar1: { attribute: "wounds" } }
+      }, i * 10));
+    });
+  });
+  const vf = folder(pack, "Véhicules (p. 74)", 900, "Actor");
+  docs.push(vf);
+  VEHICLES.forEach(([name, speed, passengers, resistance, manoeuvre, price], i) => docs.push(actorDoc(pack, vf, {
+    name, type: "vehicule", img: "icons/svg/wing.svg",
+    system: { category: "Véhicule", speed, passengers, resistance, manoeuvre, price },
+    token: { actorLink: false, disposition: 0, bar1: { attribute: "damage" } }
+  }, i * 10)));
+  return { pack, docs };
+}
+
+/** Aide-mémoire : un journal, une page par thème. */
+function journalDocs() {
+  const pack = "aide-memoire";
+  const _id = id(`${pack}:journal:Aide-mémoire Z-Corps`);
+  const pages = PAGES.map((p, i) => {
+    const pid = id(`${_id}:page:${p.name}`);
+    return {
+      _id: pid, _key: `!journal.pages!${_id}.${pid}`, name: p.name, type: "text", sort: (i + 1) * 100,
+      title: { show: true, level: 1 }, text: { content: p.content.trim(), format: 1 }, flags: {}, ownership: { default: -1 }
+    };
+  });
+  return {
+    pack,
+    docs: [{ _id, _key: `!journal!${_id}`, name: "Aide-mémoire Z-Corps", pages, folder: null, sort: 0, flags: {}, ownership: { default: 0 }, _stats: stats }]
   };
 }
 
@@ -98,14 +271,15 @@ function powerDocs() {
   return { pack, docs };
 }
 
-for (const { pack, docs } of [equipmentDocs(), powerDocs()]) {
+for (const { pack, docs } of [equipmentDocs(), powerDocs(), archetypeDocs(), bestiaryDocs(), journalDocs()]) {
   const src = path.join(ROOT, "packs/_source", pack);
   const dest = path.join(ROOT, "packs", pack);
   fs.rmSync(src, { recursive: true, force: true });
   fs.rmSync(dest, { recursive: true, force: true });
   fs.mkdirSync(src, { recursive: true });
   for (const doc of docs) {
-    const file = `${doc._key.startsWith("!folders") ? "folder" : doc.type}_${doc._id}.json`;
+    const kind = doc._key.startsWith("!folders") ? "folder" : doc._key.startsWith("!journal") ? "journal" : doc.type;
+    const file = `${kind}_${doc._id}.json`;
     fs.writeFileSync(path.join(src, file), `${JSON.stringify(doc, null, 2)}\n`);
   }
   await compilePack(src, dest, { log: false });

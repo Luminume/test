@@ -12,6 +12,9 @@
         <label class="zc-field">Bonus aux dégâts <input type="text" name="system.damageBonus" value="{{system.damageBonus}}" placeholder="{{system.damageBonusAuto}}"></label>
         <label class="zc-field">Déplacement <input type="text" name="system.movement" value="{{system.movement}}" placeholder="{{system.movementAuto}}"></label>
       </div>
+      <label class="zc-field zc-inline" data-tooltip="Morts-vivants : aucun malus de blessure sur les jets">
+        <input type="checkbox" name="system.painless" {{checked system.painless}}> Insensible à la douleur
+      </label>
     </div>
   </header>
 

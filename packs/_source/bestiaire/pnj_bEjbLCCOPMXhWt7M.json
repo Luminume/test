@@ -1,0 +1,206 @@
+{
+  "_id": "bEjbLCCOPMXhWt7M",
+  "_key": "!actors!bEjbLCCOPMXhWt7M",
+  "name": "Pillard armé",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "2D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "2D+1"
+      }
+    },
+    "movement": "",
+    "painless": false,
+    "notes": "Profil maison. En bande de 3 à 6, attaque les survivants isolés pour leurs vivres et leurs armes."
+  },
+  "folder": "0j2ZZJbckjEFYMzR",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "LIvdiRxeAqGoKtkL",
+      "_key": "!actors.items!bEjbLCCOPMXhWt7M.LIvdiRxeAqGoKtkL",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "bYS717MmUaE158Dr",
+      "_key": "!actors.items!bEjbLCCOPMXhWt7M.bYS717MmUaE158Dr",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "nFhnO9bO4EsuMSwz",
+      "_key": "!actors.items!bEjbLCCOPMXhWt7M.nFhnO9bO4EsuMSwz",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Mêlée",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "FsOVDlM5nMZwlu3F",
+      "_key": "!actors.items!bEjbLCCOPMXhWt7M.FsOVDlM5nMZwlu3F",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "bStFcwMazZjOlRca",
+      "_key": "!actors.items!bEjbLCCOPMXhWt7M.bStFcwMazZjOlRca",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Connaissance de la rue",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "qg67KawN6E7NWx1N",
+      "_key": "!actors.items!bEjbLCCOPMXhWt7M.qg67KawN6E7NWx1N",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Smith & Wesson .38 revolver",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes de poing",
+        "damage": "3D+2",
+        "price": "F (TF)",
+        "ammo": {
+          "value": 6,
+          "max": 6
+        },
+        "range": {
+          "short": "15",
+          "medium": "30",
+          "long": "45"
+        },
+        "notes": "Le célèbre M&P Modèle 10 des policiers et militaires.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+      }
+    },
+    {
+      "_id": "LMUZ2RiKnDJWiHkj",
+      "_key": "!actors.items!bEjbLCCOPMXhWt7M.LMUZ2RiKnDJWiHkj",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Machette",
+      "type": "arme",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Armes de mêlée",
+        "damage": "+1D+2",
+        "price": "$20",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Plus de 60 cm : modificateur d'encombrement possible.\nLes dégâts s'ajoutent au bonus aux dégâts du porteur."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Pillard armé",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

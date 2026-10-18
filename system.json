@@ -2,7 +2,7 @@
   "id": "zcorps-vtt",
   "title": "Z-Corps (non officiel)",
   "description": "Système Foundry VTT pour Z-Corps : fiche de personnage, jets D6 avec dé libre, blessures, échelle de stress, accoutumance et pouvoirs occultes.",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "authors": [
     {
       "name": "Landry Freson"
@@ -21,7 +21,9 @@
   "documentTypes": {
     "Actor": {
       "personnage": {},
-      "pnj": {}
+      "pnj": {},
+      "vehicule": {},
+      "groupe": {}
     },
     "Item": {
       "arme": {},
@@ -53,6 +55,40 @@
         "TRUSTED": "NONE",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "archetypes",
+      "label": "Archétypes Z-Corps",
+      "path": "packs/archetypes",
+      "type": "Actor",
+      "system": "zcorps-vtt",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "bestiaire",
+      "label": "Bestiaire Z-Corps (MJ)",
+      "path": "packs/bestiaire",
+      "type": "Actor",
+      "system": "zcorps-vtt",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "aide-memoire",
+      "label": "Aide-mémoire Z-Corps",
+      "path": "packs/aide-memoire",
+      "type": "JournalEntry",
+      "system": "zcorps-vtt",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "packFolders": [
@@ -61,7 +97,10 @@
       "sorting": "m",
       "color": "#4a1010",
       "packs": [
+        "aide-memoire",
+        "archetypes",
         "equipement",
+        "bestiaire",
         "pouvoirs-occultes"
       ]
     }

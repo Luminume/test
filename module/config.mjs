@@ -145,3 +145,28 @@ export const ADVANCEMENT = {
   skillMultiplier: 1,
   attributeMultiplier: 10
 };
+
+/** Création de personnage (p. 22). En crans : 1D = 3. */
+export const CREATION = {
+  attributeTotal: 54,      // 18D à répartir
+  attributeMin: 6,         // 2D
+  attributeMax: 15,        // 5D
+  selectedSkills: 12,
+  skillBonusTotal: 21,     // 7D
+  skillBonusMax: 6         // 2D par compétence
+};
+
+/** Dégâts aux véhicules (p. 52) : niveau, effet, part des dégâts subie par les passagers. */
+export const VEHICLE_DAMAGE = [
+  { level: 0, label: "Intact", range: "", manoeuvre: 0, passengers: 0, effect: "" },
+  { level: 1, label: "Très léger", range: "1-3", manoeuvre: 1, passengers: 0,
+    effect: "-1D de Manœuvrabilité pour ce round et le suivant." },
+  { level: 2, label: "Léger", range: "4-8", manoeuvre: 1, passengers: 0.25,
+    effect: "-1D de Manœuvrabilité (ou vitesse max. -1 niveau à 0D) jusqu'à réparation." },
+  { level: 3, label: "Lourd", range: "9-12", manoeuvre: 2, passengers: 0.5,
+    effect: "-2D de Manœuvrabilité (ou vitesse max. -2 niveaux à 0D) jusqu'à réparation." },
+  { level: 4, label: "Grave", range: "13-15", manoeuvre: 0, passengers: 0.75,
+    effect: "Incontrôlable : décélère de deux niveaux par round jusqu'à l'arrêt ou l'impact." },
+  { level: 5, label: "Détruit", range: "16+", manoeuvre: 0, passengers: 1,
+    effect: "Le véhicule ne fonctionnera plus jamais." }
+];

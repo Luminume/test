@@ -1,0 +1,132 @@
+{
+  "_id": "zWo2brVODXBvoyLW",
+  "_key": "!actors!zWo2brVODXBvoyLW",
+  "name": "Geek",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D"
+      },
+      "adresse": {
+        "code": "2D+2"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D+1"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "skills": {
+      "discretion": {
+        "selected": true,
+        "bonus": ""
+      },
+      "dexterite": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "reparer": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "electronique": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "erudition": {
+        "selected": true,
+        "bonus": ""
+      },
+      "informatique": {
+        "selected": true,
+        "bonus": "+2D"
+      },
+      "sciencesOccultes": {
+        "selected": true,
+        "bonus": ""
+      },
+      "chercher": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "investigation": {
+        "selected": true,
+        "bonus": ""
+      },
+      "jeux": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": ""
+      }
+    },
+    "carriere": "Geek",
+    "historique": "Vous avez grandi dans une petite ville perdue du Texas ou du Nebraska. Avec pour seul paysage de très grandes collines verdoyantes, vous vous êtes réfugié dans les ordinateurs, les livres et le cinéma. Plutôt distant avec les autres, vous n’avez jamais eu de véritables amis (si on excepte vos grands-parents qui vous emmenaient régulièrement dans de nombreux festivals country). Cela ne vous a cependant pas empêché de réussir de brillantes études d’ingénieur en informatique à la Rice University de Houston. Votre diplôme en poche, vous avez été recruté par une petite société, spécialisée dans les jeux sur Internet et téléphones mobiles. Hyper bosseur, incapable de quitter votre écran, entouré de collectors de films et de bande-dessinées, vous n’avez pas compris tout de suite que tout ceci n’avait aucun lien avec la Zombie Walk ou la Convention de Science-Fiction locale…\n\nPsychologie : Vous n’êtes franchement pas sportif et avez toujours refusé de prendre un fusil pour tirer sur les lynx ou les chevreuils. Mais face à l’horreur, vous êtes capable de vous surpasser. Vos connaissances cinématographiques en matière de morts-vivants ne sont guère utiles dans la réalité, mais vos compétences en matière de communication et d’électronique sont des atouts précieux. Tant qu’on peut récupérer une connexion à Internet, on peut savoir comment fabriquer une bombe artisanale !\n\nPhrase type : «Ils ne peuvent pas simplement gueuler « cerveau » pour qu’on les repère plus vite ?! »",
+    "movement": "",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "9qLNrE3RpcC1ZhX9",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "iWS1ThiApD9W0foG",
+      "_key": "!actors.items!zWo2brVODXBvoyLW.iWS1ThiApD9W0foG",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Langues (Espagnol)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Geek",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

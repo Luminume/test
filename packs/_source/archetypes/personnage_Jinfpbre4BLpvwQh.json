@@ -1,0 +1,117 @@
+{
+  "_id": "Jinfpbre4BLpvwQh",
+  "_key": "!actors!Jinfpbre4BLpvwQh",
+  "name": "Ex-détenu",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "4D"
+      },
+      "puissance": {
+        "code": "3D+1"
+      },
+      "connaissances": {
+        "code": "2D"
+      },
+      "perception": {
+        "code": "2D+1"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "skills": {
+      "bagarre": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "esquive": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "melee": {
+        "selected": true,
+        "bonus": ""
+      },
+      "armesAFeu": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "endurance": {
+        "selected": true,
+        "bonus": ""
+      },
+      "contrefacon": {
+        "selected": true,
+        "bonus": ""
+      },
+      "securite": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "connaissanceRue": {
+        "selected": true,
+        "bonus": "+1D+1"
+      },
+      "jeux": {
+        "selected": true,
+        "bonus": ""
+      },
+      "survie": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "intimidation": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": "+1D"
+      }
+    },
+    "carriere": "Ex-détenu",
+    "historique": "Vous n’auriez jamais dû quitter l’Arizona pour vous rendre à Chicago. Tout ce que vous avez gagné, ce sont quelques nuits avec de jolies femmes, mais surtout un maximum d’embrouilles et une condamnation à 75 ans de prison pour homicide. Travailler pour la mafia n’était vraiment pas une bonne idée, mais que faire d’autre lorsqu’on a votre fougue et votre gabarit ? Videur ? Catcheur ? Et puis quoi encore ? Totalement coupé du monde vingt-trois heures sur vingt-quatre, enfermé dans une cellule de confinement du pénitencier USP de Marion (Illinois), vous avez été surpris de rencontrer un employé de OneWorld. Après trois ans d’enfermement, vous étiez persuadé que tout le monde vous avait oublié. Et pourtant, ce type que vous ne connaissiez pas vous a proposé une remise de peine en échange de vos services. Pour quoi faire ? Simplement pour vous rendre là où personne ne souhaite aller, sous la bannière des Z-Corps.\n\nPsychologie : On vous a donné une deuxième chance et il convient de la saisir. Bon, okay, vous avez bien songé plusieurs fois à vous tirer le plus loin possible mais le bracelet électronique qu’ils vous ont collé à la cheville n’a pas l’air d’accord. Surtout s’il doit exploser lorsqu’on tente de le démonter. Peu importe. Vous avez envie de montrer de quoi vous êtes capable et de vous dégourdir les muscles en pétant quelques têtes. En plus, comme c’est déjà mort, ça n’ira pas porter plainte.\n\nPhrase type : «C’est pas ma faute !»",
+    "movement": "7",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "yY05rQIPYWS89iJ0",
+  "sort": 70,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Ex-détenu",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

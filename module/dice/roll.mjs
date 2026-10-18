@@ -77,6 +77,20 @@ async function promptRollOptions(actor, { label, pips, kind }) {
   return (result && typeof result === "object") ? result : null;
 }
 
+/** Couleurs du dé Joker pour Dice So Nice (rouge sang ; bleu pour celui des points de personnage). */
+export const JOKER_COLORS = {
+  "zcorps-joker": { description: "Z-Corps : dé Joker", foreground: "#ffffff", background: "#7d1414", outline: "#000000", edge: "#4a1010" },
+  "zcorps-joker-cp": { description: "Z-Corps : Joker des points de personnage", foreground: "#ffffff", background: "#2b4a6b", outline: "#000000", edge: "#1a2e44" }
+};
+
+function jokerDie(cp = false) {
+  const roll = new Roll("1d6x6");
+  const colorset = cp ? "zcorps-joker-cp" : "zcorps-joker";
+  const { foreground, background, outline, edge } = JOKER_COLORS[colorset];
+  Object.assign(roll.dice[0].options, { colorset, appearance: { colorset, foreground, background, outline, edge } });
+  return roll;
+}
+
 const resultsOf = roll => roll ? roll.dice.flatMap(d => d.results.filter(r => r.active).map(r => r.result)) : [];
 const sum = arr => arr.reduce((a, b) => a + b, 0);
 
@@ -113,7 +127,9 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
 
   // Malus de blessure : jets de Compétence et de Caractéristique uniquement (p. 63).
   const wound = WOUNDS[actor?.system.wounds?.value ?? 0];
-  if (isTest && opts.applyWound && wound.penalty) {
+  if (isTest && actor?.system.painless && wound.penalty) {
+    lines.push("Insensible à la douleur : aucun malus de blessure");
+  } else if (isTest && opts.applyWound && wound.penalty) {
     total -= wound.penalty * 3;
     lines.push(`Malus de blessure (${wound.label}) : -${wound.penalty}D`);
   }
@@ -147,9 +163,9 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
   // Un seul dé Joker par jet, plus un Joker « doux » parmi les dés de points de personnage.
   const { dice, flat } = dicePlan(total);
   const normalRoll = dice > 1 ? await new Roll(`${dice - 1}d6`).evaluate() : null;
-  const jokerRoll = await new Roll("1d6x6").evaluate();
+  const jokerRoll = await jokerDie().evaluate();
   const cpNormalRoll = cp > 1 ? await new Roll(`${cp - 1}d6`).evaluate() : null;
-  const cpJokerRoll = cp ? await new Roll("1d6x6").evaluate() : null;
+  const cpJokerRoll = cp ? await jokerDie(true).evaluate() : null;
   const rolls = [normalRoll, jokerRoll, cpNormalRoll, cpJokerRoll].filter(Boolean);
 
   const normal = resultsOf(normalRoll);

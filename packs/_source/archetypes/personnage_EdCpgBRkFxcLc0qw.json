@@ -1,0 +1,132 @@
+{
+  "_id": "EdCpgBRkFxcLc0qw",
+  "_key": "!actors!EdCpgBRkFxcLc0qw",
+  "name": "Hell's Angel",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+2"
+      },
+      "adresse": {
+        "code": "3D+1"
+      },
+      "puissance": {
+        "code": "4D"
+      },
+      "connaissances": {
+        "code": "2D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "skills": {
+      "bagarre": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "esquive": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "armesAFeu": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "crochetage": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "reparer": {
+        "selected": true,
+        "bonus": ""
+      },
+      "endurance": {
+        "selected": true,
+        "bonus": ""
+      },
+      "contrefacon": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "connaissanceRue": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "survie": {
+        "selected": true,
+        "bonus": ""
+      },
+      "intimidation": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": "+1D"
+      }
+    },
+    "carriere": "Hell's Angel",
+    "historique": "Les bikers de votre communauté ont toujours affirmé que l’Enfer se trouvait sur Terre et l’histoire vient de leur donner raison. Pendant de nombreuses années, vous avez tenté de faire oublier le sang indien qui coule dans vos veines, en participant aux actions illégales de certains membres du club. Mais vous êtes allé trop loin et n’avez pas pu échapper à la violence et à la prison. Vous avez perdu de nombreux amis et votre famille vous a tourné le dos, vous interdisant de mettre les pieds dans leur casino de Cherokee. Depuis, vous tentez de vous racheter une conduite en travaillant comme mécanicien dans un garage de Chattanooga ou de Fargo. Mais les événements récents vont sans doute vous obliger à remonter sur votre Harley-Davidson, un fusil à canon scié glissé dans votre blouson de cuir noir et rouge.\n\nPsychologie : Fidèle en amitié, vous n’avez qu’une seule parole et tenez fermement à retrouver votre famille. Rude et plutôt avare de mots, vous préférez agir que parlementer. En fait, on peut même dire que vous préférez rouler vite, plutôt que de faire quoi que ce soit d’autre. Astucieux et habile, vous aimez démonter les choses pour en comprendre le fonctionnement, qu’il s’agisse d’une moto, d’un truck, d’un camion, voire des tripes d’un macchabée qui bouge encore.\n\nPhrase type : «C’est quand même plus amusant que de tirer sur des bisons, non ? »",
+    "movement": "7",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "9qLNrE3RpcC1ZhX9",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "OKYVWC2pjR1MMAKe",
+      "_key": "!actors.items!EdCpgBRkFxcLc0qw.OKYVWC2pjR1MMAKe",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Pilotage (Moto)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Hell's Angel",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

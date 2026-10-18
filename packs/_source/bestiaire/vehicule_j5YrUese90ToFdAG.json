@@ -1,0 +1,40 @@
+{
+  "_id": "j5YrUese90ToFdAG",
+  "_key": "!actors!j5YrUese90ToFdAG",
+  "name": "Pick-up",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "60/160 km/h",
+    "passengers": "3 (cabine)",
+    "resistance": "5D+2",
+    "manoeuvre": "0",
+    "price": "$18 000/30 000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 70,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Pick-up",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

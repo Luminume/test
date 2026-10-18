@@ -1,0 +1,40 @@
+{
+  "_id": "6Fh8yB34LSesAdgn",
+  "_key": "!actors!6Fh8yB34LSesAdgn",
+  "name": "Moto 260cc",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "60/170 km/h",
+    "passengers": "1-2",
+    "resistance": "2D+1",
+    "manoeuvre": "+3D",
+    "price": "$1000/3000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 10,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Moto 260cc",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

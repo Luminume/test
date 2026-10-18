@@ -1,0 +1,527 @@
+[
+  {
+    "name": "Chasseur de primes",
+    "description": "Vous bossez depuis de nombreuses années en bonne intelligence avec les flics locaux, le plus souvent pour ramener à l’ombre des détenus ayant échappé à leur vigilance. À bord de votre antique Pontiac rafistolée, vous jouez les détectives de second plan, épiant les couples infidèles, passant des nuits entières en planque devant une boîte de nuit miteuse. Le whisky, les donuts et les chansons de Johnny Cash sont devenus vos meilleurs amis, à force d’arpenter les routes du Tennessee ou de l’Arkansas pour épingler toutes les petites frappes qui refusent de se rendre devant le juge. Mais vous n’êtes pas le genre de mec à qui l’on échappe. Il suffit de voir vos cicatrices et le long couteau planqué dans vos Santiags, qui a déjà désossé pas mal de crotales. Le problème est désormais de savoir, si vous, vous êtes capable d’échapper à ce qui vous pourchasse…",
+    "psychologie": "Dans votre famille, on a toujours eu beaucoup d’estime pour les médecins et les avocats. C’est sans doute pour cela que vous avez fait tout le contraire. Ce que vous préférez, c’est l’action, la sueur, les coups de poings dans les dents. Et ce ne sont certainement pas les bureaucrates les mieux placés pour se débarrasser des morts-vivants qui ont décidé de vous pourrir votre journée. Tant que vous serez debout, personne ne viendra vous pisser sur les bottes.",
+    "phrase": "« J’avais bien dit qu’il fallait le buter !»",
+    "movement": "6",
+    "damageBonus": "2D",
+    "attributes": {
+      "Agilité": {
+        "code": "3D",
+        "skills": [
+          "Bagarre 4D"
+        ]
+      },
+      "Adresse": {
+        "code": "3D",
+        "skills": [
+          "Armes à feu 3D+1",
+          "Crochetage 4D",
+          "Pilotage (voiture) 4D"
+        ]
+      },
+      "Puissance": {
+        "code": "3D",
+        "skills": [
+          "Courir"
+        ]
+      },
+      "Connaissances": {
+        "code": "2D+1",
+        "skills": [
+          "Informatique",
+          "Sécurité 3D+1"
+        ]
+      },
+      "Perception": {
+        "code": "4D",
+        "skills": [
+          "Connaissance de la Rue 5D",
+          "Pister 4D+1",
+          "Survie"
+        ]
+      },
+      "Présence": {
+        "code": "2D+2",
+        "skills": [
+          "Empathie 3D+2",
+          "Persuasion 3D"
+        ]
+      }
+    },
+    "group": "Survivants"
+  },
+  {
+    "name": "Miss Epi de Maïs",
+    "description": "Depuis votre plus tendre enfance, vous avez toujours rêvé de devenir mannequin. Belle et sportive, vous êtes devenue sans surprise Reine de Promo, avant de vous lancer dans de nombreux castings et concours de beauté. Issue d’une famille modeste, des fermiers du Kentucky, vous tentez désespérément de vous arracher à votre bled paumé, pour atterrir enfin sous les feux d’Hollywood. Votre élection en tant que Miss Epi de Maïs 2012, lors du concours des coopératives de Greenville, n’est qu’un nouveau pas en avant vers la reconnaissance publique. Et si vous parvenez à sortir vivante de cette apocalypse, vous savez qu’un destin hors du commun vous attend. Et rien ni personne ne vous arrêtera, même pas une centaine de zombies que vous n’hésiterez pas à passer dans la moissonneuse-batteuse familiale s’il le faut !",
+    "psychologie": "Votre beauté n’a d’égal que votre naturel et votre simplicité. Vous avez fait taire les jalouses depuis longtemps et avez plus d’une fois démontré que vous n’êtes pas une simple potiche. Que vous le vouliez ou non, vous restez une vraie fille de la ferme, habituée à manier la hache, la fourche et la pelle. Derrière votre visage angélique se cache un sacré caractère, capable de faire le vide au fusil de chasse.",
+    "phrase": "«Arrête de mater mes fesses, Boss Hog. »",
+    "movement": "5",
+    "damageBonus": "1D",
+    "attributes": {
+      "Agilité": {
+        "code": "3D+1",
+        "skills": [
+          "Acrobaties 4D+1",
+          "Esquive 4D+1"
+        ]
+      },
+      "Adresse": {
+        "code": "3D",
+        "skills": [
+          "Dextérité"
+        ]
+      },
+      "Puissance": {
+        "code": "2D+1",
+        "skills": [
+          "Courir"
+        ]
+      },
+      "Connaissances": {
+        "code": "2D+1",
+        "skills": [
+          "Érudition"
+        ]
+      },
+      "Perception": {
+        "code": "3D",
+        "skills": [
+          "Art",
+          "Chercher 4D"
+        ]
+      },
+      "Présence": {
+        "code": "4D",
+        "skills": [
+          "Charmer 5D",
+          "Déguisement 5D",
+          "Empathie 5D",
+          "Persuasion 5D",
+          "Volonté"
+        ]
+      }
+    },
+    "group": "Survivants"
+  },
+  {
+    "name": "Hell's Angel",
+    "description": "Les bikers de votre communauté ont toujours affirmé que l’Enfer se trouvait sur Terre et l’histoire vient de leur donner raison. Pendant de nombreuses années, vous avez tenté de faire oublier le sang indien qui coule dans vos veines, en participant aux actions illégales de certains membres du club. Mais vous êtes allé trop loin et n’avez pas pu échapper à la violence et à la prison. Vous avez perdu de nombreux amis et votre famille vous a tourné le dos, vous interdisant de mettre les pieds dans leur casino de Cherokee. Depuis, vous tentez de vous racheter une conduite en travaillant comme mécanicien dans un garage de Chattanooga ou de Fargo. Mais les événements récents vont sans doute vous obliger à remonter sur votre Harley-Davidson, un fusil à canon scié glissé dans votre blouson de cuir noir et rouge.",
+    "psychologie": "Fidèle en amitié, vous n’avez qu’une seule parole et tenez fermement à retrouver votre famille. Rude et plutôt avare de mots, vous préférez agir que parlementer. En fait, on peut même dire que vous préférez rouler vite, plutôt que de faire quoi que ce soit d’autre. Astucieux et habile, vous aimez démonter les choses pour en comprendre le fonctionnement, qu’il s’agisse d’une moto, d’un truck, d’un camion, voire des tripes d’un macchabée qui bouge encore.",
+    "phrase": "«C’est quand même plus amusant que de tirer sur des bisons, non ? »",
+    "movement": "7",
+    "damageBonus": "2D",
+    "attributes": {
+      "Agilité": {
+        "code": "2D+2",
+        "skills": [
+          "Bagarre 3D+2",
+          "Esquive 3D"
+        ]
+      },
+      "Adresse": {
+        "code": "3D+1",
+        "skills": [
+          "Armes à feu 4D+1",
+          "Crochetage 4D+1",
+          "Pilotage (Moto) 4D+1",
+          "Réparer"
+        ]
+      },
+      "Puissance": {
+        "code": "4D",
+        "skills": [
+          "Endurance"
+        ]
+      },
+      "Connaissances": {
+        "code": "2D",
+        "skills": [
+          "Contrefaçon 3D"
+        ]
+      },
+      "Perception": {
+        "code": "3D",
+        "skills": [
+          "Connaissance de la Rue 3D+1",
+          "Survie"
+        ]
+      },
+      "Présence": {
+        "code": "3D",
+        "skills": [
+          "Intimidation 3D+1",
+          "Volonté 4D"
+        ]
+      }
+    },
+    "group": "Survivants"
+  },
+  {
+    "name": "Geek",
+    "description": "Vous avez grandi dans une petite ville perdue du Texas ou du Nebraska. Avec pour seul paysage de très grandes collines verdoyantes, vous vous êtes réfugié dans les ordinateurs, les livres et le cinéma. Plutôt distant avec les autres, vous n’avez jamais eu de véritables amis (si on excepte vos grands-parents qui vous emmenaient régulièrement dans de nombreux festivals country). Cela ne vous a cependant pas empêché de réussir de brillantes études d’ingénieur en informatique à la Rice University de Houston. Votre diplôme en poche, vous avez été recruté par une petite société, spécialisée dans les jeux sur Internet et téléphones mobiles. Hyper bosseur, incapable de quitter votre écran, entouré de collectors de films et de bande-dessinées, vous n’avez pas compris tout de suite que tout ceci n’avait aucun lien avec la Zombie Walk ou la Convention de Science-Fiction locale…",
+    "psychologie": "Vous n’êtes franchement pas sportif et avez toujours refusé de prendre un fusil pour tirer sur les lynx ou les chevreuils. Mais face à l’horreur, vous êtes capable de vous surpasser. Vos connaissances cinématographiques en matière de morts-vivants ne sont guère utiles dans la réalité, mais vos compétences en matière de communication et d’électronique sont des atouts précieux. Tant qu’on peut récupérer une connexion à Internet, on peut savoir comment fabriquer une bombe artisanale !",
+    "phrase": "«Ils ne peuvent pas simplement gueuler « cerveau » pour qu’on les repère plus vite ?! »",
+    "movement": "5",
+    "damageBonus": "2D",
+    "attributes": {
+      "Agilité": {
+        "code": "2D",
+        "skills": [
+          "Discrétion"
+        ]
+      },
+      "Adresse": {
+        "code": "2D+2",
+        "skills": [
+          "Dextérité 3D+2",
+          "Réparer 3D+2"
+        ]
+      },
+      "Puissance": {
+        "code": "3D",
+        "skills": []
+      },
+      "Connaissances": {
+        "code": "3D+1",
+        "skills": [
+          "Électronique 4D+1",
+          "Érudition",
+          "Informatique 5D+1",
+          "Langues (Espagnol)",
+          "Sciences occultes"
+        ]
+      },
+      "Perception": {
+        "code": "3D",
+        "skills": [
+          "Chercher 4D",
+          "Investigation",
+          "Jeux 4D"
+        ]
+      },
+      "Présence": {
+        "code": "3D",
+        "skills": [
+          "Volonté"
+        ]
+      }
+    },
+    "group": "Survivants"
+  },
+  {
+    "name": "Chanteuse de country",
+    "description": "Originaire de Nashville, vous avez toujours été attirée par la countrymusic. Par ce subtil mélange d’influences musicales diverses, en provenance des Appalaches. Les vestes à franges et les jupes en jean ont trôné pendant longtemps dans votre garde-robe, avant de laisser la place à des costumes de scène bien plus modernes. Vous avez traîné votre voix suave et votre guitare sur de nombreuses petites scènes du Mississipi, de l’Alabama et de la Georgie, avant d’atterrir dans l’Oklahoma. Vos quelques albums ont connu leur petit succès, mélangeant rock, pop et country, sur des textes retraçant votre vie. Mais le chemin n’a pas toujours été facile. Entre les bars malfamés et les camionneurs avinés cherchant la bagarre, vous avez appris à esquiver les coups et à battre les plus bouseux en absorption de bières et de bourbon. Coincée par l’épidémie, vous allez certainement devoir apprendre à utiliser de nouveaux instruments…",
+    "psychologie": "Vous êtes une artiste, ravissante, fragile et charmeuse. Vous n’appréciez pas vraiment de vous retrouver au milieu du sang, de la crasse et des cadavres. Plutôt portée à laisser les autres prendre soin de vous, à vous protéger, il se peut que la terreur vous conduise à changer de comportement. Lorsqu’il ne sert plus à rien de hurler, autant foncer dans le tas ! Attention tout de même : vous pourriez finir par aimer ça…",
+    "phrase": "«Eh Duke ! Passe-moi le banjo !»",
+    "movement": "5",
+    "damageBonus": "1D",
+    "attributes": {
+      "Agilité": {
+        "code": "3D",
+        "skills": [
+          "Bagarre"
+        ]
+      },
+      "Adresse": {
+        "code": "3D",
+        "skills": [
+          "Pilotage (Voiture)"
+        ]
+      },
+      "Puissance": {
+        "code": "2D+1",
+        "skills": []
+      },
+      "Connaissances": {
+        "code": "2D+1",
+        "skills": [
+          "Érudition 3D+1"
+        ]
+      },
+      "Perception": {
+        "code": "4D",
+        "skills": [
+          "Art 5D",
+          "Connaissance de la Rue",
+          "Jeux 5D",
+          "Survie"
+        ]
+      },
+      "Présence": {
+        "code": "3D+2",
+        "skills": [
+          "Charmer 4D+1",
+          "Déguisement 4D+1",
+          "Empathie 4D+1",
+          "Escroquerie",
+          "Volonté"
+        ]
+      }
+    },
+    "group": "Survivants"
+  },
+  {
+    "name": "Soldat",
+    "description": "Lorsque Topeka a été rasée, vous avez compris que l’US Army était totalement dépassée. Indéfectible patriote, vous ne supportiez plus la gestion de la crise, condamnant de nombreux militaires à périr dans des zones de quarantaine. Mais plutôt que de déserter comme un lâche, pour sauver votre peau et celle de vos proches, vous avez demandé votre transfert dans les forces privées de OneWorld. Malgré les réticences de l’état-major, forcé de coopérer avec cette société indépendante, votre dossier fut accepté afin de servir d’agent de liaison avec les Armées. Depuis, vous mettez vos connaissances au service de cette milice, chargée de comprendre et d’éradiquer la maladie. Vous ne comprenez pas grand-chose au jargon scientifique, mais vos compagnons savent qu’ils peuvent compter sur vous pour «désinfecter» un bâtiment.",
+    "psychologie": "Médaillé après plusieurs missions en Irak ou en Afghanistan, vous n’êtes pas tout à fait le prototype du soldat américain. Vous avez surtout tendance à faire les choses au feeling, au risque de mettre tout le monde en danger. Originaire du ghetto de South Central (ou « South »), à Los Angeles, vous avez atterri à Corpus-Christi, au Texas et avez vite appris à vous faire respecter. Certains disent que vous avez choisi Z-Corps pour ne plus avoir à vous raser le crâne et pour jouer le gangsta de pacotille, sur le dos du gouvernement. C’est dire si les préjugés sont forts. Tout le monde ignore de quoi vous êtes réellement capable…",
+    "phrase": "« Hey, bouffon, enfoiré de redneck mort-vivant ! C’est mon pays, ici !»",
+    "movement": "7",
+    "damageBonus": "2D",
+    "attributes": {
+      "Agilité": {
+        "code": "3D+1",
+        "skills": [
+          "Bagarre 4D+1",
+          "Esquive 5D",
+          "Grimper",
+          "Mêlée 3D+2",
+          "Sauter"
+        ]
+      },
+      "Adresse": {
+        "code": "4D",
+        "skills": [
+          "Armes à feu 5D",
+          "Pilotage (Voiture)"
+        ]
+      },
+      "Puissance": {
+        "code": "3D+1",
+        "skills": [
+          "Endurance"
+        ]
+      },
+      "Connaissances": {
+        "code": "2D+1",
+        "skills": [
+          "Démolition 3D+1"
+        ]
+      },
+      "Perception": {
+        "code": "3D",
+        "skills": [
+          "Camouflage 4D",
+          "Survie"
+        ]
+      },
+      "Présence": {
+        "code": "2D",
+        "skills": [
+          "Volonté 3D"
+        ]
+      }
+    },
+    "group": "Z-Corps"
+  },
+  {
+    "name": "Médecin épidémiologiste",
+    "description": "Jeune femme issue d’une famille mexicaine de Piedras Negras, il n’était pas dit que vous réussiriez aussi bien dans la vie. Cernée par la misère et la pauvreté, vous avez vu certains membres de votre famille ramenés à la frontière, tandis que d’autres sombraient dans la drogue et le banditisme des gangs. Malgré tant de drames et d’injustices, vous êtes restée accrochée au rêve américain, décrochant bourses et diplômes à la prestigieuse Université John Hopkins. Devenue médecin, spécialisée dans les maladies rares, vous êtes revenue au Texas pour aider votre communauté. Vous avez été recrutée par OneWorld un an avant le début de la contagion, afin de travailler dans un de leurs laboratoires LabWatch de Dallas. Désormais, vous faites tout votre possible pour comprendre le mode de transmission du virus et enrayer ses symptômes. Sur le terrain, au cœur du Mal, vous avez l’impression de vous sentir enfin utile.",
+    "psychologie": "Vous ne devez votre réussite qu’à vous-même et possédez un sacré tempérament. Franche, autoritaire et intelligente, vous pouvez tenir tête à un Général de l’Armée ou à toute autre personne faisant obstacle à votre unité Z-Corps. Il n’est pas né celui qui vous empêchera de faire une autopsie ou de pénétrer dans une zone de quarantaine. Votre mission importe plus que tout et vous rêvez de trouver un remède à cette catastrophe bactériologique.",
+    "phrase": "«Coupez son bras et mettez-le dans ma glacière.»",
+    "movement": "4",
+    "damageBonus": "1D",
+    "attributes": {
+      "Agilité": {
+        "code": "3D",
+        "skills": [
+          "Esquive 4D"
+        ]
+      },
+      "Adresse": {
+        "code": "2D+1",
+        "skills": [
+          "Armes à feu 3D+1"
+        ]
+      },
+      "Puissance": {
+        "code": "2D+2",
+        "skills": []
+      },
+      "Connaissances": {
+        "code": "4D",
+        "skills": [
+          "Érudition 5D",
+          "Informatique",
+          "Langues (Espagnol)",
+          "Médecine* 6D"
+        ]
+      },
+      "Perception": {
+        "code": "3D",
+        "skills": [
+          "Chercher 4D",
+          "Investigation 3D+1"
+        ]
+      },
+      "Présence": {
+        "code": "3D",
+        "skills": [
+          "Commander",
+          "Empathie 3D+1",
+          "Persuasion 3D+1",
+          "Volonté"
+        ]
+      }
+    },
+    "group": "Z-Corps"
+  },
+  {
+    "name": "Ex-détenu",
+    "description": "Vous n’auriez jamais dû quitter l’Arizona pour vous rendre à Chicago. Tout ce que vous avez gagné, ce sont quelques nuits avec de jolies femmes, mais surtout un maximum d’embrouilles et une condamnation à 75 ans de prison pour homicide. Travailler pour la mafia n’était vraiment pas une bonne idée, mais que faire d’autre lorsqu’on a votre fougue et votre gabarit ? Videur ? Catcheur ? Et puis quoi encore ? Totalement coupé du monde vingt-trois heures sur vingt-quatre, enfermé dans une cellule de confinement du pénitencier USP de Marion (Illinois), vous avez été surpris de rencontrer un employé de OneWorld. Après trois ans d’enfermement, vous étiez persuadé que tout le monde vous avait oublié. Et pourtant, ce type que vous ne connaissiez pas vous a proposé une remise de peine en échange de vos services. Pour quoi faire ? Simplement pour vous rendre là où personne ne souhaite aller, sous la bannière des Z-Corps.",
+    "psychologie": "On vous a donné une deuxième chance et il convient de la saisir. Bon, okay, vous avez bien songé plusieurs fois à vous tirer le plus loin possible mais le bracelet électronique qu’ils vous ont collé à la cheville n’a pas l’air d’accord. Surtout s’il doit exploser lorsqu’on tente de le démonter. Peu importe. Vous avez envie de montrer de quoi vous êtes capable et de vous dégourdir les muscles en pétant quelques têtes. En plus, comme c’est déjà mort, ça n’ira pas porter plainte.",
+    "phrase": "«C’est pas ma faute !»",
+    "movement": "7",
+    "damageBonus": "2D",
+    "attributes": {
+      "Agilité": {
+        "code": "3D+1",
+        "skills": [
+          "Bagarre 4D+1",
+          "Esquive 3D+2",
+          "Mêlée"
+        ]
+      },
+      "Adresse": {
+        "code": "4D",
+        "skills": [
+          "Armes à feu 5D"
+        ]
+      },
+      "Puissance": {
+        "code": "3D+1",
+        "skills": [
+          "Endurance"
+        ]
+      },
+      "Connaissances": {
+        "code": "2D",
+        "skills": [
+          "Contrefaçon",
+          "Sécurité 3D"
+        ]
+      },
+      "Perception": {
+        "code": "2D+1",
+        "skills": [
+          "Connaissance de la Rue 3D+2",
+          "Jeux",
+          "Survie 2D+2"
+        ]
+      },
+      "Présence": {
+        "code": "3D",
+        "skills": [
+          "Intimidation 4D",
+          "Volonté 4D"
+        ]
+      }
+    },
+    "group": "Z-Corps"
+  },
+  {
+    "name": "Responsable Transcom'",
+    "description": "Après avoir longtemps travaillé dans la fibre optique et pour une compagnie de téléphone canadienne, vous êtes entré chez Intech System. Parmi les nombreux projets de cette filiale de OneWorld, vous avez tout particulièrement travaillé sur les senseurs et commandes des robots Sentry. Ces robots, pilotés à distance, sont utilisés pour le déminage et les missions de reconnaissance en «terrain hostile». Comme tous les habitants du monde, vous êtes resté bouchebée face aux annonces des médias, annonçant un virus destructeur en provenance du Kansas. Mais ce que vous avez d’abord pris pour un canular, un hoax, s’est avéré être la triste vérité lorsque votre chef d’équipe vous a montré les terribles images de Topeka et de Wichita. Mobilisé comme tous les membres de OneWorld suite au vote du Congrès, vous avez été affecté à une unité Z-Corps dans le but de maintenir les transmissions avec le central. Et franchement, plus le temps passe, plus vous regrettez vos anciens boulots.",
+    "psychologie": "Vous ne cessez de répéter que vous n’êtes ni soldat, ni médecin et que votre rôle est uniquement de transmettre des rapports. L’époque où vous preniez tranquillement votre café devant la machine du service, en parlant des matchs de NBA ou du Superbowl, vous paraît bien loin. On ne peut pas dire que vous soyez très courageux, ayant surtout tendance à geindre et à jouer les pessimistes. Mais, qui sait, dans l’adversité, on peut apprendre à retirer le cran de sécurité.",
+    "phrase": "«Comme c’est trop dégueulasse !»",
+    "movement": "6",
+    "damageBonus": "2D",
+    "attributes": {
+      "Agilité": {
+        "code": "3D+1",
+        "skills": [
+          "Discrétion",
+          "Esquive 3D+2"
+        ]
+      },
+      "Adresse": {
+        "code": "3D",
+        "skills": [
+          "Armes à feu 4D",
+          "Dextérité",
+          "Réparer"
+        ]
+      },
+      "Puissance": {
+        "code": "3D",
+        "skills": []
+      },
+      "Connaissances": {
+        "code": "4D",
+        "skills": [
+          "Électronique 4D+1",
+          "Informatique 6D",
+          "Langues (Espagnol)",
+          "Sécurité 5D"
+        ]
+      },
+      "Perception": {
+        "code": "2D+1",
+        "skills": [
+          "Investigation 3D+1",
+          "Jeux"
+        ]
+      },
+      "Présence": {
+        "code": "2D+1",
+        "skills": [
+          "Volonté 3D+2"
+        ]
+      }
+    },
+    "group": "Z-Corps"
+  },
+  {
+    "name": "Aumônier",
+    "description": "Les nombreuses rumeurs et croyances entourant l’épidémie ont donné du grain à moudre aux prédicateurs et sectes de tous bords. Pragmatique et réservé, vous avez longtemps été révérend dans une petite ville de l’Iowa, jusqu’à ce que les premiers zombies en décident autrement. Venant en aide aux familles des victimes et aux exilés des États voisins, vous avez su garder la tête froide malgré les questions de vos ouailles au sujet de l’Apocalypse et de la Fin du Monde. Vous ne voulez pas croire que tout ceci est un plan du Divin ou, tout du moins, vous ne voulez pas vous en persuader. Face à l’impuissance des autorités et à la perte de quelques êtres chers, vous avez choisi de vous engager chez OneWorld. Peut-être pour permettre aux mourants de se tourner vers Dieu avant de rendre leur dernier souffle ? Pour écouter vos coéquipiers, paralysés par la peur et le désespoir ? Ou plus certainement, pour renvoyer ces saloperies dans l’Enfer qu’elles n’auraient jamais dû quitter !",
+    "psychologie": "Vous avez perdu la Foi en ce monde basculant dans l'horreur la plus effroyable. Mais malgré cela, vous ne pouvez vous empêcher de soutenir votre prochain, de panser ses plaies, de lui montrer le côté positif de la situation. Vous cherchez désespérément un message, une lueur, un espoir, dans tout ce qui arrive. Et vous mettez les bouchées doubles, lorsqu’il s’agit de sécuriser un périmètre ou de récupérer des prélèvements dans une zone industrielle pluvieuse de Grand Island.",
+    "phrase": "«Où es-tu ? Christ ?»",
+    "movement": "4",
+    "damageBonus": "1D",
+    "attributes": {
+      "Agilité": {
+        "code": "2D+2",
+        "skills": [
+          "Esquive 3D+2"
+        ]
+      },
+      "Adresse": {
+        "code": "2D+2",
+        "skills": [
+          "Armes à feu 3D+2",
+          "Réparer"
+        ]
+      },
+      "Puissance": {
+        "code": "2D+2",
+        "skills": []
+      },
+      "Connaissances": {
+        "code": "3D",
+        "skills": [
+          "Affaires",
+          "Érudition 4D+1",
+          "Langues (Latin) 4D",
+          "Sciences occultes"
+        ]
+      },
+      "Perception": {
+        "code": "3D",
+        "skills": [
+          "Connaissance de la Rue 3D+1"
+        ]
+      },
+      "Présence": {
+        "code": "4D",
+        "skills": [
+          "Charmer",
+          "Empathie 5D",
+          "Persuasion",
+          "Volonté 4D+1"
+        ]
+      }
+    },
+    "group": "Z-Corps"
+  }
+]

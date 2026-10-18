@@ -1,0 +1,132 @@
+{
+  "_id": "5uGoxWcKrI6F48KE",
+  "_key": "!actors!5uGoxWcKrI6F48KE",
+  "name": "Soldat",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "4D"
+      },
+      "puissance": {
+        "code": "3D+1"
+      },
+      "connaissances": {
+        "code": "2D+1"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "2D"
+      }
+    },
+    "skills": {
+      "bagarre": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "esquive": {
+        "selected": true,
+        "bonus": "+1D+2"
+      },
+      "grimper": {
+        "selected": true,
+        "bonus": ""
+      },
+      "melee": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "sauter": {
+        "selected": true,
+        "bonus": ""
+      },
+      "armesAFeu": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "endurance": {
+        "selected": true,
+        "bonus": ""
+      },
+      "demolition": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "camouflage": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "survie": {
+        "selected": true,
+        "bonus": ""
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": "+1D"
+      }
+    },
+    "carriere": "Soldat",
+    "historique": "Lorsque Topeka a été rasée, vous avez compris que l’US Army était totalement dépassée. Indéfectible patriote, vous ne supportiez plus la gestion de la crise, condamnant de nombreux militaires à périr dans des zones de quarantaine. Mais plutôt que de déserter comme un lâche, pour sauver votre peau et celle de vos proches, vous avez demandé votre transfert dans les forces privées de OneWorld. Malgré les réticences de l’état-major, forcé de coopérer avec cette société indépendante, votre dossier fut accepté afin de servir d’agent de liaison avec les Armées. Depuis, vous mettez vos connaissances au service de cette milice, chargée de comprendre et d’éradiquer la maladie. Vous ne comprenez pas grand-chose au jargon scientifique, mais vos compagnons savent qu’ils peuvent compter sur vous pour «désinfecter» un bâtiment.\n\nPsychologie : Médaillé après plusieurs missions en Irak ou en Afghanistan, vous n’êtes pas tout à fait le prototype du soldat américain. Vous avez surtout tendance à faire les choses au feeling, au risque de mettre tout le monde en danger. Originaire du ghetto de South Central (ou « South »), à Los Angeles, vous avez atterri à Corpus-Christi, au Texas et avez vite appris à vous faire respecter. Certains disent que vous avez choisi Z-Corps pour ne plus avoir à vous raser le crâne et pour jouer le gangsta de pacotille, sur le dos du gouvernement. C’est dire si les préjugés sont forts. Tout le monde ignore de quoi vous êtes réellement capable…\n\nPhrase type : « Hey, bouffon, enfoiré de redneck mort-vivant ! C’est mon pays, ici !»",
+    "movement": "7",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "yY05rQIPYWS89iJ0",
+  "sort": 50,
+  "items": [
+    {
+      "_id": "aqz1sEVreiSavnzt",
+      "_key": "!actors.items!5uGoxWcKrI6F48KE.aqz1sEVreiSavnzt",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Pilotage (Voiture)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Soldat",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

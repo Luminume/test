@@ -1,0 +1,45 @@
+<div class="zc-sheet zc-groupe">
+  <header class="zc-top">
+    <img class="zc-portrait small" src="{{actor.img}}" alt="" {{#if editable}}data-action="editPortrait" data-tooltip="Changer l'image"{{/if}}>
+    <div class="zc-identity">
+      <label class="zc-field grow">Nom du groupe <input type="text" name="name" value="{{actor.name}}"></label>
+      <p class="zc-hint">Glisse des personnages, PNJ ou véhicules depuis la barre latérale dans la liste ci-dessous.</p>
+    </div>
+  </header>
+
+  <section class="zc-box zc-group-members">
+    <header class="zc-band"><span>Membres</span></header>
+    <table>
+      <thead><tr><th></th><th>Nom</th><th>État</th><th>Stress</th><th>Accoutumance</th><th>Cojones</th><th>PP</th><th></th></tr></thead>
+      <tbody>
+        {{#each members as |m|}}
+        <tr data-uuid="{{m.uuid}}">
+          <td>{{#unless m.missing}}<img src="{{m.img}}" alt="" class="zc-item-img">{{/unless}}</td>
+          <td><a data-action="openMember">{{m.name}}</a> <span class="zc-hint">{{m.type}}</span></td>
+          {{#if m.visible}}
+          <td class="{{#if m.hurt}}zc-hurt{{/if}}">{{m.wounds}}</td>
+          <td>{{m.stress}}</td>
+          <td>{{m.accoutumance}}</td>
+          <td>{{m.cojones}}</td>
+          <td>{{m.cp}}</td>
+          {{else}}
+          <td colspan="5" class="zc-hint">—</td>
+          {{/if}}
+          <td class="zc-controls">{{#if @root.editable}}<a data-action="removeMember" data-tooltip="Retirer du groupe"><i class="fa-solid fa-user-minus"></i></a>{{/if}}</td>
+        </tr>
+        {{else}}
+        <tr><td colspan="8" class="zc-hint zc-drop-hint">Dépose des acteurs ici.</td></tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="zc-box">
+    <header class="zc-band"><span>Inventaire commun</span></header>
+    <textarea name="system.inventory" rows="5">{{system.inventory}}</textarea>
+  </section>
+  <section class="zc-box">
+    <header class="zc-band"><span>Notes</span></header>
+    <textarea name="system.notes" rows="4">{{system.notes}}</textarea>
+  </section>
+</div>

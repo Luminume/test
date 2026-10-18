@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   woundFromMargin, nextWoundLevel, damageBonusPips, movement, outcome, advancementCost, nextSkillBonus,
-  accoutumanceTier, accoutumanceEvents
+  accoutumanceTier, accoutumanceEvents, powerCost, vehicleDamageFromMargin, nextVehicleDamage, creationReport
 } from "../module/rules.mjs";
 
 test("table des niveaux de blessure (p. 63)", () => {
@@ -62,4 +62,27 @@ test("progression avec les points de personnage", () => {
   assert.equal(nextSkillBonus(-2, true), -1);
   assert.equal(nextSkillBonus(-1, true), 0);   // retour au niveau de la Caractéristique
   assert.equal(nextSkillBonus(5, true), 6);    // +1D+2 -> +2D
+});
+
+test("coût d'un pouvoir", () => {
+  assert.equal(powerCost("+2 influence"), 2);
+  assert.equal(powerCost("+1 résonance par échange"), 1);
+  assert.equal(powerCost(""), 0);
+});
+
+test("dégâts aux véhicules (p. 52)", () => {
+  assert.deepEqual([0, 1, 4, 9, 13, 16].map(vehicleDamageFromMargin), [0, 1, 2, 3, 4, 5]);
+  assert.equal(nextVehicleDamage(2, 5), 2);   // Léger + Léger : pas d'aggravation
+  assert.equal(nextVehicleDamage(1, 10), 3);
+  assert.equal(nextVehicleDamage(3, 2), 3);   // Lourd + Très léger : rien
+  assert.equal(nextVehicleDamage(3, 5), 4);   // Lourd + Léger : un niveau de plus
+  assert.equal(nextVehicleDamage(4, 20), 5);
+});
+
+test("rapport de création", () => {
+  const rules = { attributeTotal: 54, attributeMin: 6, attributeMax: 15, selectedSkills: 12, skillBonusTotal: 21, skillBonusMax: 6 };
+  const ok = creationReport([9, 9, 9, 9, 9, 9], 12, [6, 6, 6, 3], rules);
+  assert.ok(ok.attributesOk && ok.attributesInRange && ok.selectedOk && ok.bonusOk && ok.bonusInRange);
+  const ko = creationReport([18, 9, 9, 9, 6, 3], 10, [9], rules);
+  assert.ok(!ko.attributesInRange && !ko.selectedOk && !ko.bonusInRange);
 });

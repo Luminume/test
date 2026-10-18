@@ -124,3 +124,34 @@ test("fiche d'objet pouvoir", () => {
   });
   assert.ok(html.includes('value="2" selected') && html.includes("system.revealed") && !html.includes("system.notes"));
 });
+
+test("bouton Utiliser, aide à la création, fiche limitée", () => {
+  const ctx = { ...actorContext(), isOwner: true };
+  assert.equal((render("templates/actor/personnage.hbs", ctx).match(/data-action="usePower"/g) || []).length, 2);
+  ctx.creation = {
+    rows: [{ label: "Caractéristiques", value: "17D", target: "18D", ok: false }],
+    warnings: ["Agilité doit être entre 2D et 5D."],
+    archetypes: [{ uuid: "Compendium.zcorps-vtt.archetypes.Actor.x", name: "Geek" }]
+  };
+  const html = render("templates/actor/personnage.hbs", ctx);
+  assert.ok(html.includes("Aide à la création (p. 22)") && html.includes("fa-circle-exclamation") && html.includes("Geek"));
+  assert.ok(html.includes("Terminer la création"));
+  const limited = render("templates/actor/limited.hbs", { actor: { name: "Joe", img: "x.png" }, system: { carriere: "Flic" } });
+  assert.ok(limited.includes("Joe") && limited.includes("Flic") && !limited.includes("input"));
+});
+
+test("fiches véhicule et groupe", () => {
+  const vehicle = render("templates/actor/vehicule.hbs", {
+    actor: { name: "Pick-up", img: "x" }, editable: true, system: { speed: "60/160 km/h" },
+    resistanceTotal: "5D+2", manoeuvreTotal: "+0",
+    levels: [{ level: 1, label: "Très léger", range: "1-3", share: "—", checked: true, current: true }]
+  });
+  assert.ok(vehicle.includes("5D+2") && vehicle.includes('data-action="vehicleDamage"') && vehicle.includes("Très léger"));
+  const group = render("templates/actor/groupe.hbs", {
+    actor: { name: "Unité 7", img: "x" }, editable: true, system: {},
+    members: [{ uuid: "Actor.a", name: "Katrina", img: "x", visible: true, wounds: "Blessé", hurt: true, stress: "Calme", accoutumance: "12/30 (seuil 2)", cojones: 1, cp: 5 }]
+  });
+  assert.ok(group.includes("Katrina") && group.includes("zc-hurt") && group.includes("12/30 (seuil 2)"));
+  const empty = render("templates/actor/groupe.hbs", { actor: { name: "Vide" }, system: {}, members: [] });
+  assert.ok(empty.includes("Dépose des acteurs ici"));
+});

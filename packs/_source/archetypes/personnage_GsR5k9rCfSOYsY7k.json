@@ -1,0 +1,132 @@
+{
+  "_id": "GsR5k9rCfSOYsY7k",
+  "_key": "!actors!GsR5k9rCfSOYsY7k",
+  "name": "Médecin épidémiologiste",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "adresse": {
+        "code": "2D+1"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "4D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "skills": {
+      "esquive": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "armesAFeu": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "erudition": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "informatique": {
+        "selected": true,
+        "bonus": ""
+      },
+      "medecine": {
+        "selected": true,
+        "bonus": "+2D"
+      },
+      "chercher": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "investigation": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "commander": {
+        "selected": true,
+        "bonus": ""
+      },
+      "empathie": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "persuasion": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": ""
+      }
+    },
+    "carriere": "Médecin épidémiologiste",
+    "historique": "Jeune femme issue d’une famille mexicaine de Piedras Negras, il n’était pas dit que vous réussiriez aussi bien dans la vie. Cernée par la misère et la pauvreté, vous avez vu certains membres de votre famille ramenés à la frontière, tandis que d’autres sombraient dans la drogue et le banditisme des gangs. Malgré tant de drames et d’injustices, vous êtes restée accrochée au rêve américain, décrochant bourses et diplômes à la prestigieuse Université John Hopkins. Devenue médecin, spécialisée dans les maladies rares, vous êtes revenue au Texas pour aider votre communauté. Vous avez été recrutée par OneWorld un an avant le début de la contagion, afin de travailler dans un de leurs laboratoires LabWatch de Dallas. Désormais, vous faites tout votre possible pour comprendre le mode de transmission du virus et enrayer ses symptômes. Sur le terrain, au cœur du Mal, vous avez l’impression de vous sentir enfin utile.\n\nPsychologie : Vous ne devez votre réussite qu’à vous-même et possédez un sacré tempérament. Franche, autoritaire et intelligente, vous pouvez tenir tête à un Général de l’Armée ou à toute autre personne faisant obstacle à votre unité Z-Corps. Il n’est pas né celui qui vous empêchera de faire une autopsie ou de pénétrer dans une zone de quarantaine. Votre mission importe plus que tout et vous rêvez de trouver un remède à cette catastrophe bactériologique.\n\nPhrase type : «Coupez son bras et mettez-le dans ma glacière.»",
+    "movement": "4",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "yY05rQIPYWS89iJ0",
+  "sort": 60,
+  "items": [
+    {
+      "_id": "U9zmy8bu74Aegouc",
+      "_key": "!actors.items!GsR5k9rCfSOYsY7k.U9zmy8bu74Aegouc",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Langues (Espagnol)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Médecin épidémiologiste",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

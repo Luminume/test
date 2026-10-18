@@ -1,6 +1,6 @@
-import { SKILLS, STRESS, WOUNDS, ACCOUTUMANCE, ADVANCEMENT } from "../config.mjs";
+import { SKILLS, STRESS, WOUNDS, ACCOUTUMANCE, ADVANCEMENT, VEHICLE_DAMAGE } from "../config.mjs";
 import { codeToPips, pipsToCode, rollFormula } from "../dice-code.mjs";
-import { nextWoundLevel, accoutumanceEvents, advancementCost, nextSkillBonus } from "../rules.mjs";
+import { nextWoundLevel, accoutumanceEvents, advancementCost, nextSkillBonus, powerCost, nextVehicleDamage } from "../rules.mjs";
 import { rollD6, rollSimple, postChat } from "../dice/roll.mjs";
 
 const escape = s => String(s).replace(/[&<>"']/g, c => `&#${c.charCodeAt(0)};`);
@@ -9,9 +9,9 @@ export class ZCorpsActor extends Actor {
 
   async _preCreate(data, options, user) {
     if ((await super._preCreate(data, options, user)) === false) return false;
-    if (data.prototypeToken) return;
+    if (data.prototypeToken || this.type === "groupe") return;
     const token = {
-      "prototypeToken.bar1.attribute": "wounds",
+      "prototypeToken.bar1.attribute": this.type === "vehicule" ? "damage" : "wounds",
       "prototypeToken.displayBars": CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER
     };
     if (this.type === "personnage") {
@@ -48,7 +48,7 @@ export class ZCorpsActor extends Actor {
   /** Initiative : Test d'Agilité avec dé Joker (p. 28). Une action par tranche de 10 points. */
   getRollData() {
     const data = Object.assign({}, super.getRollData());
-    data.initiative = rollFormula(this.system.attributes.agilite.pips);
+    if (this.system.attributes) data.initiative = rollFormula(this.system.attributes.agilite.pips);
     return data;
   }
 
@@ -237,5 +237,86 @@ export class ZCorpsActor extends Actor {
       <p><strong>${escape(plan.label)}</strong> : ${from} → <strong>${to}</strong></p>
       <div class="zc-note">${plan.cost} point(s) de personnage dépensé(s), reste ${available - plan.cost}.</div></div>`);
     return true;
+  }
+
+  /* -------------------------------------------- */
+  /*  Pouvoirs occultes                           */
+  /* -------------------------------------------- */
+
+  /**
+   * Utilise un pouvoir : ajoute son coût à l'accoutumance (personnages) et l'annonce.
+   * Un pouvoir non révélé n'est annoncé qu'au MJ.
+   */
+  async usePower(item) {
+    const cost = powerCost(item.system.cost);
+    const lines = [];
+    if (cost && this.type === "personnage") {
+      const before = this.system.accoutumance.value;
+      const after = Math.min(ACCOUTUMANCE.max, before + cost);
+      await this.update({ "system.accoutumance.value": after });
+      lines.push(`Accoutumance : ${before} → <strong>${after}</strong>/${ACCOUTUMANCE.max}`);
+    } else if (cost) {
+      lines.push(`Coût : ${escape(item.system.cost)}`);
+    }
+    const content = `<div class="zc-roll zc-power-card">
+      <header class="zc-roll-title">${"◆".repeat(item.system.tier)} ${escape(item.name)}</header>
+      ${item.system.mechanic ? `<p>${escape(item.system.mechanic)}</p>` : ""}
+      ${lines.map(l => `<div class="zc-note">${l}</div>`).join("")}
+    </div>`;
+    const cls = ChatMessage.implementation;
+    const data = { speaker: cls.getSpeaker({ actor: this }), content };
+    if (!item.system.revealed) data.whisper = cls.getWhisperRecipients("GM").map(u => u.id);
+    return cls.create(data);
+  }
+
+  /* -------------------------------------------- */
+  /*  Véhicules                                   */
+  /* -------------------------------------------- */
+
+  rollVehicleResistance() {
+    return rollD6(this, { label: `Résistance — ${this.name}`, pips: this.system.resistancePips, kind: "resistance" });
+  }
+
+  /** Dégâts à un véhicule (p. 52) : jet de Résistance, niveau de dégâts, part des passagers. */
+  applyVehicleDamage(damage) {
+    return rollD6(this, {
+      label: `${this.name} encaisse ${damage} points de dégâts`,
+      pips: this.system.resistancePips,
+      kind: "resistance",
+      afterRoll: async result => {
+        const margin = damage - result.total;
+        const before = this.system.damage.value;
+        const after = nextVehicleDamage(before, margin);
+        if (after !== before) await this.update({ "system.damage.value": after });
+        const share = VEHICLE_DAMAGE[after].passengers;
+        const notes = [`Dégâts ${damage} − résistance ${result.total} = ${margin}`];
+        if (after !== before && VEHICLE_DAMAGE[after].effect) notes.push(VEHICLE_DAMAGE[after].effect);
+        if (margin > 0 && share) notes.push(`Passagers : ${Math.round(damage * share)} points de dégâts (${share * 100} %), à moduler selon leur exposition.`);
+        return { highlight: margin <= 0 ? "Aucun dégât" : VEHICLE_DAMAGE[after].label, notes };
+      }
+    });
+  }
+
+  /* -------------------------------------------- */
+  /*  Archétypes                                  */
+  /* -------------------------------------------- */
+
+  /**
+   * Remplace Caractéristiques, compétences et historique par ceux d'un archétype.
+   * Les objets du personnage (armes, équipement, pouvoirs) sont conservés ; ses compétences ajoutées sont remplacées.
+   */
+  async applyArchetype(source) {
+    const data = source.system.toObject();
+    const keep = ["pseudo", "genre", "age", "taille", "poids", "cojones", "cp", "accoutumance", "wounds", "stress", "occult", "money", "equipmentNotes", "notes"];
+    for (const key of keep) delete data[key];
+    await this.update({ system: data });
+    const oldSkills = this.items.filter(i => i.type === "competence").map(i => i.id);
+    if (oldSkills.length) await this.deleteEmbeddedDocuments("Item", oldSkills);
+    const newSkills = source.items.filter(i => i.type === "competence").map(i => {
+      const obj = i.toObject();
+      delete obj._id;
+      return obj;
+    });
+    if (newSkills.length) await this.createEmbeddedDocuments("Item", newSkills);
   }
 }

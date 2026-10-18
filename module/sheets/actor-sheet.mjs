@@ -1,6 +1,6 @@
-import { SYSTEM_ID, ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, ADVANCEMENT } from "../config.mjs";
+import { SYSTEM_ID, ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, ADVANCEMENT, CREATION } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
-import { advancementCost } from "../rules.mjs";
+import { advancementCost, creationReport } from "../rules.mjs";
 import { ZCorpsBrowser } from "../apps/browser.mjs";
 
 const { HandlebarsApplicationMixin, DialogV2 } = foundry.applications.api;
@@ -159,6 +159,43 @@ function onOpenBrowser(event, target) {
   return ZCorpsBrowser.open(this.document, target.dataset.mode);
 }
 
+function onUsePower(event, target) {
+  const item = itemOf(this, target);
+  if (item) return this.document.usePower(item);
+}
+
+function onToggleCreation() {
+  this.creation = !this.creation;
+  return this.render();
+}
+
+async function onApplyArchetype(event, target) {
+  const uuid = this.element.querySelector("select.zc-archetype-choice")?.value;
+  if (!uuid) return;
+  const source = await fromUuid(uuid);
+  const ok = await DialogV2.confirm({
+    window: { title: "Appliquer un archétype" },
+    content: `<p>Remplacer les Caractéristiques, compétences, carrière et historique de
+      <strong>${escape(this.document.name)}</strong> par ceux de l'archétype <strong>${escape(source.name)}</strong> ?</p>
+      <p>Les armes, l'équipement, les pouvoirs, les points et l'identité sont conservés.</p>`,
+    rejectClose: false
+  });
+  if (ok) return this.document.applyArchetype(source);
+}
+
+/** Données de glisser-déposer vers la barre de macros. */
+function rollDragData(sheet, el) {
+  const base = { type: "ZCorpsRoll", actorUuid: sheet.document.uuid };
+  const action = el.dataset.action;
+  if (action === "rollAttribute") return { ...base, kind: "attribute", key: el.dataset.attribute, label: el.textContent.trim() };
+  if (action === "rollSkill") return { ...base, kind: "skill", key: el.dataset.skill, label: el.textContent.trim() };
+  const item = itemOf(sheet, el);
+  if (!item) return null;
+  if (action === "rollCustomSkill") return { ...base, kind: "custom", itemId: item.id, label: item.name, img: item.img };
+  if (item.type === "arme") return { ...base, kind: "weapon", itemId: item.id, label: item.name, img: item.img };
+  return null;
+}
+
 function onTogglePowerRevealed(event, target) {
   const item = itemOf(this, target);
   if (item && game.user.isGM) return item.update({ "system.revealed": !item.system.revealed });
@@ -195,9 +232,21 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       showPortrait: onShowPortrait,
       openBrowser: onOpenBrowser,
       togglePowerRevealed: onTogglePowerRevealed,
-      improve: onImprove
-    }
+      improve: onImprove,
+      usePower: onUsePower,
+      toggleCreation: onToggleCreation,
+      applyArchetype: onApplyArchetype
+    },
+    // Les joueurs avec une permission « limitée » voient une fiche réduite.
+    viewPermission: CONST.DOCUMENT_OWNERSHIP_LEVELS.LIMITED
   };
+
+  /** Fiche réduite (portrait, nom, carrière) pour les utilisateurs en permission « limitée ». */
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options);
+    const limited = this.document.limited;
+    options.parts = Object.keys(this.constructor.PARTS).filter(p => (p === "limited") === limited);
+  }
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
@@ -252,6 +301,7 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         range: i.system.range
       })),
       isGM: game.user.isGM,
+      isOwner: actor.isOwner,
       // Pouvoirs : le MJ les voit tous, les joueurs seulement ceux qui sont révélés.
       powers: items.filter(i => i.type === "pouvoir" && (game.user.isGM || i.system.revealed))
         .sort((a, b) => (a.system.tier - b.system.tier) || a.name.localeCompare(b.name, "fr"))
@@ -270,8 +320,51 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     });
 
     context.showPowers = context.isGM || context.powers.length > 0;
-    if (actor.type === "personnage") this._preparePersonnage(context);
+    if (actor.type === "personnage") {
+      this._preparePersonnage(context);
+      if (this.creation && this.isEditable) await this._prepareCreation(context, items);
+    }
     return context;
+  }
+
+  /** Aide à la création (p. 22) : compteurs et archétypes disponibles. */
+  async _prepareCreation(context, items) {
+    const system = context.system;
+    const custom = items.filter(i => i.type === "competence");
+    const standard = Object.values(system.skills).filter(s => s.trained);
+    const bonuses = [
+      ...standard.map(s => Math.max(0, codeToPips(s.bonus).pips)),
+      ...custom.map(i => Math.max(0, codeToPips(i.system.bonus).pips))
+    ];
+    const report = creationReport(
+      Object.keys(ATTRIBUTES).map(k => system.attributes[k].pips),
+      standard.length + custom.length,
+      bonuses,
+      CREATION
+    );
+    const tooHigh = [
+      ...Object.values(system.skills).filter(s => s.trained && codeToPips(s.bonus).pips > CREATION.skillBonusMax).map(s => s.label),
+      ...custom.filter(i => codeToPips(i.system.bonus).pips > CREATION.skillBonusMax).map(i => i.name)
+    ];
+    const outOfRange = Object.entries(ATTRIBUTES)
+      .filter(([k]) => system.attributes[k].pips < CREATION.attributeMin || system.attributes[k].pips > CREATION.attributeMax)
+      .map(([, label]) => label);
+    const pack = game.packs.get(`${SYSTEM_ID}.archetypes`);
+    const index = pack ? await pack.getIndex() : [];
+    context.creation = {
+      rows: [
+        { label: "Caractéristiques", value: pipsToCode(report.attributeTotal), target: "18D", ok: report.attributesOk },
+        { label: "Compétences sélectionnées", value: report.selected, target: CREATION.selectedSkills, ok: report.selectedOk },
+        { label: "Dés ajoutés aux compétences", value: pipsToCode(report.bonusTotal), target: "7D", ok: report.bonusOk },
+        { label: "Points de personnage", value: system.cp.value, target: 5, ok: system.cp.value === 5 },
+        { label: "Points de Cojones", value: system.cojones.value, target: 1, ok: system.cojones.value === 1 }
+      ],
+      warnings: [
+        ...outOfRange.map(l => `${l} doit être entre 2D et 5D.`),
+        ...tooHigh.map(l => `${l} : 2D ajoutés au maximum à la création.`)
+      ],
+      archetypes: [...index].sort((a, b) => a.name.localeCompare(b.name, "fr")).map(e => ({ uuid: e.uuid, name: e.name }))
+    };
   }
 
   _preparePersonnage(context) {
@@ -313,6 +406,16 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   /** Champs d'objets modifiables directement depuis la fiche (data-item-field). */
   _onRender(context, options) {
     super._onRender(context, options);
+    // Glisser une Caractéristique, une compétence ou une arme dans la barre de macros.
+    const draggable = this.element.querySelectorAll(
+      "[data-action=rollAttribute], [data-action=rollSkill], [data-action=rollCustomSkill], .zc-weapons tr[data-item-id]");
+    for (const el of draggable) {
+      el.setAttribute("draggable", "true");
+      el.addEventListener("dragstart", event => {
+        const data = rollDragData(this, el);
+        if (data) event.dataTransfer.setData("text/plain", JSON.stringify(data));
+      });
+    }
     for (const input of this.element.querySelectorAll("[data-item-field]")) {
       input.addEventListener("change", event => {
         event.stopPropagation();
@@ -327,9 +430,12 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   }
 }
 
+const LIMITED_PART = { template: `systems/${SYSTEM_ID}/templates/actor/limited.hbs` };
+
 export class PersonnageSheet extends ZCorpsActorSheet {
   static PARTS = {
-    sheet: { template: `systems/${SYSTEM_ID}/templates/actor/personnage.hbs`, scrollable: [""] }
+    sheet: { template: `systems/${SYSTEM_ID}/templates/actor/personnage.hbs`, scrollable: [""] },
+    limited: LIMITED_PART
   };
 }
 
@@ -339,6 +445,7 @@ export class PnjSheet extends ZCorpsActorSheet {
   };
 
   static PARTS = {
-    sheet: { template: `systems/${SYSTEM_ID}/templates/actor/pnj.hbs`, scrollable: [""] }
+    sheet: { template: `systems/${SYSTEM_ID}/templates/actor/pnj.hbs`, scrollable: [""] },
+    limited: LIMITED_PART
   };
 }

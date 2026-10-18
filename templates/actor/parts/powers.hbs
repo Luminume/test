@@ -17,13 +17,16 @@
     {{p.mechanic}}
     {{#if p.cost}}<span class="zc-browser-cost">{{p.cost}}</span>{{/if}}
   </span>
-  {{#if @root.isGM}}
   <span class="zc-controls">
+    {{#if @root.isOwner}}
+    <a data-action="usePower" data-tooltip="Utiliser{{#if p.cost}} ({{p.cost}}){{/if}}"><i class="fa-solid fa-hand-sparkles"></i></a>
+    {{/if}}
+    {{#if @root.isGM}}
     <a data-action="togglePowerRevealed" data-tooltip="{{#if p.revealed}}Révélé au joueur : cliquer pour cacher{{else}}Caché au joueur : cliquer pour révéler{{/if}}">
       <i class="fa-solid {{#if p.revealed}}fa-eye{{else}}fa-eye-slash{{/if}}"></i>
     </a>
     <a data-action="itemDelete" data-tooltip="Retirer"><i class="fa-solid fa-trash"></i></a>
+    {{/if}}
   </span>
-  {{/if}}
 </div>
 {{/each}}

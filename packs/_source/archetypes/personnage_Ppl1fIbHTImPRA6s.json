@@ -1,0 +1,132 @@
+{
+  "_id": "Ppl1fIbHTImPRA6s",
+  "_key": "!actors!Ppl1fIbHTImPRA6s",
+  "name": "Aumônier",
+  "type": "personnage",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+2"
+      },
+      "adresse": {
+        "code": "2D+2"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "4D"
+      }
+    },
+    "skills": {
+      "esquive": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "armesAFeu": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "reparer": {
+        "selected": true,
+        "bonus": ""
+      },
+      "affaires": {
+        "selected": true,
+        "bonus": ""
+      },
+      "erudition": {
+        "selected": true,
+        "bonus": "+1D+1"
+      },
+      "sciencesOccultes": {
+        "selected": true,
+        "bonus": ""
+      },
+      "connaissanceRue": {
+        "selected": true,
+        "bonus": "+1"
+      },
+      "charmer": {
+        "selected": true,
+        "bonus": ""
+      },
+      "empathie": {
+        "selected": true,
+        "bonus": "+1D"
+      },
+      "persuasion": {
+        "selected": true,
+        "bonus": ""
+      },
+      "volonte": {
+        "selected": true,
+        "bonus": "+1"
+      }
+    },
+    "carriere": "Aumônier",
+    "historique": "Les nombreuses rumeurs et croyances entourant l’épidémie ont donné du grain à moudre aux prédicateurs et sectes de tous bords. Pragmatique et réservé, vous avez longtemps été révérend dans une petite ville de l’Iowa, jusqu’à ce que les premiers zombies en décident autrement. Venant en aide aux familles des victimes et aux exilés des États voisins, vous avez su garder la tête froide malgré les questions de vos ouailles au sujet de l’Apocalypse et de la Fin du Monde. Vous ne voulez pas croire que tout ceci est un plan du Divin ou, tout du moins, vous ne voulez pas vous en persuader. Face à l’impuissance des autorités et à la perte de quelques êtres chers, vous avez choisi de vous engager chez OneWorld. Peut-être pour permettre aux mourants de se tourner vers Dieu avant de rendre leur dernier souffle ? Pour écouter vos coéquipiers, paralysés par la peur et le désespoir ? Ou plus certainement, pour renvoyer ces saloperies dans l’Enfer qu’elles n’auraient jamais dû quitter !\n\nPsychologie : Vous avez perdu la Foi en ce monde basculant dans l'horreur la plus effroyable. Mais malgré cela, vous ne pouvez vous empêcher de soutenir votre prochain, de panser ses plaies, de lui montrer le côté positif de la situation. Vous cherchez désespérément un message, une lueur, un espoir, dans tout ce qui arrive. Et vous mettez les bouchées doubles, lorsqu’il s’agit de sécuriser un périmètre ou de récupérer des prélèvements dans une zone industrielle pluvieuse de Grand Island.\n\nPhrase type : «Où es-tu ? Christ ?»",
+    "movement": "",
+    "damageBonus": "",
+    "cojones": {
+      "value": 1
+    },
+    "cp": {
+      "value": 5
+    }
+  },
+  "folder": "yY05rQIPYWS89iJ0",
+  "sort": 90,
+  "items": [
+    {
+      "_id": "4Y2Xk1NahczEd6q3",
+      "_key": "!actors.items!Ppl1fIbHTImPRA6s.4Y2Xk1NahczEd6q3",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Langues (Latin)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Aumônier",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": 1,
+    "bar1": {
+      "attribute": "wounds"
+    },
+    "bar2": {
+      "attribute": "accoutumance"
+    }
+  }
+}

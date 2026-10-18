@@ -2,8 +2,9 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import { SKILLS } from "../module/config.mjs";
+import { SKILLS, CREATION, ATTRIBUTES } from "../module/config.mjs";
 import { codeToPips } from "../module/dice-code.mjs";
+import { creationReport } from "../module/rules.mjs";
 import { WEAPONS, ARMOR, GEAR, VEHICLES } from "../tools/data/equipement.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
@@ -49,4 +50,43 @@ test("compendiums compilés présents", () => {
   for (const pack of ["equipement", "pouvoirs-occultes"]) {
     assert.ok(fs.existsSync(path.join(root, "packs", pack, "CURRENT")), pack);
   }
+});
+
+const readPack = pack => fs.readdirSync(path.join(root, "packs/_source", pack))
+  .map(f => JSON.parse(fs.readFileSync(path.join(root, "packs/_source", pack, f), "utf8")));
+
+test("archétypes : règles de création vérifiées (avec les écarts du livre)", () => {
+  // Le livre lui-même s'écarte de ses règles pour trois pré-tirés : on garde ses valeurs.
+  const bookExceptions = {
+    "Geek": { attributeTotal: 51 },
+    "Chanteuse de country": { attributeTotal: 55, bonusTotal: 15 },
+    "Aumônier": { bonusTotal: 18 }
+  };
+  const actors = readPack("archetypes").filter(d => d.type === "personnage");
+  assert.equal(actors.length, 10);
+  for (const a of actors) {
+    const attrs = Object.keys(ATTRIBUTES).map(k => codeToPips(a.system.attributes[k].code).pips);
+    const standard = Object.values(a.system.skills);
+    const custom = a.items.filter(i => i.type === "competence");
+    const bonuses = [...standard.map(s => codeToPips(s.bonus).pips), ...custom.map(i => codeToPips(i.system.bonus).pips)];
+    const r = creationReport(attrs, standard.length + custom.length, bonuses, CREATION);
+    const expected = { attributeTotal: CREATION.attributeTotal, bonusTotal: CREATION.skillBonusTotal, ...bookExceptions[a.name] };
+    assert.equal(r.selected, CREATION.selectedSkills, `${a.name} : compétences`);
+    assert.equal(r.attributeTotal, expected.attributeTotal, `${a.name} : Caractéristiques`);
+    assert.equal(r.bonusTotal, expected.bonusTotal, `${a.name} : dés de compétences`);
+    assert.ok(r.attributesInRange && r.bonusInRange, a.name);
+  }
+});
+
+test("bestiaire : PNJ valides, zombies insensibles à la douleur, véhicules", () => {
+  const docs = readPack("bestiaire");
+  const pnj = docs.filter(d => d.type === "pnj");
+  const vehicles = docs.filter(d => d.type === "vehicule");
+  assert.ok(pnj.length >= 9);
+  assert.equal(vehicles.length, 17);
+  for (const a of pnj) {
+    assert.ok(a.items.some(i => i.type === "arme") || a.name === "Civil paniqué", a.name);
+    for (const i of a.items) assert.ok(i._key.startsWith(`!actors.items!${a._id}.`), i.name);
+  }
+  assert.ok(pnj.filter(a => a.system.painless).every(a => a.img.includes("skull")));
 });

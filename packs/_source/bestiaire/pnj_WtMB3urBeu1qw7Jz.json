@@ -1,0 +1,152 @@
+{
+  "_id": "WtMB3urBeu1qw7Jz",
+  "_key": "!actors!WtMB3urBeu1qw7Jz",
+  "name": "Zombie colosse",
+  "type": "pnj",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D"
+      },
+      "adresse": {
+        "code": "1D"
+      },
+      "puissance": {
+        "code": "5D"
+      },
+      "connaissances": {
+        "code": "1D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "1D"
+      }
+    },
+    "movement": "4",
+    "painless": true,
+    "notes": "Profil maison. Hostile : insensible à la douleur, vue faible, ouïe et odorat excellents (p. 104). Seule la destruction de la tête (hypophyse) l'arrête définitivement. Sang et salive contaminants. Ancien colosse (catcheur, déménageur…) : encaisse énormément."
+  },
+  "folder": "XUiiWhg32JIgGthV",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "RSITn2PiYiTAEHKi",
+      "_key": "!actors.items!WtMB3urBeu1qw7Jz.RSITn2PiYiTAEHKi",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "gvAKCpQaRO1rJCxd",
+      "_key": "!actors.items!WtMB3urBeu1qw7Jz.gvAKCpQaRO1rJCxd",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Soulever",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "EEu2iSKletfHG7d2",
+      "_key": "!actors.items!WtMB3urBeu1qw7Jz.EEu2iSKletfHG7d2",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Morsure",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Armes naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme naturelle. Contamination possible : voir les règles du virus."
+      }
+    },
+    {
+      "_id": "Gkk3ioa4NZRth0PC",
+      "_key": "!actors.items!WtMB3urBeu1qw7Jz.Gkk3ioa4NZRth0PC",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Coup massif",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Armes naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme naturelle. Réussite : la cible est agrippée, la morsure suit."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Zombie colosse",
+    "texture": {
+      "src": "icons/svg/skull.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

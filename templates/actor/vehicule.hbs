@@ -1,0 +1,52 @@
+<div class="zc-sheet zc-vehicule">
+  <header class="zc-top">
+    <img class="zc-portrait small" src="{{actor.img}}" alt="" {{#if editable}}data-action="editPortrait" data-tooltip="Changer l'image"{{/if}}>
+    <div class="zc-identity">
+      <label class="zc-field grow">Nom <input type="text" name="name" value="{{actor.name}}"></label>
+      <div class="zc-row">
+        <label class="zc-field">Catégorie <input type="text" name="system.category" value="{{system.category}}"></label>
+        <label class="zc-field">Prix <input type="text" name="system.price" value="{{system.price}}"></label>
+      </div>
+    </div>
+  </header>
+
+  <div class="zc-columns zc-vehicle-columns">
+    <section class="zc-box">
+      <header class="zc-band"><span>Caractéristiques</span></header>
+      <div class="zc-form">
+        <label class="zc-field">Vitesse <input type="text" name="system.speed" value="{{system.speed}}"></label>
+        <label class="zc-field">Passagers <input type="text" name="system.passengers" value="{{system.passengers}}"></label>
+        <label class="zc-field">Résistance <input type="text" name="system.resistance" value="{{system.resistance}}"></label>
+        <label class="zc-field">Protection <input type="text" name="system.protection" value="{{system.protection}}"></label>
+        <label class="zc-field" data-tooltip="S'ajoute à la compétence du pilote pour les cascades">Manœuvrabilité
+          <input type="text" name="system.manoeuvre" value="{{system.manoeuvre}}"></label>
+        <p class="zc-hint">Résistance totale <strong>{{resistanceTotal}}</strong> · Manœuvrabilité actuelle <strong>{{manoeuvreTotal}}</strong></p>
+      </div>
+      <button type="button" data-action="vehicleResistance"><i class="fa-solid fa-dice"></i> Jet de Résistance</button>
+    </section>
+
+    <section class="zc-box zc-wounds">
+      <h3>Dégâts (p. 52)</h3>
+      <ul>
+        {{#each levels as |l|}}
+        <li class="{{#if l.checked}}checked{{/if}}{{#if l.current}} current{{/if}}" data-tooltip="{{l.effect}}">
+          <a class="zc-check" data-action="setDamage" data-level="{{l.level}}"></a>
+          <span class="zc-range">{{l.range}}</span>
+          <span class="zc-label">{{l.label}}</span>
+          <span class="zc-penalty" data-tooltip="Part des dégâts subie par les passagers">{{l.share}}</span>
+        </li>
+        {{/each}}
+      </ul>
+      <button type="button" data-action="vehicleDamage"><i class="fa-solid fa-car-burst"></i> Encaisser des dégâts</button>
+    </section>
+  </div>
+
+  <section class="zc-box">
+    <header class="zc-band"><span>Équipage et passagers</span></header>
+    <textarea name="system.crew" rows="3">{{system.crew}}</textarea>
+  </section>
+  <section class="zc-box">
+    <header class="zc-band"><span>Notes</span></header>
+    <textarea name="system.notes" rows="4">{{system.notes}}</textarea>
+  </section>
+</div>

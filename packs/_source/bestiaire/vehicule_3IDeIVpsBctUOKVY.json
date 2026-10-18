@@ -1,0 +1,40 @@
+{
+  "_id": "3IDeIVpsBctUOKVY",
+  "_key": "!actors!3IDeIVpsBctUOKVY",
+  "name": "Canot",
+  "type": "vehicule",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicule",
+    "speed": "Test de Puissance",
+    "passengers": "6",
+    "resistance": "3D+2",
+    "manoeuvre": "0",
+    "price": "$1500/4000"
+  },
+  "folder": "eht1YfRmXnHT1OKm",
+  "sort": 120,
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Canot",
+    "texture": {
+      "src": "icons/svg/wing.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "damage"
+    }
+  }
+}

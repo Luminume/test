@@ -78,3 +78,51 @@ export function accoutumanceEvents(before, after, zones, max) {
   if (before < max && after >= max) events.push({ type: "full", value: max });
   return events;
 }
+
+/** Coût numérique d'un pouvoir (« +2 influence » → 2). */
+export function powerCost(cost) {
+  const m = /([+-]?\d+)/.exec(String(cost ?? ""));
+  return m ? Math.abs(Number(m[1])) : 0;
+}
+
+/**
+ * Contrôles de création (p. 22) sur des valeurs en crans.
+ * @param {number[]} attributes        crans des 6 Caractéristiques
+ * @param {number} selected            nombre de compétences sélectionnées
+ * @param {number[]} bonuses           bonus positifs (crans) des compétences
+ */
+export function creationReport(attributes, selected, bonuses, rules) {
+  const attributeTotal = attributes.reduce((a, b) => a + b, 0);
+  const bonusTotal = bonuses.reduce((a, b) => a + b, 0);
+  return {
+    attributeTotal,
+    attributesOk: attributeTotal === rules.attributeTotal,
+    attributesInRange: attributes.every(p => p >= rules.attributeMin && p <= rules.attributeMax),
+    selected,
+    selectedOk: selected === rules.selectedSkills,
+    bonusTotal,
+    bonusOk: bonusTotal === rules.skillBonusTotal,
+    bonusInRange: bonuses.every(p => p <= rules.skillBonusMax)
+  };
+}
+
+/** Niveau de dégâts infligé à un véhicule selon la marge (p. 52). */
+export function vehicleDamageFromMargin(margin) {
+  if (margin <= 0) return 0;
+  if (margin <= 3) return 1;
+  if (margin <= 8) return 2;
+  if (margin <= 12) return 3;
+  if (margin <= 15) return 4;
+  return 5;
+}
+
+/**
+ * Nouvel état d'un véhicule : Très léger et Léger se cumulent sans limite ;
+ * à partir de Lourd, tout dégât au-dessus de Très léger fait monter d'un niveau.
+ */
+export function nextVehicleDamage(current, margin) {
+  const hit = vehicleDamageFromMargin(margin);
+  if (hit === 0) return current;
+  if (current >= 3 && hit >= 2) return Math.min(current + 1, 5);
+  return Math.max(current, hit);
+}

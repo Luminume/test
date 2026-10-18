@@ -459,3 +459,31 @@
 .zc-zone-label.zc-zone-3 { border-color: #4a1640; }
 .zc-zone-label.current { color: var(--zc-ink); font-weight: 700; }
 .zc-accou-alert.zc-tier-3 .zc-roll-title { background: #2a0c25; }
+
+/* --- Aide à la création ---------------------------------- */
+
+.zc-creation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 4px 12px; }
+.zc-creation-row { display: flex; align-items: center; gap: 6px; }
+.zc-creation-row.ok i { color: var(--zc-ok); }
+.zc-creation-row.ko i { color: var(--zc-blood); }
+.zc-creation-row span:first-of-type { flex: 1; }
+.zc-creation-warning { margin: 4px 0 0; color: var(--zc-blood); font-weight: 600; }
+.zc-archetype { display: flex; gap: 8px; align-items: center; margin-top: 6px; }
+.zc-archetype select { flex: 1; }
+.zc-sheet .zc-archetype button { width: auto; margin: 0; }
+
+/* --- Fiche limitée, véhicule, groupe --------------------- */
+
+.zc-limited { align-items: center; text-align: center; }
+.zc-limited .zc-portrait { max-width: 320px; transform: none; cursor: default; }
+.zc-limited-name { border: none; margin: 4px 0 0; }
+.zc-limited-career { color: var(--zc-muted); margin: 0; }
+.zc-vehicle-columns { grid-template-columns: 1fr 1fr; }
+.zc-hurt { color: var(--zc-blood); font-weight: 700; }
+.zc-drop-hint { text-align: center; padding: 16px; border: 2px dashed var(--zc-line); }
+.zc-group-members th, .zc-group-members td { white-space: nowrap; }
+
+/* --- Chat : pouvoir utilisé ------------------------------ */
+
+.zc-power-card .zc-roll-title { background: #2a0c25; }
+.zc-power-card p { margin: 4px 0; }

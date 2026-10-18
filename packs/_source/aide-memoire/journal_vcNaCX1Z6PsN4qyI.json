@@ -1,0 +1,132 @@
+{
+  "_id": "vcNaCX1Z6PsN4qyI",
+  "_key": "!journal!vcNaCX1Z6PsN4qyI",
+  "name": "Aide-mémoire Z-Corps",
+  "pages": [
+    {
+      "_id": "mBKbqJZyrfgEckkA",
+      "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.mBKbqJZyrfgEckkA",
+      "name": "Utiliser le système",
+      "type": "text",
+      "sort": 100,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h2>Raccourcis</h2>\n<ul>\n  <li><strong>Clic</strong> sur une Caractéristique, une compétence ou une arme : fenêtre d'options puis jet. <strong>Maj + clic</strong> : jet direct.</li>\n  <li><strong>Glisser</strong> une Caractéristique, une compétence ou une arme dans la barre de macros : jet en un clic.</li>\n  <li>Portrait : clic pour le changer, bouton <em>écran</em> pour le montrer aux joueurs.</li>\n  <li>Loupe des blocs Armes / Équipement : banque d'objets du livre.</li>\n  <li>Case des pouvoirs : bouton <em>Pouvoirs occultes</em> (MJ), bouton <em>Utiliser</em> sur chaque pouvoir.</li>\n  <li><em>Aide à la création</em> et <em>Progression</em> : sous les points de personnage.</li>\n  <li>Carte de dégâts dans le chat : <em>Appliquer aux jetons ciblés</em> (ou sélectionnés).</li>\n  <li>Acteur <em>Groupe</em> : glisser les personnages dedans pour suivre leur état d'un coup d'œil.</li>\n</ul>",
+        "format": 1
+      },
+      "flags": {},
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "_id": "erDd2XFYCUqPVOJD",
+      "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.erDd2XFYCUqPVOJD",
+      "name": "Jets et dé Joker",
+      "type": "text",
+      "sort": 200,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h2>Code D (p. 25)</h2>\n<p>On lance autant de d6 que le chiffre devant le D, plus les tiers (+1, +2). 3 tiers = 1D.</p>\n<h2>Dé Joker</h2>\n<ul>\n  <li>Un dé de chaque jet est le Joker (rouge dans le chat et avec Dice So Nice).</li>\n  <li><strong>6</strong> : succès critique, on ajoute et on relance, tant qu'il fait 6.</li>\n  <li><strong>1</strong> au premier jet : échec critique. Le MJ choisit : retirer le dé le plus haut, ou garder le total avec une complication.</li>\n</ul>\n<h2>Réussite (p. 37)</h2>\n<p>Il faut <strong>dépasser</strong> la difficulté. Égalité : pas d'effet, ou avantage à celui qui a l'initiative.</p>\n<table>\n  <tr><th>Difficulté</th><th>Valeur</th></tr>\n  <tr><td>Très facile</td><td>1-5</td></tr><tr><td>Facile</td><td>6-10</td></tr>\n  <tr><td>Moyenne</td><td>11-15</td></tr><tr><td>Difficile</td><td>16-20</td></tr>\n  <tr><td>Très difficile</td><td>21-25</td></tr><tr><td>Héroïque</td><td>26-30</td></tr>\n  <tr><td>Légendaire</td><td>31+</td></tr>\n</table>\n<h2>Compétences (p. 22)</h2>\n<p>Non sélectionnée : Caractéristique −1D. Sélectionnée : Caractéristique + dés ajoutés.</p>\n<h2>Initiative (p. 28)</h2>\n<p>Test d'Agilité avec Joker. Une action par tranche de 10 points.</p>",
+        "format": 1
+      },
+      "flags": {},
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "_id": "SZwRkE4qRcnsJilp",
+      "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.SZwRkE4qRcnsJilp",
+      "name": "Points de personnage et Cojones",
+      "type": "text",
+      "sort": 300,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h2>Points de personnage (p. 26)</h2>\n<ul>\n  <li>+1D par point dépensé (dont un Joker qui explose mais sans échec critique).</li>\n  <li>Maximum par jet fixé par le MJ (réglage du monde) : 2 aventure facile, 3 cinématique.</li>\n  <li>Aussi utilisables pour progresser (bouton <em>Progression</em>).</li>\n</ul>\n<h2>Cojones (p. 26)</h2>\n<ul>\n  <li>Un par test, au choix : doubler dés et tiers, ou relancer un test raté (bouton dans le chat).</li>\n  <li>Jamais cumulés avec des points de personnage sur le même jet.</li>\n</ul>\n<p>Départ : 5 points de personnage, 1 point de Cojones.</p>",
+        "format": 1
+      },
+      "flags": {},
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "_id": "me6PnERJ3ZsCPCaC",
+      "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.me6PnERJ3ZsCPCaC",
+      "name": "Blessures",
+      "type": "text",
+      "sort": 400,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h2>Encaisser (p. 63)</h2>\n<p>Résistance = Puissance + protection portée (sans malus de blessure). Résistance ≥ dégâts : rien.</p>\n<table>\n  <tr><th>Dégâts − Résistance</th><th>Niveau</th><th>Effet</th></tr>\n  <tr><td>1-3</td><td>Sonné</td><td>−1D pour le reste du round et le suivant</td></tr>\n  <tr><td>4-8</td><td>Blessé</td><td>−1D jusqu'à guérison</td></tr>\n  <tr><td>4-8 (déjà Blessé)</td><td>Gravement blessé</td><td>−2D jusqu'à guérison</td></tr>\n  <tr><td>9-12</td><td>Handicapé</td><td>Volonté/Endurance Moyen pour rester debout à −3D, sinon K.O. 10D minutes</td></tr>\n  <tr><td>13-15</td><td>Mortellement blessé</td><td>Inconscient, test de Puissance chaque round</td></tr>\n  <tr><td>16+</td><td>Mort</td><td>—</td></tr>\n</table>\n<p>Un coup inférieur au niveau actuel fait monter d'un niveau. Les malus ne se cumulent pas.</p>\n<p>Bonus aux dégâts : dés de Puissance ÷ 2, arrondi au supérieur. Une arme notée « +xD » s'y ajoute.</p>",
+        "format": 1
+      },
+      "flags": {},
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "_id": "XCyqDAbfHddHAc0w",
+      "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.XCyqDAbfHddHAc0w",
+      "name": "Véhicules",
+      "type": "text",
+      "sort": 500,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h2>Dégâts aux véhicules (p. 52)</h2>\n<table>\n  <tr><th>Dégâts − Résistance</th><th>Véhicule</th><th>Passagers</th></tr>\n  <tr><td>1-3</td><td>Très léger : −1D Manœuvrabilité ce round et le suivant</td><td>aucun dégât</td></tr>\n  <tr><td>4-8</td><td>Léger : −1D Manœuvrabilité jusqu'à réparation</td><td>1/4 des dégâts</td></tr>\n  <tr><td>9-12</td><td>Lourd : −2D Manœuvrabilité jusqu'à réparation</td><td>1/2</td></tr>\n  <tr><td>13-15</td><td>Grave : incontrôlable</td><td>3/4</td></tr>\n  <tr><td>16+</td><td>Détruit</td><td>totalité</td></tr>\n</table>\n<p>Très léger et Léger se cumulent sans limite ; à partir de Lourd, tout dégât au-dessus de Très léger fait monter d'un niveau.\nPas de points de personnage ni de Cojones sur la Résistance d'un véhicule.</p>",
+        "format": 1
+      },
+      "flags": {},
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
+      "_id": "BxPO3EqsdwekYxYW",
+      "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.BxPO3EqsdwekYxYW",
+      "name": "Accoutumance et pouvoirs",
+      "type": "text",
+      "sort": 600,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h2>Accoutumance (règle de la campagne)</h2>\n<p>Jauge de 0 à 30, visible des joueurs : seuil 1 de 0 à 10, seuil 2 de 11 à 20, seuil 3 de 21 à 30.\nLe chat annonce l'entrée dans les seuils 2 et 3 et la jauge pleine.</p>\n<h2>Pouvoirs occultes</h2>\n<ul>\n  <li>Seuil 1 : passifs, narrés par le MJ. Seuil 2 : actifs, +1 par utilisation. Seuil 3 : manifestes, +2 par utilisation.</li>\n  <li>Le bouton <em>Utiliser</em> ajoute le coût à la jauge et l'annonce (au MJ seulement si le pouvoir n'est pas révélé).</li>\n  <li>Un pouvoir reste invisible pour le joueur tant que le MJ ne l'a pas révélé (icône œil).</li>\n</ul>",
+        "format": 1
+      },
+      "flags": {},
+      "ownership": {
+        "default": -1
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}
