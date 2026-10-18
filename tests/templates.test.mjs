@@ -14,6 +14,7 @@ Handlebars.registerHelper("selectOptions", (choices, opts) => new Handlebars.Saf
 const root = path.resolve(import.meta.dirname, "..");
 const read = p => fs.readFileSync(path.join(root, p), "utf8");
 Handlebars.registerPartial("systems/zcorps-vtt/templates/actor/parts/weapons.hbs", read("templates/actor/parts/weapons.hbs"));
+Handlebars.registerPartial("systems/zcorps-vtt/templates/actor/parts/powers.hbs", read("templates/actor/parts/powers.hbs"));
 const render = (p, ctx) => Handlebars.compile(read(p), { strict: false })(ctx);
 
 function actorContext() {
@@ -34,7 +35,11 @@ function actorContext() {
       value: i + 1, filled: i < 12, threshold: (i + 1) % 10 === 0 })) },
     occult: Array.from({ length: 6 }, (_, i) => ({ key: `p${i + 1}`, name: "", effect: "" })),
     weapons: [{ id: "w1", name: "Fusil", skill: "Armes à feu", damage: "4D", hasAmmo: true, ammo: { value: 2, max: 6 }, range: {} }],
-    equipment: [{ id: "e1", name: "Gilet", quantity: 1, protection: "+1D", equipped: true }]
+    equipment: [{ id: "e1", name: "Gilet", quantity: 1, protection: "+1D", equipped: true }],
+    powers: [
+      { id: "p1", name: "La voix familière", tier: "◆", cost: "", mechanic: "Murmure.", revealed: false },
+      { id: "p2", name: "L'Écho", tier: "◆◆", cost: "+1 influence", mechanic: "Sent le danger.", revealed: true }
+    ]
   };
 }
 
@@ -75,4 +80,44 @@ test("fiche PNJ, objet, dialogue, chat", () => {
   });
   assert.ok(chat.includes("Échec critique") && chat.includes('data-zc-apply-damage="8"'));
   assert.ok(chat.includes("data-zc-reroll"));
+});
+
+test("pouvoirs sur la fiche : outils MJ seulement pour le MJ", () => {
+  const ctx = actorContext();
+  const player = render("templates/actor/personnage.hbs", ctx);
+  assert.ok(player.includes("La voix familière"));          // le contexte filtre déjà pour le joueur
+  assert.ok(!player.includes('data-mode="pouvoirs"'));
+  assert.ok(!player.includes("togglePowerRevealed"));
+  // 2 pouvoirs + 6 lignes libres fournies par le contexte de test
+  assert.equal((player.match(/class="zc-occult-row/g) || []).length, 8);
+  ctx.isGM = true;
+  const gm = render("templates/actor/personnage.hbs", ctx);
+  assert.ok(gm.includes('data-mode="pouvoirs"') && gm.includes("fa-eye-slash"));
+  assert.ok(gm.includes('data-action="showPortrait"'));
+  const pnj = render("templates/actor/pnj.hbs", { ...ctx, showPowers: true });
+  assert.ok(pnj.includes("Pouvoirs occultes") && pnj.includes('data-action="showPortrait"'));
+});
+
+test("fenêtre de recherche", () => {
+  const entry = { uuid: "Compendium.x.y.Item.a", name: "L'Écho", tier: "◆◆", tags: ["Campagne", "Katrina"],
+    cost: "+1 influence", details: "Sent le danger.", search: "l'echo campagne", owned: true, origin: "Livre" };
+  const html = render("templates/apps/browser.hbs", {
+    isPowers: true, canEdit: true, isGM: true, groups: [{ label: "Seuil 2", entries: [entry] }],
+    groupChoices: [{ value: "Seuil 2", label: "Seuil 2" }]
+  });
+  assert.ok(html.includes('data-action="toggle" checked'));
+  assert.ok(html.includes("Campagne") && html.includes("Tous les seuils"));
+  const items = render("templates/apps/browser.hbs", {
+    isPowers: false, canEdit: true, actor: { name: "Joe" },
+    groups: [{ label: "Fusils", entries: [{ ...entry, tier: "", tags: [], stats: ["Dégâts 7D"] }] }]
+  });
+  assert.ok(items.includes('data-action="add"') && items.includes("Dégâts 7D"));
+});
+
+test("fiche d'objet pouvoir", () => {
+  const html = render("templates/item/item.hbs", {
+    item: { name: "L'Écho" }, system: { tier: 2, tags: "Campagne", cost: "+1 influence", mechanic: "", narrative: "" },
+    isPouvoir: true, isGM: true, tierChoices: { 1: "Seuil 1", 2: "Seuil 2", 3: "Seuil 3" }
+  });
+  assert.ok(html.includes('value="2" selected') && html.includes("system.revealed") && !html.includes("system.notes"));
 });

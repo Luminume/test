@@ -1,0 +1,28 @@
+{
+  "_id": "BtFe38zIBEyDG3fg",
+  "_key": "!items!BtFe38zIBEyDG3fg",
+  "name": "Camionnette de livraison",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$20 000/30 000",
+    "equipped": false,
+    "notes": "Vitesse : 60/160 km/h\nPassagers : 2 (cabine)\nRésistance : 6D\nManœuvrabilité : -1D"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 80,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

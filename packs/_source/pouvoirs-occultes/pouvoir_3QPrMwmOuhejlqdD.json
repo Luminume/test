@@ -1,0 +1,27 @@
+{
+  "_id": "3QPrMwmOuhejlqdD",
+  "_key": "!items!3QPrMwmOuhejlqdD",
+  "name": "Présence stabilisante",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Bill, PNJ",
+    "cost": "",
+    "mechanic": "Les PJ à proximité de Bill gagnent +1 à leurs jets de Volonté contre la panique. Passive, non consciente.",
+    "narrative": "Il n'essaie pas de rassurer — il est juste là. Et ça suffit, d'une façon que personne n'arrive à expliquer.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 170,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

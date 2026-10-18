@@ -1,0 +1,35 @@
+{
+  "_id": "2lVsVzHt3jK5ElYi",
+  "_key": "!items!2lVsVzHt3jK5ElYi",
+  "name": "Lectro-volt « Taser » X-26",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes à impulsions électriques",
+    "damage": "8D",
+    "price": "TD",
+    "ammo": {
+      "value": 2,
+      "max": 2
+    },
+    "range": {
+      "short": "2",
+      "medium": "4",
+      "long": "6"
+    },
+    "notes": "Assomme seulement. Sans effet sur les morts-vivants ; ne traverse pas les armures non conductrices (Kevlar…)."
+  },
+  "folder": "qXatvxpEZEAYKUcI",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

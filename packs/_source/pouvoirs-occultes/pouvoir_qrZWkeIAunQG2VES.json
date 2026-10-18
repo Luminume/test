@@ -1,0 +1,27 @@
+{
+  "_id": "qrZWkeIAunQG2VES",
+  "_key": "!items!qrZWkeIAunQG2VES",
+  "name": "L'œil du survivant",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Smith, PJ",
+    "cost": "",
+    "mechanic": "Smith perçoit instinctivement les dynamiques de pouvoir dans un groupe — qui obéit à qui par peur, qui est le maillon faible, qui ment pour se protéger. Passive, le MJ peut lui glisser ces informations sans jet.",
+    "narrative": "Il a survécu dans la couronne en lisant les gens. Il croit que c'est de l'expérience managériale. C'est plus profond que ça maintenant.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 110,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

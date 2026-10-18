@@ -1,0 +1,28 @@
+{
+  "_id": "vpgNHgCkzhgpDaSR",
+  "_key": "!items!vpgNHgCkzhgpDaSR",
+  "name": "Jumelles",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$90",
+    "equipped": false,
+    "notes": "+1D aux Tests basés sur la vue au-delà de 2 m, de jour."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 150,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

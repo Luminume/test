@@ -1,0 +1,27 @@
+{
+  "_id": "aNLRGcKNAOcjnn9b",
+  "_key": "!items!aNLRGcKNAOcjnn9b",
+  "name": "Regard d'Ancien",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "+2 résonance",
+    "mechanic": "Les entités conscientes liées à Paresse — Anciens secondaires inclus — la perçoivent comme quelque chose d'inclassable. +3D à toutes ses interactions avec des entités cosmiques. Elles ne l'abordent pas avec les mêmes présupposés qu'un humain ordinaire. Coût : +2 résonance.",
+    "narrative": "Eliah, Jah'ste, Kôhle, Elah O Ikim — aucun d'entre eux ne la traite comme une proie. C'est peut-être plus inquiétant.",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 270,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

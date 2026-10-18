@@ -6,6 +6,10 @@
 
   {{#if isArme}}
   <div class="zc-form">
+    <div class="zc-row">
+      <label class="zc-field">Catégorie <input type="text" name="system.category" value="{{system.category}}"></label>
+      <label class="zc-field">Prix / dispo. <input type="text" name="system.price" value="{{system.price}}"></label>
+    </div>
     <label class="zc-field">Compétence
       <select name="system.skill">{{selectOptions skillChoices selected=system.skill}}</select>
     </label>
@@ -25,6 +29,11 @@
 
   {{#if isEquipement}}
   <div class="zc-form">
+    <div class="zc-row">
+      <label class="zc-field">Catégorie <input type="text" name="system.category" value="{{system.category}}"></label>
+      <label class="zc-field small">Dispo. <input type="text" name="system.availability" value="{{system.availability}}"></label>
+      <label class="zc-field">Prix <input type="text" name="system.price" value="{{system.price}}"></label>
+    </div>
     <div class="zc-row">
       <label class="zc-field">Quantité <input type="number" min="0" name="system.quantity" value="{{system.quantity}}"></label>
       <label class="zc-field">Protection (ex. +1D) <input type="text" name="system.protection" value="{{system.protection}}"></label>
@@ -46,7 +55,30 @@
   </div>
   {{/if}}
 
+  {{#if isPouvoir}}
+  <div class="zc-form">
+    <div class="zc-row">
+      <label class="zc-field">Seuil
+        <select name="system.tier">{{selectOptions tierChoices selected=system.tier}}</select>
+      </label>
+      <label class="zc-field">Coût <input type="text" name="system.cost" value="{{system.cost}}" placeholder="+1 influence"></label>
+    </div>
+    <label class="zc-field">Étiquettes <input type="text" name="system.tags" value="{{system.tags}}" placeholder="Campagne, Katrina"></label>
+    {{#if isGM}}
+    <label class="zc-field zc-inline">
+      <input type="checkbox" name="system.revealed" {{checked system.revealed}}> Révélé au joueur (visible sur sa fiche)
+    </label>
+    {{/if}}
+    <label class="zc-field zc-block">Mécanique
+      <textarea name="system.mechanic" rows="4">{{system.mechanic}}</textarea>
+    </label>
+    <label class="zc-field zc-block">Narratif
+      <textarea name="system.narrative" rows="4">{{system.narrative}}</textarea>
+    </label>
+  </div>
+  {{else}}
   <label class="zc-field zc-block">Notes
     <textarea name="system.notes" rows="5">{{system.notes}}</textarea>
   </label>
+  {{/if}}
 </div>

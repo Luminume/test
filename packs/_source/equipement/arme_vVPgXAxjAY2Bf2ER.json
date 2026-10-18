@@ -1,0 +1,35 @@
+{
+  "_id": "vVPgXAxjAY2Bf2ER",
+  "_key": "!items!vVPgXAxjAY2Bf2ER",
+  "name": "Arc composite avec flèche",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesDeJet",
+    "category": "Armes de trait",
+    "damage": "3D+1",
+    "price": "$350",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "10",
+      "medium": "60",
+      "long": "250"
+    },
+    "notes": "Une action pour recharger (sauf arbalètes : un round)."
+  },
+  "folder": "r86VKv9B5rXywGPG",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

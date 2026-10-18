@@ -1,0 +1,35 @@
+{
+  "_id": "lFAD9GHc9Lz9bJcS",
+  "_key": "!items!lFAD9GHc9Lz9bJcS",
+  "name": "Colt Snub .38 revolver",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "3D+2",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 6,
+      "max": 6
+    },
+    "range": {
+      "short": "10",
+      "medium": "20",
+      "long": "40"
+    },
+    "notes": "Discret, facile à dissimuler, dégainé plus vite. Munitions .38 spécial.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

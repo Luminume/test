@@ -1,6 +1,7 @@
 import { SYSTEM_ID, ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, ADVANCEMENT } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
 import { advancementCost } from "../rules.mjs";
+import { ZCorpsBrowser } from "../apps/browser.mjs";
 
 const { HandlebarsApplicationMixin, DialogV2 } = foundry.applications.api;
 const { ActorSheetV2 } = foundry.applications.sheets;
@@ -126,13 +127,41 @@ async function onItemDelete(event, target) {
   if (ok) return item.delete();
 }
 
+/** Change le portrait ; le jeton suit s'il utilisait encore l'ancienne image ou l'image par défaut. */
 function onEditPortrait() {
+  const actor = this.document;
   const FP = foundry.applications.apps.FilePicker.implementation;
   return new FP({
     type: "image",
-    current: this.document.img,
-    callback: path => this.document.update({ img: path })
+    current: actor.img,
+    callback: path => {
+      const update = { img: path };
+      const token = actor.prototypeToken.texture.src;
+      if (!token || token === actor.img || token === CONST.DEFAULT_TOKEN) update["prototypeToken.texture.src"] = path;
+      return actor.update(update);
+    }
   }).browse();
+}
+
+/** Affiche le portrait en grand et le montre à tous les joueurs connectés. */
+function onShowPortrait() {
+  const actor = this.document;
+  const popout = new foundry.applications.apps.ImagePopout({
+    src: actor.img,
+    uuid: actor.uuid,
+    window: { title: actor.name }
+  });
+  popout.render({ force: true });
+  popout.shareImage();
+}
+
+function onOpenBrowser(event, target) {
+  return ZCorpsBrowser.open(this.document, target.dataset.mode);
+}
+
+function onTogglePowerRevealed(event, target) {
+  const item = itemOf(this, target);
+  if (item && game.user.isGM) return item.update({ "system.revealed": !item.system.revealed });
 }
 
 /* -------------------------------------------- */
@@ -163,6 +192,9 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemDelete: onItemDelete,
       editPortrait: onEditPortrait,
       toggleProgression: onToggleProgression,
+      showPortrait: onShowPortrait,
+      openBrowser: onOpenBrowser,
+      togglePowerRevealed: onTogglePowerRevealed,
       improve: onImprove
     }
   };
@@ -219,6 +251,14 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         ammo: i.system.ammo,
         range: i.system.range
       })),
+      isGM: game.user.isGM,
+      // Pouvoirs : le MJ les voit tous, les joueurs seulement ceux qui sont révélés.
+      powers: items.filter(i => i.type === "pouvoir" && (game.user.isGM || i.system.revealed))
+        .sort((a, b) => (a.system.tier - b.system.tier) || a.name.localeCompare(b.name, "fr"))
+        .map(i => ({
+          id: i.id, name: i.name, tier: "◆".repeat(i.system.tier), cost: i.system.cost,
+          mechanic: i.system.mechanic, revealed: i.system.revealed
+        })),
       equipment: items.filter(i => i.type === "equipement").map(i => ({
         id: i.id,
         name: i.name,
@@ -229,6 +269,7 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       }))
     });
 
+    context.showPowers = context.isGM || context.powers.length > 0;
     if (actor.type === "personnage") this._preparePersonnage(context);
     return context;
   }
@@ -253,7 +294,14 @@ class ZCorpsActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
           };
         })
       },
-      occult: Array.from({ length: OCCULT_SLOTS }, (_, i) => ({ key: `p${i + 1}`, ...system.occult[`p${i + 1}`] }))
+      // Lignes libres : celles déjà remplies, puis des vides jusqu'à 6 lignes au total avec les pouvoirs.
+      occult: (() => {
+        const rows = Array.from({ length: OCCULT_SLOTS }, (_, i) => ({ key: `p${i + 1}`, ...system.occult[`p${i + 1}`] }));
+        const filled = rows.filter(r => r.name || r.effect);
+        const blanks = rows.filter(r => !r.name && !r.effect);
+        const room = Math.max(0, OCCULT_SLOTS - context.powers.length - filled.length);
+        return [...filled, ...blanks.slice(0, room)];
+      })()
     });
   }
 

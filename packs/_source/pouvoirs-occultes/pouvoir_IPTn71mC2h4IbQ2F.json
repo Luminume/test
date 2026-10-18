@@ -1,0 +1,27 @@
+{
+  "_id": "IPTn71mC2h4IbQ2F",
+  "_key": "!items!IPTn71mC2h4IbQ2F",
+  "name": "Le réceptacle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Bill, PNJ",
+    "cost": "+1 influence",
+    "mechanic": "Une fois par session, Bill peut 'prendre' la charge émotionnelle d'un autre PJ — temporairement, pour une scène. Ce PJ ne subit pas les pénalités de stress ou d'états émotionnels pendant ce temps. Bill les porte à sa place. Coût : +1 influence.",
+    "narrative": "Il l'a toujours fait sans s'en rendre compte. Maintenant c'est plus littéral. Plus physique. Il sort de ces moments-là épuisé d'une façon différente.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 190,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

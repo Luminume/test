@@ -1,0 +1,35 @@
+{
+  "_id": "O8CQS2bFy3n1u2Uz",
+  "_key": "!items!O8CQS2bFy3n1u2Uz",
+  "name": "Arbalète lourde et carreau",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesDeJet",
+    "category": "Armes de trait",
+    "damage": "4D+1",
+    "price": "$400",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "10",
+      "medium": "100",
+      "long": "300"
+    },
+    "notes": "Exige un round entier pour recharger.\nUne action pour recharger (sauf arbalètes : un round)."
+  },
+  "folder": "r86VKv9B5rXywGPG",
+  "sort": 30,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

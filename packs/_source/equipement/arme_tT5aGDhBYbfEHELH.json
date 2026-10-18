@@ -1,0 +1,35 @@
+{
+  "_id": "tT5aGDhBYbfEHELH",
+  "_key": "!items!tT5aGDhBYbfEHELH",
+  "name": "Canon scié (SPAS-15 Franchi) Cal.12",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Fusils à pompe",
+    "damage": "6D",
+    "price": "M (TF)",
+    "ammo": {
+      "value": 5,
+      "max": 5
+    },
+    "range": {
+      "short": "15",
+      "medium": "20",
+      "long": "30"
+    },
+    "notes": "Les fusils à double canon peuvent tirer deux fois par action.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "5JHk4a2geky5GvUZ",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

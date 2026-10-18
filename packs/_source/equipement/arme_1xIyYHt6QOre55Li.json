@@ -1,0 +1,35 @@
+{
+  "_id": "1xIyYHt6QOre55Li",
+  "_key": "!items!1xIyYHt6QOre55Li",
+  "name": "Remington Mod 30",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Fusils",
+    "damage": "5D+1",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 6,
+      "max": 6
+    },
+    "range": {
+      "short": "20",
+      "medium": "75",
+      "long": "200"
+    },
+    "notes": "Disponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "ZvZm3J6vIqg2ctKn",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

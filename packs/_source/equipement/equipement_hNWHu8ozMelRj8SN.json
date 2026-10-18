@@ -1,0 +1,28 @@
+{
+  "_id": "hNWHu8ozMelRj8SN",
+  "_key": "!items!hNWHu8ozMelRj8SN",
+  "name": "Télescope",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$200",
+    "equipped": false,
+    "notes": "+2D aux Tests de Chercher basés sur la vision ; une action pour le régler."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 360,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

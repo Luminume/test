@@ -1,0 +1,28 @@
+{
+  "_id": "IhzK1cWvId19vXkd",
+  "_key": "!items!IhzK1cWvId19vXkd",
+  "name": "Ruban adhésif « Chatterton », 10 m",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "TF",
+    "price": "$10",
+    "equipped": false,
+    "notes": "Supporte environ 90 kg. Résistance totale 10."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 390,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

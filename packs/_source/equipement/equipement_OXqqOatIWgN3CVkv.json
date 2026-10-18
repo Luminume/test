@@ -1,0 +1,28 @@
+{
+  "_id": "OXqqOatIWgN3CVkv",
+  "_key": "!items!OXqqOatIWgN3CVkv",
+  "name": "Fournitures d'art",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "TF",
+    "price": "$100",
+    "equipped": false,
+    "notes": "+1D aux Tests d'Art ou de Contrefaçon adéquats."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 50,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

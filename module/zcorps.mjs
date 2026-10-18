@@ -1,6 +1,6 @@
 import * as config from "./config.mjs";
 import { PersonnageData, PnjData } from "./data/actor.mjs";
-import { ArmeData, EquipementData, CompetenceData } from "./data/item.mjs";
+import { ArmeData, EquipementData, CompetenceData, PouvoirData } from "./data/item.mjs";
 import { ZCorpsActor } from "./documents/actor.mjs";
 import { PersonnageSheet, PnjSheet } from "./sheets/actor-sheet.mjs";
 import { ZCorpsItemSheet } from "./sheets/item-sheet.mjs";
@@ -21,8 +21,8 @@ Hooks.once("init", () => {
     pnj: { bar: ["wounds"], value: [] }
   };
 
-  CONFIG.Item.dataModels = { arme: ArmeData, equipement: EquipementData, competence: CompetenceData };
-  CONFIG.Item.typeLabels = { arme: "Arme", equipement: "Équipement", competence: "Compétence" };
+  CONFIG.Item.dataModels = { arme: ArmeData, equipement: EquipementData, competence: CompetenceData, pouvoir: PouvoirData };
+  CONFIG.Item.typeLabels = { arme: "Arme", equipement: "Équipement", competence: "Compétence", pouvoir: "Pouvoir occulte" };
 
   CONFIG.Combat.initiative = { formula: "@initiative", decimals: 0 };
 
@@ -46,7 +46,8 @@ Hooks.once("init", () => {
   foundry.applications.handlebars.loadTemplates([
     `systems/${SYSTEM_ID}/templates/chat/roll.hbs`,
     `systems/${SYSTEM_ID}/templates/dialog/roll-options.hbs`,
-    `systems/${SYSTEM_ID}/templates/actor/parts/weapons.hbs`
+    `systems/${SYSTEM_ID}/templates/actor/parts/weapons.hbs`,
+    `systems/${SYSTEM_ID}/templates/actor/parts/powers.hbs`
   ]);
 });
 

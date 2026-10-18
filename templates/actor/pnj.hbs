@@ -1,6 +1,11 @@
 <div class="zc-sheet zc-pnj">
   <header class="zc-top">
-    <img class="zc-portrait small" src="{{actor.img}}" alt="" data-action="editPortrait" data-tooltip="Changer l'image">
+    <div class="zc-portrait-frame small">
+      <img class="zc-portrait small" src="{{actor.img}}" alt="" {{#if editable}}data-action="editPortrait" data-tooltip="Changer l'image"{{/if}}>
+      <button type="button" class="zc-show-portrait" data-action="showPortrait" data-tooltip="Montrer l'image aux joueurs">
+        <i class="fa-solid fa-display"></i>
+      </button>
+    </div>
     <div class="zc-identity">
       <label class="zc-field grow">Nom <input type="text" name="name" value="{{actor.name}}"></label>
       <div class="zc-row">
@@ -59,6 +64,15 @@
       </section>
     </aside>
   </div>
+
+  {{#if showPowers}}
+  <section class="zc-box">
+    <header class="zc-band"><span>Pouvoirs occultes</span></header>
+    <div class="zc-occult">
+      {{> "systems/zcorps-vtt/templates/actor/parts/powers.hbs"}}
+    </div>
+  </section>
+  {{/if}}
 
   {{> "systems/zcorps-vtt/templates/actor/parts/weapons.hbs"}}
 

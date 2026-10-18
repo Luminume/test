@@ -1,0 +1,35 @@
+{
+  "_id": "8iGiVAQSTbSbDFh2",
+  "_key": "!items!8iGiVAQSTbSbDFh2",
+  "name": "Pic à glace, ciseaux, couteau de poche, tournevis, pieu",
+  "type": "arme",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "skill": "melee",
+    "category": "Armes de mêlée",
+    "damage": "+2",
+    "price": "$15",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "",
+      "medium": "",
+      "long": ""
+    },
+    "notes": "Les dégâts s'ajoutent au bonus aux dégâts du porteur."
+  },
+  "folder": "bdAHcoacmuHBO2e8",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

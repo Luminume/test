@@ -1,0 +1,27 @@
+{
+  "_id": "tI5npEdhQZ0mq8QW",
+  "_key": "!items!tI5npEdhQZ0mq8QW",
+  "name": "Transmission",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "+2 résonance",
+    "mechanic": "Peut transmettre volontairement à un autre PJ ou PNJ une information reçue directement de Paresse — y compris des informations à seuil 3 normalement inaccessibles à des niveaux d'influence inférieurs. Coût : +2 résonance. La cible gagne +1 influence involontairement.",
+    "narrative": "Elle peut partager ce qu'elle sait. La question est pourquoi elle le ferait, et à quel moment.",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 280,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

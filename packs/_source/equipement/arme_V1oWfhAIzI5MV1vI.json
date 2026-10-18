@@ -1,0 +1,35 @@
+{
+  "_id": "V1oWfhAIzI5MV1vI",
+  "_key": "!items!V1oWfhAIzI5MV1vI",
+  "name": "Fléchette",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "lancer",
+    "category": "Armes de lancer",
+    "damage": "+1",
+    "price": "$20",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "PUI",
+      "medium": "PUI+1",
+      "long": "PUI+2"
+    },
+    "notes": "PUI = Puissance du lanceur (en mètres)."
+  },
+  "folder": "qYba6P0QXA8mDPmY",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

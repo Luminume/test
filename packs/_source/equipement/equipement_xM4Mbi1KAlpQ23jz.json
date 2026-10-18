@@ -1,0 +1,28 @@
+{
+  "_id": "xM4Mbi1KAlpQ23jz",
+  "_key": "!items!xM4Mbi1KAlpQ23jz",
+  "name": "Hélicoptère civil",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$200 000/900 000",
+    "equipped": false,
+    "notes": "Vitesse : 120/150 km/h\nPassagers : 5\nRésistance : 6D+1\nManœuvrabilité : +3D"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 150,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "AUKeFqEVRi94nNj7",
+  "_key": "!items!AUKeFqEVRi94nNj7",
+  "name": "Springfield M1903 Rifle (.30-06)",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Fusils",
+    "damage": "7D",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 5,
+      "max": 5
+    },
+    "range": {
+      "short": "40",
+      "medium": "80",
+      "long": "160"
+    },
+    "notes": "Disponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "ZvZm3J6vIqg2ctKn",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

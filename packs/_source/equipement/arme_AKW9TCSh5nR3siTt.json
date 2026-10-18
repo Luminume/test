@@ -1,0 +1,35 @@
+{
+  "_id": "AKW9TCSh5nR3siTt",
+  "_key": "!items!AKW9TCSh5nR3siTt",
+  "name": "Marteau (outil)",
+  "type": "arme",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "skill": "melee",
+    "category": "Armes de mêlée",
+    "damage": "+1D",
+    "price": "$20",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "",
+      "medium": "",
+      "long": ""
+    },
+    "notes": "Les dégâts s'ajoutent au bonus aux dégâts du porteur."
+  },
+  "folder": "bdAHcoacmuHBO2e8",
+  "sort": 150,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

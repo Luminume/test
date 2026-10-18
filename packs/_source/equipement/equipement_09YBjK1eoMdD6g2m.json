@@ -1,0 +1,28 @@
+{
+  "_id": "09YBjK1eoMdD6g2m",
+  "_key": "!items!09YBjK1eoMdD6g2m",
+  "name": "Bateau à voile (petit)",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$6500/10 000",
+    "equipped": false,
+    "notes": "Vitesse : vent +25 %, Test de Pilotage\nPassagers : 2\nRésistance : 4D\nManœuvrabilité : +2D"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 130,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

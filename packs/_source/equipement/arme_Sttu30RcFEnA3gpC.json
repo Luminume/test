@@ -1,0 +1,35 @@
+{
+  "_id": "Sttu30RcFEnA3gpC",
+  "_key": "!items!Sttu30RcFEnA3gpC",
+  "name": "Smith & Wesson .38 revolver",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "3D+2",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 6,
+      "max": 6
+    },
+    "range": {
+      "short": "15",
+      "medium": "30",
+      "long": "45"
+    },
+    "notes": "Le célèbre M&P Modèle 10 des policiers et militaires.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 50,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

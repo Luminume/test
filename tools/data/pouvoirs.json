@@ -1,0 +1,362 @@
+[
+  {
+    "name": "La voix familière",
+    "tier": 1,
+    "mechanic": "Dans des moments de stress intense, Katrina entend son prénom murmuré par une voix lointaine. Passive — le MJ narre. Aucun jet requis.",
+    "narrative": "Rationalisable comme hallucination auditive de stress post-traumatique. La voix est trop lointaine pour être certifiée.",
+    "tags": [
+      "Campagne",
+      "Katrina",
+      "PJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Calme sous la tempête",
+    "tier": 1,
+    "mechanic": "+1D à ses tests de Volonté contre la peur ou la terreur situationnelle. Passive.",
+    "narrative": "Elle gère mieux que les autres. C'est l'adrénaline. C'est la formation CIA. Elle ne voit pas que ce calme n'est plus tout à fait le sien.",
+    "tags": [
+      "Campagne",
+      "Katrina",
+      "PJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "L'Écho",
+    "tier": 2,
+    "mechanic": "Peut 'sentir' si une personne à laquelle elle est liée émotionnellement est en danger immédiat. Une fois par scène. Coût : +1 influence.",
+    "narrative": "La voix de Paolo devient tendue, pressée. Elle rationalise comme de l'intuition. Mais elle commence à y répondre activement — et c'est le glissement.",
+    "tags": [
+      "Campagne",
+      "Katrina",
+      "PJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Lecture d'intention",
+    "tier": 2,
+    "mechanic": "En observant un PNJ quelques instants, peut poser une question fermée au MJ sur ses intentions immédiates. Coût : +1 influence.",
+    "narrative": "Elle s'est toujours crue bonne pour lire les gens. Maintenant elle l'est vraiment. Mais la source n'est plus entièrement humaine.",
+    "tags": [
+      "Campagne",
+      "Katrina",
+      "PJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Les voix des profondeurs",
+    "tier": 3,
+    "mechanic": "La voix de Paolo transmet des informations que Paolo lui-même ne saurait pas — sur Paresse, les factions, les profondeurs. Une fois par session. Coût : +2 influence.",
+    "narrative": "Ce n'est plus Paolo. Ou peut-être que si, et c'est pire. La rationalisation ne tient plus. La question reste ouverte et brûlante jusqu'en acte 3.",
+    "tags": [
+      "Campagne",
+      "Katrina",
+      "PJ"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "L'armure tient mieux",
+    "tier": 1,
+    "mechanic": "Résistance passive aux hallucinations de Paresse : +1D aux tests de Volonté contre les effets d'horreur cosmique.",
+    "narrative": "Il dort mieux. Les voix sont moins précises. Paresse n'a pas fait taire les morts — il les a isolés. Il protège Hector parce qu'un Hector fonctionnel est plus utile.",
+    "tags": [
+      "Campagne",
+      "Hector",
+      "PJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Sens du danger",
+    "tier": 1,
+    "mechanic": "Immunité passive à la fuite involontaire en situation de danger extrême. Il ne peut pas paniquer mécaniquement.",
+    "narrative": "Son cerveau a normalisé l'horreur. Ce qu'il attribue à l'expérience de combat, c'est le monstre qui se réveille — imperméable à la peur.",
+    "tags": [
+      "Campagne",
+      "Hector",
+      "PJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "L'armure comme présence",
+    "tier": 2,
+    "mechanic": "Les mutants de bas niveau hésitent à l'attaquer en premier. −1D à leur initiative contre Hector. Coût : +1 influence.",
+    "narrative": "Il projette quelque chose. Une autorité que les animaux lisent. Ce qu'il ne voit pas : elles ne l'hésitent pas face à un prédateur. Elles hésitent face à un pair potentiel.",
+    "tags": [
+      "Campagne",
+      "Hector",
+      "PJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "L'écho du rire",
+    "tier": 2,
+    "mechanic": "Une fois par session, dans un moment de violence intense, +2D aux dégâts sur une attaque. Coût : +1 influence. Le joueur doit nommer à voix haute ce que ressent Hector à ce moment.",
+    "narrative": "Le monstre en dessous. Si le joueur dit 'rien' ou 'de la colère' trop vite — laisser le silence s'installer.",
+    "tags": [
+      "Campagne",
+      "Hector",
+      "PJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Le chevalier est une peau",
+    "tier": 3,
+    "mechanic": "L'armure narrative devient réalité perçue : les survivants le suivent sans raison, +2D à tous ses jets de Présence/Persuasion. Coût : +2 influence.",
+    "narrative": "Ce n'est plus Hector qui porte l'armure. C'est le monstre qui a appris à la mettre. Les PJ proches peuvent voir les fissures.",
+    "tags": [
+      "Campagne",
+      "Hector",
+      "PJ"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "La voix des ombres",
+    "tier": 3,
+    "mechanic": "Dans un lieu chargé de mort violente, peut percevoir des fragments sur qui est mort, comment, pourquoi. Jusqu'à 3 questions au MJ. Coût : +2 influence.",
+    "narrative": "Les morts parlent en informations. Les enfants qu'il a tués sont les voix les plus claires. Les plus précises. Les plus utiles. Chaque utilisation nécessite de les entendre.",
+    "tags": [
+      "Campagne",
+      "Hector",
+      "PJ"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "L'œil du survivant",
+    "tier": 1,
+    "mechanic": "Smith perçoit instinctivement les dynamiques de pouvoir dans un groupe — qui obéit à qui par peur, qui est le maillon faible, qui ment pour se protéger. Passive, le MJ peut lui glisser ces informations sans jet.",
+    "narrative": "Il a survécu dans la couronne en lisant les gens. Il croit que c'est de l'expérience managériale. C'est plus profond que ça maintenant.",
+    "tags": [
+      "Campagne",
+      "Smith",
+      "PJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Transparence",
+    "tier": 1,
+    "mechanic": "Dans des situations sociales tendues, les regards glissent sur lui. −1D aux jets d'Intimidation ou de Perception des PNJ hostiles qui le cibleraient directement. Passive.",
+    "narrative": "Il est devenu expert en invisibilité. Le problème : Paresse a appris à utiliser cette discrétion pour autre chose.",
+    "tags": [
+      "Campagne",
+      "Smith",
+      "PJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "La voix du manager",
+    "tier": 2,
+    "mechanic": "En situation de tension sociale, peut calmer ou orienter un groupe de PNJ en quelques mots — son charisme d'ancien manager, amplifié. Test de Présence avec +2D. Coût : +1 influence.",
+    "narrative": "Quand il n'a plus le choix, quelque chose d'ancien remonte. Le charisma qu'il a enterré avec son identité d'avant. Il ne sait pas pourquoi ça marche encore mieux qu'avant. Il ne veut pas le savoir.",
+    "tags": [
+      "Campagne",
+      "Smith",
+      "PJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Calcul de sortie",
+    "tier": 2,
+    "mechanic": "Face à une situation dangereuse, peut identifier instantanément le chemin de moindre résistance — la fuite optimale, le mensonge le plus crédible, l'allié le plus utile à mobiliser. Une analyse par scène, résultat communiqué par le MJ. Coût : +1 influence.",
+    "narrative": "Il s'est échappé de Novatis par ce même instinct. Il rationalisait ça comme du pragmatisme. Ce n'était pas du pragmatisme.",
+    "tags": [
+      "Campagne",
+      "Smith",
+      "PJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Le miroir",
+    "tier": 3,
+    "mechanic": "Peut 'refléter' à un PNJ ce que ce PNJ veut voir en lui — projeter une identité sur mesure adaptée à la peur ou au désir de sa cible. Pour la durée d'une scène, il devient exactement ce que l'autre a besoin de percevoir. Coût : +2 influence.",
+    "narrative": "Paresse n'a pas créé ce talent. Smith l'a développé seul pour survivre dans la couronne. Paresse l'a juste rendu conscient et utilisable. La question est ce qu'il reste de Smith sous le reflet.",
+    "tags": [
+      "Campagne",
+      "Smith",
+      "PJ"
+    ],
+    "cost": "+2 influence"
+  },
+  {
+    "name": "L'acceptation",
+    "tier": 3,
+    "mechanic": "Une fois par campagne : Smith peut choisir d'agir en sachant que c'est courageux, sans que la peur le paralyse. Mécaniquement : immunité aux effets de peur pour une scène complète, +1D à toutes ses actions. Coût : +3 influence. Irréversible.",
+    "narrative": "C'est la fissure qui se referme — ou qui s'ouvre complètement. L'acceptation de ce qu'il est, dans un sens ou dans l'autre. À utiliser comme moment narratif majeur, jamais comme optimisation mécanique.",
+    "tags": [
+      "Campagne",
+      "Smith",
+      "PJ"
+    ],
+    "cost": "+3 influence"
+  },
+  {
+    "name": "Présence stabilisante",
+    "tier": 1,
+    "mechanic": "Les PJ à proximité de Bill gagnent +1 à leurs jets de Volonté contre la panique. Passive, non consciente.",
+    "narrative": "Il n'essaie pas de rassurer — il est juste là. Et ça suffit, d'une façon que personne n'arrive à expliquer.",
+    "tags": [
+      "Campagne",
+      "Bill",
+      "PNJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Ce que les murs entendent",
+    "tier": 1,
+    "mechanic": "Bill perçoit parfois des bribes de conversations ou d'événements passés dans un lieu — impressions fugaces, pas des visions nettes. Le MJ peut utiliser ça pour lui glisser des informations atmosphériques sur un endroit.",
+    "narrative": "Il croit que c'est de l'intuition. Les lieux chargés lui pèsent plus qu'aux autres depuis un moment.",
+    "tags": [
+      "Campagne",
+      "Bill",
+      "PNJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Le réceptacle",
+    "tier": 2,
+    "mechanic": "Une fois par session, Bill peut 'prendre' la charge émotionnelle d'un autre PJ — temporairement, pour une scène. Ce PJ ne subit pas les pénalités de stress ou d'états émotionnels pendant ce temps. Bill les porte à sa place. Coût : +1 influence.",
+    "narrative": "Il l'a toujours fait sans s'en rendre compte. Maintenant c'est plus littéral. Plus physique. Il sort de ces moments-là épuisé d'une façon différente.",
+    "tags": [
+      "Campagne",
+      "Bill",
+      "PNJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Dernière clarté",
+    "tier": 2,
+    "mechanic": "Quand une situation semble bloquée, Bill peut formuler une observation simple mais juste qui ouvre une nouvelle voie — narrative ou tactique. Le MJ lui souffle cette observation. Une fois par session. Coût : +1 influence.",
+    "narrative": "Il ne sait pas d'où ça vient. Il dit juste ce qui lui semble évident. Et c'est exactement ce qu'il fallait dire.",
+    "tags": [
+      "Campagne",
+      "Bill",
+      "PNJ"
+    ],
+    "cost": "+1 influence"
+  },
+  {
+    "name": "Cartographie froide",
+    "tier": 1,
+    "mechanic": "Lit les dynamiques émotionnelles d'un groupe instantanément — qui obéit à qui vraiment, qui est le point de rupture, qui ment et pourquoi. Résultats communiqués au MJ si besoin de calibrer ses actions en jeu.",
+    "narrative": "Elle a toujours fait ça. Maintenant c'est simplement plus précis, plus profond, et ça s'étend aux entités non-humaines.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Silence intérieur total",
+    "tier": 1,
+    "mechanic": "Immunisée aux effets de seuil 1 et 2 de la corruption cosmique — hallucinations, panique, pression de présence. Les influences de Paresse la traversent sans s'accrocher.",
+    "narrative": "Elle ne résiste pas. Elle est juste étrangère à ces mécanismes. Paresse ne lui parle pas par ces canaux.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Perception des fissures",
+    "tier": 1,
+    "mechanic": "Peut évaluer le niveau d'influence approximatif de Paresse sur un humain à proximité — pas un chiffre exact, mais une impression précise (faible / modéré / élevé / critique). Passive.",
+    "narrative": "Elle voit les fissures dans les autres sans voir les siennes propres — parce qu'elle n'en a pas.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": ""
+  },
+  {
+    "name": "Emprunt profond",
+    "tier": 2,
+    "mechanic": "Peut s'immerger dans la logique interne d'une personne — humain ou entité — pour en comprendre la structure complète : peurs, motivations, points de rupture, mensonges. Contact ou observation prolongée (scène entière). La cible ressent un vide net, comme une intrusion. Coût : +1 résonance.",
+    "narrative": "Elle ne le vit pas comme une violation. Elle le vit comme de la recherche. C'est peut-être la même chose.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": "+1 résonance"
+  },
+  {
+    "name": "Interface directe",
+    "tier": 2,
+    "mechanic": "Peut initier un échange avec Paresse à volonté — pas seulement le recevoir. Elle lui pose des questions, il répond. Les informations sont vraies. Les coûts de cet échange sont la résonance, pas la santé mentale. Coût : +1 résonance par échange.",
+    "narrative": "Ce qui terrifierait un humain normal est pour elle une conversation de travail. Paresse lui répond parce qu'elle est la seule qui lui parle comme à un égal.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": "+1 résonance"
+  },
+  {
+    "name": "Vecteur d'influence",
+    "tier": 2,
+    "mechanic": "Peut accélérer l'influence de Paresse sur une cible ciblée en sa présence — +2 points d'influence sur cette cible après une scène de contact prolongé. Doit être délibéré. Coût : +1 résonance.",
+    "narrative": "Elle peut ouvrir des fissures chez les autres. Elle n'en a pas elle-même. Ça dit quelque chose sur la nature de ses intentions.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": "+1 résonance"
+  },
+  {
+    "name": "Regard d'Ancien",
+    "tier": 3,
+    "mechanic": "Les entités conscientes liées à Paresse — Anciens secondaires inclus — la perçoivent comme quelque chose d'inclassable. +3D à toutes ses interactions avec des entités cosmiques. Elles ne l'abordent pas avec les mêmes présupposés qu'un humain ordinaire. Coût : +2 résonance.",
+    "narrative": "Eliah, Jah'ste, Kôhle, Elah O Ikim — aucun d'entre eux ne la traite comme une proie. C'est peut-être plus inquiétant.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": "+2 résonance"
+  },
+  {
+    "name": "Transmission",
+    "tier": 3,
+    "mechanic": "Peut transmettre volontairement à un autre PJ ou PNJ une information reçue directement de Paresse — y compris des informations à seuil 3 normalement inaccessibles à des niveaux d'influence inférieurs. Coût : +2 résonance. La cible gagne +1 influence involontairement.",
+    "narrative": "Elle peut partager ce qu'elle sait. La question est pourquoi elle le ferait, et à quel moment.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": "+2 résonance"
+  },
+  {
+    "name": "Négociation directe",
+    "tier": 3,
+    "mechanic": "À résonance 8+, peut engager une véritable négociation avec Paresse — pas seulement recevoir des informations, mais proposer des termes, des échanges, des conditions. Les résultats de ces négociations sont à la discrétion du MJ mais Paresse répond en entité rationnelle, pas hostile. Coût : +3 résonance par session d'usage.",
+    "narrative": "Elle est peut-être la seule humaine de l'histoire à avoir eu une conversation de bonne foi avec le Grand Ancien. Ce que ça implique pour la campagne n'est pas encore clair.",
+    "tags": [
+      "Campagne",
+      "Jenna Flemming",
+      "PNJ"
+    ],
+    "cost": "+3 résonance"
+  }
+]

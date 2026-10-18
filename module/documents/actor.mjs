@@ -104,9 +104,9 @@ export class ZCorpsActor extends Actor {
     return result;
   }
 
-  /** Un code de dégâts précédé de « + » s'ajoute au bonus aux dégâts (p. 57). */
+  /** Un code de dégâts précédé de « + » ou « - » modifie le bonus aux dégâts (p. 57). */
   static addsDamageBonus(item) {
-    return item.system.damage.trim().startsWith("+");
+    return /^[+-]/.test(item.system.damage.trim());
   }
 
   weaponDamagePips(item) {

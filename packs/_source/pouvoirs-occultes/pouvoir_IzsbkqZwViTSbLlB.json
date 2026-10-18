@@ -1,0 +1,27 @@
+{
+  "_id": "IzsbkqZwViTSbLlB",
+  "_key": "!items!IzsbkqZwViTSbLlB",
+  "name": "Interface directe",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "+1 résonance",
+    "mechanic": "Peut initier un échange avec Paresse à volonté — pas seulement le recevoir. Elle lui pose des questions, il répond. Les informations sont vraies. Les coûts de cet échange sont la résonance, pas la santé mentale. Coût : +1 résonance par échange.",
+    "narrative": "Ce qui terrifierait un humain normal est pour elle une conversation de travail. Paresse lui répond parce qu'elle est la seule qui lui parle comme à un égal.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 250,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_id": "8m0R0mkM4PxzDWpA",
+  "_key": "!items!8m0R0mkM4PxzDWpA",
+  "name": "Voiture, berline",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$25 000/30 000",
+    "equipped": false,
+    "notes": "Vitesse : 70/200 km/h\nPassagers : 4-5\nRésistance : 4D+2\nManœuvrabilité : +1D+1"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 40,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

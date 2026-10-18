@@ -1,0 +1,28 @@
+{
+  "_id": "PK3rzM6L9DpZdeO8",
+  "_key": "!items!PK3rzM6L9DpZdeO8",
+  "name": "Détecteur de signal",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$150",
+    "equipped": false,
+    "notes": "Détecte les traceurs ; indique la direction (les plus chers : sur une carte)."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 440,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

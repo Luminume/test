@@ -1,0 +1,27 @@
+{
+  "_id": "Cv18BF6xEIEKeGJz",
+  "_key": "!items!Cv18BF6xEIEKeGJz",
+  "name": "Silence intérieur total",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "",
+    "mechanic": "Immunisée aux effets de seuil 1 et 2 de la corruption cosmique — hallucinations, panique, pression de présence. Les influences de Paresse la traversent sans s'accrocher.",
+    "narrative": "Elle ne résiste pas. Elle est juste étrangère à ces mécanismes. Paresse ne lui parle pas par ces canaux.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 220,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

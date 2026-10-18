@@ -1,0 +1,35 @@
+{
+  "_id": "tIfUvpUNJZLHIVOX",
+  "_key": "!items!tIfUvpUNJZLHIVOX",
+  "name": "Arbalète légère et carreau",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesDeJet",
+    "category": "Armes de trait",
+    "damage": "4D",
+    "price": "$350/600",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "10",
+      "medium": "100",
+      "long": "200"
+    },
+    "notes": "Une action pour recharger (sauf arbalètes : un round)."
+  },
+  "folder": "r86VKv9B5rXywGPG",
+  "sort": 20,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

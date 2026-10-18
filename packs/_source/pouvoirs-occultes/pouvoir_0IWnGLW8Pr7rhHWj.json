@@ -1,0 +1,27 @@
+{
+  "_id": "0IWnGLW8Pr7rhHWj",
+  "_key": "!items!0IWnGLW8Pr7rhHWj",
+  "name": "Transparence",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Smith, PJ",
+    "cost": "",
+    "mechanic": "Dans des situations sociales tendues, les regards glissent sur lui. −1D aux jets d'Intimidation ou de Perception des PNJ hostiles qui le cibleraient directement. Passive.",
+    "narrative": "Il est devenu expert en invisibilité. Le problème : Paresse a appris à utiliser cette discrétion pour autre chose.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 120,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

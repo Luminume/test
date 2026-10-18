@@ -1,0 +1,35 @@
+{
+  "_id": "jxUBsUf4BQGpv8DJ",
+  "_key": "!items!jxUBsUf4BQGpv8DJ",
+  "name": "Colt .45 Peacemaker",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "4D+1",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 6,
+      "max": 6
+    },
+    "range": {
+      "short": "15",
+      "medium": "30",
+      "long": "45"
+    },
+    "notes": "Archaïque mais solide. Il faut armer le chien à chaque coup.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

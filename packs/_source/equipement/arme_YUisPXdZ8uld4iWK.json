@@ -1,0 +1,35 @@
+{
+  "_id": "YUisPXdZ8uld4iWK",
+  "_key": "!items!YUisPXdZ8uld4iWK",
+  "name": "TEC-9 (9mm)",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Pistolets mitrailleurs",
+    "damage": "3D+2",
+    "price": "D (D)",
+    "ammo": {
+      "value": 30,
+      "max": 30
+    },
+    "range": {
+      "short": "15",
+      "medium": "30",
+      "long": "45"
+    },
+    "notes": "Un tir simple envoie environ 1/5 du chargeur ; jusqu'à 3 cibles par round.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "yh3e3Wvzfk4AOCRv",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

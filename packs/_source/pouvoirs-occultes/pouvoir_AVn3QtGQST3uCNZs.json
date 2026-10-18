@@ -1,0 +1,27 @@
+{
+  "_id": "AVn3QtGQST3uCNZs",
+  "_key": "!items!AVn3QtGQST3uCNZs",
+  "name": "Perception des fissures",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "",
+    "mechanic": "Peut évaluer le niveau d'influence approximatif de Paresse sur un humain à proximité — pas un chiffre exact, mais une impression précise (faible / modéré / élevé / critique). Passive.",
+    "narrative": "Elle voit les fissures dans les autres sans voir les siennes propres — parce qu'elle n'en a pas.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 230,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

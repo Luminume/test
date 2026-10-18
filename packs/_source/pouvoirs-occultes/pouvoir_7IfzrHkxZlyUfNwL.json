@@ -1,0 +1,27 @@
+{
+  "_id": "7IfzrHkxZlyUfNwL",
+  "_key": "!items!7IfzrHkxZlyUfNwL",
+  "name": "La voix du manager",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Smith, PJ",
+    "cost": "+1 influence",
+    "mechanic": "En situation de tension sociale, peut calmer ou orienter un groupe de PNJ en quelques mots — son charisme d'ancien manager, amplifié. Test de Présence avec +2D. Coût : +1 influence.",
+    "narrative": "Quand il n'a plus le choix, quelque chose d'ancien remonte. Le charisma qu'il a enterré avec son identité d'avant. Il ne sait pas pourquoi ça marche encore mieux qu'avant. Il ne veut pas le savoir.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 130,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

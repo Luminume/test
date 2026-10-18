@@ -1,0 +1,27 @@
+{
+  "_id": "YbHFhijcIzaczy2Q",
+  "_key": "!items!YbHFhijcIzaczy2Q",
+  "name": "L'armure comme présence",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Hector, PJ",
+    "cost": "+1 influence",
+    "mechanic": "Les mutants de bas niveau hésitent à l'attaquer en premier. −1D à leur initiative contre Hector. Coût : +1 influence.",
+    "narrative": "Il projette quelque chose. Une autorité que les animaux lisent. Ce qu'il ne voit pas : elles ne l'hésitent pas face à un prédateur. Elles hésitent face à un pair potentiel.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 70,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

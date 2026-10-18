@@ -1,0 +1,28 @@
+{
+  "_id": "B2wGwQ7oDHVbAgaN",
+  "_key": "!items!B2wGwQ7oDHVbAgaN",
+  "name": "Canot",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$1500/4000",
+    "equipped": false,
+    "notes": "Vitesse : Test de Puissance\nPassagers : 6\nRésistance : 3D+2\nManœuvrabilité : 0"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 120,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

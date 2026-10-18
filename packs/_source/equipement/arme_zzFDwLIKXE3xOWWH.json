@@ -1,0 +1,35 @@
+{
+  "_id": "zzFDwLIKXE3xOWWH",
+  "_key": "!items!zzFDwLIKXE3xOWWH",
+  "name": "Remington 1100 TAC4",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Fusils à pompe",
+    "damage": "6D",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 5,
+      "max": 5
+    },
+    "range": {
+      "short": "20",
+      "medium": "40",
+      "long": "60"
+    },
+    "notes": "Semi-automatique très fiable, chargeur d'appoint de 4 cartouches et viseur possibles.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "5JHk4a2geky5GvUZ",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

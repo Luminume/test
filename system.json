@@ -2,14 +2,22 @@
   "id": "zcorps-vtt",
   "title": "Z-Corps (non officiel)",
   "description": "Système Foundry VTT pour Z-Corps : fiche de personnage, jets D6 avec dé libre, blessures, échelle de stress, accoutumance et pouvoirs occultes.",
-  "version": "0.1.2",
-  "authors": [{ "name": "Landry Freson" }],
+  "version": "0.2.0",
+  "authors": [
+    {
+      "name": "Landry Freson"
+    }
+  ],
   "compatibility": {
     "minimum": "13",
     "verified": "13"
   },
-  "esmodules": ["module/zcorps.mjs"],
-  "styles": ["css/zcorps.css"],
+  "esmodules": [
+    "module/zcorps.mjs"
+  ],
+  "styles": [
+    "css/zcorps.css"
+  ],
   "documentTypes": {
     "Actor": {
       "personnage": {},
@@ -18,9 +26,46 @@
     "Item": {
       "arme": {},
       "equipement": {},
-      "competence": {}
+      "competence": {},
+      "pouvoir": {}
     }
   },
+  "packs": [
+    {
+      "name": "equipement",
+      "label": "Équipement Z-Corps",
+      "path": "packs/equipement",
+      "type": "Item",
+      "system": "zcorps-vtt",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "pouvoirs-occultes",
+      "label": "Pouvoirs occultes (MJ)",
+      "path": "packs/pouvoirs-occultes",
+      "type": "Item",
+      "system": "zcorps-vtt",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Z-Corps",
+      "sorting": "m",
+      "color": "#4a1010",
+      "packs": [
+        "equipement",
+        "pouvoirs-occultes"
+      ]
+    }
+  ],
   "grid": {
     "distance": 1,
     "units": "m"

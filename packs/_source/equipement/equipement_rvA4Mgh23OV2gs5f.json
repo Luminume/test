@@ -1,0 +1,28 @@
+{
+  "_id": "rvA4Mgh23OV2gs5f",
+  "_key": "!items!rvA4Mgh23OV2gs5f",
+  "name": "Barre levier en fer",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$30",
+    "equipped": false,
+    "notes": "+1D aux tentatives par surprise, ou +2 au bonus aux dégâts pour les attaques brutales."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 310,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

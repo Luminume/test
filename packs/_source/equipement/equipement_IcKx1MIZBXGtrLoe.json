@@ -1,0 +1,28 @@
+{
+  "_id": "IcKx1MIZBXGtrLoe",
+  "_key": "!items!IcKx1MIZBXGtrLoe",
+  "name": "Corde de nylon, 50 m",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "TF",
+    "price": "$15",
+    "equipped": false,
+    "notes": ""
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 130,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

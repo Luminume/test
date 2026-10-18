@@ -13,8 +13,10 @@ export class ArmeData extends foundry.abstract.TypeDataModel {
       skill: new fields.StringField({
         required: true, blank: false, initial: "armesAFeu", choices: Object.keys(SKILLS)
       }),
+      category: text(""),
       // « +1D » = s'ajoute au bonus aux dégâts du porteur (armes de mêlée, p. 57).
       damage: text("3D"),
+      price: text(""),
       ammo: new fields.SchemaField({ value: int(0), max: int(0) }),
       range: new fields.SchemaField({ short: text(""), medium: text(""), long: text("") }),
       notes: text("")
@@ -25,8 +27,11 @@ export class ArmeData extends foundry.abstract.TypeDataModel {
 export class EquipementData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
+      category: text(""),
       quantity: int(1),
       protection: text(""),
+      availability: text(""),
+      price: text(""),
       equipped: new fields.BooleanField({ initial: false }),
       notes: text("")
     };
@@ -43,5 +48,24 @@ export class CompetenceData extends foundry.abstract.TypeDataModel {
       bonus: text("+1D"),
       notes: text("")
     };
+  }
+}
+
+/** Pouvoir occulte, rangé par seuil (tier 1 à 3). Caché aux joueurs tant qu'il n'est pas révélé. */
+export class PouvoirData extends foundry.abstract.TypeDataModel {
+  static defineSchema() {
+    return {
+      tier: new fields.NumberField({ required: true, nullable: false, integer: true, initial: 1, min: 1, max: 3 }),
+      // Étiquettes séparées par des virgules (« Campagne, Katrina »).
+      tags: text("Campagne"),
+      cost: text(""),
+      mechanic: text(""),
+      narrative: text(""),
+      revealed: new fields.BooleanField({ initial: false })
+    };
+  }
+
+  get tagList() {
+    return this.tags.split(",").map(t => t.trim()).filter(Boolean);
   }
 }

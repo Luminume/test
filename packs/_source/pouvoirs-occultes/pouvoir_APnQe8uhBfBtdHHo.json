@@ -1,0 +1,27 @@
+{
+  "_id": "APnQe8uhBfBtdHHo",
+  "_key": "!items!APnQe8uhBfBtdHHo",
+  "name": "L'Écho",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Katrina, PJ",
+    "cost": "+1 influence",
+    "mechanic": "Peut 'sentir' si une personne à laquelle elle est liée émotionnellement est en danger immédiat. Une fois par scène. Coût : +1 influence.",
+    "narrative": "La voix de Paolo devient tendue, pressée. Elle rationalise comme de l'intuition. Mais elle commence à y répondre activement — et c'est le glissement.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 20,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

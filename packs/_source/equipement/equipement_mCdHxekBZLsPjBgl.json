@@ -1,0 +1,28 @@
+{
+  "_id": "mCdHxekBZLsPjBgl",
+  "_key": "!items!mCdHxekBZLsPjBgl",
+  "name": "Kit d'électricien",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "M",
+    "price": "$250",
+    "equipped": false,
+    "notes": "Kit d'outils : +1D à Électronique si on possède la Compétence."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 490,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

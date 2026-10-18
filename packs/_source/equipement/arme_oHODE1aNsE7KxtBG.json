@@ -1,0 +1,35 @@
+{
+  "_id": "oHODE1aNsE7KxtBG",
+  "_key": "!items!oHODE1aNsE7KxtBG",
+  "name": "Dynamite (bâton)",
+  "type": "arme",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "skill": "lancer",
+    "category": "Explosifs",
+    "damage": "5D",
+    "price": "TF",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "PUI-3",
+      "medium": "PUI-2",
+      "long": "PUI+1"
+    },
+    "notes": "Déflagration 0-2 / 2-5 / 5-10 m. Détonateur ou minuteur obligatoire.\nRayon de déflagration (m) : dégâts complets / moitié / quart."
+  },
+  "folder": "Il0bVgwBClw42Pah",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

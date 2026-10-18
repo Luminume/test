@@ -1,0 +1,27 @@
+{
+  "_id": "bpmiBhKlTsgLFbKW",
+  "_key": "!items!bpmiBhKlTsgLFbKW",
+  "name": "Les voix des profondeurs",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, Katrina, PJ",
+    "cost": "+2 influence",
+    "mechanic": "La voix de Paolo transmet des informations que Paolo lui-même ne saurait pas — sur Paresse, les factions, les profondeurs. Une fois par session. Coût : +2 influence.",
+    "narrative": "Ce n'est plus Paolo. Ou peut-être que si, et c'est pire. La rationalisation ne tient plus. La question reste ouverte et brûlante jusqu'en acte 3.",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 40,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

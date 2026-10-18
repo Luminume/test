@@ -1,0 +1,35 @@
+{
+  "_id": "7NBG8C4Jx88lzVKN",
+  "_key": "!items!7NBG8C4Jx88lzVKN",
+  "name": "Sarbacane et fléchette",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesDeJet",
+    "category": "Armes de trait",
+    "damage": "1D",
+    "price": "$50",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "10",
+      "medium": "40",
+      "long": "100"
+    },
+    "notes": "Utilisée en général avec du poison, dont les dégâts s'ajoutent.\nUne action pour recharger (sauf arbalètes : un round)."
+  },
+  "folder": "r86VKv9B5rXywGPG",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

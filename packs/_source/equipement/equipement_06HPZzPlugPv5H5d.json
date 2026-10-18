@@ -1,0 +1,28 @@
+{
+  "_id": "06HPZzPlugPv5H5d",
+  "_key": "!items!06HPZzPlugPv5H5d",
+  "name": "Pick-up",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$18 000/30 000",
+    "equipped": false,
+    "notes": "Vitesse : 60/160 km/h\nPassagers : 3 (cabine)\nRésistance : 5D+2\nManœuvrabilité : 0"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 70,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

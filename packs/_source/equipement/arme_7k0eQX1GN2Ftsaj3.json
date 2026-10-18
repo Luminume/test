@@ -1,0 +1,35 @@
+{
+  "_id": "7k0eQX1GN2Ftsaj3",
+  "_key": "!items!7k0eQX1GN2Ftsaj3",
+  "name": "Kalashnikov AK-47 (7.62x39mm)",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Fusils d'assaut",
+    "damage": "6D",
+    "price": "D (D)",
+    "ammo": {
+      "value": 30,
+      "max": 30
+    },
+    "range": {
+      "short": "45",
+      "medium": "85",
+      "long": "170"
+    },
+    "notes": "Rafales de 3-4 cartouches (1 coup), coup par coup ou automatique ; jusqu'à 3 cibles par action. Ne s'enraye jamais.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "RMlHNtLk6xtTrQnb",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

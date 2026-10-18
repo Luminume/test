@@ -1,0 +1,28 @@
+{
+  "_id": "4GzYeEAsXJ7QD0mP",
+  "_key": "!items!4GzYeEAsXJ7QD0mP",
+  "name": "Cuir renforcé, blouson d'aviateur",
+  "type": "equipement",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "category": "Protections",
+    "quantity": 1,
+    "protection": "+1D+1",
+    "availability": "",
+    "price": "",
+    "equipped": false,
+    "notes": "Ne se porte pas sous une autre armure ; peut se porter sur du cuir souple."
+  },
+  "folder": "c0vBUgkcIyrjYQ09",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

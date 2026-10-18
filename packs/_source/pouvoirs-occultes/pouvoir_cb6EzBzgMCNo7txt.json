@@ -1,0 +1,27 @@
+{
+  "_id": "cb6EzBzgMCNo7txt",
+  "_key": "!items!cb6EzBzgMCNo7txt",
+  "name": "Calme sous la tempête",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Katrina, PJ",
+    "cost": "",
+    "mechanic": "+1D à ses tests de Volonté contre la peur ou la terreur situationnelle. Passive.",
+    "narrative": "Elle gère mieux que les autres. C'est l'adrénaline. C'est la formation CIA. Elle ne voit pas que ce calme n'est plus tout à fait le sien.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

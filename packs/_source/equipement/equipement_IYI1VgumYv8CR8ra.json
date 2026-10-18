@@ -1,0 +1,28 @@
+{
+  "_id": "IYI1VgumYv8CR8ra",
+  "_key": "!items!IYI1VgumYv8CR8ra",
+  "name": "Pelle",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "TF",
+    "price": "$20",
+    "equipped": false,
+    "notes": "+1D pour creuser ; attaques brutales avec +2 au bonus aux dégâts."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 200,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

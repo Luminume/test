@@ -1,0 +1,28 @@
+{
+  "_id": "cFqo3BXWPZ75QUcb",
+  "_key": "!items!cFqo3BXWPZ75QUcb",
+  "name": "Canoë",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$900/2000",
+    "equipped": false,
+    "notes": "Vitesse : Test de Puissance\nPassagers : 4\nRésistance : 2D\nManœuvrabilité : +1D"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 110,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

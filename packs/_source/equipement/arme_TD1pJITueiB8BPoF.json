@@ -1,0 +1,35 @@
+{
+  "_id": "TD1pJITueiB8BPoF",
+  "_key": "!items!TD1pJITueiB8BPoF",
+  "name": "Winchester 94 lever action (30-30)",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Fusils",
+    "damage": "6D+1",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 6,
+      "max": 6
+    },
+    "range": {
+      "short": "30",
+      "medium": "60",
+      "long": "120"
+    },
+    "notes": "Disponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "ZvZm3J6vIqg2ctKn",
+  "sort": 20,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_id": "O7wcT1uLJ164rJrW",
+  "_key": "!items!O7wcT1uLJ164rJrW",
+  "name": "Moto 260cc",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$1000/3000",
+    "equipped": false,
+    "notes": "Vitesse : 60/170 km/h\nPassagers : 1-2\nRésistance : 2D+1\nManœuvrabilité : +3D"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_id": "2h0u2l3vLZZmqgOt",
+  "_key": "!items!2h0u2l3vLZZmqgOt",
+  "name": "Lampe à pétrole",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$50",
+    "equipped": false,
+    "notes": ""
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 270,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

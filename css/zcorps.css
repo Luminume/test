@@ -376,3 +376,72 @@
 .zc-sheet .zc-band a.zc-improve { color: #fff; }
 .zc-sheet .zc-band a.zc-improve:hover { color: #f3c1c1; }
 .zc-sheet button.zc-progression-toggle.active { background: #2b4a6b; }
+
+/* --- Portrait -------------------------------------------- */
+
+.zc-portrait-frame { position: relative; }
+.zc-portrait-frame.small { flex: 0 0 96px; }
+.zc-sheet button.zc-show-portrait {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: auto;
+  margin: 0;
+  padding: 2px 6px;
+  opacity: 0.85;
+}
+.zc-sheet button.zc-show-portrait:hover { opacity: 1; }
+
+.zc-band-controls { display: flex; gap: 10px; }
+
+/* --- Pouvoirs -------------------------------------------- */
+
+.zc-powers-toolbar { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px dotted var(--zc-line); }
+.zc-sheet .zc-powers-toolbar button { width: auto; margin: 0; }
+.zc-occult-row.zc-power { grid-template-columns: 1fr 3fr auto; align-items: start; }
+.zc-occult-row.zc-power .zc-occult-name { font-weight: 700; }
+.zc-occult-row.zc-power .zc-occult-effect { font-size: 12px; }
+.zc-occult-row.zc-power.secret { background: repeating-linear-gradient(45deg, transparent 0 6px, rgba(125, 20, 20, 0.06) 6px 12px); }
+.zc-tier { color: var(--zc-blood, #7d1414); letter-spacing: -2px; margin-right: 4px; }
+.zc-browser-cost {
+  font-size: 11px;
+  background: #f2d4d4;
+  color: #6a1010;
+  border-radius: 3px;
+  padding: 0 4px;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+/* --- Fenêtre de recherche -------------------------------- */
+
+.zc-browser .window-content { padding: 0; background: var(--zc-paper); color: var(--zc-ink); display: flex; flex-direction: column; overflow: hidden; }
+.zc-browser-body { display: flex; flex-direction: column; flex: 1; min-height: 0; font-size: 13px; }
+.zc-browser-filters { display: flex; gap: 6px; align-items: center; padding: 8px; border-bottom: 2px solid var(--zc-blood-dark); }
+.zc-browser-filters input[type="search"] { flex: 1; }
+.zc-browser-filters button { width: auto; flex: 0 0 auto; }
+.zc-browser-owned { display: flex; align-items: center; gap: 3px; white-space: nowrap; }
+.zc-browser-count { font-size: 11px; color: var(--zc-muted); white-space: nowrap; }
+.zc-browser-list { flex: 1; min-height: 0; overflow-y: auto; padding: 8px; }
+.zc-browser-group { margin-bottom: 10px; }
+.zc-browser-group .zc-band { margin: 0 0 4px; font-size: 13px; border: none; }
+.zc-browser-entry {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 4px 2px;
+  border-bottom: 1px solid var(--zc-line);
+}
+.zc-browser-entry.owned { background: rgba(47, 107, 47, 0.08); }
+.zc-browser-check { margin-top: 3px; }
+.zc-browser-main { flex: 1; min-width: 0; }
+.zc-browser-title { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; font-weight: 700; }
+.zc-browser-title a { cursor: pointer; }
+.zc-tag { font-size: 10px; font-weight: 600; background: #e4d8cc; border-radius: 8px; padding: 0 6px; }
+.zc-tag.owned { background: #d9ecd9; }
+.zc-origin { font-size: 10px; color: var(--zc-muted); margin-left: auto; font-weight: 400; }
+.zc-browser-stats { display: flex; flex-wrap: wrap; gap: 8px; font-size: 11px; color: var(--zc-muted); }
+.zc-browser-details { margin: 2px 0 0; font-size: 12px; }
+.zc-browser-extra { margin: 2px 0 0; font-size: 11px; font-style: italic; color: var(--zc-muted); }
+.zc-browser-add { width: 30px; flex: 0 0 30px; }
+.zc-browser-entry[hidden], .zc-browser-group[hidden] { display: none; }

@@ -1,0 +1,27 @@
+{
+  "_id": "ZDWqOy61BgAXE9sp",
+  "_key": "!items!ZDWqOy61BgAXE9sp",
+  "name": "L'armure tient mieux",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Hector, PJ",
+    "cost": "",
+    "mechanic": "Résistance passive aux hallucinations de Paresse : +1D aux tests de Volonté contre les effets d'horreur cosmique.",
+    "narrative": "Il dort mieux. Les voix sont moins précises. Paresse n'a pas fait taire les morts — il les a isolés. Il protège Hector parce qu'un Hector fonctionnel est plus utile.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 50,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_id": "5wbArgJgvOPxLkga",
+  "_key": "!items!5wbArgJgvOPxLkga",
+  "name": "Crochets de fer et pitons",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$25",
+    "equipped": false,
+    "notes": "+1D pour grimper une surface dure (avec une corde). En arme : +1 aux dégâts."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 250,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

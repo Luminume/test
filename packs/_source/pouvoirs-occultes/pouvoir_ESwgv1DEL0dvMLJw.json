@@ -1,0 +1,27 @@
+{
+  "_id": "ESwgv1DEL0dvMLJw",
+  "_key": "!items!ESwgv1DEL0dvMLJw",
+  "name": "Lecture d'intention",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Katrina, PJ",
+    "cost": "+1 influence",
+    "mechanic": "En observant un PNJ quelques instants, peut poser une question fermée au MJ sur ses intentions immédiates. Coût : +1 influence.",
+    "narrative": "Elle s'est toujours crue bonne pour lire les gens. Maintenant elle l'est vraiment. Mais la source n'est plus entièrement humaine.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 30,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

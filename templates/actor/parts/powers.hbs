@@ -1,0 +1,29 @@
+{{!-- Pouvoirs occultes possédés (le MJ voit tout, les joueurs seulement les pouvoirs révélés). --}}
+{{#if isGM}}
+<div class="zc-powers-toolbar">
+  <button type="button" data-action="openBrowser" data-mode="pouvoirs">
+    <i class="fa-solid fa-eye"></i> Pouvoirs occultes
+  </button>
+  <span class="zc-hint">Les pouvoirs non révélés <i class="fa-solid fa-eye-slash"></i> sont invisibles pour le joueur.</span>
+</div>
+{{/if}}
+{{#each powers as |p|}}
+<div class="zc-occult-row zc-power{{#unless p.revealed}} secret{{/unless}}" data-item-id="{{p.id}}">
+  <span class="zc-occult-name">
+    <span class="zc-tier">{{p.tier}}</span>
+    <a data-action="itemEdit">{{p.name}}</a>
+  </span>
+  <span class="zc-occult-effect">
+    {{p.mechanic}}
+    {{#if p.cost}}<span class="zc-browser-cost">{{p.cost}}</span>{{/if}}
+  </span>
+  {{#if @root.isGM}}
+  <span class="zc-controls">
+    <a data-action="togglePowerRevealed" data-tooltip="{{#if p.revealed}}Révélé au joueur : cliquer pour cacher{{else}}Caché au joueur : cliquer pour révéler{{/if}}">
+      <i class="fa-solid {{#if p.revealed}}fa-eye{{else}}fa-eye-slash{{/if}}"></i>
+    </a>
+    <a data-action="itemDelete" data-tooltip="Retirer"><i class="fa-solid fa-trash"></i></a>
+  </span>
+  {{/if}}
+</div>
+{{/each}}

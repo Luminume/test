@@ -1,0 +1,27 @@
+{
+  "_id": "9xZ4bJiKB7D1j1Mh",
+  "_key": "!items!9xZ4bJiKB7D1j1Mh",
+  "name": "Dernière clarté",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Bill, PNJ",
+    "cost": "+1 influence",
+    "mechanic": "Quand une situation semble bloquée, Bill peut formuler une observation simple mais juste qui ouvre une nouvelle voie — narrative ou tactique. Le MJ lui souffle cette observation. Une fois par session. Coût : +1 influence.",
+    "narrative": "Il ne sait pas d'où ça vient. Il dit juste ce qui lui semble évident. Et c'est exactement ce qu'il fallait dire.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 200,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

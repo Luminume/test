@@ -1,0 +1,27 @@
+{
+  "_id": "PFr2R3qG63PC5GK2",
+  "_key": "!items!PFr2R3qG63PC5GK2",
+  "name": "L'écho du rire",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Hector, PJ",
+    "cost": "+1 influence",
+    "mechanic": "Une fois par session, dans un moment de violence intense, +2D aux dégâts sur une attaque. Coût : +1 influence. Le joueur doit nommer à voix haute ce que ressent Hector à ce moment.",
+    "narrative": "Le monstre en dessous. Si le joueur dit 'rien' ou 'de la colère' trop vite — laisser le silence s'installer.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 80,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

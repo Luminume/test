@@ -1,0 +1,27 @@
+{
+  "_id": "XlVWHCCIvg4UkZBe",
+  "_key": "!items!XlVWHCCIvg4UkZBe",
+  "name": "La voix familière",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Katrina, PJ",
+    "cost": "",
+    "mechanic": "Dans des moments de stress intense, Katrina entend son prénom murmuré par une voix lointaine. Passive — le MJ narre. Aucun jet requis.",
+    "narrative": "Rationalisable comme hallucination auditive de stress post-traumatique. La voix est trop lointaine pour être certifiée.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

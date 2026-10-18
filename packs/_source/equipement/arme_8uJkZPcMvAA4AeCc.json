@@ -1,0 +1,35 @@
+{
+  "_id": "8uJkZPcMvAA4AeCc",
+  "_key": "!items!8uJkZPcMvAA4AeCc",
+  "name": "« Shocker » auto-défense",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes à impulsions électriques",
+    "damage": "4D",
+    "price": "F",
+    "ammo": {
+      "value": 2,
+      "max": 2
+    },
+    "range": {
+      "short": "Contact",
+      "medium": "",
+      "long": ""
+    },
+    "notes": "Assomme seulement, au contact. Sans effet sur les morts-vivants."
+  },
+  "folder": "qXatvxpEZEAYKUcI",
+  "sort": 10,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

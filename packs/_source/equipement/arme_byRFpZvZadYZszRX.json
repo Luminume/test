@@ -1,0 +1,35 @@
+{
+  "_id": "byRFpZvZadYZszRX",
+  "_key": "!items!byRFpZvZadYZszRX",
+  "name": "Baïonnette",
+  "type": "arme",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "skill": "melee",
+    "category": "Armes de mêlée",
+    "damage": "+1D",
+    "price": "$50",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "",
+      "medium": "",
+      "long": ""
+    },
+    "notes": "Les dégâts s'ajoutent au bonus aux dégâts du porteur."
+  },
+  "folder": "bdAHcoacmuHBO2e8",
+  "sort": 110,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

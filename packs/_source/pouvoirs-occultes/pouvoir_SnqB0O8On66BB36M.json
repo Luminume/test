@@ -1,0 +1,27 @@
+{
+  "_id": "SnqB0O8On66BB36M",
+  "_key": "!items!SnqB0O8On66BB36M",
+  "name": "Sens du danger",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Hector, PJ",
+    "cost": "",
+    "mechanic": "Immunité passive à la fuite involontaire en situation de danger extrême. Il ne peut pas paniquer mécaniquement.",
+    "narrative": "Son cerveau a normalisé l'horreur. Ce qu'il attribue à l'expérience de combat, c'est le monstre qui se réveille — imperméable à la peur.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 60,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

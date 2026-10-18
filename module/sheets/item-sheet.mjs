@@ -37,6 +37,9 @@ export class ZCorpsItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       isArme: item.type === "arme",
       isEquipement: item.type === "equipement",
       isCompetence: item.type === "competence",
+      isPouvoir: item.type === "pouvoir",
+      isGM: game.user.isGM,
+      tierChoices: { 1: "Seuil 1 ◆", 2: "Seuil 2 ◆◆", 3: "Seuil 3 ◆◆◆" },
       skillChoices,
       attributeChoices: ATTRIBUTES
     });

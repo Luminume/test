@@ -25,6 +25,20 @@ et contenir `system.json`), puis relancer Foundry.
 - **Objets** : arme (compétence, dégâts, munitions, portées), équipement (protection),
   compétence.
 
+## Portraits, banque d'objets, pouvoirs occultes
+
+- **Portrait** : clic sur l'image pour la changer (le jeton suit s'il utilisait l'ancienne image).
+  Le bouton <i>écran</i> en bas du portrait l'affiche en grand chez tous les joueurs connectés.
+- **Banque d'objets** (loupe dans les blocs Armes et Équipement) : armes, protections, matériel et
+  véhicules du livre (p. 67-76), recherche par nom, catégorie ou effet, bouton « + » pour ajouter
+  au personnage. Les objets créés par le MJ dans l'onglet Objets du monde y apparaissent aussi
+  (bouton « Créer »). Également disponible dans la compendie « Équipement Z-Corps ».
+- **Pouvoirs occultes** (MJ uniquement, bouton dans la case des pouvoirs) : les 30 pouvoirs de la
+  campagne, rangés par seuil, étiquetés « Campagne » + personnage + PJ/PNJ, avec recherche.
+  Cocher = ajouter au personnage, décocher = retirer. Sur la fiche, un pouvoir reste caché au joueur
+  tant que le MJ ne l'a pas révélé (icône œil). Compendie « Pouvoirs occultes (MJ) », invisible aux joueurs.
+- Données sources : `tools/data/` ; après modification, `npm run build:packs` régénère les compendiums.
+
 ## Règles appliquées (livre de base, édition révisée)
 
 - **Dé Joker** sur tous les jets (p. 25) : sur un 6 il explose. Sur un 1 au premier jet,

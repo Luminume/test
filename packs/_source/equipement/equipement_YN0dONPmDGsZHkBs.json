@@ -1,0 +1,28 @@
+{
+  "_id": "YN0dONPmDGsZHkBs",
+  "_key": "!items!YN0dONPmDGsZHkBs",
+  "name": "Cuir souple, tissu épais",
+  "type": "equipement",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "category": "Protections",
+    "quantity": 1,
+    "protection": "+2",
+    "availability": "",
+    "price": "",
+    "equipped": false,
+    "notes": "Se porte sous ou sur n'importe quelle armure ; ajoute au maximum +1 à la combinaison."
+  },
+  "folder": "c0vBUgkcIyrjYQ09",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

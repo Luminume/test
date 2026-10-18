@@ -1,0 +1,28 @@
+{
+  "_id": "R4cVWdHNNv1GUHbO",
+  "_key": "!items!R4cVWdHNNv1GUHbO",
+  "name": "Gilet pare-balles",
+  "type": "equipement",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "category": "Protections",
+    "quantity": 1,
+    "protection": "+3D",
+    "availability": "",
+    "price": "",
+    "equipped": false,
+    "notes": "Kevlar, céramique… Ne se porte pas sous une autre armure. Chaque couche supplémentaire : +4 ou plus aux difficultés basées sur l'Agilité."
+  },
+  "folder": "c0vBUgkcIyrjYQ09",
+  "sort": 20,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

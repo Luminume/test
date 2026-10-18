@@ -1,0 +1,35 @@
+{
+  "_id": "EaoycILMVEP0LgV5",
+  "_key": "!items!EaoycILMVEP0LgV5",
+  "name": "Grenade fumigène / lacrymogène",
+  "type": "arme",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "skill": "lancer",
+    "category": "Explosifs",
+    "damage": "0",
+    "price": "F",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "PUI-4",
+      "medium": "PUI-3",
+      "long": "PUI+3"
+    },
+    "notes": "Nuage de 10 m² : -1D aux Tests de Perception (vue), d'Agilité et d'Adresse. L'armure ne protège pas, il faut un masque à gaz.\nRayon de déflagration (m) : dégâts complets / moitié / quart."
+  },
+  "folder": "Il0bVgwBClw42Pah",
+  "sort": 20,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

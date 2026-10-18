@@ -1,0 +1,35 @@
+{
+  "_id": "4T2Iz2v9vbCd8z00",
+  "_key": "!items!4T2Iz2v9vbCd8z00",
+  "name": "Javeline",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "lancer",
+    "category": "Armes de lancer",
+    "damage": "+2D",
+    "price": "$100",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "5",
+      "medium": "25",
+      "long": "40"
+    },
+    "notes": "Plus de 60 cm : modificateur d'encombrement possible.\nPUI = Puissance du lanceur (en mètres)."
+  },
+  "folder": "qYba6P0QXA8mDPmY",
+  "sort": 40,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_id": "jl5ehxp8qgPLK62D",
+  "_key": "!items!jl5ehxp8qgPLK62D",
+  "name": "Outils de serrurier",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "M",
+    "price": "$40",
+    "equipped": false,
+    "notes": "+1D au Crochetage si l'utilisateur possède la Compétence."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 350,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

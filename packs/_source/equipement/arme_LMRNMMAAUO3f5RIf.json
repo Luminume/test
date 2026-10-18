@@ -1,0 +1,35 @@
+{
+  "_id": "LMRNMMAAUO3f5RIf",
+  "_key": "!items!LMRNMMAAUO3f5RIf",
+  "name": "Glock 17 9mm",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "3D+2",
+    "price": "D (F)",
+    "ammo": {
+      "value": 17,
+      "max": 17
+    },
+    "range": {
+      "short": "8",
+      "medium": "16",
+      "long": "24"
+    },
+    "notes": "Semi-automatique léger et compact, fiable, faible recul.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 20,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

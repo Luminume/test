@@ -1,0 +1,28 @@
+{
+  "_id": "NIw6mlngmh9qNs3W",
+  "_key": "!items!NIw6mlngmh9qNs3W",
+  "name": "Bus de ville",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$80 000/100 000",
+    "equipped": false,
+    "notes": "Vitesse : 50/120 km/h\nPassagers : 80\nRésistance : 5D+2\nManœuvrabilité : -4D"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 90,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

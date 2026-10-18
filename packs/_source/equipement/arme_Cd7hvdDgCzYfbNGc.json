@@ -1,0 +1,35 @@
+{
+  "_id": "Cd7hvdDgCzYfbNGc",
+  "_key": "!items!Cd7hvdDgCzYfbNGc",
+  "name": "Boomerang (lourd)",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "lancer",
+    "category": "Armes de lancer",
+    "damage": "1D+1",
+    "price": "$150",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "5",
+      "medium": "40",
+      "long": "100"
+    },
+    "notes": "PUI = Puissance du lanceur (en mètres)."
+  },
+  "folder": "qYba6P0QXA8mDPmY",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

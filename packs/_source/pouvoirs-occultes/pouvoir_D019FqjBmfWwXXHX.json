@@ -1,0 +1,27 @@
+{
+  "_id": "D019FqjBmfWwXXHX",
+  "_key": "!items!D019FqjBmfWwXXHX",
+  "name": "Calcul de sortie",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Smith, PJ",
+    "cost": "+1 influence",
+    "mechanic": "Face à une situation dangereuse, peut identifier instantanément le chemin de moindre résistance — la fuite optimale, le mensonge le plus crédible, l'allié le plus utile à mobiliser. Une analyse par scène, résultat communiqué par le MJ. Coût : +1 influence.",
+    "narrative": "Il s'est échappé de Novatis par ce même instinct. Il rationalisait ça comme du pragmatisme. Ce n'était pas du pragmatisme.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 140,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "f6aek25BV7jJuGmc",
+  "_key": "!items!f6aek25BV7jJuGmc",
+  "name": "Walter PPK 9mm",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "3D",
+    "price": "M (F)",
+    "ammo": {
+      "value": 7,
+      "max": 7
+    },
+    "range": {
+      "short": "7",
+      "medium": "14",
+      "long": "21"
+    },
+    "notes": "Semi-automatique allemand léger (astérisque dans le tableau du livre).\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 70,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "9iBXHMPDCpty8Hj2",
+  "_key": "!items!9iBXHMPDCpty8Hj2",
+  "name": "Épée standard",
+  "type": "arme",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "skill": "melee",
+    "category": "Armes de mêlée",
+    "damage": "+2D+2",
+    "price": "$100",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "",
+      "medium": "",
+      "long": ""
+    },
+    "notes": "Les dégâts s'ajoutent au bonus aux dégâts du porteur."
+  },
+  "folder": "bdAHcoacmuHBO2e8",
+  "sort": 160,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

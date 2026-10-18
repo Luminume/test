@@ -1,0 +1,35 @@
+{
+  "_id": "doEEHN1siEdPTaRi",
+  "_key": "!items!doEEHN1siEdPTaRi",
+  "name": "Grenade à fragmentation",
+  "type": "arme",
+  "img": "icons/svg/explosion.svg",
+  "system": {
+    "skill": "lancer",
+    "category": "Explosifs",
+    "damage": "6D",
+    "price": "F",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "PUI-4",
+      "medium": "PUI-3",
+      "long": "PUI+3"
+    },
+    "notes": "Déflagration 0-3 / 3-8 / 8-16 m. Explose 3 secondes après dégoupillage.\nRayon de déflagration (m) : dégâts complets / moitié / quart."
+  },
+  "folder": "Il0bVgwBClw42Pah",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

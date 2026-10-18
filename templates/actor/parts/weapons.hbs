@@ -1,7 +1,12 @@
 <section class="zc-box zc-weapons">
   <header class="zc-band">
     <span>Armes</span>
-    {{#if editable}}<a data-action="itemCreate" data-type="arme" data-tooltip="Ajouter une arme"><i class="fa-solid fa-plus"></i></a>{{/if}}
+    {{#if editable}}
+    <span class="zc-band-controls">
+      <a data-action="openBrowser" data-mode="objets" data-tooltip="Banque d'objets"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a data-action="itemCreate" data-type="arme" data-tooltip="Nouvelle arme"><i class="fa-solid fa-plus"></i></a>
+    </span>
+    {{/if}}
   </header>
   <table>
     <thead>

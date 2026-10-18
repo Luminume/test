@@ -1,0 +1,28 @@
+{
+  "_id": "CAp6KSUO31FYPHfF",
+  "_key": "!items!CAp6KSUO31FYPHfF",
+  "name": "Vélo",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$150/700",
+    "equipped": false,
+    "notes": "Vitesse : voir livre\nPassagers : 1-2\nRésistance : 2D\nManœuvrabilité : +2D+2"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 0,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

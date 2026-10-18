@@ -1,0 +1,28 @@
+{
+  "_id": "jyhd5UBvKdM3l6Cp",
+  "_key": "!items!jyhd5UBvKdM3l6Cp",
+  "name": "Masque anti-gaz",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "M",
+    "price": "$200/300",
+    "equipped": false,
+    "notes": "+2D aux Tests de résistance contre les gaz ; annule jusqu'à 1D de modificateurs."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 90,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

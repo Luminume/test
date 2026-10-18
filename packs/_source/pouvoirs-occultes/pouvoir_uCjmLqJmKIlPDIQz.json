@@ -1,0 +1,27 @@
+{
+  "_id": "uCjmLqJmKIlPDIQz",
+  "_key": "!items!uCjmLqJmKIlPDIQz",
+  "name": "Emprunt profond",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "+1 résonance",
+    "mechanic": "Peut s'immerger dans la logique interne d'une personne — humain ou entité — pour en comprendre la structure complète : peurs, motivations, points de rupture, mensonges. Contact ou observation prolongée (scène entière). La cible ressent un vide net, comme une intrusion. Coût : +1 résonance.",
+    "narrative": "Elle ne le vit pas comme une violation. Elle le vit comme de la recherche. C'est peut-être la même chose.",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 240,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

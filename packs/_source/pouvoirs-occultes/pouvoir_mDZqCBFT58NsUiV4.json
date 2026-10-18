@@ -1,0 +1,27 @@
+{
+  "_id": "mDZqCBFT58NsUiV4",
+  "_key": "!items!mDZqCBFT58NsUiV4",
+  "name": "Négociation directe",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "+3 résonance",
+    "mechanic": "À résonance 8+, peut engager une véritable négociation avec Paresse — pas seulement recevoir des informations, mais proposer des termes, des échanges, des conditions. Les résultats de ces négociations sont à la discrétion du MJ mais Paresse répond en entité rationnelle, pas hostile. Coût : +3 résonance par session d'usage.",
+    "narrative": "Elle est peut-être la seule humaine de l'histoire à avoir eu une conversation de bonne foi avec le Grand Ancien. Ce que ça implique pour la campagne n'est pas encore clair.",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 290,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

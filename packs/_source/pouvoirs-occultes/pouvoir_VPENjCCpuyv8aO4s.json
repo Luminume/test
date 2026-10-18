@@ -1,0 +1,27 @@
+{
+  "_id": "VPENjCCpuyv8aO4s",
+  "_key": "!items!VPENjCCpuyv8aO4s",
+  "name": "L'acceptation",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, Smith, PJ",
+    "cost": "+3 influence",
+    "mechanic": "Une fois par campagne : Smith peut choisir d'agir en sachant que c'est courageux, sans que la peur le paralyse. Mécaniquement : immunité aux effets de peur pour une scène complète, +1D à toutes ses actions. Coût : +3 influence. Irréversible.",
+    "narrative": "C'est la fissure qui se referme — ou qui s'ouvre complètement. L'acceptation de ce qu'il est, dans un sens ou dans l'autre. À utiliser comme moment narratif majeur, jamais comme optimisation mécanique.",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 160,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

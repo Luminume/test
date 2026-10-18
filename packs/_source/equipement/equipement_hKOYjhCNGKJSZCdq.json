@@ -1,0 +1,28 @@
+{
+  "_id": "hKOYjhCNGKJSZCdq",
+  "_key": "!items!hKOYjhCNGKJSZCdq",
+  "name": "Enregistreur numérique (cartes SD)",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$150",
+    "equipped": false,
+    "notes": ""
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 290,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

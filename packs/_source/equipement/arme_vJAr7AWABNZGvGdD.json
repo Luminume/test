@@ -1,0 +1,35 @@
+{
+  "_id": "vJAr7AWABNZGvGdD",
+  "_key": "!items!vJAr7AWABNZGvGdD",
+  "name": "Katana",
+  "type": "arme",
+  "img": "icons/svg/sword.svg",
+  "system": {
+    "skill": "melee",
+    "category": "Armes de mêlée",
+    "damage": "+3D",
+    "price": "$100",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "",
+      "medium": "",
+      "long": ""
+    },
+    "notes": "Plus de 60 cm : modificateur d'encombrement possible.\nLes dégâts s'ajoutent au bonus aux dégâts du porteur."
+  },
+  "folder": "bdAHcoacmuHBO2e8",
+  "sort": 90,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

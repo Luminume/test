@@ -1,0 +1,35 @@
+{
+  "_id": "3AToFw3m7pqe2vlO",
+  "_key": "!items!3AToFw3m7pqe2vlO",
+  "name": "Derringer .45 pistolet",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "2D+2",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 2,
+      "max": 2
+    },
+    "range": {
+      "short": "2",
+      "medium": "5",
+      "long": "10"
+    },
+    "notes": "La plus petite des armes de poing, se cache dans un sac à main.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 40,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

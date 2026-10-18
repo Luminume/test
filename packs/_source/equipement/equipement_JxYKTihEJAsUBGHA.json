@@ -1,0 +1,28 @@
+{
+  "_id": "JxYKTihEJAsUBGHA",
+  "_key": "!items!JxYKTihEJAsUBGHA",
+  "name": "Outils de mécanicien",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "M",
+    "price": "$200",
+    "equipped": false,
+    "notes": "Kit d'outils : +1D à Réparer si on possède la Compétence."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 420,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

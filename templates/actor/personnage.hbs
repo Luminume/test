@@ -87,7 +87,12 @@
 
     {{!-- Colonne de droite --}}
     <aside class="zc-side">
-      <img class="zc-portrait" src="{{actor.img}}" alt="" data-action="editPortrait" data-tooltip="Changer l'image">
+      <div class="zc-portrait-frame">
+        <img class="zc-portrait" src="{{actor.img}}" alt="" {{#if editable}}data-action="editPortrait" data-tooltip="Changer l'image"{{/if}}>
+        <button type="button" class="zc-show-portrait" data-action="showPortrait" data-tooltip="Montrer l'image aux joueurs">
+          <i class="fa-solid fa-display"></i>
+        </button>
+      </div>
 
       <section class="zc-box zc-wounds">
         <h3>Niveaux de blessures</h3>
@@ -170,6 +175,7 @@
       {{/each}}
     </div>
     <div class="zc-occult">
+      {{> "systems/zcorps-vtt/templates/actor/parts/powers.hbs"}}
       {{#each occult as |p|}}
       <div class="zc-occult-row">
         <input type="text" class="zc-occult-name" name="system.occult.{{p.key}}.name" value="{{p.name}}">
@@ -185,7 +191,12 @@
   <section class="zc-box zc-equipment">
     <header class="zc-band">
       <span>Équipement</span>
-      {{#if editable}}<a data-action="itemCreate" data-type="equipement" data-tooltip="Ajouter"><i class="fa-solid fa-plus"></i></a>{{/if}}
+      {{#if editable}}
+      <span class="zc-band-controls">
+        <a data-action="openBrowser" data-mode="objets" data-tooltip="Banque d'objets"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a data-action="itemCreate" data-type="equipement" data-tooltip="Nouvel équipement"><i class="fa-solid fa-plus"></i></a>
+      </span>
+      {{/if}}
     </header>
     <table>
       <thead><tr><th></th><th>Objet</th><th>Qté</th><th>Protection</th><th>Porté</th><th></th></tr></thead>

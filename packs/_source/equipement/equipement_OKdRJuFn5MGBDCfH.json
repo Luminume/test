@@ -1,0 +1,28 @@
+{
+  "_id": "OKdRJuFn5MGBDCfH",
+  "_key": "!items!OKdRJuFn5MGBDCfH",
+  "name": "Moto 1200cc",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$7000/15 000",
+    "equipped": false,
+    "notes": "Vitesse : 100/200 km/h\nPassagers : 1-2\nRésistance : 4D\nManœuvrabilité : +2D"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 20,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

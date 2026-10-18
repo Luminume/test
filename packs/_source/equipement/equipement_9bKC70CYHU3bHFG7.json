@@ -1,0 +1,28 @@
+{
+  "_id": "9bKC70CYHU3bHFG7",
+  "_key": "!items!9bKC70CYHU3bHFG7",
+  "name": "Viseur pour fusil",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "M/D",
+    "price": "$100",
+    "equipped": false,
+    "notes": "+2 aux Tests d'Armes à feu à moyenne ou longue portée en visant toute une action."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 110,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

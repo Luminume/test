@@ -1,0 +1,35 @@
+{
+  "_id": "SSZ6dna6Mavra4vP",
+  "_key": "!items!SSZ6dna6Mavra4vP",
+  "name": "Desert Eagle IMI .50 AE",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "5D",
+    "price": "M (D)",
+    "ammo": {
+      "value": 7,
+      "max": 7
+    },
+    "range": {
+      "short": "15",
+      "medium": "30",
+      "long": "50"
+    },
+    "notes": "Encombrant et lourd, calibre inhabituel, peu de recul.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 80,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

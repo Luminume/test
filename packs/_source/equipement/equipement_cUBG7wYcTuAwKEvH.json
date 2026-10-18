@@ -1,0 +1,28 @@
+{
+  "_id": "cUBG7wYcTuAwKEvH",
+  "_key": "!items!cUBG7wYcTuAwKEvH",
+  "name": "Torche électrique, grande",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "TF",
+    "price": "$25",
+    "equipped": false,
+    "notes": "Réduit les modificateurs d'obscurité de 2D dans un cône de 5 m."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 80,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

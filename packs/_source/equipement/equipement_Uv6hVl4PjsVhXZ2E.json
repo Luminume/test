@@ -1,0 +1,28 @@
+{
+  "_id": "Uv6hVl4PjsVhXZ2E",
+  "_key": "!items!Uv6hVl4PjsVhXZ2E",
+  "name": "Menottes",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "M",
+    "price": "$50",
+    "equipped": false,
+    "notes": "Clé ou Test de Crochetage Moyen pour les enlever. Résistance totale 15."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 190,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

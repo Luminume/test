@@ -1,0 +1,58 @@
+<div class="zc-browser-body">
+  <header class="zc-browser-filters">
+    <input type="search" name="query" value="{{query}}" placeholder="Rechercher (nom, étiquette, effet…)" autofocus>
+    <select name="group">
+      <option value="">{{#if isPowers}}Tous les seuils{{else}}Toutes les catégories{{/if}}</option>
+      {{#each groupChoices}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+    </select>
+    {{#if isPowers}}
+    <label class="zc-browser-owned"><input type="checkbox" name="ownedOnly" {{#if ownedOnly}}checked{{/if}}> Possédés</label>
+    {{/if}}
+    <span class="zc-browser-count"></span>
+    {{#if isGM}}
+    <button type="button" data-action="create" data-tooltip="Créer dans le monde"><i class="fa-solid fa-plus"></i> Créer</button>
+    {{/if}}
+  </header>
+
+  <div class="zc-browser-list">
+    {{#if empty}}
+    <p class="zc-hint">Aucune entrée. Vérifie que la compendie du système est disponible, ou crée des objets dans le monde.</p>
+    {{/if}}
+    {{#each groups as |group|}}
+    <section class="zc-browser-group" data-group="{{group.label}}">
+      <h3 class="zc-band">{{group.label}}</h3>
+      {{#each group.entries as |e|}}
+      <article class="zc-browser-entry{{#if e.owned}} owned{{/if}}" data-uuid="{{e.uuid}}" data-name="{{e.name}}"
+               data-search="{{e.search}}" data-owned="{{#if e.owned}}true{{else}}false{{/if}}">
+        {{#if @root.isPowers}}
+        <input type="checkbox" class="zc-browser-check" data-action="toggle" {{#if e.owned}}checked{{/if}}
+               {{#unless @root.canEdit}}disabled{{/unless}} data-tooltip="Possédé par le personnage">
+        {{else}}
+        <img src="{{e.img}}" alt="" class="zc-item-img">
+        {{/if}}
+        <div class="zc-browser-main">
+          <div class="zc-browser-title">
+            {{#if e.tier}}<span class="zc-tier">{{e.tier}}</span>{{/if}}
+            <a data-action="open">{{e.name}}</a>
+            {{#if e.cost}}<span class="zc-browser-cost">{{e.cost}}</span>{{/if}}
+            {{#each e.tags}}<span class="zc-tag">{{this}}</span>{{/each}}
+            {{#if e.quantity}}<span class="zc-tag owned">×{{e.quantity}}</span>{{/if}}
+            <span class="zc-origin">{{e.origin}}</span>
+          </div>
+          {{#if e.stats}}<div class="zc-browser-stats">{{#each e.stats}}<span>{{this}}</span>{{/each}}</div>{{/if}}
+          {{#if e.details}}<p class="zc-browser-details">{{e.details}}</p>{{/if}}
+          {{#if e.extra}}<p class="zc-browser-extra">{{e.extra}}</p>{{/if}}
+        </div>
+        {{#unless @root.isPowers}}
+        {{#if @root.canEdit}}
+        <button type="button" class="zc-browser-add" data-action="add" data-tooltip="Ajouter à {{@root.actor.name}}">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        {{/if}}
+        {{/unless}}
+      </article>
+      {{/each}}
+    </section>
+    {{/each}}
+  </div>
+</div>

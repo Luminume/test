@@ -1,0 +1,27 @@
+{
+  "_id": "tONbGSWYN7LplT8H",
+  "_key": "!items!tONbGSWYN7LplT8H",
+  "name": "Ce que les murs entendent",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Bill, PNJ",
+    "cost": "",
+    "mechanic": "Bill perçoit parfois des bribes de conversations ou d'événements passés dans un lieu — impressions fugaces, pas des visions nettes. Le MJ peut utiliser ça pour lui glisser des informations atmosphériques sur un endroit.",
+    "narrative": "Il croit que c'est de l'intuition. Les lieux chargés lui pèsent plus qu'aux autres depuis un moment.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 180,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

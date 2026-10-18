@@ -1,0 +1,35 @@
+{
+  "_id": "2tzc1f7EfIoI7dsU",
+  "_key": "!items!2tzc1f7EfIoI7dsU",
+  "name": "Smith & Wesson .357 Magnum",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesAFeu",
+    "category": "Armes de poing",
+    "damage": "5D",
+    "price": "F (TF)",
+    "ammo": {
+      "value": 6,
+      "max": 6
+    },
+    "range": {
+      "short": "20",
+      "medium": "35",
+      "long": "50"
+    },
+    "notes": "Version .357 Magnum, utilisée par le F.B.I.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+  },
+  "folder": "gYic5s4CYW7CoANp",
+  "sort": 60,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

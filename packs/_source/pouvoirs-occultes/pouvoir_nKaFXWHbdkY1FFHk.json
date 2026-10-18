@@ -1,0 +1,27 @@
+{
+  "_id": "nKaFXWHbdkY1FFHk",
+  "_key": "!items!nKaFXWHbdkY1FFHk",
+  "name": "Cartographie froide",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, Jenna Flemming, PNJ",
+    "cost": "",
+    "mechanic": "Lit les dynamiques émotionnelles d'un groupe instantanément — qui obéit à qui vraiment, qui est le point de rupture, qui ment et pourquoi. Résultats communiqués au MJ si besoin de calibrer ses actions en jeu.",
+    "narrative": "Elle a toujours fait ça. Maintenant c'est simplement plus précis, plus profond, et ça s'étend aux entités non-humaines.",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 210,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

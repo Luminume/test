@@ -1,0 +1,35 @@
+{
+  "_id": "Ah7EVLSmKEtfC36c",
+  "_key": "!items!Ah7EVLSmKEtfC36c",
+  "name": "Pierre (taille poing)",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "lancer",
+    "category": "Armes de lancer",
+    "damage": "+1",
+    "price": "—",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "PUI-2",
+      "medium": "PUI-1",
+      "long": "PUI"
+    },
+    "notes": "PUI = Puissance du lanceur (en mètres)."
+  },
+  "folder": "qYba6P0QXA8mDPmY",
+  "sort": 50,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

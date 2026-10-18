@@ -1,0 +1,35 @@
+{
+  "_id": "35A5H9hRhxlBGsv2",
+  "_key": "!items!35A5H9hRhxlBGsv2",
+  "name": "Arbalète sur poignet et carreau",
+  "type": "arme",
+  "img": "icons/svg/target.svg",
+  "system": {
+    "skill": "armesDeJet",
+    "category": "Armes de trait",
+    "damage": "4D",
+    "price": "$150",
+    "ammo": {
+      "value": 0,
+      "max": 0
+    },
+    "range": {
+      "short": "10",
+      "medium": "25",
+      "long": "50"
+    },
+    "notes": "Une action pour recharger (sauf arbalètes : un round)."
+  },
+  "folder": "r86VKv9B5rXywGPG",
+  "sort": 40,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

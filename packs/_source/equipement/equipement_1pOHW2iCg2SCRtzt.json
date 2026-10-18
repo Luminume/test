@@ -1,0 +1,28 @@
+{
+  "_id": "1pOHW2iCg2SCRtzt",
+  "_key": "!items!1pOHW2iCg2SCRtzt",
+  "name": "Voiture, 4x4",
+  "type": "equipement",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "category": "Véhicules",
+    "quantity": 1,
+    "protection": "",
+    "availability": "",
+    "price": "$25 000/35 000",
+    "equipped": false,
+    "notes": "Vitesse : 60/180 km/h\nPassagers : 6-7\nRésistance : 5D+2\nManœuvrabilité : 0"
+  },
+  "folder": "MhohllV1bY7Cn3GB",
+  "sort": 50,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

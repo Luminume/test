@@ -1,0 +1,28 @@
+{
+  "_id": "I6yecAfmGJ1OIhz2",
+  "_key": "!items!I6yecAfmGJ1OIhz2",
+  "name": "Holster spécial",
+  "type": "equipement",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "category": "Matériel",
+    "quantity": 1,
+    "protection": "",
+    "availability": "F",
+    "price": "$80",
+    "equipped": false,
+    "notes": "Dégainer ne compte pas comme une action ; +1D à l'Initiative pour « celui qui dégaine le premier »."
+  },
+  "folder": "QNkUZffMAAGyqDQm",
+  "sort": 30,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}
