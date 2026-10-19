@@ -1,0 +1,27 @@
+{
+  "_id": "BzDdmmNL86Lwo0HN",
+  "_key": "!items!BzDdmmNL86Lwo0HN",
+  "name": "Cartographie des traumas",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Perçoit les blessures psychologiques profondes de tout humain à moins de 5m. Sait exactement comment les toucher.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1490,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

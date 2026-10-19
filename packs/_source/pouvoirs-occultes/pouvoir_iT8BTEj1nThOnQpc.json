@@ -1,0 +1,27 @@
+{
+  "_id": "iT8BTEj1nThOnQpc",
+  "_key": "!items!iT8BTEj1nThOnQpc",
+  "name": "Régénération lente",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Récupère 3 PV par round hors combat.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1260,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

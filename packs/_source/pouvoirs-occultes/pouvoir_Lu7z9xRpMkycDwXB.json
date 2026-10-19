@@ -1,0 +1,27 @@
+{
+  "_id": "Lu7z9xRpMkycDwXB",
+  "_key": "!items!Lu7z9xRpMkycDwXB",
+  "name": "Le couvercle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "En combat, peut ériger une barrière spatiale dans un rayon de 30m. Rien n'entre ni ne sort pendant 3 rounds. Utilisable une fois par rencontre.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1190,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

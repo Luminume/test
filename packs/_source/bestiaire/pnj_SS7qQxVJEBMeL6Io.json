@@ -1,0 +1,194 @@
+{
+  "_id": "SS7qQxVJEBMeL6Io",
+  "_key": "!actors!SS7qQxVJEBMeL6Io",
+  "name": "Le Prélat des Cendres",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+2"
+      },
+      "adresse": {
+        "code": "2D+1"
+      },
+      "puissance": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "2D+2"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "4D+1"
+      }
+    },
+    "movement": "5",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Chef des Illuminés, ancien pasteur (peut-être). Endurance : résistance à la chaleur par habitude ; Sciences occultes : interprétation déformée ; charisme messianique.\n▸ Voix qui apaise : +2D en Persuasion face à des gens en détresse ou en deuil.\n▸ Conviction totale : immunisé à la peur et à l'intimidation.\n▸ Négociation possible (MJ) : seule porte d'entrée non violente vers le pont Ouest.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "NoC3TFrkdrE0nDmZ",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "8AOmQFiI6Z36BtIR",
+      "_key": "!actors.items!SS7qQxVJEBMeL6Io.8AOmQFiI6Z36BtIR",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "CPEFBo4gLxdGbL9k",
+      "_key": "!actors.items!SS7qQxVJEBMeL6Io.CPEFBo4gLxdGbL9k",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Sciences occultes",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "DFAyztE5NfHrql2o",
+      "_key": "!actors.items!SS7qQxVJEBMeL6Io.DFAyztE5NfHrql2o",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Persuasion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "loI7m3iQf6rCCTop",
+      "_key": "!actors.items!SS7qQxVJEBMeL6Io.loI7m3iQf6rCCTop",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Volonté",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "2ln8233oCfbeHM2J",
+      "_key": "!actors.items!SS7qQxVJEBMeL6Io.2ln8233oCfbeHM2J",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Torche rituelle",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "2D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Toujours allumée. Symbole autant qu'arme."
+      }
+    },
+    {
+      "_id": "rplTAWE5jLelXY4f",
+      "_key": "!actors.items!SS7qQxVJEBMeL6Io.rplTAWE5jLelXY4f",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Lance-flammes improvisé",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes",
+        "damage": "4D",
+        "price": "",
+        "ammo": {
+          "value": 1,
+          "max": 1
+        },
+        "range": {
+          "short": "courte",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Bricolé avec de l'équipement de chantier. 1 utilisation par scène (recharge)."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Le Prélat des Cendres",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

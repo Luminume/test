@@ -1,0 +1,27 @@
+{
+  "_id": "MxOTJZ05b9B65O0O",
+  "_key": "!items!MxOTJZ05b9B65O0O",
+  "name": "Manipulation de la souffrance",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Peut amplifier la douleur d'une blessure existante. La cible perd une action et subit -2D pendant 1 round. Volonté diff. 15 pour résister.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1550,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

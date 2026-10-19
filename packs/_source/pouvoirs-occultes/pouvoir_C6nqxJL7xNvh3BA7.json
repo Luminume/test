@@ -1,0 +1,27 @@
+{
+  "_id": "C6nqxJL7xNvh3BA7",
+  "_key": "!items!C6nqxJL7xNvh3BA7",
+  "name": "Invocation partielle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Une fois par rencontre, peut appeler une manifestation partielle de Paresse dans la zone — perturbation sensorielle massive dans 30m de rayon, tous les tests de Volonté augmentent de +4 en difficulté pendant 2 rounds.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1600,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

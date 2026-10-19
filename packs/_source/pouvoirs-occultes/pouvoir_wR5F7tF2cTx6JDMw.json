@@ -1,0 +1,27 @@
+{
+  "_id": "wR5F7tF2cTx6JDMw",
+  "_key": "!items!wR5F7tF2cTx6JDMw",
+  "name": "Résistance naturelle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Immunisée aux mutations et à l'infection. Les poisons font la moitié des dégâts.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1270,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

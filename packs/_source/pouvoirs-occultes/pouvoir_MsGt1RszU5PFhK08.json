@@ -1,0 +1,27 @@
+{
+  "_id": "MsGt1RszU5PFhK08",
+  "_key": "!items!MsGt1RszU5PFhK08",
+  "name": "Onde de rejet",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Repousse toutes les créatures à moins de 8m de lui de 5m en arrière. Force diff. 18 pour résister.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1170,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

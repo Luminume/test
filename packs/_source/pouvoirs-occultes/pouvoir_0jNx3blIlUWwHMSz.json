@@ -1,0 +1,27 @@
+{
+  "_id": "0jNx3blIlUWwHMSz",
+  "_key": "!items!0jNx3blIlUWwHMSz",
+  "name": "Lien d'Ancien",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Peut se lier à un humain à volonté élevée. Tant que le lien tient, elle ressent ce qu'il ressent et sait où il se trouve. Le lien se brise sur un test de Volonté diff. 19.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1590,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

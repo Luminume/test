@@ -1,0 +1,27 @@
+{
+  "_id": "4TFhFayt3z0r79dE",
+  "_key": "!items!4TFhFayt3z0r79dE",
+  "name": "Sens de la corruption",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Perçoit le niveau d'influence de Paresse sur tout être vivant à moins de 20m. Sait qui est le plus corrompu dans un groupe.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1250,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

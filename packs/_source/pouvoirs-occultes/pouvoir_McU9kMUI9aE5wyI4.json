@@ -1,0 +1,27 @@
+{
+  "_id": "McU9kMUI9aE5wyI4",
+  "_key": "!items!McU9kMUI9aE5wyI4",
+  "name": "Camouflage naturel",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Se fond dans tout environnement naturel (forêt, eau, roc). Perception diff. 22 pour la repérer.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1290,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

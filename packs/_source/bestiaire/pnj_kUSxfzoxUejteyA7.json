@@ -1,0 +1,284 @@
+{
+  "_id": "kUSxfzoxUejteyA7",
+  "_key": "!actors!kUSxfzoxUejteyA7",
+  "name": "Jared Conery",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "4D+2"
+      },
+      "adresse": {
+        "code": "3D+1"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "1D+2"
+      },
+      "perception": {
+        "code": "3D+2"
+      },
+      "presence": {
+        "code": "2D"
+      }
+    },
+    "movement": "8 (+2 en environnement vertical)",
+    "damageBonus": "1D",
+    "painless": false,
+    "notes": "22 ans, éclaireur, frère de Mila.\n▸ Premier coup : dans une embuscade qu'il a repérée, gagne l'initiative et +1D aux dégâts de sa première attaque.\n▸ Reconnaissance silencieuse : explore une zone dangereuse avant le groupe (narratif).",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "rvlyTT0YwzHUIwCu",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "jHWX8dW7w70g6zjX",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.jHWX8dW7w70g6zjX",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Acrobaties",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Ykmtwaf7TqRMEYSX",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.Ykmtwaf7TqRMEYSX",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "JOXKHgf35gJVJ5vN",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.JOXKHgf35gJVJ5vN",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Discrétion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "wJjuNuEyw91BgfAI",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.wJjuNuEyw91BgfAI",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Dextérité",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "7lIJCbK6UX6Bn1Fi",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.7lIJCbK6UX6Bn1Fi",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "pFfdg5QACz1V9Dkt",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.pFfdg5QACz1V9Dkt",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Pister",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "nS4j6qAVSJxFZHzg",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.nS4j6qAVSJxFZHzg",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Chercher",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Kb84lIfO8rnhymiw",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.Kb84lIfO8rnhymiw",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Connaissance de la rue",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "nKS3lQaCSCCTlxBC",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.nKS3lQaCSCCTlxBC",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Volonté",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "9f3W1UpZRN9VWErM",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.9f3W1UpZRN9VWErM",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 90,
+      "name": "Couteau de combat",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "+1D+1",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme principale et de prédilection."
+      }
+    },
+    {
+      "_id": "JT90KRgGensJCpx0",
+      "_key": "!actors.items!kUSxfzoxUejteyA7.JT90KRgGensJCpx0",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 100,
+      "name": "Couteaux de lancer (x3)",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "lancer",
+        "category": "Attaques naturelles",
+        "damage": "+1",
+        "price": "",
+        "ammo": {
+          "value": 3,
+          "max": 3
+        },
+        "range": {
+          "short": "courte",
+          "medium": "moyenne",
+          "long": ""
+        },
+        "notes": "Récupérables après le combat si la scène le permet."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Jared Conery",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

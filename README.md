@@ -58,6 +58,10 @@ et contenir `system.json`), puis relancer Foundry.
   « Partir de cet archétype » pour copier un pré-tiré.
 - Compendiums : **Archétypes** (les 10 pré-tirés du livre), **Bestiaire (MJ)** (zombie de Phase 1 du livre,
   les 22 créatures du Bestiaire II de la campagne, profils maison, véhicules), **Aide-mémoire**.
+- **PNJ principaux** de la campagne (Beans en trois phases et sa garde, les Illuminés, le groupe Macbury) et
+  **Péchés / Anciens secondaires** avec un **profil PV** (Points de Vie, seuils de blessure, malus automatiques)
+  et leurs **71 pouvoirs occultes** intégrés (étiquettes Campagne, PNJ et nom), aussi présents dans la
+  compendie des pouvoirs.
 - **Hordes** : case « Horde » sur les PNJ (nombre, +5 toutes les N créatures) ; le bonus est ajouté aux jets
   et chaque niveau de blessure réduit la horde d'environ 20 %.
 

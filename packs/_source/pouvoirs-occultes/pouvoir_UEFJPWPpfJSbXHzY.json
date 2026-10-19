@@ -1,0 +1,27 @@
+{
+  "_id": "UEFJPWPpfJSbXHzY",
+  "_key": "!items!UEFJPWPpfJSbXHzY",
+  "name": "Disparition totale",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Envie",
+    "cost": "",
+    "mechanic": "Peut devenir entièrement invisible pendant 2 rounds. Tout le monde perd sa trace. N'attaque pas pendant la disparition — se repositionne uniquement.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1080,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

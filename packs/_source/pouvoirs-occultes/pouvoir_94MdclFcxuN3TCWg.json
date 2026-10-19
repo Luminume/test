@@ -1,0 +1,27 @@
+{
+  "_id": "94MdclFcxuN3TCWg",
+  "_key": "!items!94MdclFcxuN3TCWg",
+  "name": "Infiltration des rêves",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Sur une cible endormie à moins de 20m, peut tisser un rêve orienté — lui faire croire une information fausse ou amplifier une peur existante.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1540,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

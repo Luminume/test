@@ -497,3 +497,11 @@
 
 .zc-horde-bonus { font-weight: 800; color: var(--zc-blood); align-self: center; }
 .zc-pnj .zc-field.small input { width: 48px; }
+
+/* --- Profil PV ------------------------------------------- */
+
+.zc-hp-state { font-weight: 800; margin: 4px 0 0; }
+.zc-hp-state.zc-hp-1 { color: #8a5a12; }
+.zc-hp-state.zc-hp-2 { color: var(--zc-blood); }
+.zc-hp-state.zc-hp-3 { color: #2a0c25; }
+.zc-hp .zc-field.small input { width: 52px; }

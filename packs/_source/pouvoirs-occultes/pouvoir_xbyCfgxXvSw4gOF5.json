@@ -1,0 +1,27 @@
+{
+  "_id": "xbyCfgxXvSw4gOF5",
+  "_key": "!items!xbyCfgxXvSw4gOF5",
+  "name": "Inertie",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Peut immobiliser une cible sans contact — force gravitationnelle localisée. Athlétisme diff. 20 pour se libérer.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1130,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

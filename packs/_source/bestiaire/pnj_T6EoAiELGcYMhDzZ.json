@@ -1,0 +1,281 @@
+{
+  "_id": "T6EoAiELGcYMhDzZ",
+  "_key": "!actors!T6EoAiELGcYMhDzZ",
+  "name": "Envie",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "5D+1"
+      },
+      "puissance": {
+        "code": "4D"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "hp": {
+      "enabled": true,
+      "value": 32,
+      "max": 32,
+      "thresholds": "9/18/27"
+    },
+    "notes": "Profil PV du bestiaire de la campagne : PV 32, Résistance 4D, Attaque 5D+1, Défense 5D+2, Initiative 5D+1, seuils 9/18/27.\nConversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. Adresse, Connaissances, Perception et Présence non données : 3D par défaut.\nL'Ombre souriante : masque peint d'un sourire, a perdu la voix. Observe, cartographie, élimine les perturbateurs discrets."
+  },
+  "folder": "DnNttdTkXlmtC9NW",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "B1FOIhslsnT8oWJA",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.B1FOIhslsnT8oWJA",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (attaque)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "udxIgHNFt1ptsI0e",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.udxIgHNFt1ptsI0e",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive (défense)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "IvUsnYe8oUnzM9Ur",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.IvUsnYe8oUnzM9Ur",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Fouet d'ombre",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "4D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "6 m",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Peut saisir une arme ou désarmer (Force diff. 15 pour résister)."
+      }
+    },
+    {
+      "_id": "W3H45aBgDCIDKWQy",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.W3H45aBgDCIDKWQy",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Impact d'ombre",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "3D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Contondant, peut projeter la cible (Athlétisme diff. 14)."
+      }
+    },
+    {
+      "_id": "N0WEVlHlgFF70dxN",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.N0WEVlHlgFF70dxN",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.O0PSAefI1CW5rdBD"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Manteau d'ombre",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Envie",
+        "cost": "",
+        "mechanic": "Peut se fondre dans toute ombre de taille humaine. Perception diff. 18 pour le détecter.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "qSbakxCEGXlPpoGT",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.qSbakxCEGXlPpoGT",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.Gtbp7VkpolrDk9DY"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Silence absolu",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Envie",
+        "cost": "",
+        "mechanic": "Ses déplacements ne produisent aucun son. Furtivité automatiquement réussie si les conditions le permettent.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "9IHGFsqHVFA1jyHY",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.9IHGFsqHVFA1jyHY",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.z5MRwAcacIdj6Dxb"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Fouet et bouclier",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Envie",
+        "cost": "",
+        "mechanic": "Peut utiliser les ombres comme fouets (attaque) ou les densifier en bouclier (+2D à la Défense pendant un round). Choisir l'un ou l'autre par round.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "q8xzxi74bw03wQE2",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.q8xzxi74bw03wQE2",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.JMYXz2XZFAKZjstc"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Absorption d'impact",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Envie",
+        "cost": "",
+        "mechanic": "Peut absorber une attaque physique dans l'ombre. Annule une attaque par combat. L'ombre autour de lui se contracte visiblement.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "HMhkjKnvZzb8lFA0",
+      "_key": "!actors.items!T6EoAiELGcYMhDzZ.HMhkjKnvZzb8lFA0",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.UEFJPWPpfJSbXHzY"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Disparition totale",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Envie",
+        "cost": "",
+        "mechanic": "Peut devenir entièrement invisible pendant 2 rounds. Tout le monde perd sa trace. N'attaque pas pendant la disparition — se repositionne uniquement.",
+        "narrative": "",
+        "revealed": false
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Envie",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "hp"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "kh4Xy5KfeKK9m2wX",
+  "_key": "!items!kh4Xy5KfeKK9m2wX",
+  "name": "Gel du temps local",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Peut suspendre une créature dans le temps pendant 1 round. Cette créature ne peut agir. Utilisable 2×/combat.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1150,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

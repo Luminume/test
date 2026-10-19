@@ -1,0 +1,248 @@
+{
+  "_id": "ca7sbtdAwRCQjRvp",
+  "_key": "!actors!ca7sbtdAwRCQjRvp",
+  "name": "Vlad Roubanovitch",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+2"
+      },
+      "adresse": {
+        "code": "3D+1"
+      },
+      "puissance": {
+        "code": "4D+2"
+      },
+      "connaissances": {
+        "code": "1D+2"
+      },
+      "perception": {
+        "code": "2D+1"
+      },
+      "presence": {
+        "code": "2D+2"
+      }
+    },
+    "movement": "6",
+    "damageBonus": "3D",
+    "painless": false,
+    "notes": "37 ans, la force du groupe, protecteur de Mila.\n▸ Mur humain : se place pour couvrir un allié.\n▸ Polyvalence : aucune pénalité de changement d'arme en combat.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "rvlyTT0YwzHUIwCu",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "bFgWH8FC6shLIbLJ",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.bFgWH8FC6shLIbLJ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "lTkF2KptmF4FGCtY",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.lTkF2KptmF4FGCtY",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "hkEVQjyswJeMXKyP",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.hkEVQjyswJeMXKyP",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Dextérité",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "b1SsrIqFOES5InfG",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.b1SsrIqFOES5InfG",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "xo5bCAkwLh8Egami",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.xo5bCAkwLh8Egami",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Soulever",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "uGdccRYJdrAi4Imj",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.uGdccRYJdrAi4Imj",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "B02k0TZobifezAoT",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.B02k0TZobifezAoT",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Volonté",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Y99xhICg7tQvBCQs",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.Y99xhICg7tQvBCQs",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Fusil d'assaut (pillé policier/SWAT)",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes",
+        "damage": "4D+2",
+        "price": "",
+        "ammo": {
+          "value": 30,
+          "max": 30
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Pièce maîtresse du groupe. Munitions précieuses."
+      }
+    },
+    {
+      "_id": "aSfpzlwFYYuq4oVM",
+      "_key": "!actors.items!ca7sbtdAwRCQjRvp.aSfpzlwFYYuq4oVM",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Machette",
+      "type": "arme",
+      "img": "icons/svg/sword.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Armes de mêlée",
+        "damage": "+1D+2",
+        "price": "$20",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Plus de 60 cm : modificateur d'encombrement possible.\nLes dégâts s'ajoutent au bonus aux dégâts du porteur."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Vlad Roubanovitch",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

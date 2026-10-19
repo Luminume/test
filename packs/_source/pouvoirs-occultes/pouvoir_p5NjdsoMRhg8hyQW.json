@@ -1,0 +1,27 @@
+{
+  "_id": "p5NjdsoMRhg8hyQW",
+  "_key": "!items!p5NjdsoMRhg8hyQW",
+  "name": "Frénésie de chair",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Gourmandise",
+    "cost": "",
+    "mechanic": "Si une cible qu'il a blessée est à portée, il peut faire une attaque bonus gratuite en fin de round. Une seule fois par round.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 930,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

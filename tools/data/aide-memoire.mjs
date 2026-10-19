@@ -91,6 +91,20 @@ export const PAGES = [
 </ul>`
   },
   {
+    name: "Profil PV (Péchés, Anciens)",
+    content: `
+<h2>Profil PV du bestiaire de la campagne</h2>
+<p>Les Péchés et les Anciens utilisent des Points de Vie et trois seuils de blessure (ex. 8/16/24).</p>
+<ul>
+  <li><em>Encaisser des dégâts</em> : jet de Résistance (Puissance) ; ce qui dépasse est retiré des PV.</li>
+  <li>Dégâts cumulés sous le 1er seuil : aucun malus ; entre le 1er et le 2e : −1D ; entre le 2e et le 3e : −2D ;
+    au-delà du 3e : hors combat. Les malus s'appliquent automatiquement aux jets.</li>
+  <li>Attaque et Défense sont des compétences « Bagarre (attaque) » et « Esquive (défense) » ; l'Initiative est l'Agilité.</li>
+  <li>Régénérations (Gourmandise, Greed, Jah'ste) : ajuster les PV à la main sur la fiche.</li>
+  <li>Les pouvoirs occultes ignorent la résistance physique sauf indication contraire ; un test de Volonté reste possible contre les effets mentaux.</li>
+</ul>`
+  },
+  {
     name: "Véhicules",
     content: `
 <h2>Dégâts aux véhicules (p. 52)</h2>

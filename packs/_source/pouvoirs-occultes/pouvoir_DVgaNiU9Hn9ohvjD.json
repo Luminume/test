@@ -1,0 +1,27 @@
+{
+  "_id": "DVgaNiU9Hn9ohvjD",
+  "_key": "!items!DVgaNiU9Hn9ohvjD",
+  "name": "Tisser les ombres",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Luxure",
+    "cost": "",
+    "mechanic": "Peut créer des illusions visuelles et auditives dans un rayon de 20m. Les hallucinations durent jusqu'à la fin de la scène ou jusqu'à un test de Volonté réussi (diff. 14).",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 940,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "DRQiSUPB4plIMGAa",
+  "_key": "!items!DRQiSUPB4plIMGAa",
+  "name": "Déni de réalité",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Luxure",
+    "cost": "",
+    "mechanic": "Une fois par combat, peut annuler un coup qui l'aurait réduite à 0 PV. Elle tombe à 1 PV à la place. Utilisable une seule fois par rencontre.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 980,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

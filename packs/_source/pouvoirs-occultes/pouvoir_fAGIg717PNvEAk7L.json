@@ -1,0 +1,27 @@
+{
+  "_id": "fAGIg717PNvEAk7L",
+  "_key": "!items!fAGIg717PNvEAk7L",
+  "name": "Régénération primaire",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Gourmandise",
+    "cost": "",
+    "mechanic": "Récupère 2 PV à chaque début de son tour tant qu'il est en dessous de son seuil 1.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 920,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

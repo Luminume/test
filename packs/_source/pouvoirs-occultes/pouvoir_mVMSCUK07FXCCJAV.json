@@ -1,0 +1,27 @@
+{
+  "_id": "mVMSCUK07FXCCJAV",
+  "_key": "!items!mVMSCUK07FXCCJAV",
+  "name": "Regard de Paresse",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Son regard direct déclenche une hallucination liée au trauma de la cible (1 round). -2D à toutes les actions ce tour. Volonté diff. 14 pour résister.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1520,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

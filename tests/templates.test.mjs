@@ -160,3 +160,11 @@ test("fiches véhicule et groupe", () => {
   const empty = render("templates/actor/groupe.hbs", { actor: { name: "Vide" }, system: {}, members: [] });
   assert.ok(empty.includes("Dépose des acteurs ici"));
 });
+
+test("fiche PNJ : profil PV", () => {
+  const ctx = { ...actorContext(), showPowers: true };
+  ctx.system = { ...ctx.system, hp: { enabled: true, value: 20, max: 28, thresholds: "8/16/24", level: 1, label: "Blessé légèrement", taken: 8 }, horde: {} };
+  const html = render("templates/actor/pnj.hbs", ctx);
+  assert.ok(html.includes("Points de Vie") && html.includes("Blessé légèrement") && html.includes('name="system.hp.thresholds"'));
+  assert.ok(!html.includes('data-action="setWound"'));
+});

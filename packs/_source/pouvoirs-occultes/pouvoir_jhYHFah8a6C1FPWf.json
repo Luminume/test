@@ -1,0 +1,27 @@
+{
+  "_id": "jhYHFah8a6C1FPWf",
+  "_key": "!items!jhYHFah8a6C1FPWf",
+  "name": "Voix de Paresse",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Sa voix transmet une fatigue douce. Toute cible qui l'écoute plus de 30 secondes doit réussir Volonté diff. 12 ou subir -1D à sa prochaine action.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1480,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

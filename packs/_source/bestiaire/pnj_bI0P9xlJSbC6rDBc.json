@@ -1,0 +1,281 @@
+{
+  "_id": "bI0P9xlJSbC6rDBc",
+  "_key": "!actors!bI0P9xlJSbC6rDBc",
+  "name": "Luxure",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "4D+2"
+      },
+      "puissance": {
+        "code": "4D"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "hp": {
+      "enabled": true,
+      "value": 36,
+      "max": 36,
+      "thresholds": "10/20/30"
+    },
+    "notes": "Profil PV du bestiaire de la campagne : PV 36, Résistance 4D, Attaque 3D+2, Défense 5D+1, Initiative 4D+2, seuils 10/20/30.\nConversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. Adresse, Connaissances, Perception et Présence non données : 3D par défaut.\nL'Araignée, tisseuse d'illusions. Apparence féminine, pattes arachnéennes dans le dos. Ne combat pas directement : piège, attire, délègue."
+  },
+  "folder": "DnNttdTkXlmtC9NW",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "aMBvhocB3XH2VBsd",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.aMBvhocB3XH2VBsd",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (attaque)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "-1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "aBfjbAuT9Kvvpc5p",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.aBfjbAuT9Kvvpc5p",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive (défense)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "3vqbnDYJBChp5cwN",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.3vqbnDYJBChp5cwN",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Pattes arachnéennes",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "4D+1",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "3 m",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Peut agripper (Athlétisme diff. 16 pour se libérer)."
+      }
+    },
+    {
+      "_id": "4uZ4wgDnQ42xxmQQ",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.4uZ4wgDnQ42xxmQQ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Mandibules",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "5D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Seulement sur une cible immobilisée. Dégâts perforants."
+      }
+    },
+    {
+      "_id": "H3CGYeLQFDnNa10t",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.H3CGYeLQFDnNa10t",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.DVgaNiU9Hn9ohvjD"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Tisser les ombres",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Luxure",
+        "cost": "",
+        "mechanic": "Peut créer des illusions visuelles et auditives dans un rayon de 20m. Les hallucinations durent jusqu'à la fin de la scène ou jusqu'à un test de Volonté réussi (diff. 14).",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "xcnmmIYlPXDd6LlK",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.xcnmmIYlPXDd6LlK",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.r9imUthapFDHLqAh"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Beauté paralysante",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Luxure",
+        "cost": "",
+        "mechanic": "Toute créature qui la regarde directement doit réussir un test de Volonté (diff. 12) ou perdre son action suivante.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "bF2qMVedFBA3HkeH",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.bF2qMVedFBA3HkeH",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.HfjEpINGNyAlGGBX"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Toile d'ombre",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Luxure",
+        "cost": "",
+        "mechanic": "Peut immobiliser une cible avec une toile tissée d'obscurité. Athlétisme diff. 17 pour se libérer. Utilisable 2×/combat.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "vizflXQRe2mHHqXx",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.vizflXQRe2mHHqXx",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.gWxoy28Xzor92z1A"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Marionnettes",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Luxure",
+        "cost": "",
+        "mechanic": "Peut prendre le contrôle d'un humain exposé durablement à ses illusions (scène entière + échec Volonté diff. 15). La marionnette agit à son initiative.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "VGAOgIZEPJjEBIEC",
+      "_key": "!actors.items!bI0P9xlJSbC6rDBc.VGAOgIZEPJjEBIEC",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.DRQiSUPB4plIMGAa"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Déni de réalité",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Luxure",
+        "cost": "",
+        "mechanic": "Une fois par combat, peut annuler un coup qui l'aurait réduite à 0 PV. Elle tombe à 1 PV à la place. Utilisable une seule fois par rencontre.",
+        "narrative": "",
+        "revealed": false
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Luxure",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "hp"
+    }
+  }
+}

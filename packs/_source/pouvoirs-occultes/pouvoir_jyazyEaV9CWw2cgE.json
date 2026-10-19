@@ -1,0 +1,27 @@
+{
+  "_id": "jyazyEaV9CWw2cgE",
+  "_key": "!items!jyazyEaV9CWw2cgE",
+  "name": "Sceau d'observateur",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Peut marquer mentalement un PJ — sait en permanence où il se trouve dans la ville.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1180,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

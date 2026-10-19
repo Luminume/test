@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   woundFromMargin, nextWoundLevel, damageBonusPips, movement, outcome, advancementCost, nextSkillBonus,
-  accoutumanceTier, accoutumanceEvents, powerCost, vehicleDamageFromMargin, nextVehicleDamage, creationReport, nextAccoutumanceDifficulty, hordeBonus, hordeAfterWounds
+  accoutumanceTier, accoutumanceEvents, powerCost, vehicleDamageFromMargin, nextVehicleDamage, creationReport, nextAccoutumanceDifficulty, hordeBonus, hordeAfterWounds, parseThresholds, hpLevel
 } from "../module/rules.mjs";
 
 test("table des niveaux de blessure (p. 63)", () => {
@@ -107,4 +107,10 @@ test("règle de horde (Bestiaire II)", () => {
   assert.equal(hordeAfterWounds(25, 1), 20);  // −20 % par niveau
   assert.equal(hordeAfterWounds(25, 2), 16);
   assert.equal(hordeAfterWounds(25, 0), 25);
+});
+
+test("profil PV : seuils de blessure", () => {
+  assert.deepEqual(parseThresholds("8 / 16 / 24"), [8, 16, 24]);
+  const t = [8, 16, 24];
+  assert.deepEqual([0, 7, 8, 15, 16, 24, 40].map(d => hpLevel(d, t)), [0, 0, 1, 1, 2, 3, 3]);
 });

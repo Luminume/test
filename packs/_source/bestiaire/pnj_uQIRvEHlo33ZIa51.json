@@ -1,0 +1,306 @@
+{
+  "_id": "uQIRvEHlo33ZIa51",
+  "_key": "!actors!uQIRvEHlo33ZIa51",
+  "name": "Jane Macbury",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+1"
+      },
+      "adresse": {
+        "code": "3D+2"
+      },
+      "puissance": {
+        "code": "3D+1"
+      },
+      "connaissances": {
+        "code": "2D+2"
+      },
+      "perception": {
+        "code": "3D+2"
+      },
+      "presence": {
+        "code": "3D+2"
+      }
+    },
+    "movement": "6",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "35 ans, ex-policière, cheffe du groupe. Connaissances : tactique, droit, procédures.\n▸ Commandement tactique : un ordre clair donne +1D à la prochaine action d'un allié qui le suit (une fois par round).\n▸ Lecture de terrain : +2D en Perception pour repérer une embuscade, une issue ou une faiblesse structurelle.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "rvlyTT0YwzHUIwCu",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "2PE4ixCE5IsCIKe0",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.2PE4ixCE5IsCIKe0",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Esquive",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "NpnztHTC6x4CipAA",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.NpnztHTC6x4CipAA",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "JXYGmmEhqXtnSUwy",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.JXYGmmEhqXtnSUwy",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "b4f7ND4R8Cfrihng",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.b4f7ND4R8Cfrihng",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Tp2LZdwEREqf0eba",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.Tp2LZdwEREqf0eba",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Investigation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "BchDJml5FFVXBdCH",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.BchDJml5FFVXBdCH",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Connaissance de la rue",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "RRWf2xqe9LBx5ozD",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.RRWf2xqe9LBx5ozD",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "m7EnSvCb6LhOmGzQ",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.m7EnSvCb6LhOmGzQ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Persuasion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "B6VmBY3iww2yV2z2",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.B6VmBY3iww2yV2z2",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Volonté",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "JAsssKI0sdjLdiIL",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.JAsssKI0sdjLdiIL",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 90,
+      "name": "Pistolet de service (Glock)",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes",
+        "damage": "3D+1",
+        "price": "",
+        "ammo": {
+          "value": 17,
+          "max": 17
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Munitions limitées (ressource narrative)."
+      }
+    },
+    {
+      "_id": "e1CHU7hKikqH322Y",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.e1CHU7hKikqH322Y",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 100,
+      "name": "Matraque télescopique",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Privilégie le non-létal sur les humains."
+      }
+    },
+    {
+      "_id": "l8ZMQDPiJgXuj6Su",
+      "_key": "!actors.items!uQIRvEHlo33ZIa51.l8ZMQDPiJgXuj6Su",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 110,
+      "name": "Gilet pare-balles (police)",
+      "type": "equipement",
+      "img": "icons/svg/shield.svg",
+      "system": {
+        "category": "Protections",
+        "quantity": 1,
+        "protection": "+1D",
+        "availability": "",
+        "price": "",
+        "equipped": true,
+        "notes": "Contre les armes à feu uniquement : à retirer du jet de résistance sinon."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Jane Macbury",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

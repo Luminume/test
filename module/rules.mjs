@@ -149,3 +149,13 @@ export function hordeAfterWounds(count, levels) {
   if (levels <= 0) return count;
   return Math.max(0, Math.round(count * 0.8 ** levels));
 }
+
+/** Seuils « 8/16/24 » → [8, 16, 24]. */
+export function parseThresholds(text) {
+  return String(text ?? "").split(/[^\d]+/).filter(Boolean).map(Number).slice(0, 3);
+}
+
+/** Niveau (0 à 3) du profil PV selon les dégâts cumulés et les trois seuils. */
+export function hpLevel(taken, thresholds) {
+  return thresholds.filter(t => taken >= t).length;
+}

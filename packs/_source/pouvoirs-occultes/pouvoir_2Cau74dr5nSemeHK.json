@@ -1,0 +1,27 @@
+{
+  "_id": "2Cau74dr5nSemeHK",
+  "_key": "!items!2Cau74dr5nSemeHK",
+  "name": "Seuil de douleur élevé",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Colère",
+    "cost": "",
+    "mechanic": "Ignore les pénalités de la première blessure. Continue à agir sans malus jusqu'au seuil 2.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 910,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

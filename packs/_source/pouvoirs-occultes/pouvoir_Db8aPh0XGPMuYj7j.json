@@ -1,0 +1,27 @@
+{
+  "_id": "Db8aPh0XGPMuYj7j",
+  "_key": "!items!Db8aPh0XGPMuYj7j",
+  "name": "Appel de la forêt",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Convoque la faune de la forêt dans un rayon de 200m. 2D6 créatures mutées apparaissent en 2 rounds — elles ne lui obéissent pas, mais s'en prennent à ses assaillants en priorité.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1320,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

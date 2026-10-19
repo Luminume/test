@@ -1,0 +1,27 @@
+{
+  "_id": "EsinVBtxTOEI13iV",
+  "_key": "!items!EsinVBtxTOEI13iV",
+  "name": "Illusion de confiance",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Peut apparaître comme quelqu'un de confiance pour une cible. Pendant 1 scène, la cible ne peut pas la percevoir comme hostile sauf sur preuve directe. Volonté diff. 16 pour résister.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1570,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

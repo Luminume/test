@@ -1,0 +1,27 @@
+{
+  "_id": "eXhoKUPEDuZps7sy",
+  "_key": "!items!eXhoKUPEDuZps7sy",
+  "name": "Effacement",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Sur un humain à 0 PV, peut effacer ses souvenirs récents plutôt que de le tuer. La cible se réveille amnésique de la rencontre.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1200,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

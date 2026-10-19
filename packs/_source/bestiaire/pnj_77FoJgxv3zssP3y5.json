@@ -1,0 +1,176 @@
+{
+  "_id": "77FoJgxv3zssP3y5",
+  "_key": "!actors!77FoJgxv3zssP3y5",
+  "name": "Michael Beans (phase Stable)",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+2"
+      },
+      "adresse": {
+        "code": "2D+2"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D+1"
+      },
+      "presence": {
+        "code": "4D"
+      }
+    },
+    "movement": "6",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Phase Stable (4-5 sur 1D6). Voir la fiche « phase Vulnérable » pour le jet de phase et les particularités.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "b45da0WanAJKOmHK",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "oOkTgzMEHLNawkq1",
+      "_key": "!actors.items!77FoJgxv3zssP3y5.oOkTgzMEHLNawkq1",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "eHQ7C2EHx3m29EzA",
+      "_key": "!actors.items!77FoJgxv3zssP3y5.eHQ7C2EHx3m29EzA",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Persuasion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "z7GWfRTdx15n7Ien",
+      "_key": "!actors.items!77FoJgxv3zssP3y5.z7GWfRTdx15n7Ien",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "9HSHAOvDBm2O3WH9",
+      "_key": "!actors.items!77FoJgxv3zssP3y5.9HSHAOvDBm2O3WH9",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Pistolet automatique",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes",
+        "damage": "3D+1",
+        "price": "",
+        "ammo": {
+          "value": 12,
+          "max": 12
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": ""
+      }
+    },
+    {
+      "_id": "aWV5jm7cGyhLcJQx",
+      "_key": "!actors.items!77FoJgxv3zssP3y5.aWV5jm7cGyhLcJQx",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Mains nues / objet improvisé",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": ""
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Michael Beans (phase Stable)",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

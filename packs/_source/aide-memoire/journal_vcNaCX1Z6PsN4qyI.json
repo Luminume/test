@@ -99,11 +99,30 @@
       }
     },
     {
+      "_id": "m76qcCE62WdNHhes",
+      "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.m76qcCE62WdNHhes",
+      "name": "Profil PV (Péchés, Anciens)",
+      "type": "text",
+      "sort": 600,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h2>Profil PV du bestiaire de la campagne</h2>\n<p>Les Péchés et les Anciens utilisent des Points de Vie et trois seuils de blessure (ex. 8/16/24).</p>\n<ul>\n  <li><em>Encaisser des dégâts</em> : jet de Résistance (Puissance) ; ce qui dépasse est retiré des PV.</li>\n  <li>Dégâts cumulés sous le 1er seuil : aucun malus ; entre le 1er et le 2e : −1D ; entre le 2e et le 3e : −2D ;\n    au-delà du 3e : hors combat. Les malus s'appliquent automatiquement aux jets.</li>\n  <li>Attaque et Défense sont des compétences « Bagarre (attaque) » et « Esquive (défense) » ; l'Initiative est l'Agilité.</li>\n  <li>Régénérations (Gourmandise, Greed, Jah'ste) : ajuster les PV à la main sur la fiche.</li>\n  <li>Les pouvoirs occultes ignorent la résistance physique sauf indication contraire ; un test de Volonté reste possible contre les effets mentaux.</li>\n</ul>",
+        "format": 1
+      },
+      "flags": {},
+      "ownership": {
+        "default": -1
+      }
+    },
+    {
       "_id": "XCyqDAbfHddHAc0w",
       "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.XCyqDAbfHddHAc0w",
       "name": "Véhicules",
       "type": "text",
-      "sort": 600,
+      "sort": 700,
       "title": {
         "show": true,
         "level": 1
@@ -122,7 +141,7 @@
       "_key": "!journal.pages!vcNaCX1Z6PsN4qyI.BxPO3EqsdwekYxYW",
       "name": "Accoutumance et pouvoirs",
       "type": "text",
-      "sort": 700,
+      "sort": 800,
       "title": {
         "show": true,
         "level": 1

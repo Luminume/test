@@ -1,0 +1,854 @@
+[
+  {
+    "name": "Présence dominante",
+    "tier": 1,
+    "mechanic": "Les PNJ hostiles de rang inférieur hésitent à l'attaquer en premier. -1D à leur initiative contre lui.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Colère"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Seuil de douleur élevé",
+    "tier": 1,
+    "mechanic": "Ignore les pénalités de la première blessure. Continue à agir sans malus jusqu'au seuil 2.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Colère"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Régénération primaire",
+    "tier": 1,
+    "mechanic": "Récupère 2 PV à chaque début de son tour tant qu'il est en dessous de son seuil 1.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Gourmandise"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Frénésie de chair",
+    "tier": 1,
+    "mechanic": "Si une cible qu'il a blessée est à portée, il peut faire une attaque bonus gratuite en fin de round. Une seule fois par round.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Gourmandise"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Tisser les ombres",
+    "tier": 1,
+    "mechanic": "Peut créer des illusions visuelles et auditives dans un rayon de 20m. Les hallucinations durent jusqu'à la fin de la scène ou jusqu'à un test de Volonté réussi (diff. 14).",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Luxure"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Beauté paralysante",
+    "tier": 1,
+    "mechanic": "Toute créature qui la regarde directement doit réussir un test de Volonté (diff. 12) ou perdre son action suivante.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Luxure"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Toile d'ombre",
+    "tier": 1,
+    "mechanic": "Peut immobiliser une cible avec une toile tissée d'obscurité. Athlétisme diff. 17 pour se libérer. Utilisable 2×/combat.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Luxure"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Marionnettes",
+    "tier": 2,
+    "mechanic": "Peut prendre le contrôle d'un humain exposé durablement à ses illusions (scène entière + échec Volonté diff. 15). La marionnette agit à son initiative.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Luxure"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Déni de réalité",
+    "tier": 2,
+    "mechanic": "Une fois par combat, peut annuler un coup qui l'aurait réduite à 0 PV. Elle tombe à 1 PV à la place. Utilisable une seule fois par rencontre.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Luxure"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Corps composite",
+    "tier": 1,
+    "mechanic": "Immunisé aux effets de peur et aux tests de moral. Les visages sur sa peau hurlent pour lui.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Greed"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Régénération massive",
+    "tier": 1,
+    "mechanic": "Récupère 4 PV par tour. Peut être stoppée temporairement par le feu (aucune récupération ce tour-là).",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Greed"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Présence abyssale",
+    "tier": 1,
+    "mechanic": "Toute créature entrant à moins de 5m doit réussir un test de Volonté (diff. 13) ou subir -2D à toutes ses actions ce tour.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Greed"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Moment de lucidité",
+    "tier": 2,
+    "mechanic": "MJ seulement. Dans ses phases conscientes, Greed peut transmettre une information vraie sur Paresse aux PJ. Ce n'est pas un pouvoir de combat — c'est narratif.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Greed"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Absorption",
+    "tier": 2,
+    "mechanic": "Si une cible est réduite à 0 PV en corps à corps, Greed absorbe sa résistance : +1D à sa Résistance jusqu'à la fin du combat. Cumulable jusqu'à +3D.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Greed"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Manteau d'ombre",
+    "tier": 1,
+    "mechanic": "Peut se fondre dans toute ombre de taille humaine. Perception diff. 18 pour le détecter.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Envie"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Silence absolu",
+    "tier": 1,
+    "mechanic": "Ses déplacements ne produisent aucun son. Furtivité automatiquement réussie si les conditions le permettent.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Envie"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Fouet et bouclier",
+    "tier": 1,
+    "mechanic": "Peut utiliser les ombres comme fouets (attaque) ou les densifier en bouclier (+2D à la Défense pendant un round). Choisir l'un ou l'autre par round.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Envie"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Absorption d'impact",
+    "tier": 2,
+    "mechanic": "Peut absorber une attaque physique dans l'ombre. Annule une attaque par combat. L'ombre autour de lui se contracte visiblement.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Envie"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Disparition totale",
+    "tier": 2,
+    "mechanic": "Peut devenir entièrement invisible pendant 2 rounds. Tout le monde perd sa trace. N'attaque pas pendant la disparition — se repositionne uniquement.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Envie"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Présence insurmontable",
+    "tier": 1,
+    "mechanic": "Toute créature à moins de 10m ressent une pression physique. -1D à toutes les actions.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Perception totale",
+    "tier": 1,
+    "mechanic": "Impossible de le surprendre. Perçoit les intentions hostiles avant qu'elles se manifestent.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Corps inaltérable",
+    "tier": 1,
+    "mechanic": "Immunisé aux poisons, maladies, effets de peur et de corruption.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Regard de vérité",
+    "tier": 1,
+    "mechanic": "En regardant un humain dans les yeux, sait s'il ment. Aucun test requis.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Inertie",
+    "tier": 1,
+    "mechanic": "Peut immobiliser une cible sans contact — force gravitationnelle localisée. Athlétisme diff. 20 pour se libérer.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Résistance structurelle",
+    "tier": 1,
+    "mechanic": "Les armes normales font la moitié des dégâts. Seul le feu ou les armes imprégnées de corruption font dégâts complets.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Gel du temps local",
+    "tier": 2,
+    "mechanic": "Peut suspendre une créature dans le temps pendant 1 round. Cette créature ne peut agir. Utilisable 2×/combat.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Distorsion de l'espace",
+    "tier": 2,
+    "mechanic": "Se téléporte jusqu'à 15m dans sa ligne de vue. Utilisable comme réaction à une attaque.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Onde de rejet",
+    "tier": 2,
+    "mechanic": "Repousse toutes les créatures à moins de 8m de lui de 5m en arrière. Force diff. 18 pour résister.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Sceau d'observateur",
+    "tier": 2,
+    "mechanic": "Peut marquer mentalement un PJ — sait en permanence où il se trouve dans la ville.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Le couvercle",
+    "tier": 3,
+    "mechanic": "En combat, peut ériger une barrière spatiale dans un rayon de 30m. Rien n'entre ni ne sort pendant 3 rounds. Utilisable une fois par rencontre.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Effacement",
+    "tier": 3,
+    "mechanic": "Sur un humain à 0 PV, peut effacer ses souvenirs récents plutôt que de le tuer. La cible se réveille amnésique de la rencontre.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Verdict final",
+    "tier": 3,
+    "mechanic": "Attaque unique à plein potentiel : 9D de dégâts sur une cible. Eliah ne l'utilise qu'en dernier recours absolu.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Eliah"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Écoute profonde",
+    "tier": 1,
+    "mechanic": "Entend toute conversation à moins de 500m dans un environnement calme. Dans les égouts, portée réduite à 50m mais traverse les murs.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Pas silencieux",
+    "tier": 1,
+    "mechanic": "Se déplace sans bruit dans tout environnement, quelle que soit la surface.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Indifférence aux blessures",
+    "tier": 1,
+    "mechanic": "Ne montre aucun signe de douleur. Les adversaires ne peuvent pas évaluer son état réel.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Sens de la corruption",
+    "tier": 1,
+    "mechanic": "Perçoit le niveau d'influence de Paresse sur tout être vivant à moins de 20m. Sait qui est le plus corrompu dans un groupe.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Régénération lente",
+    "tier": 1,
+    "mechanic": "Récupère 3 PV par round hors combat.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Résistance naturelle",
+    "tier": 1,
+    "mechanic": "Immunisée aux mutations et à l'infection. Les poisons font la moitié des dégâts.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Désorientation sensorielle",
+    "tier": 2,
+    "mechanic": "Peut inverser la perception d'une cible (droite/gauche, haut/bas) pendant 2 rounds. -3D à toutes ses actions. Volonté diff. 15 pour résister.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Camouflage naturel",
+    "tier": 2,
+    "mechanic": "Se fond dans tout environnement naturel (forêt, eau, roc). Perception diff. 22 pour la repérer.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Répulsion instinctive",
+    "tier": 2,
+    "mechanic": "Les mutants et créatures corrompues fuient sa présence dans un rayon de 15m.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Contre-corruption",
+    "tier": 2,
+    "mechanic": "Peut réduire de 1 point l'influence de Paresse sur une cible humaine. Long contact requis (scène entière). Douloureux pour la cible.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Appel de la forêt",
+    "tier": 3,
+    "mechanic": "Convoque la faune de la forêt dans un rayon de 200m. 2D6 créatures mutées apparaissent en 2 rounds — elles ne lui obéissent pas, mais s'en prennent à ses assaillants en priorité.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Silence total",
+    "tier": 3,
+    "mechanic": "Plonge une zone de 30m de rayon dans un silence absolu pendant 3 rounds. Aucun son ne peut y pénétrer ou en sortir.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Dissolution",
+    "tier": 3,
+    "mechanic": "Peut se dissoudre dans l'environnement naturel et réapparaître en tout point de la forêt ou du lac dans le même round. Utilisable une fois par rencontre.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Jah'ste"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Aura de remords",
+    "tier": 1,
+    "mechanic": "Toute créature consciente à moins de 8m ressent une culpabilité diffuse. -1D aux jets offensifs contre Kôhle.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Connaissance du feu",
+    "tier": 1,
+    "mechanic": "Immunisé aux dégâts de feu et de chaleur. Les flammes ne l'affectent pas.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Vérité partielle",
+    "tier": 1,
+    "mechanic": "Ses paroles portent un poids qui les rend difficiles à ignorer. +2D à tous ses jets de persuasion.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Perception des liens",
+    "tier": 1,
+    "mechanic": "Voit les connexions émotionnelles entre personnes — qui fait confiance à qui, qui craint qui.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Purification au contact",
+    "tier": 1,
+    "mechanic": "Son contact direct peut neutraliser une mutation naissante (seuil 1 de corruption). Douloureux.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Résistance à la corruption",
+    "tier": 1,
+    "mechanic": "Immunisé à l'influence directe de Paresse. Ses rêves sont libres.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Flamme purificatrice",
+    "tier": 2,
+    "mechanic": "Peut créer une flamme qui ne brûle que la corruption et les mutations. Dégâts 5D contre les mutants, 0 dégât contre les humains non corrompus.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Poids du passé",
+    "tier": 2,
+    "mechanic": "Cible une créature consciente — elle revit un souvenir de culpabilité. Immobilisée 1 round. Volonté diff. 14 pour résister. Ne fonctionne pas sur des créatures sans remords.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Guérison imparfaite",
+    "tier": 2,
+    "mechanic": "Peut soigner 10 PV sur une cible humaine. Kôhle perd 5 PV en contrepartie. Il ne peut pas utiliser ce pouvoir sur lui-même.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Vérité brûlante",
+    "tier": 2,
+    "mechanic": "Peut forcer une créature consciente à dire la vérité pendant 1 round. Volonté diff. 17 pour résister.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Incendie contrôlé",
+    "tier": 3,
+    "mechanic": "Déclenche un feu de purification dans une zone de 20m de rayon. Brûle uniquement la corruption et les structures physiques liées à Paresse. Dure 3 rounds. Utilisable une fois.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Confession",
+    "tier": 3,
+    "mechanic": "Sur une cible à 0 PV, peut extraire ses secrets les plus profonds — motivations, peurs, allégeances. Les informations sont vraies. Kôhle déteste utiliser ce pouvoir.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Sacrifice partiel",
+    "tier": 3,
+    "mechanic": "Peut absorber tous les dégâts destinés à un allié dans un rayon de 10m pendant 1 round. Kôhle subit la totalité. Utilisable une seule fois par rencontre.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Kôhle"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Voix de Paresse",
+    "tier": 1,
+    "mechanic": "Sa voix transmet une fatigue douce. Toute cible qui l'écoute plus de 30 secondes doit réussir Volonté diff. 12 ou subir -1D à sa prochaine action.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Cartographie des traumas",
+    "tier": 1,
+    "mechanic": "Perçoit les blessures psychologiques profondes de tout humain à moins de 5m. Sait exactement comment les toucher.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Aura d'éveil",
+    "tier": 1,
+    "mechanic": "Sa présence accélère l'influence de Paresse sur les humains proches. +1 point d'influence par heure passée en sa compagnie.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Immunité aux blessures mineures",
+    "tier": 1,
+    "mechanic": "Les dégâts inférieurs à 5 par attaque ne l'affectent pas.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Regard de Paresse",
+    "tier": 1,
+    "mechanic": "Son regard direct déclenche une hallucination liée au trauma de la cible (1 round). -2D à toutes les actions ce tour. Volonté diff. 14 pour résister.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Résistance absolue à la peur",
+    "tier": 1,
+    "mechanic": "Immunisée à tous les effets de terreur, panique et peur.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Infiltration des rêves",
+    "tier": 2,
+    "mechanic": "Sur une cible endormie à moins de 20m, peut tisser un rêve orienté — lui faire croire une information fausse ou amplifier une peur existante.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Manipulation de la souffrance",
+    "tier": 2,
+    "mechanic": "Peut amplifier la douleur d'une blessure existante. La cible perd une action et subit -2D pendant 1 round. Volonté diff. 15 pour résister.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Canal de Paresse",
+    "tier": 2,
+    "mechanic": "Peut transmettre une fraction de l'influence du Grand Ancien à un humain. +3 points d'influence immédiatement. Douloureux.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Illusion de confiance",
+    "tier": 2,
+    "mechanic": "Peut apparaître comme quelqu'un de confiance pour une cible. Pendant 1 scène, la cible ne peut pas la percevoir comme hostile sauf sur preuve directe. Volonté diff. 16 pour résister.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Éveil forcé",
+    "tier": 3,
+    "mechanic": "En contact direct avec une cible à haute influence (7+), peut déclencher un éveil partiel de Paresse à travers elle — la cible perd le contrôle 1D3 rounds, dégâts collatéraux probables.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Lien d'Ancien",
+    "tier": 3,
+    "mechanic": "Peut se lier à un humain à volonté élevée. Tant que le lien tient, elle ressent ce qu'il ressent et sait où il se trouve. Le lien se brise sur un test de Volonté diff. 19.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  },
+  {
+    "name": "Invocation partielle",
+    "tier": 3,
+    "mechanic": "Une fois par rencontre, peut appeler une manifestation partielle de Paresse dans la zone — perturbation sensorielle massive dans 30m de rayon, tous les tests de Volonté augmentent de +4 en difficulté pendant 2 rounds.",
+    "tags": [
+      "Campagne",
+      "PNJ",
+      "Elah O Ikim"
+    ],
+    "narrative": "",
+    "cost": ""
+  }
+]

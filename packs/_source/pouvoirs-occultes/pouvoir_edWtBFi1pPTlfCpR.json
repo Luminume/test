@@ -1,0 +1,27 @@
+{
+  "_id": "edWtBFi1pPTlfCpR",
+  "_key": "!items!edWtBFi1pPTlfCpR",
+  "name": "Désorientation sensorielle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Peut inverser la perception d'une cible (droite/gauche, haut/bas) pendant 2 rounds. -3D à toutes ses actions. Volonté diff. 15 pour résister.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1280,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

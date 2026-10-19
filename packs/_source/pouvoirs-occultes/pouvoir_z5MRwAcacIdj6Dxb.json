@@ -1,0 +1,27 @@
+{
+  "_id": "z5MRwAcacIdj6Dxb",
+  "_key": "!items!z5MRwAcacIdj6Dxb",
+  "name": "Fouet et bouclier",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Envie",
+    "cost": "",
+    "mechanic": "Peut utiliser les ombres comme fouets (attaque) ou les densifier en bouclier (+2D à la Défense pendant un round). Choisir l'un ou l'autre par round.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1060,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

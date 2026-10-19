@@ -1,0 +1,27 @@
+{
+  "_id": "H2EFMdDB6UCTsXDO",
+  "_key": "!items!H2EFMdDB6UCTsXDO",
+  "name": "Dissolution",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Peut se dissoudre dans l'environnement naturel et réapparaître en tout point de la forêt ou du lac dans le même round. Utilisable une fois par rencontre.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1340,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

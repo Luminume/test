@@ -1,0 +1,27 @@
+{
+  "_id": "XzoG21TlGTrkzelK",
+  "_key": "!items!XzoG21TlGTrkzelK",
+  "name": "Flamme purificatrice",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Kôhle",
+    "cost": "",
+    "mechanic": "Peut créer une flamme qui ne brûle que la corruption et les mutations. Dégâts 5D contre les mutants, 0 dégât contre les humains non corrompus.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1410,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

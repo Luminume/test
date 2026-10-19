@@ -1,0 +1,27 @@
+{
+  "_id": "vOzfjVJ6L5AVZVAh",
+  "_key": "!items!vOzfjVJ6L5AVZVAh",
+  "name": "Aura d'éveil",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Sa présence accélère l'influence de Paresse sur les humains proches. +1 point d'influence par heure passée en sa compagnie.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1500,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "_id": "ubEAap5BaJ31p5GK",
+  "_key": "!actors!ubEAap5BaJ31p5GK",
+  "name": "Elah O Ikim",
+  "type": "pnj",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "6D"
+      },
+      "puissance": {
+        "code": "7D"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "hp": {
+      "enabled": true,
+      "value": 76,
+      "max": 76,
+      "thresholds": "21/42/63"
+    },
+    "notes": "Profil PV du bestiaire de la campagne : PV 76, Résistance 7D, Attaque 6D+2, Défense 6D+1, Initiative 6D, seuils 21/42/63.\nConversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. Adresse, Connaissances, Perception et Présence non données : 3D par défaut.\nAucun Ancien ne peut attaquer en premier sans attirer l'attention de Paresse : ces statistiques ne s'appliquent que s'il est attaqué. Les Anciens (sauf Elah O Ikim) cherchent à neutraliser, pas à tuer.\n« She who follows ». Fidèle de Paresse, accélératrice de l'éveil. Chaleureuse, curieuse, fascinante — la plus dangereuse. Défend l'éveil, pas sa vie ; utilise les PJ comme leviers. La seule Ancienne qui cherche la mort des PJ."
+  },
+  "folder": "EnUPZYfhqo9EBULp",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "P8nfkneYKNYmjNM4",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.P8nfkneYKNYmjNM4",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (attaque)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "DjcdBGzZYohi4yBH",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.DjcdBGzZYohi4yBH",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive (défense)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "wrXkYLmtpY2QiDXZ",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.wrXkYLmtpY2QiDXZ",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.jhYHFah8a6C1FPWf"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Voix de Paresse",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Sa voix transmet une fatigue douce. Toute cible qui l'écoute plus de 30 secondes doit réussir Volonté diff. 12 ou subir -1D à sa prochaine action.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "hnubBCXEB3FOGihq",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.hnubBCXEB3FOGihq",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.BzDdmmNL86Lwo0HN"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Cartographie des traumas",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Perçoit les blessures psychologiques profondes de tout humain à moins de 5m. Sait exactement comment les toucher.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "RARVWdHeeqJ0azSv",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.RARVWdHeeqJ0azSv",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.vOzfjVJ6L5AVZVAh"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Aura d'éveil",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Sa présence accélère l'influence de Paresse sur les humains proches. +1 point d'influence par heure passée en sa compagnie.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "Df8il2y0uyveClr1",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.Df8il2y0uyveClr1",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.FAswfFjgdjnH6g70"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Immunité aux blessures mineures",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Les dégâts inférieurs à 5 par attaque ne l'affectent pas.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "hiAFuuU5Tl2rKDyF",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.hiAFuuU5Tl2rKDyF",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.mVMSCUK07FXCCJAV"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Regard de Paresse",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Son regard direct déclenche une hallucination liée au trauma de la cible (1 round). -2D à toutes les actions ce tour. Volonté diff. 14 pour résister.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "uMfnIDjRYzzUzDcg",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.uMfnIDjRYzzUzDcg",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.Nl5SHZoIxuciSGYi"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Résistance absolue à la peur",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Immunisée à tous les effets de terreur, panique et peur.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "VU0kd64KYFcUBxcM",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.VU0kd64KYFcUBxcM",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.94MdclFcxuN3TCWg"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Infiltration des rêves",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Sur une cible endormie à moins de 20m, peut tisser un rêve orienté — lui faire croire une information fausse ou amplifier une peur existante.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "XPQlVDFXHzz0VFHP",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.XPQlVDFXHzz0VFHP",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.MxOTJZ05b9B65O0O"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 90,
+      "name": "Manipulation de la souffrance",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Peut amplifier la douleur d'une blessure existante. La cible perd une action et subit -2D pendant 1 round. Volonté diff. 15 pour résister.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "dp0ced0RZ6a7dFlP",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.dp0ced0RZ6a7dFlP",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.WOMz1ujxNnF4CCYu"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 100,
+      "name": "Canal de Paresse",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Peut transmettre une fraction de l'influence du Grand Ancien à un humain. +3 points d'influence immédiatement. Douloureux.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "oDOiMv3KyOqgvEDl",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.oDOiMv3KyOqgvEDl",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.EsinVBtxTOEI13iV"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 110,
+      "name": "Illusion de confiance",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Peut apparaître comme quelqu'un de confiance pour une cible. Pendant 1 scène, la cible ne peut pas la percevoir comme hostile sauf sur preuve directe. Volonté diff. 16 pour résister.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "9t48YlMA7AGVybui",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.9t48YlMA7AGVybui",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.eqMlDdjOpcTLdG9o"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 120,
+      "name": "Éveil forcé",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "En contact direct avec une cible à haute influence (7+), peut déclencher un éveil partiel de Paresse à travers elle — la cible perd le contrôle 1D3 rounds, dégâts collatéraux probables.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "4bzeAiK9PyQEhM3S",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.4bzeAiK9PyQEhM3S",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.0jNx3blIlUWwHMSz"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 130,
+      "name": "Lien d'Ancien",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Peut se lier à un humain à volonté élevée. Tant que le lien tient, elle ressent ce qu'il ressent et sait où il se trouve. Le lien se brise sur un test de Volonté diff. 19.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "Xb0PPOYqrOK4Bcyg",
+      "_key": "!actors.items!ubEAap5BaJ31p5GK.Xb0PPOYqrOK4Bcyg",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.C6nqxJL7xNvh3BA7"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 140,
+      "name": "Invocation partielle",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Elah O Ikim",
+        "cost": "",
+        "mechanic": "Une fois par rencontre, peut appeler une manifestation partielle de Paresse dans la zone — perturbation sensorielle massive dans 30m de rayon, tous les tests de Volonté augmentent de +4 en difficulté pendant 2 rounds.",
+        "narrative": "",
+        "revealed": false
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Elah O Ikim",
+    "texture": {
+      "src": "icons/svg/eye.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "hp"
+    }
+  }
+}

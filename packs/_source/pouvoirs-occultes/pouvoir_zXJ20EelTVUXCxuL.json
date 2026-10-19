@@ -1,0 +1,27 @@
+{
+  "_id": "zXJ20EelTVUXCxuL",
+  "_key": "!items!zXJ20EelTVUXCxuL",
+  "name": "Absorption",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Greed",
+    "cost": "",
+    "mechanic": "Si une cible est réduite à 0 PV en corps à corps, Greed absorbe sa résistance : +1D à sa Résistance jusqu'à la fin du combat. Cumulable jusqu'à +3D.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1030,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

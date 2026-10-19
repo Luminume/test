@@ -1,0 +1,187 @@
+{
+  "_id": "OGKFXI19RlyQvBqD",
+  "_key": "!actors!OGKFXI19RlyQvBqD",
+  "name": "Illuminé",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+1"
+      },
+      "adresse": {
+        "code": "2D"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "1D+2"
+      },
+      "perception": {
+        "code": "2D+1"
+      },
+      "presence": {
+        "code": "2D+2"
+      }
+    },
+    "movement": "5",
+    "damageBonus": "1D",
+    "painless": false,
+    "notes": "Fidèle du Prélat (profil type). Volonté : fidélité au Prélat.\n▸ Détermination collective : +1D aux tests de Volonté tant que le Prélat est visible et en vie.\n▸ Pas de discernement : aucune distinction entre menace réelle et passant (défaut narratif).",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "NoC3TFrkdrE0nDmZ",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "1zeAtQo4OTDPN2a7",
+      "_key": "!actors.items!OGKFXI19RlyQvBqD.1zeAtQo4OTDPN2a7",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "8BDeivlSpauMveXl",
+      "_key": "!actors.items!OGKFXI19RlyQvBqD.8BDeivlSpauMveXl",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Volonté",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Ykq4wTEGNPz0lUKI",
+      "_key": "!actors.items!OGKFXI19RlyQvBqD.Ykq4wTEGNPz0lUKI",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Torche",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "2D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme standard du groupe."
+      }
+    },
+    {
+      "_id": "ciU6LdpPpnHHW39i",
+      "_key": "!actors.items!OGKFXI19RlyQvBqD.ciU6LdpPpnHHW39i",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Bidon d'accélérant + briquet",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "lancer",
+        "category": "Attaques naturelles",
+        "damage": "3D+1",
+        "price": "",
+        "ammo": {
+          "value": 1,
+          "max": 1
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Zone d'effet réduite (2 m). Risque pour l'utilisateur si raté (Agilité diff. 12)."
+      }
+    },
+    {
+      "_id": "wgsBqrqBOf8w14vq",
+      "_key": "!actors.items!OGKFXI19RlyQvBqD.wgsBqrqBOf8w14vq",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Arme de fortune (barre, pioche)",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "melee",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Si à court de feu."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Illuminé",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

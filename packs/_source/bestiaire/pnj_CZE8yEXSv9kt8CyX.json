@@ -1,0 +1,206 @@
+{
+  "_id": "CZE8yEXSv9kt8CyX",
+  "_key": "!actors!CZE8yEXSv9kt8CyX",
+  "name": "Gourmandise",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D"
+      },
+      "puissance": {
+        "code": "3D+2"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "hp": {
+      "enabled": true,
+      "value": 24,
+      "max": 24,
+      "thresholds": "7/14/21"
+    },
+    "notes": "Profil PV du bestiaire de la campagne : PV 24, Résistance 3D+2, Attaque 4D+2, Défense 3D+1, Initiative 3D, seuils 7/14/21.\nConversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. Adresse, Connaissances, Perception et Présence non données : 3D par défaut.\nTyran cannibale. Lucidité décroissante : il sait ce qu'il fait et n'y voit plus de mal."
+  },
+  "folder": "FXgHDIEuyYWP4TiQ",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "EkFbu9U8YktzLRpK",
+      "_key": "!actors.items!CZE8yEXSv9kt8CyX.EkFbu9U8YktzLRpK",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (attaque)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "pgQIUh3mpt5VmFqW",
+      "_key": "!actors.items!CZE8yEXSv9kt8CyX.pgQIUh3mpt5VmFqW",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive (défense)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "l1l9MVL58BdGyWVM",
+      "_key": "!actors.items!CZE8yEXSv9kt8CyX.l1l9MVL58BdGyWVM",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Lame dentée artisanale",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "4D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Déchire plutôt que coupe. +2 aux dégâts si la cible est déjà blessée."
+      }
+    },
+    {
+      "_id": "5xyxlcvwW0zMlnio",
+      "_key": "!actors.items!CZE8yEXSv9kt8CyX.5xyxlcvwW0zMlnio",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Morsure",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "3D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Seulement si désarmé ou en frénésie."
+      }
+    },
+    {
+      "_id": "FWwFeWE0FPE6aWQw",
+      "_key": "!actors.items!CZE8yEXSv9kt8CyX.FWwFeWE0FPE6aWQw",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.fAGIg717PNvEAk7L"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Régénération primaire",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Gourmandise",
+        "cost": "",
+        "mechanic": "Récupère 2 PV à chaque début de son tour tant qu'il est en dessous de son seuil 1.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "UV2qpJG2yCRpmtXh",
+      "_key": "!actors.items!CZE8yEXSv9kt8CyX.UV2qpJG2yCRpmtXh",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.p5NjdsoMRhg8hyQW"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Frénésie de chair",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Gourmandise",
+        "cost": "",
+        "mechanic": "Si une cible qu'il a blessée est à portée, il peut faire une attaque bonus gratuite en fin de round. Une seule fois par round.",
+        "narrative": "",
+        "revealed": false
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Gourmandise",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "hp"
+    }
+  }
+}

@@ -1,6 +1,6 @@
-import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, STARTING, VEHICLE_DAMAGE } from "../config.mjs";
+import { ATTRIBUTES, SKILLS, WOUNDS, STRESS, ACCOUTUMANCE, OCCULT_SLOTS, STARTING, VEHICLE_DAMAGE, HP_STATES } from "../config.mjs";
 import { codeToPips, pipsToCode } from "../dice-code.mjs";
-import { accoutumanceTier, damageBonusPips, movement, hordeBonus } from "../rules.mjs";
+import { accoutumanceTier, damageBonusPips, movement, hordeBonus, parseThresholds, hpLevel } from "../rules.mjs";
 
 const fields = foundry.data.fields;
 
@@ -28,6 +28,8 @@ function prepareWounds(system) {
   const wound = WOUNDS[system.wounds.value] ?? WOUNDS[0];
   system.wounds.label = wound.label;
   system.woundPenalty = wound.penalty;
+  // État utilisé par les jets (remplacé par le profil PV quand il est actif).
+  system.woundState = wound;
 }
 
 /** Données communes aux personnages et aux PNJ. */
@@ -135,6 +137,13 @@ export class PnjData extends BaseActorData {
         enabled: new fields.BooleanField({ initial: false }),
         count: int(10, 0),
         per: int(10, 1)
+      }),
+      // Profil « PV » du bestiaire de la campagne : Points de Vie et trois seuils de blessure.
+      hp: new fields.SchemaField({
+        enabled: new fields.BooleanField({ initial: false }),
+        value: int(20, 0),
+        max: int(20, 0),
+        thresholds: text("")
       })
     };
   }
@@ -142,6 +151,13 @@ export class PnjData extends BaseActorData {
   prepareDerivedData() {
     super.prepareDerivedData();
     this.hordeBonus = this.horde.enabled ? hordeBonus(this.horde.count, this.horde.per) : 0;
+    if (this.hp.enabled) {
+      const thresholds = parseThresholds(this.hp.thresholds);
+      const state = HP_STATES[hpLevel(Math.max(0, this.hp.max - this.hp.value), thresholds)];
+      Object.assign(this.hp, { taken: Math.max(0, this.hp.max - this.hp.value), thresholdList: thresholds, level: state.level, label: state.label });
+      this.woundState = state;
+      this.woundPenalty = state.penalty;
+    }
   }
 }
 

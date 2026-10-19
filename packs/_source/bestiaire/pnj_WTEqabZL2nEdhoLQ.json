@@ -1,0 +1,423 @@
+{
+  "_id": "WTEqabZL2nEdhoLQ",
+  "_key": "!actors!WTEqabZL2nEdhoLQ",
+  "name": "Eliah",
+  "type": "pnj",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "6D+2"
+      },
+      "puissance": {
+        "code": "7D+2"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "hp": {
+      "enabled": true,
+      "value": 80,
+      "max": 80,
+      "thresholds": "22/44/66"
+    },
+    "notes": "Profil PV du bestiaire de la campagne : PV 80, Résistance 7D+2, Attaque 6D+1, Défense 7D, Initiative 6D+2, seuils 22/44/66.\nConversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. Adresse, Connaissances, Perception et Présence non données : 3D par défaut.\nAucun Ancien ne peut attaquer en premier sans attirer l'attention de Paresse : ces statistiques ne s'appliquent que s'il est attaqué. Les Anciens (sauf Elah O Ikim) cherchent à neutraliser, pas à tuer.\n« He who seeks truth ». Gardien du pont Nord, observateur, scelle la ville. Réponse chirurgicale : préfère immobiliser que détruire. Seuls le feu et les armes imprégnées de corruption lui font des dégâts complets."
+  },
+  "folder": "EnUPZYfhqo9EBULp",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "GkBcfT48AEX8Qrbv",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.GkBcfT48AEX8Qrbv",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (attaque)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "-1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "R6ApP8GIjoKRuFpz",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.R6ApP8GIjoKRuFpz",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive (défense)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "vyOgqQqvIdUC6kCq",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.vyOgqQqvIdUC6kCq",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.MQsNvNNMGCrtxsbB"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Présence insurmontable",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Toute créature à moins de 10m ressent une pression physique. -1D à toutes les actions.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "ZQjuJq9XXQgPZk1U",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.ZQjuJq9XXQgPZk1U",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.RKyGLgyptYBYpYNm"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Perception totale",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Impossible de le surprendre. Perçoit les intentions hostiles avant qu'elles se manifestent.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "HWJNbGWtCF0tSl0F",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.HWJNbGWtCF0tSl0F",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.DDK3nS9WZAbKLAED"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Corps inaltérable",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Immunisé aux poisons, maladies, effets de peur et de corruption.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "TM2JsCVabPRAH8Jo",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.TM2JsCVabPRAH8Jo",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.HZKIYYQkT5Gbbh4Q"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Regard de vérité",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "En regardant un humain dans les yeux, sait s'il ment. Aucun test requis.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "ezItGeAtmy0vOIua",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.ezItGeAtmy0vOIua",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.xbyCfgxXvSw4gOF5"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Inertie",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Peut immobiliser une cible sans contact — force gravitationnelle localisée. Athlétisme diff. 20 pour se libérer.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "01vnTQgGmeoQ4w4b",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.01vnTQgGmeoQ4w4b",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.FJcHRMOGMVwWVPjh"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Résistance structurelle",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Les armes normales font la moitié des dégâts. Seul le feu ou les armes imprégnées de corruption font dégâts complets.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "PwShq2QOo5AVJA5R",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.PwShq2QOo5AVJA5R",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.kh4Xy5KfeKK9m2wX"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Gel du temps local",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Peut suspendre une créature dans le temps pendant 1 round. Cette créature ne peut agir. Utilisable 2×/combat.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "fyuATkzKGthlE1lJ",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.fyuATkzKGthlE1lJ",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.4BLWM0FKrnSQAxvt"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 90,
+      "name": "Distorsion de l'espace",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Se téléporte jusqu'à 15m dans sa ligne de vue. Utilisable comme réaction à une attaque.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "Yvy8YCXOSWoBj1v9",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.Yvy8YCXOSWoBj1v9",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.MsGt1RszU5PFhK08"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 100,
+      "name": "Onde de rejet",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Repousse toutes les créatures à moins de 8m de lui de 5m en arrière. Force diff. 18 pour résister.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "eXYXHRu3Z2caFeJ0",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.eXYXHRu3Z2caFeJ0",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.jyazyEaV9CWw2cgE"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 110,
+      "name": "Sceau d'observateur",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Peut marquer mentalement un PJ — sait en permanence où il se trouve dans la ville.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "MINq4C3DEMVrbKgU",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.MINq4C3DEMVrbKgU",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.Lu7z9xRpMkycDwXB"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 120,
+      "name": "Le couvercle",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "En combat, peut ériger une barrière spatiale dans un rayon de 30m. Rien n'entre ni ne sort pendant 3 rounds. Utilisable une fois par rencontre.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "LYodD3c0rEfEdysr",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.LYodD3c0rEfEdysr",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.eXhoKUPEDuZps7sy"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 130,
+      "name": "Effacement",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Sur un humain à 0 PV, peut effacer ses souvenirs récents plutôt que de le tuer. La cible se réveille amnésique de la rencontre.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "wgyAL9rxAaQUws2x",
+      "_key": "!actors.items!WTEqabZL2nEdhoLQ.wgyAL9rxAaQUws2x",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.YzdcwFcciqSKShMZ"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 140,
+      "name": "Verdict final",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Eliah",
+        "cost": "",
+        "mechanic": "Attaque unique à plein potentiel : 9D de dégâts sur une cible. Eliah ne l'utilise qu'en dernier recours absolu.",
+        "narrative": "",
+        "revealed": false
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Eliah",
+    "texture": {
+      "src": "icons/svg/eye.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "hp"
+    }
+  }
+}

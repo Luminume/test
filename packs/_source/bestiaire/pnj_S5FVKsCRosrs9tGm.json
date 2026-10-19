@@ -1,0 +1,194 @@
+{
+  "_id": "S5FVKsCRosrs9tGm",
+  "_key": "!actors!S5FVKsCRosrs9tGm",
+  "name": "Michael Beans (phase Crise)",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+2"
+      },
+      "adresse": {
+        "code": "2D+2"
+      },
+      "puissance": {
+        "code": "4D"
+      },
+      "connaissances": {
+        "code": "2D"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "4D+2"
+      }
+    },
+    "movement": "7",
+    "damageBonus": "3D",
+    "painless": true,
+    "notes": "Phase Crise (6 sur 1D6) : rage chimique, insensible à la douleur, lucidité altérée, hallucinations actives, terrifiant. Voir la fiche « phase Vulnérable » pour le jet de phase et les particularités.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "b45da0WanAJKOmHK",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "2bMJrFLHAI8vRzDD",
+      "_key": "!actors.items!S5FVKsCRosrs9tGm.2bMJrFLHAI8vRzDD",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "nF2UpHiaZwjH73sy",
+      "_key": "!actors.items!S5FVKsCRosrs9tGm.nF2UpHiaZwjH73sy",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "qJbgc5bdTn7cLrKO",
+      "_key": "!actors.items!S5FVKsCRosrs9tGm.qJbgc5bdTn7cLrKO",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "wAhSF8zqsfW1mIyL",
+      "_key": "!actors.items!S5FVKsCRosrs9tGm.wAhSF8zqsfW1mIyL",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "DJYxjK4m6zzWuYrG",
+      "_key": "!actors.items!S5FVKsCRosrs9tGm.DJYxjK4m6zzWuYrG",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Pistolet automatique",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes",
+        "damage": "3D+1",
+        "price": "",
+        "ammo": {
+          "value": 12,
+          "max": 12
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": ""
+      }
+    },
+    {
+      "_id": "ujqsmHbltbPL9pQz",
+      "_key": "!actors.items!S5FVKsCRosrs9tGm.ujqsmHbltbPL9pQz",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Mains nues / objet improvisé",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques naturelles",
+        "damage": "+1D",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Force disproportionnée à sa carrure."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Michael Beans (phase Crise)",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

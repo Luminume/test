@@ -1,0 +1,423 @@
+{
+  "_id": "5zHC4SJjnUbFYm6W",
+  "_key": "!actors!5zHC4SJjnUbFYm6W",
+  "name": "Jah'ste",
+  "type": "pnj",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "7D"
+      },
+      "puissance": {
+        "code": "6D+2"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "hp": {
+      "enabled": true,
+      "value": 72,
+      "max": 72,
+      "thresholds": "20/40/60"
+    },
+    "notes": "Profil PV du bestiaire de la campagne : PV 72, Résistance 6D+2, Attaque 6D, Défense 7D+1, Initiative 7D, seuils 20/40/60.\nConversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. Adresse, Connaissances, Perception et Présence non données : 3D par défaut.\nAucun Ancien ne peut attaquer en premier sans attirer l'attention de Paresse : ces statistiques ne s'appliquent que s'il est attaqué. Les Anciens (sauf Elah O Ikim) cherchent à neutraliser, pas à tuer.\n« She who listens ». Errante, ralentit l'éveil, indifférence froide. Ne cherche pas à tuer, seulement à ne plus être dérangée."
+  },
+  "folder": "EnUPZYfhqo9EBULp",
+  "sort": 10,
+  "items": [
+    {
+      "_id": "zhyaw2OzEjYzHL1t",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.zhyaw2OzEjYzHL1t",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (attaque)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "-1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "flZxqNnvt6vCtNhn",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.flZxqNnvt6vCtNhn",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive (défense)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "biqd4EzLTVRuoYGr",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.biqd4EzLTVRuoYGr",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.QAYtohYGqXqzaTEH"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Écoute profonde",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Entend toute conversation à moins de 500m dans un environnement calme. Dans les égouts, portée réduite à 50m mais traverse les murs.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "BFKtek8oJu3ZtqCZ",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.BFKtek8oJu3ZtqCZ",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.2CDFv6DuQ1IUpMQH"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Pas silencieux",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Se déplace sans bruit dans tout environnement, quelle que soit la surface.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "ocKS6juM9XKGvGap",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.ocKS6juM9XKGvGap",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.1nG4UGPaoUAaCy12"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Indifférence aux blessures",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Ne montre aucun signe de douleur. Les adversaires ne peuvent pas évaluer son état réel.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "ubmtr1gp2OMDbRdI",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.ubmtr1gp2OMDbRdI",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.4TFhFayt3z0r79dE"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Sens de la corruption",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Perçoit le niveau d'influence de Paresse sur tout être vivant à moins de 20m. Sait qui est le plus corrompu dans un groupe.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "2SAaPfqd6YVLJOkT",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.2SAaPfqd6YVLJOkT",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.iT8BTEj1nThOnQpc"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Régénération lente",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Récupère 3 PV par round hors combat.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "ccBnc8qiBXuJp762",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.ccBnc8qiBXuJp762",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.wR5F7tF2cTx6JDMw"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 70,
+      "name": "Résistance naturelle",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Immunisée aux mutations et à l'infection. Les poisons font la moitié des dégâts.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "IB8EBPgfAo9vDSeR",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.IB8EBPgfAo9vDSeR",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.edWtBFi1pPTlfCpR"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 80,
+      "name": "Désorientation sensorielle",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Peut inverser la perception d'une cible (droite/gauche, haut/bas) pendant 2 rounds. -3D à toutes ses actions. Volonté diff. 15 pour résister.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "R4gGUygmkH43xTmA",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.R4gGUygmkH43xTmA",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.McU9kMUI9aE5wyI4"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 90,
+      "name": "Camouflage naturel",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Se fond dans tout environnement naturel (forêt, eau, roc). Perception diff. 22 pour la repérer.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "zyzij1YjYVezsWJP",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.zyzij1YjYVezsWJP",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.w4CKBUb1uTsfcCvk"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 100,
+      "name": "Répulsion instinctive",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Les mutants et créatures corrompues fuient sa présence dans un rayon de 15m.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "e2OgiNrWmzfZkN8C",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.e2OgiNrWmzfZkN8C",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.fG7f1saCnGkULn2o"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 110,
+      "name": "Contre-corruption",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 2,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Peut réduire de 1 point l'influence de Paresse sur une cible humaine. Long contact requis (scène entière). Douloureux pour la cible.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "oIFal7bU1ZgzY71S",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.oIFal7bU1ZgzY71S",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.Db8aPh0XGPMuYj7j"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 120,
+      "name": "Appel de la forêt",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Convoque la faune de la forêt dans un rayon de 200m. 2D6 créatures mutées apparaissent en 2 rounds — elles ne lui obéissent pas, mais s'en prennent à ses assaillants en priorité.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "1Du65DR3YsPxzG85",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.1Du65DR3YsPxzG85",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.cMKBz4BYjJABIwY8"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 130,
+      "name": "Silence total",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Plonge une zone de 30m de rayon dans un silence absolu pendant 3 rounds. Aucun son ne peut y pénétrer ou en sortir.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "XgyZaMv2IQjupfhU",
+      "_key": "!actors.items!5zHC4SJjnUbFYm6W.XgyZaMv2IQjupfhU",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.H2EFMdDB6UCTsXDO"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 140,
+      "name": "Dissolution",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 3,
+        "tags": "Campagne, PNJ, Jah'ste",
+        "cost": "",
+        "mechanic": "Peut se dissoudre dans l'environnement naturel et réapparaître en tout point de la forêt ou du lac dans le même round. Utilisable une fois par rencontre.",
+        "narrative": "",
+        "revealed": false
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Jah'ste",
+    "texture": {
+      "src": "icons/svg/eye.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "hp"
+    }
+  }
+}

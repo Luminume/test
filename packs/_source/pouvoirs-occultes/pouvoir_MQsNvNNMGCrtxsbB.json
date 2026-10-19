@@ -1,0 +1,27 @@
+{
+  "_id": "MQsNvNNMGCrtxsbB",
+  "_key": "!items!MQsNvNNMGCrtxsbB",
+  "name": "Présence insurmontable",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Toute créature à moins de 10m ressent une pression physique. -1D à toutes les actions.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1090,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

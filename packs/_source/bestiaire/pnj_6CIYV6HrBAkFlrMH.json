@@ -1,0 +1,206 @@
+{
+  "_id": "6CIYV6HrBAkFlrMH",
+  "_key": "!actors!6CIYV6HrBAkFlrMH",
+  "name": "Colère",
+  "type": "pnj",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "3D+2"
+      },
+      "puissance": {
+        "code": "4D+1"
+      },
+      "adresse": {
+        "code": "3D"
+      },
+      "connaissances": {
+        "code": "3D"
+      },
+      "perception": {
+        "code": "3D"
+      },
+      "presence": {
+        "code": "3D"
+      }
+    },
+    "hp": {
+      "enabled": true,
+      "value": 28,
+      "max": 28,
+      "thresholds": "8/16/24"
+    },
+    "notes": "Profil PV du bestiaire de la campagne : PV 28, Résistance 4D+1, Attaque 5D, Défense 4D, Initiative 3D+2, seuils 8/16/24.\nConversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. Adresse, Connaissances, Perception et Présence non données : 3D par défaut.\nChef de guerre, dirigeant territorial. Le plus fonctionnel des sept ; sa peur secrète de Luxure est son unique fissure."
+  },
+  "folder": "FXgHDIEuyYWP4TiQ",
+  "sort": 0,
+  "items": [
+    {
+      "_id": "SelgwDK1M4PUJtge",
+      "_key": "!actors.items!6CIYV6HrBAkFlrMH.SelgwDK1M4PUJtge",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre (attaque)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "RD3J1009omHkfmE3",
+      "_key": "!actors.items!6CIYV6HrBAkFlrMH.RD3J1009omHkfmE3",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Esquive (défense)",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "kR26LA0t57OjTCSU",
+      "_key": "!actors.items!6CIYV6HrBAkFlrMH.kR26LA0t57OjTCSU",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Couteau de boucher",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "4D+1",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Arme de prédilection. Toujours à portée."
+      }
+    },
+    {
+      "_id": "i1neJCf11zBQTmvE",
+      "_key": "!actors.items!6CIYV6HrBAkFlrMH.i1neJCf11zBQTmvE",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Matraque improvisée",
+      "type": "arme",
+      "img": "icons/svg/blood.svg",
+      "system": {
+        "skill": "bagarre",
+        "category": "Attaques",
+        "damage": "3D+2",
+        "price": "",
+        "ammo": {
+          "value": 0,
+          "max": 0
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Dégâts contondants, peut étourdir (diff. 14)."
+      }
+    },
+    {
+      "_id": "n0fyjHd4BvkZOO0Z",
+      "_key": "!actors.items!6CIYV6HrBAkFlrMH.n0fyjHd4BvkZOO0Z",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.COEMk5FMtyVahdpq"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Présence dominante",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Colère",
+        "cost": "",
+        "mechanic": "Les PNJ hostiles de rang inférieur hésitent à l'attaquer en premier. -1D à leur initiative contre lui.",
+        "narrative": "",
+        "revealed": false
+      }
+    },
+    {
+      "_id": "6S6kr3UFInL1q0qY",
+      "_key": "!actors.items!6CIYV6HrBAkFlrMH.6S6kr3UFInL1q0qY",
+      "effects": [],
+      "flags": {
+        "zcorps-vtt": {
+          "sourceUuid": "Compendium.zcorps-vtt.pouvoirs-occultes.Item.2Cau74dr5nSemeHK"
+        }
+      },
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Seuil de douleur élevé",
+      "type": "pouvoir",
+      "img": "icons/svg/eye.svg",
+      "system": {
+        "tier": 1,
+        "tags": "Campagne, PNJ, Colère",
+        "cost": "",
+        "mechanic": "Ignore les pénalités de la première blessure. Continue à agir sans malus jusqu'au seuil 2.",
+        "narrative": "",
+        "revealed": false
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Colère",
+    "texture": {
+      "src": "icons/svg/terror.svg"
+    },
+    "displayBars": 20,
+    "actorLink": true,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "hp"
+    }
+  }
+}

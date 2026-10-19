@@ -1,0 +1,27 @@
+{
+  "_id": "fG7f1saCnGkULn2o",
+  "_key": "!items!fG7f1saCnGkULn2o",
+  "name": "Contre-corruption",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Peut réduire de 1 point l'influence de Paresse sur une cible humaine. Long contact requis (scène entière). Douloureux pour la cible.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1310,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

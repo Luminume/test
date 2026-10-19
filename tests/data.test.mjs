@@ -85,16 +85,57 @@ test("bestiaire : PNJ valides, zombies insensibles à la douleur, véhicules", (
   assert.ok(pnj.length >= 9);
   assert.equal(vehicles.length, 17);
   for (const a of pnj) {
-    assert.ok(a.items.some(i => i.type === "arme") || ["Civil paniqué", "Bébé zombie"].includes(a.name), a.name);
+    assert.ok(a.items.some(i => i.type === "arme") || ["Civil paniqué", "Bébé zombie"].includes(a.name) || a.system.hp?.enabled, a.name);
     for (const i of a.items) assert.ok(i._key.startsWith(`!actors.items!${a._id}.`), i.name);
   }
-  assert.ok(pnj.filter(a => a.system.painless).every(a => a.img.includes("skull")));
+  // Tous les zombies sont insensibles à la douleur
+  assert.ok(pnj.filter(a => a.img.includes("skull")).every(a => a.system.painless));
   // Zombie officiel du livre et créatures de la campagne
   const zombie = pnj.find(a => a.name === "Zombie (Phase 1)");
   assert.equal(zombie.system.attributes.agilite.code, "3D");
   assert.equal(zombie.items.find(i => i.name === "Bagarre").system.bonus, "+2");
-  assert.equal(pnj.filter(a => a.folder && docs.find(f => f._id === a.folder).name.startsWith("Campagne Atica")).length, 21);
-  const hordes = pnj.filter(a => a.system.horde.enabled).map(a => a.name).sort();
+  const bestiaryII = ["Faune mutée & hordes", "Cultistes des 7 Péchés", "Créations de Luxure", "Couronne intérieure & hôpitaux",
+    "Profondeurs du lac", "Aberration d'Eliah"].map(f => `Campagne Atica — ${f}`);
+  assert.equal(pnj.filter(a => bestiaryII.includes(docs.find(f => f._id === a.folder).name)).length, 21);
+  const hordes = pnj.filter(a => a.system.horde?.enabled).map(a => a.name).sort();
   assert.deepEqual(hordes, ["Banc d'anguilles", "Horde de chiens", "Horde de rats", "Horde de zombies (Phase 1)", "Noyés revenus à la vie"]);
   assert.equal(pnj.find(a => a.name === "Horde de rats").system.horde.per, 15);
+});
+
+test("pouvoirs des PNJ : 71 pouvoirs étiquetés Campagne, PNJ et nom, liés aux fiches", () => {
+  const npcPowers = JSON.parse(fs.readFileSync(path.join(root, "tools/data/pouvoirs-pnj.json"), "utf8"));
+  assert.equal(npcPowers.length, 71);
+  for (const p of npcPowers) {
+    assert.equal(p.tags[0], "Campagne");
+    assert.equal(p.tags[1], "PNJ");
+    assert.ok([1, 2, 3].includes(p.tier) && p.mechanic.length > 20, p.name);
+  }
+  const counts = {};
+  for (const p of npcPowers) counts[p.tags[2]] = (counts[p.tags[2]] ?? 0) + 1;
+  assert.deepEqual(counts, { "Colère": 2, "Gourmandise": 2, "Luxure": 5, "Greed": 5, "Envie": 5, "Eliah": 13, "Jah'ste": 13, "Kôhle": 13, "Elah O Ikim": 13 });
+
+  const packPowers = readPack("pouvoirs-occultes").filter(d => d.type === "pouvoir");
+  assert.equal(packPowers.length, 30 + 60 + 71);
+  const ids = new Set(packPowers.map(d => d._id));
+  const actors = readPack("bestiaire").filter(d => d.type === "pnj" && d.system.hp?.enabled);
+  assert.equal(actors.length, 9);
+  for (const a of actors) {
+    const powers = a.items.filter(i => i.type === "pouvoir");
+    assert.equal(powers.length, counts[a.name], a.name);
+    for (const p of powers) {
+      const source = p.flags["zcorps-vtt"].sourceUuid.split(".").pop();
+      assert.ok(ids.has(source), `${a.name} : ${p.name}`);
+    }
+    assert.ok(a.items.some(i => i.name === "Bagarre (attaque)"), a.name);
+  }
+});
+
+test("PNJ principaux de la campagne", () => {
+  const pnj = readPack("bestiaire").filter(d => d.type === "pnj");
+  for (const name of ["Michael Beans (phase Vulnérable)", "Michael Beans (phase Stable)", "Michael Beans (phase Crise)",
+    "Garde de Beans", "Le Prélat des Cendres", "Illuminé", "Jane Macbury", "Jared Conery", "Mila Conery", "Vlad Roubanovitch"]) {
+    assert.ok(pnj.some(a => a.name === name), name);
+  }
+  const mila = pnj.find(a => a.name === "Mila Conery");
+  assert.equal(mila.system.attributes.puissance.code, "1D");
 });

@@ -1,0 +1,27 @@
+{
+  "_id": "RKyGLgyptYBYpYNm",
+  "_key": "!items!RKyGLgyptYBYpYNm",
+  "name": "Perception totale",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Impossible de le surprendre. Perçoit les intentions hostiles avant qu'elles se manifestent.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1100,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_id": "4BLWM0FKrnSQAxvt",
+  "_key": "!items!4BLWM0FKrnSQAxvt",
+  "name": "Distorsion de l'espace",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Se téléporte jusqu'à 15m dans sa ligne de vue. Utilisable comme réaction à une attaque.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1160,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

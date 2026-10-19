@@ -1,0 +1,27 @@
+{
+  "_id": "gWxoy28Xzor92z1A",
+  "_key": "!items!gWxoy28Xzor92z1A",
+  "name": "Marionnettes",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Luxure",
+    "cost": "",
+    "mechanic": "Peut prendre le contrôle d'un humain exposé durablement à ses illusions (scène entière + échec Volonté diff. 15). La marionnette agit à son initiative.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 970,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

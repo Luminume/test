@@ -1,0 +1,27 @@
+{
+  "_id": "FAswfFjgdjnH6g70",
+  "_key": "!items!FAswfFjgdjnH6g70",
+  "name": "Immunité aux blessures mineures",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "Les dégâts inférieurs à 5 par attaque ne l'affectent pas.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1510,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

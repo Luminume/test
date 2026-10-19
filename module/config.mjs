@@ -173,3 +173,14 @@ export const VEHICLE_DAMAGE = [
   { level: 5, label: "Détruit", range: "16+", manoeuvre: 0, passengers: 1,
     effect: "Le véhicule ne fonctionnera plus jamais." }
 ];
+
+/**
+ * Profil « PV » (bestiaire de la campagne : Péchés, Anciens) : dégâts cumulés comparés à trois seuils.
+ * Sous le 1er seuil : rien ; entre 1 et 2 : -1D ; entre 2 et 3 : -2D ; au-delà du 3e : hors combat.
+ */
+export const HP_STATES = [
+  { level: 0, label: "Indemne", penalty: 0 },
+  { level: 1, label: "Blessé légèrement", penalty: 1 },
+  { level: 2, label: "Blessé gravement", penalty: 2 },
+  { level: 3, label: "Hors combat", penalty: 0, incapacitated: true }
+];

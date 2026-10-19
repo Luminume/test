@@ -1,0 +1,27 @@
+{
+  "_id": "QAYtohYGqXqzaTEH",
+  "_key": "!items!QAYtohYGqXqzaTEH",
+  "name": "Écoute profonde",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Entend toute conversation à moins de 500m dans un environnement calme. Dans les égouts, portée réduite à 50m mais traverse les murs.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1220,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

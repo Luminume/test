@@ -19,7 +19,7 @@ Hooks.once("init", () => {
   CONFIG.Actor.typeLabels = { personnage: "Personnage", pnj: "PNJ / Zombie", vehicule: "Véhicule", groupe: "Groupe" };
   CONFIG.Actor.trackableAttributes = {
     personnage: { bar: ["wounds", "accoutumance"], value: ["cojones.value", "cp.value", "stress.value"] },
-    pnj: { bar: ["wounds"], value: [] },
+    pnj: { bar: ["wounds", "hp"], value: [] },
     vehicule: { bar: ["damage"], value: [] },
     groupe: { bar: [], value: [] }
   };

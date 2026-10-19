@@ -1,0 +1,27 @@
+{
+  "_id": "27MVS25H5bmizHbF",
+  "_key": "!items!27MVS25H5bmizHbF",
+  "name": "Vérité partielle",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Kôhle",
+    "cost": "",
+    "mechanic": "Ses paroles portent un poids qui les rend difficiles à ignorer. +2D à tous ses jets de persuasion.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1370,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

@@ -61,6 +61,22 @@
     </div>
 
     <aside class="zc-side">
+      <label class="zc-field zc-inline" data-tooltip="Profil du bestiaire de la campagne (Péchés, Anciens) : Points de Vie et seuils de blessure">
+        <input type="checkbox" name="system.hp.enabled" {{checked system.hp.enabled}}> Profil PV
+      </label>
+      {{#if system.hp.enabled}}
+      <section class="zc-box zc-hp">
+        <h3>Points de Vie</h3>
+        <div class="zc-row">
+          <label class="zc-field small">PV <input type="number" min="0" name="system.hp.value" value="{{system.hp.value}}"></label>
+          <label class="zc-field small">/ <input type="number" min="0" name="system.hp.max" value="{{system.hp.max}}"></label>
+        </div>
+        <label class="zc-field" data-tooltip="Dégâts cumulés : 1er seuil -1D, 2e seuil -2D, 3e seuil hors combat">Seuils
+          <input type="text" name="system.hp.thresholds" value="{{system.hp.thresholds}}" placeholder="8/16/24"></label>
+        <p class="zc-hp-state zc-hp-{{system.hp.level}}">{{system.hp.label}} <span class="zc-hint">({{system.hp.taken}} dégâts)</span></p>
+        <button type="button" data-action="takeDamage"><i class="fa-solid fa-heart-crack"></i> Encaisser des dégâts</button>
+      </section>
+      {{else}}
       <section class="zc-box zc-wounds">
         <h3>Niveaux de blessures</h3>
         <ul>
@@ -75,6 +91,7 @@
         </ul>
         <button type="button" data-action="takeDamage"><i class="fa-solid fa-heart-crack"></i> Encaisser des dégâts</button>
       </section>
+      {{/if}}
     </aside>
   </div>
 

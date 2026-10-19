@@ -1,0 +1,27 @@
+{
+  "_id": "1nG4UGPaoUAaCy12",
+  "_key": "!items!1nG4UGPaoUAaCy12",
+  "name": "Indifférence aux blessures",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Ne montre aucun signe de douleur. Les adversaires ne peuvent pas évaluer son état réel.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1240,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

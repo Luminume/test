@@ -1,0 +1,147 @@
+{
+  "_id": "BdMKFd1vGQdEczKa",
+  "_key": "!actors!BdMKFd1vGQdEczKa",
+  "name": "Garde de Beans",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "2D+1"
+      },
+      "adresse": {
+        "code": "2D+2"
+      },
+      "puissance": {
+        "code": "2D+2"
+      },
+      "connaissances": {
+        "code": "1D+2"
+      },
+      "perception": {
+        "code": "2D"
+      },
+      "presence": {
+        "code": "2D"
+      }
+    },
+    "movement": "6",
+    "damageBonus": "2D",
+    "painless": false,
+    "notes": "Profil type. 2 à 4 gardes accompagnent Beans en permanence dans la Couronne Intérieure. Arme : profil d'arme de poing du livre (non précisée).",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "b45da0WanAJKOmHK",
+  "sort": 30,
+  "items": [
+    {
+      "_id": "BYWmlNUx2bRED00j",
+      "_key": "!actors.items!BdMKFd1vGQdEczKa.BYWmlNUx2bRED00j",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Bagarre",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "agilite",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "nJFnRB79EHmjZGsk",
+      "_key": "!actors.items!BdMKFd1vGQdEczKa.nJFnRB79EHmjZGsk",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Armes à feu",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "adresse",
+        "bonus": "+2",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "LYFHPPDhh4dwcVMj",
+      "_key": "!actors.items!BdMKFd1vGQdEczKa.LYFHPPDhh4dwcVMj",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Intimidation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "VV7vzfCjFXuKG5qt",
+      "_key": "!actors.items!BdMKFd1vGQdEczKa.VV7vzfCjFXuKG5qt",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Glock 17 9mm",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes de poing",
+        "damage": "3D+2",
+        "price": "D (F)",
+        "ammo": {
+          "value": 17,
+          "max": 17
+        },
+        "range": {
+          "short": "8",
+          "medium": "16",
+          "long": "24"
+        },
+        "notes": "Semi-automatique léger et compact, fiable, faible recul.\nDisponibilité de l'arme (entre parenthèses : munitions). TF très facile, F facile, M moyenne, D difficile, TD très difficile."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Garde de Beans",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

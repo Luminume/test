@@ -1,0 +1,27 @@
+{
+  "_id": "cMKBz4BYjJABIwY8",
+  "_key": "!items!cMKBz4BYjJABIwY8",
+  "name": "Silence total",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Plonge une zone de 30m de rayon dans un silence absolu pendant 3 rounds. Aucun son ne peut y pénétrer ou en sortir.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1330,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

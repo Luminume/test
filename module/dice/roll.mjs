@@ -30,7 +30,7 @@ const cojonesAllowed = kind => kind !== "damage";
 async function promptRollOptions(actor, { label, pips, kind, fixedDifficulty }) {
   const isTest = kind === "test";
   const hasResources = actor?.type === "personnage";
-  const wound = WOUNDS[actor?.system.wounds?.value ?? 0];
+  const wound = actor?.system.woundState ?? WOUNDS[actor?.system.wounds?.value ?? 0];
   const maxCp = game.settings.get(SYSTEM_ID, "maxCpPerRoll");
   const cpAvailable = actor?.system.cp?.value ?? 0;
   const content = await renderTemplate(TEMPLATES.dialog, {
@@ -129,7 +129,7 @@ export async function rollD6(actor, { label, pips, kind = "test", fast = false, 
   }
 
   // Malus de blessure : jets de Compétence et de Caractéristique uniquement (p. 63).
-  const wound = WOUNDS[actor?.system.wounds?.value ?? 0];
+  const wound = actor?.system.woundState ?? WOUNDS[actor?.system.wounds?.value ?? 0];
   if (isTest && actor?.system.painless && wound.penalty) {
     lines.push("Insensible à la douleur : aucun malus de blessure");
   } else if (isTest && opts.applyWound && wound.penalty) {

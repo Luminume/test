@@ -1,0 +1,27 @@
+{
+  "_id": "w4CKBUb1uTsfcCvk",
+  "_key": "!items!w4CKBUb1uTsfcCvk",
+  "name": "Répulsion instinctive",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 2,
+    "tags": "Campagne, PNJ, Jah'ste",
+    "cost": "",
+    "mechanic": "Les mutants et créatures corrompues fuient sa présence dans un rayon de 15m.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "QmmaJ4tfCzs8Atfq",
+  "sort": 1300,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

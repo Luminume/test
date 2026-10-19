@@ -1,0 +1,27 @@
+{
+  "_id": "COEMk5FMtyVahdpq",
+  "_key": "!items!COEMk5FMtyVahdpq",
+  "name": "Présence dominante",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Colère",
+    "cost": "",
+    "mechanic": "Les PNJ hostiles de rang inférieur hésitent à l'attaquer en premier. -1D à leur initiative contre lui.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 900,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

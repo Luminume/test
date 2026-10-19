@@ -1,0 +1,27 @@
+{
+  "_id": "r9imUthapFDHLqAh",
+  "_key": "!items!r9imUthapFDHLqAh",
+  "name": "Beauté paralysante",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Luxure",
+    "cost": "",
+    "mechanic": "Toute créature qui la regarde directement doit réussir un test de Volonté (diff. 12) ou perdre son action suivante.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 950,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

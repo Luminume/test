@@ -1,0 +1,201 @@
+{
+  "_id": "DK0WcVqi9X25cCCM",
+  "_key": "!actors!DK0WcVqi9X25cCCM",
+  "name": "Mila Conery",
+  "type": "pnj",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "attributes": {
+      "agilite": {
+        "code": "1D+2"
+      },
+      "adresse": {
+        "code": "1D+1"
+      },
+      "puissance": {
+        "code": "1D"
+      },
+      "connaissances": {
+        "code": "4D+2"
+      },
+      "perception": {
+        "code": "4D"
+      },
+      "presence": {
+        "code": "2D+2"
+      }
+    },
+    "movement": "3 (réduit par la maladie)",
+    "damageBonus": "1D",
+    "painless": false,
+    "notes": "17 ans, stratégiste, sœur de Jared ; maladie grave, dégénérative. Érudition : géopolitique, tactique, histoire.\nNOTE MJ — Fragilité : avec 1D en Puissance, tout coup direct la met en danger de mort. Jamais en première ligne.\n▸ Analyse stratégique : +1D à l'Initiative du groupe au premier round après une scène de préparation.\n▸ Mémoire géopolitique : +3D aux tests de Connaissances sur l'organisation humaine.\n▸ Vulnérabilité assumée : un allié qui s'interpose subit l'attaque à sa place sans test.",
+    "horde": {
+      "enabled": false,
+      "count": 10,
+      "per": 10
+    }
+  },
+  "folder": "rvlyTT0YwzHUIwCu",
+  "sort": 20,
+  "items": [
+    {
+      "_id": "oFHfVJB73Bv5W98h",
+      "_key": "!actors.items!DK0WcVqi9X25cCCM.oFHfVJB73Bv5W98h",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 0,
+      "name": "Endurance",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "puissance",
+        "bonus": "",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "x6Dvzht4KkoDysgY",
+      "_key": "!actors.items!DK0WcVqi9X25cCCM.x6Dvzht4KkoDysgY",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 10,
+      "name": "Érudition",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "connaissances",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "LgYtpgdjpuF3J7Fc",
+      "_key": "!actors.items!DK0WcVqi9X25cCCM.LgYtpgdjpuF3J7Fc",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 20,
+      "name": "Investigation",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "MF1efdIHdGknS7kl",
+      "_key": "!actors.items!DK0WcVqi9X25cCCM.MF1efdIHdGknS7kl",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 30,
+      "name": "Chercher",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "perception",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "6TCHiFrhUUSX3vYH",
+      "_key": "!actors.items!DK0WcVqi9X25cCCM.6TCHiFrhUUSX3vYH",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 40,
+      "name": "Persuasion",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "to8mjmA01BQk9iOm",
+      "_key": "!actors.items!DK0WcVqi9X25cCCM.to8mjmA01BQk9iOm",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 50,
+      "name": "Volonté",
+      "type": "competence",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "attribute": "presence",
+        "bonus": "+1D+1",
+        "notes": ""
+      }
+    },
+    {
+      "_id": "Yh4ZDMoDTGR99uJJ",
+      "_key": "!actors.items!DK0WcVqi9X25cCCM.Yh4ZDMoDTGR99uJJ",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "sort": 60,
+      "name": "Pistolet léger (dernier recours)",
+      "type": "arme",
+      "img": "icons/svg/target.svg",
+      "system": {
+        "skill": "armesAFeu",
+        "category": "Armes",
+        "damage": "2D+1",
+        "price": "",
+        "ammo": {
+          "value": 8,
+          "max": 8
+        },
+        "range": {
+          "short": "",
+          "medium": "",
+          "long": ""
+        },
+        "notes": "Le recul même la déstabilise physiquement."
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  },
+  "prototypeToken": {
+    "name": "Mila Conery",
+    "texture": {
+      "src": "icons/svg/mystery-man.svg"
+    },
+    "displayBars": 20,
+    "actorLink": false,
+    "disposition": -1,
+    "bar1": {
+      "attribute": "wounds"
+    }
+  }
+}

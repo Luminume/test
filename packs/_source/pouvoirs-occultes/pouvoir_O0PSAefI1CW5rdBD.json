@@ -1,0 +1,27 @@
+{
+  "_id": "O0PSAefI1CW5rdBD",
+  "_key": "!items!O0PSAefI1CW5rdBD",
+  "name": "Manteau d'ombre",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Envie",
+    "cost": "",
+    "mechanic": "Peut se fondre dans toute ombre de taille humaine. Perception diff. 18 pour le détecter.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1040,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

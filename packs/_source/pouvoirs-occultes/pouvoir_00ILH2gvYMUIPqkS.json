@@ -1,0 +1,27 @@
+{
+  "_id": "00ILH2gvYMUIPqkS",
+  "_key": "!items!00ILH2gvYMUIPqkS",
+  "name": "Corps composite",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Greed",
+    "cost": "",
+    "mechanic": "Immunisé aux effets de peur et aux tests de moral. Les visages sur sa peau hurlent pour lui.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 990,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

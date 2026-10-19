@@ -1,0 +1,27 @@
+{
+  "_id": "eqMlDdjOpcTLdG9o",
+  "_key": "!items!eqMlDdjOpcTLdG9o",
+  "name": "Éveil forcé",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 3,
+    "tags": "Campagne, PNJ, Elah O Ikim",
+    "cost": "",
+    "mechanic": "En contact direct avec une cible à haute influence (7+), peut déclencher un éveil partiel de Paresse à travers elle — la cible perd le contrôle 1D3 rounds, dégâts collatéraux probables.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "qqNzBwWo1d9qe6pO",
+  "sort": 1580,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

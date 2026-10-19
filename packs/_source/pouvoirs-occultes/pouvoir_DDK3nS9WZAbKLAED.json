@@ -1,0 +1,27 @@
+{
+  "_id": "DDK3nS9WZAbKLAED",
+  "_key": "!items!DDK3nS9WZAbKLAED",
+  "name": "Corps inaltérable",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "Immunisé aux poisons, maladies, effets de peur et de corruption.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1110,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

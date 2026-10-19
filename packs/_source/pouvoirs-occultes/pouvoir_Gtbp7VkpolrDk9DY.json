@@ -1,0 +1,27 @@
+{
+  "_id": "Gtbp7VkpolrDk9DY",
+  "_key": "!items!Gtbp7VkpolrDk9DY",
+  "name": "Silence absolu",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Envie",
+    "cost": "",
+    "mechanic": "Ses déplacements ne produisent aucun son. Furtivité automatiquement réussie si les conditions le permettent.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1050,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

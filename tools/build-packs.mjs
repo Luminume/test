@@ -8,6 +8,7 @@ import crypto from "node:crypto";
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 import { WEAPONS, ARMOR, GEAR, VEHICLES } from "./data/equipement.mjs";
 import { BESTIARY } from "./data/bestiaire.mjs";
+import { PNJ_GROUPS, SINS_AND_ELDERS } from "./data/pnj-campagne.mjs";
 import { PAGES } from "./data/aide-memoire.mjs";
 import { ATTRIBUTES, SKILLS } from "../module/config.mjs";
 import { codeToPips, pipsToCode } from "../module/dice-code.mjs";
@@ -17,9 +18,12 @@ const SYSTEM = "zcorps-vtt";
 const readJson = file => JSON.parse(fs.readFileSync(path.join(ROOT, "tools/data", file), "utf8"));
 // Pouvoirs de la campagne puis bibliothèque générique (sans étiquette « Campagne »).
 // `variant` distingue les identifiants quand un nom existe dans les deux listes.
+// Pouvoirs des PNJ du bestiaire (Péchés, Anciens) : étiquettes Campagne, PNJ, nom du PNJ.
+const NPC_POWERS = readJson("pouvoirs-pnj.json").map(p => ({ ...p, variant: `pnj:${p.tags[2]}` }));
 const POWERS = [
   ...readJson("pouvoirs.json"),
-  ...readJson("pouvoirs-generiques.json").map(p => ({ ...p, variant: "generique" }))
+  ...readJson("pouvoirs-generiques.json").map(p => ({ ...p, variant: "generique" })),
+  ...NPC_POWERS
 ];
 
 /** Identifiant Foundry stable (16 caractères alphanumériques) dérivé d'une clé. */
@@ -158,7 +162,7 @@ function archetypeDocs() {
 function bestiaryDocs() {
   const pack = "bestiaire";
   const docs = [];
-  BESTIARY.forEach((group, g) => {
+  [...BESTIARY, ...PNJ_GROUPS].forEach((group, g) => {
     const f = folder(pack, group.folder, (g + 1) * 100, "Actor");
     docs.push(f);
     group.actors.forEach((a, i) => {
@@ -195,6 +199,51 @@ function bestiaryDocs() {
       }, i * 10));
     });
   });
+  // Péchés et Anciens : profil PV, pouvoirs occultes intégrés (liés à la compendie des pouvoirs).
+  SINS_AND_ELDERS.forEach((group, g) => {
+    const f = folder(pack, group.folder, 500 + g * 10, "Actor");
+    docs.push(f);
+    group.actors.forEach((a, i) => {
+      const agiPips = codeToPips(a.initiative).pips;
+      const items = [
+        customSkill("Bagarre (attaque)", "agilite", agiPips, a.attack),
+        customSkill("Esquive (défense)", "agilite", agiPips, a.defense)
+      ];
+      for (const w of a.weapons) {
+        items.push({
+          name: w.name, type: "arme", img: "icons/svg/blood.svg",
+          system: { skill: "bagarre", category: "Attaques", damage: w.damage, price: "", ammo: { value: 0, max: 0 },
+            range: { short: "", medium: "", long: "", ...w.range }, notes: w.notes ?? "" }
+        });
+      }
+      for (const p of NPC_POWERS.filter(p => p.tags[2] === a.name)) {
+        items.push({
+          name: p.name, type: "pouvoir", img: "icons/svg/eye.svg", system: powerSystem(p),
+          flags: { [SYSTEM]: { sourceUuid: `Compendium.${SYSTEM}.pouvoirs-occultes.Item.${powerId(p)}` } }
+        });
+      }
+      docs.push(actorDoc(pack, f, {
+        name: a.name, type: "pnj", img: group.img,
+        system: {
+          attributes: {
+            agilite: { code: a.initiative }, puissance: { code: a.resistance },
+            adresse: { code: "3D" }, connaissances: { code: "3D" }, perception: { code: "3D" }, presence: { code: "3D" }
+          },
+          hp: { enabled: true, value: a.hp, max: a.hp, thresholds: a.thresholds },
+          notes: [
+            `Profil PV du bestiaire de la campagne : PV ${a.hp}, Résistance ${a.resistance}, Attaque ${a.attack}, Défense ${a.defense}, `
+              + `Initiative ${a.initiative}, seuils ${a.thresholds}.`,
+            "Conversion : Initiative → Agilité, Résistance → Puissance ; Attaque et Défense en compétences. "
+              + "Adresse, Connaissances, Perception et Présence non données : 3D par défaut.",
+            group.elderNote, a.notes
+          ].filter(Boolean).join("\n")
+        },
+        items,
+        token: { actorLink: true, disposition: -1, bar1: { attribute: "hp" } }
+      }, i * 10));
+    });
+  });
+
   const vf = folder(pack, "Véhicules (p. 74)", 900, "Actor");
   docs.push(vf);
   VEHICLES.forEach(([name, speed, passengers, resistance, manoeuvre, price], i) => docs.push(actorDoc(pack, vf, {
@@ -269,13 +318,18 @@ function equipmentDocs() {
   return { pack, docs };
 }
 
+/** Identifiant d'un pouvoir dans la compendie (même calcul que item()). */
+const powerId = p => id(`pouvoirs-occultes:item:pouvoir:${p.name}${p.variant ? `:${p.variant}` : ""}`);
+
+const powerSystem = p => ({ tier: p.tier, tags: p.tags.join(", "), cost: p.cost, mechanic: p.mechanic, narrative: p.narrative, revealed: false });
+
 function powerDocs() {
   const pack = "pouvoirs-occultes";
   const folders = [1, 2, 3].map(t => folder(pack, `Seuil ${t}`, t * 100));
   const docs = [...folders];
   POWERS.forEach((p, i) => docs.push(item(pack, folders[p.tier - 1], {
     name: p.name, type: "pouvoir", img: "icons/svg/eye.svg", variant: p.variant,
-    system: { tier: p.tier, tags: p.tags.join(", "), cost: p.cost, mechanic: p.mechanic, narrative: p.narrative, revealed: false }
+    system: powerSystem(p)
   }, i * 10)));
   return { pack, docs };
 }

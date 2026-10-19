@@ -1,0 +1,27 @@
+{
+  "_id": "HZKIYYQkT5Gbbh4Q",
+  "_key": "!items!HZKIYYQkT5Gbbh4Q",
+  "name": "Regard de vérité",
+  "type": "pouvoir",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "tier": 1,
+    "tags": "Campagne, PNJ, Eliah",
+    "cost": "",
+    "mechanic": "En regardant un humain dans les yeux, sait s'il ment. Aucun test requis.",
+    "narrative": "",
+    "revealed": false
+  },
+  "folder": "XXB0B1OAcLzExEWI",
+  "sort": 1120,
+  "effects": [],
+  "flags": {},
+  "ownership": {
+    "default": 0
+  },
+  "_stats": {
+    "coreVersion": "13.345",
+    "systemId": "zcorps-vtt",
+    "systemVersion": "0.2.0"
+  }
+}

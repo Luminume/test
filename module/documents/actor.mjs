@@ -162,6 +162,7 @@ export class ZCorpsActor extends Actor {
       notes,
       afterRoll: async result => {
         const margin = damage - result.total;
+        if (this.system.hp?.enabled) return this._applyHpDamage(margin, damage, result.total);
         const before = this.system.wounds.value;
         const after = nextWoundLevel(before, margin);
         const update = {};
@@ -184,6 +185,17 @@ export class ZCorpsActor extends Actor {
         };
       }
     });
+  }
+
+  /** Profil PV : les points au-delà de la résistance sont retirés des Points de Vie. */
+  async _applyHpDamage(margin, damage, resistance) {
+    const hp = this.system.hp;
+    const notes = [`Dégâts ${damage} − résistance ${resistance} = ${margin}`];
+    if (margin <= 0) return { highlight: "Aucune blessure", notes };
+    const after = Math.max(0, hp.value - margin);
+    await this.update({ "system.hp.value": after });
+    notes.push(`PV ${hp.value} → ${after}/${hp.max}`);
+    return { highlight: this.system.hp.label, notes };
   }
 
   /* -------------------------------------------- */
